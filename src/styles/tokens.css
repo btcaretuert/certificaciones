@@ -33,6 +33,15 @@
      #b4562a solo contrasta sobre fondo claro: en oscuro da 3.45. */
   --alerta: light-dark(#b4562a, #e08a5a);
 
+  /* Franja alterna de la tabla de 252. Separado de --surface porque los dos
+     valores compiten por el mismo pixel: si la franja usara el del realce, al
+     pasar el cursor por una fila ya rayada no cambiaria nada. Y no puede
+     oscurecerse mas, por lo mismo que --surface no puede: el badge .exp de una
+     credencial vencida usa --alerta y sobre #f9f9f7 ya viene en 4.63.
+     Por eso el realce suma ademas un riel de acento al borde izquierdo, que no
+     se pinta detras de ningun texto y por tanto no toca ningun contraste. */
+  --cebra: light-dark(#f9f9f7, #17181d);
+
   /* Realce de fila al pasar el cursor sobre la tabla de 252.
      El valor lo fija el peor par, no el gusto: el badge .exp de una credencial
      vencida usa --alerta, que ya viene justo (4.71 sobre --bg). Con #f5f5f2
@@ -52,8 +61,12 @@
 
   /* La pila monoespaciada faltaba por completo: `code` heredaba la del
      navegador, que en Windows es Courier New, justo en el parrafo que lleva
-     el stack tecnico. */
-  --mono: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, Consolas, monospace;
+     el stack tecnico.
+     Cascadia Code y DejaVu Sans Mono entran por delante de los fallbacks
+     genericos porque son las dos unicas de la pila que traen cero barrado: sin
+     ellas `slashed-zero` no tiene de donde salir en Windows ni en Linux. */
+  --mono: ui-monospace, 'SF Mono', 'Cascadia Code', 'Cascadia Mono', Menlo,
+    Consolas, 'DejaVu Sans Mono', monospace;
 
   --dur: .15s;
   --ease: cubic-bezier(.2, .6, .3, 1);

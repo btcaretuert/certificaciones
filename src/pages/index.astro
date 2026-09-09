@@ -35,11 +35,21 @@ const areas = countBy(certs, (c) => c.area).map(([a, n]) => ({
 })).sort((x, y) => y.h - x.h || y.n - x.n);
 const maxH = Math.max(1, ...areas.map((a) => a.h));
 const tech = techCoverage(certs).filter((t) => t.n >= 2);
-// Solo para la tira del encabezado. Las 30 de `tech` ocupan tres filas en
-// escritorio pero quince en un telefono, y el enlace llega casi siempre desde
-// el navegador de LinkedIn: arriba van las mas respaldadas y la nube entera se
-// queda en su seccion.
-const techTop = [...tech].sort((a, b) => b.n - a.n).slice(0, 12);
+/**
+ * Las doce del encabezado. Las 30 de `tech` ocupan tres filas en escritorio
+ * pero quince en un telefono, y el enlace llega casi siempre desde el navegador
+ * de LinkedIn, asi que la nube entera se queda en su seccion.
+ *
+ * El corte va por PESO, que es el orden en que `techCoverage` ya las devuelve.
+ * Aqui se reordenaba por volumen bruto y eso ponia `office-365` —20 cursos de
+ * una hora, peso 24— por delante de `gcp` —11 certificados, peso 102— en la
+ * primera linea que lee alguien que evalua un perfil de datos. El peso lo fija
+ * la curaduria ficha por ficha; el conteo solo dice cuantas veces se repitio un
+ * curso de ofimatica. Un array de tecnologias "de primer nivel" escrito a mano
+ * habria hecho lo mismo, pero seria una segunda fuente de verdad que se
+ * desincroniza el dia que entre una ficha nueva.
+ */
+const techTop = tech.slice(0, 12);
 const { hours, covered, total: nCursos, itineraries } = hoursFloor(certs);
 const hoy = new Date().toISOString().slice(0, 10);
 // 68 cursos otorgan ademas certificado del PMI: otro documento, con su propio
@@ -58,6 +68,17 @@ const heno = (c: (typeof certs)[number]) =>
     .join(' ').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
 const ev = evidence(certs);
 const maxYear = Math.max(1, ...years.map(([, n]) => n));
+/**
+ * Alto maximo de una columna del histograma, en px.
+ *
+ * En px y no en porcentaje porque el conteo va PEGADO encima de su barra, no en
+ * una fila propia: en una banda de 110px con el numero arriba del todo, el «1»
+ * de 2013 quedaba a 110px de una barra de 3px y no se leia como su etiqueta.
+ * Con el conteo dentro de la columna hace falta reservarle sitio, y eso es una
+ * resta de pixeles —110 de banda menos 16 de cifra— que un porcentaje no sabe
+ * hacer. Los dos valores viven aqui y en la regla .col, que es donde se ven.
+ */
+const ALTO_BARRA = 94;
 ---
 <Base title="Alejandro Retuert — Certificaciones">
   <header class="hero">
@@ -67,7 +88,7 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
       <p class="sub">Ingeniería y arquitectura de datos</p>
       <ul class="stats">
         <li><Icono nombre="certificado" px={20} /><b>{certs.length}</b><span>certificados</span></li>
-        <li><Icono nombre="escudo" px={20} /><b>{ev.official}</b><span>de organismo externo</span></li>
+        <li class="eje"><Icono nombre="escudo" px={20} /><b>{ev.official}</b><span>de organismo externo</span></li>
         <li><Icono nombre="documento" px={20} /><b>{ev.withPdf}</b><span>con documento adjunto</span></li>
         <li><Icono nombre="verificable" px={20} /><b>{ev.withVerifyUrl}</b><span>verificables en el emisor</span></li>
         <li><Icono nombre="reloj" px={20} /><b>{hours}</b><span>horas de contenido <i>({covered} de {nCursos} con dato)</i></span></li>
@@ -76,8 +97,8 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
         )}
       </ul>
       <p class="stack">
-        <span class="vh">Tecnologías con más certificados: </span>
-        {techTop.map((t) => <code>{t.tech}</code>)}
+        <span class="vh">Tecnologías con más respaldo: </span>
+        {techTop.map((t) => <code>{t.tech} <b>{t.n}</b></code>)}
       </p>
       {itineraries > 0 && (
         <p class="disclaimer">
@@ -146,7 +167,13 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
       <h2><Icono nombre="barras" px={17} />Actividad por año</h2>
       <div class="years">
         {years.map(([y, n]) => (
-          <div class="yr"><span class="yb" style={`height:${(n / maxYear) * 100}%`}></span><span class="yl">{String(y).slice(2)}</span><span class="yn">{n}</span></div>
+          <div class="yr" title={`${y}: ${n} certificados`}>
+            <span class="col">
+              {n > 0 && <span class="yn">{n}</span>}
+              <span class="yb" style={`height:${Math.max(n > 0 ? 3 : 0, (n / maxYear) * ALTO_BARRA)}px`}></span>
+            </span>
+            <span class="yl">{String(y).slice(2)}</span>
+          </div>
         ))}
       </div>
       {undated > 0 && <p class="note">{undated} certificados sin fecha registrada, no incluidos en el gráfico.</p>}
@@ -197,43 +224,46 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
           Project Management Institute, con su propio número y sus PDU. Es otro documento del mismo
           curso, así que se enlaza aparte en vez de repetir el título en la lista.</p>
       )}
-      <table>
-        <thead><tr><th>Certificado</th><th>Área</th><th>Tipo</th><th>Año</th><th title="Copia del certificado, alojada en este sitio">Documento</th><th title="Comprobable en el sitio del emisor, sin depender de mí">Verificable</th></tr></thead>
-        <tbody>
-          {certs.map((c) => (
-            <tr data-area={c.area} data-tipo={c.type} data-anio={c.issued?.slice(0, 4) ?? ''}
-                data-verif={c.verify_url ? '1' : ''} data-pmi={c.pmi_pdf ? '1' : ''}
-                data-ofi={c.official ? '1' : ''} data-q={heno(c)}>
-              <td><a class="tt" href={urlCert(c.id)}>{c.title}</a></td>
-              <td class="dim">{areaLabel(c.area)}</td>
-              <td><Chip variante={c.type} sm>{typeLabel(c.type)}</Chip></td>
-              <td class="dim">
-                {c.issued?.slice(0, 4) ?? '—'}
-                {c.expires && c.expires < hoy && <span class="exp" title={`Vencio el ${c.expires}`}>vencida</span>}
-              </td>
-              <td class="docs">
-                {c.pdf
-                  ? <a class="doc" href={urlPdf(c.pdf)} target="_blank" rel="noopener noreferrer">PDF ↗</a>
-                  : <span class="dim">—</span>}
-                {c.pmi_pdf && (
-                  <a class="doc pmi" href={urlPdf(c.pmi_pdf)} target="_blank"
-                     rel="noopener noreferrer"
-                     title={`Certificado del Project Management Institute${c.pmi_pdus ? ` · ${c.pmi_pdus} PDU` : ''}`}>PMI ↗</a>
-                )}
-              </td>
-              <td class="docs">
-                {c.verify_url
-                  ? <a class="ok" href={c.verify_url} rel="noopener noreferrer" target="_blank">emisor ↗</a>
-                  : <span class="dim">—</span>}
-                {c.pmi_verify_url && (
-                  <a class="ok pmi" href={c.pmi_verify_url} rel="noopener noreferrer" target="_blank"
-                     title="Verificar el certificado del PMI en LinkedIn">PMI ↗</a>
-                )}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div class="tabla" role="region" aria-label="Listado completo de certificados" tabindex="0">
+        <table>
+          <thead><tr><th>Certificado</th><th>Área</th><th>Tipo</th><th>Año</th><th title="Copia del certificado, alojada en este sitio">Documento</th><th title="Comprobable en el sitio del emisor, sin depender de mí">Verificable</th></tr></thead>
+          <tbody>
+            {certs.map((c, i) => (
+              <tr class:list={{ par: i % 2 === 1 }}
+                  data-area={c.area} data-tipo={c.type} data-anio={c.issued?.slice(0, 4) ?? ''}
+                  data-verif={c.verify_url ? '1' : ''} data-pmi={c.pmi_pdf ? '1' : ''}
+                  data-ofi={c.official ? '1' : ''} data-q={heno(c)}>
+                <td><a class="tt" href={urlCert(c.id)}>{c.title}</a></td>
+                <td class="dim">{areaLabel(c.area)}</td>
+                <td><Chip variante={c.type} sm>{typeLabel(c.type)}</Chip></td>
+                <td class="dim anio">
+                  {c.issued?.slice(0, 4) ?? '—'}
+                  {c.expires && c.expires < hoy && <span class="exp" title={`Vencio el ${c.expires}`}>vencida</span>}
+                </td>
+                <td class="docs">
+                  {c.pdf
+                    ? <a class="doc" href={urlPdf(c.pdf)} target="_blank" rel="noopener noreferrer">PDF ↗</a>
+                    : <span class="dim">—</span>}
+                  {c.pmi_pdf && (
+                    <a class="doc pmi" href={urlPdf(c.pmi_pdf)} target="_blank"
+                       rel="noopener noreferrer"
+                       title={`Certificado del Project Management Institute${c.pmi_pdus ? ` · ${c.pmi_pdus} PDU` : ''}`}>PMI ↗</a>
+                  )}
+                </td>
+                <td class="docs">
+                  {c.verify_url
+                    ? <a class="ok" href={c.verify_url} rel="noopener noreferrer" target="_blank">emisor ↗</a>
+                    : <span class="dim">—</span>}
+                  {c.pmi_verify_url && (
+                    <a class="ok pmi" href={c.pmi_verify_url} rel="noopener noreferrer" target="_blank"
+                       title="Verificar el certificado del PMI en LinkedIn">PMI ↗</a>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </section>
   </main>
 
@@ -277,7 +307,12 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
             (!pmi || d.pmi === '1') &&
             (!ofi || d.ofi === '1');
           fila.hidden = !ok;
-          if (ok) n++;
+          // La franja alterna se recalcula sobre las filas VISIBLES. Con
+          // :nth-child se pintaria sobre la posicion original, asi que en cuanto
+          // un filtro esconde una fila aparecen dos rayadas seguidas y la ayuda
+          // de lectura se vuelve ruido. El build siembra la misma clase con el
+          // mismo criterio, para que la tabla salga rayada sin esperar al script.
+          if (ok) { fila.classList.toggle('par', n % 2 === 1); n++; }
         }
         if (cuenta) cuenta.textContent = String(n);
         form.dataset.vacio = n === 0 ? '1' : '';
@@ -305,7 +340,11 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
     /* Tira de stack en el encabezado. Es lo primero que busca quien lee esto
        para un puesto técnico y estaba en la quinta sección, bajo el pliegue. */
     .stack { display: flex; flex-wrap: wrap; gap: 6px; margin: 22px 0 0; }
-    .stack code { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 3px 9px; font-size: 12px; }
+    .stack code { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 3px 9px; font-size: 11.5px; }
+    /* El respaldo va atenuado: la etiqueta es lo que se busca, el numero es
+       contexto. En el tono del texto los doce numeros compiten con los doce
+       nombres y la tira deja de leerse de un golpe. */
+    .stack code b { color: var(--muted); font-weight: 600; }
     main { padding: 34px 0 70px; }
     section { margin-bottom: 42px; }
     .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); }
@@ -315,26 +354,63 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
     .card h3 { font-size: 15px; margin: 8px 0 5px; }
     .meta { margin: 0; color: var(--muted); font-size: 13px; }
     .techs { margin: 9px 0 0; display: flex; flex-wrap: wrap; gap: 5px; }
-    .techs.big code b { color: var(--accent); }
     .bar { display: grid; grid-template-columns: 210px 1fr 52px 34px; align-items: center; gap: 12px; font-size: 13.5px; }
-    .vig { display: inline-block; margin-left: 6px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); border: 1px solid currentColor; border-radius: 4px; padding: 1px 4px; }
-    .years { display: flex; align-items: flex-end; gap: 5px; height: 130px; padding-top: 10px; }
-    .yr { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; }
-    .yb { width: 100%; background: var(--accent); border-radius: var(--radius-sm) var(--radius-sm) 0 0; min-height: 3px; }
-    .yl { font-size: 11px; color: var(--muted); margin-top: 5px; }
-    .yn { font-size: 10px; color: var(--muted); }
+    .vig { display: inline-block; margin-left: 6px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); border: 1px solid currentColor; border-radius: 4px; padding: 1px 5px 1px 4px; }
+    /* Punto de estado. Va con content vacio y fondo, no con el caracter '●':
+       un bullet en el texto lo anuncian algunos lectores de pantalla como
+       "circulo negro" en medio de la fecha de vigencia. */
+    .vig::before { content: ''; display: inline-block; width: 5px; height: 5px; margin-right: 5px; border-radius: 50%; background: currentColor; vertical-align: .1em; }
+    /* Histograma con base alineada y conteo pegado a su columna.
+       La banda de 110px la fija .col y el alto util de la barra sale de
+       ALTO_BARRA en el frontmatter: los 16px de diferencia son el sitio del
+       conteo, que se apoya sobre la barra en vez de flotar en una fila comun.
+       Los años sin certificados se dibujan como columna vacia y no se omiten:
+       el hueco entre 2014 y 2018 es parte de lo que el grafico dice. */
+    .years { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 5px; padding-top: 10px; }
+    .yr { display: grid; grid-template-rows: 110px auto; justify-items: center; }
+    .col { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; width: 100%; height: 110px; }
+    .yb { width: 100%; background: var(--accent); border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
+    .yl { font-size: 11px; color: var(--muted); margin-top: 5px; font-variant-numeric: tabular-nums; }
+    .yn { font-size: 10px; color: var(--muted); margin-bottom: 3px; font-variant-numeric: tabular-nums; }
     .note { color: var(--muted); font-size: 12.5px; margin-top: 10px; }
     table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
-    th { text-align: left; font-weight: 600; color: var(--muted); font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; padding: 8px 10px; border-bottom: 1px solid var(--line); }
-    td { padding: 9px 10px; border-bottom: 1px solid var(--line); }
-    /* Realce neutro, no --accent-soft: sobre ese fondo .dim cae a 2.95. */
+    /* Encabezado fijo. Con 252 filas, en la 180 ya no se sabe que columna es
+       cual, y el sitio no pagina a proposito: paginar rompe el Ctrl+F, que es
+       como se busca de verdad en una lista asi.
+       El fondo es solido y no translucido con blur: sobre un fondo difuminado
+       el contraste depende de lo que pase por debajo, y ahi axe mide el estado
+       en reposo y nunca lo que se ve al hacer scroll.
+       La regla inferior va como sombra interior y no como border-bottom: con
+       border-collapse el borde lo pinta la tabla, no la celda, y una celda
+       pegajosa lo deja atras al desplazarse. */
+    thead th { position: sticky; top: 0; z-index: 1; background: var(--bg); }
+    th { text-align: left; font-weight: 600; color: var(--muted); font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; padding: 9px 10px; box-shadow: inset 0 -1px 0 var(--line); }
+    /* 7px por fila: 252 filas a 9px son 500px de aire que obligan a un scroll
+       de mas sin aportar legibilidad. */
+    td { padding: 7px 10px; border-bottom: 1px solid var(--line); }
+    /* Franja alterna como ayuda de escaneo horizontal: seis columnas y el ojo
+       salta de fila al llegar a la derecha. La clase la mantiene el script
+       sobre las filas visibles; el valor esta separado del realce porque los
+       dos se pintan detras del mismo texto y --alerta ya viene justo. */
+    tbody tr.par { background: var(--cebra); }
+    /* Realce neutro, no --accent-soft: sobre ese fondo .dim cae a 2.95.
+       Sobre una fila ya rayada el cambio de fondo es de dos valores y no se ve,
+       asi que el realce lo cierra un riel de acento al borde izquierdo. Va como
+       sombra interior: no se pinta detras de ningun texto y por tanto no toca
+       el contraste de nada. */
     tbody tr { transition: background-color var(--dur) var(--ease); }
-    tbody tr:hover { background: var(--surface); }
+    tbody tr:hover { background: var(--surface); box-shadow: inset 2px 0 0 var(--accent); }
     .dim { color: var(--muted); }
-    .ok { color: var(--accent); font-weight: 600; font-size: 12px; }
-    .doc { color: var(--accent); font-weight: 600; font-size: 12px; }
+    /* El año en monoespaciada: cuatro cifras de ancho fijo se leen en columna,
+       que es justo lo que se hace al recorrer 252 filas ordenadas por fecha. */
+    .anio { font-family: var(--mono); font-size: 12px; font-variant-numeric: tabular-nums; }
+    /* Micro-pastillas en vez de enlaces subrayados. Son cuatro por fila y hasta
+       500 en la tabla: el subrayado por omision del navegador convertia la
+       columna de evidencia en una mancha. */
+    .ok, .doc { display: inline-block; font-size: 11px; font-weight: 600; text-decoration: none; padding: 1px 6px; border: 1px solid var(--line); border-radius: var(--radius-sm); color: var(--accent); }
+    .ok:hover, .doc:hover { border-color: currentColor; background: var(--card); }
     .docs { white-space: nowrap; }
-    .pmi { display: inline-block; margin-left: 7px; padding-left: 7px; border-left: 1px solid var(--line); color: var(--ges); }
+    .pmi { margin-left: 5px; color: var(--ges); }
     .note.tight { margin: -4px 0 12px; max-width: 76ch; }
     .nav { margin: 0 0 22px; font-size: 13.5px; }
     .nav a { color: var(--accent); font-weight: 600; text-decoration: none; }
@@ -343,7 +419,15 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
     .shot { overflow: hidden; }
     /* Más lenta que la tarjeta a propósito: el desfase entre el contenedor y su
        contenido es lo que da sensación de material y no de dos transiciones. */
-    .shot img { display: block; width: 100%; height: 116px; object-fit: cover; object-position: top center; border-radius: var(--radius) var(--radius) 0 0; transition: transform .25s var(--ease); }
+    /* Proporcion fija en CSS en vez de un alto de 116px: el recorte se adapta
+       al ancho de la columna y todas las tarjetas de una fila siguen midiendo
+       igual. Los atributos width/height del <img> se quedan con la medida real
+       de cada archivo —hay verticales A4 entre las destacadas— porque son los
+       que el navegador usa para reservar el hueco antes de que llegue el CSS.
+       `height: auto` no es decorativo: sin el, ese atributo cuenta como alto
+       explicito y `aspect-ratio` no llega a aplicarse; la tarjeta pasaba a
+       medir el alto del certificado entero, 495 o 842px. */
+    .shot img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top center; border-radius: var(--radius) var(--radius) 0 0; transition: transform .25s var(--ease); }
     .card.hi:hover .shot img { transform: scale(1.03); }
     .card h3 a { text-decoration: none; }
     .card h3 a:hover { text-decoration: underline; }
@@ -362,11 +446,38 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
     .cuenta { margin: 0 0 0 auto; font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
     .cuenta output { font-weight: 700; color: var(--fg); }
     .cuenta button { font: inherit; color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
-    .filtros[data-vacio='1'] + table tbody::after { content: 'Ningún certificado coincide con estos filtros.'; display: block; padding: 18px 10px; color: var(--muted); }
+    /* Hermano general, no adyacente. Entre el formulario y la tabla hay un <p>
+       —la nota del PMI, que se emite siempre porque hay 68 cursos con
+       acreditacion— asi que `.filtros + table` no encontraba nada y el aviso de
+       "sin resultados" no llegaba a pintarse nunca. La tabla se quedaba muda. */
+    .filtros[data-vacio='1'] ~ .tabla tbody::after { content: 'Ningún certificado coincide con estos filtros.'; display: block; padding: 18px 10px; color: var(--muted); }
     .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
     .exp { display: inline-block; margin-left: 6px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--alerta); border: 1px solid currentColor; border-radius: 4px; padding: 1px 4px; }
     .disclaimer { margin: 16px 0 0; max-width: 62ch; color: var(--muted); font-size: 12.5px; line-height: 1.5; }
-    @media (max-width: 640px) { .bar { grid-template-columns: 118px 1fr 44px 28px; font-size: 12.5px; } table { font-size: 12.5px; } .stats b { font-size: 30px; } }
+    /* Seis columnas no caben en un telefono, y no es cuestion de apretarlas:
+       el minimo lo fijan los propios encabezados —«Verificable» mide 132px a
+       11.5px en versalitas—, asi que ocultar la columna de area dejaba la tabla
+       en 571px sobre un ancho util de 350. Antes de esto desbordaba el
+       DOCUMENTO entero: la portada se desplazaba en horizontal completa, con
+       encabezado y tarjetas incluidos, en cualquier telefono.
+       El desplazamiento se confina a la tabla y solo en movil: en escritorio el
+       contenedor se queda en `visible` para no convertirse en contexto de
+       scroll, que es lo que dejaria de anclar el thead pegajoso.
+       Va con tabindex y nombre porque una region desplazable a la que no se
+       llega con el teclado es un fallo serio de WCAG (2.1.1), no un detalle. */
+    .tabla { overflow: visible; }
+    .tabla:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    /* 760px y no el corte de 640 del resto: el punto no es «movil», es el ancho
+       en que la tabla deja de caber. Su minimo es 696px —constante, lo fijan los
+       encabezados— mas los 40px de margen de .wrap, o sea 736px de ventana. Se
+       redondea a 760 porque la media query mide la ventana CON la barra de
+       desplazamiento y clientWidth sin ella: sin ese margen, entre 736 y 753 la
+       consulta dice que cabe y en pantalla no cabe. */
+    @media (max-width: 760px) { .tabla { overflow-x: auto; } }
+    @media (max-width: 640px) {
+      .bar { grid-template-columns: 118px 1fr 44px 28px; font-size: 12.5px; }
+      table { font-size: 12.5px; }
+    }
     @media (prefers-reduced-motion: reduce) {
       .card.hi, .shot img, tbody tr { transition: none; }
       .card.hi:hover { transform: none; }

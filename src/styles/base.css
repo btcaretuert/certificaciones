@@ -10,5 +10,19 @@ body {
 a { color: inherit; }
 h1, h2, h3 { line-height: 1.2; letter-spacing: -0.015em; margin: 0; text-wrap: balance; }
 /* Sin esto `code` cae en la monoespaciada por defecto del navegador: Courier
-   New en Windows, que es donde se va a abrir esto desde LinkedIn. */
-code, kbd, samp, pre { font-family: var(--mono); }
+   New en Windows, que es donde se va a abrir esto desde LinkedIn.
+   El cero barrado se pide aqui y no en cada uso: en un numero de credencial
+   —que es lo que casi siempre va dentro de un `code` en este sitio— distinguir
+   0 de O es la diferencia entre poder teclearlo y no. */
+code, kbd, samp, pre {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums slashed-zero;
+}
+
+/* Seleccion con el verde de marca en vez del azul del sistema.
+   Precision que conviene no confundir: esto NO toca el resaltado de Ctrl+F, que
+   lo pinta el navegador y no es estilizable. Lo que si cubre es la seleccion a
+   mano y el destino de un enlace con fragmento de texto, que es como se cita
+   una fila concreta de una tabla de 252. */
+::selection { background: var(--accent); color: var(--bg); }
+::target-text { background: var(--accent); color: var(--bg); }

@@ -42,6 +42,17 @@ export function techCoverage(certs: PublishedCert[]) {
     .sort((a, b) => b.weight - a.weight || b.n - a.n || (a.tech < b.tech ? -1 : 1));
 }
 
+/**
+ * Actividad por año, con los años vacios incluidos.
+ *
+ * Devolver solo los años con certificados convierte el histograma en una
+ * mentira de eje: entre 2014 y 2018 no hubo formacion registrada, y omitir los
+ * tres años intermedios los dibujaba pegados, como si 2014 y 2018 fueran
+ * consecutivos. En un grafico de actividad el hueco ES el dato.
+ *
+ * El relleno se limita al rango observado —del primer año al ultimo— y no toca
+ * ningun conteo: la suma de `years` sigue siendo certs.length menos `undated`.
+ */
 export function timeline(certs: PublishedCert[]) {
   const years = new Map<number, number>();
   let undated = 0;
@@ -50,7 +61,11 @@ export function timeline(certs: PublishedCert[]) {
     const y = Number(c.issued.slice(0, 4));
     years.set(y, (years.get(y) ?? 0) + 1);
   }
-  const sorted = [...years.entries()].sort((a, b) => a[0] - b[0]);
+  if (years.size === 0) return { years: [] as [number, number][], undated };
+  const desde = Math.min(...years.keys());
+  const hasta = Math.max(...years.keys());
+  const sorted: [number, number][] = [];
+  for (let y = desde; y <= hasta; y++) sorted.push([y, years.get(y) ?? 0]);
   return { years: sorted, undated };
 }
 
