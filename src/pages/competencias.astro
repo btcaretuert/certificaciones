@@ -1,9 +1,9 @@
 ---
-import Base from '../layouts/Base.astro';
-import { publishedCertificates, type PublishedCert } from '../lib/data';
-import { agruparPorCompetencia, type GrupoCompetencia } from '../lib/skills';
-import { hoursFloor } from '../lib/stats';
-import { urlCert, urlCompetencias, urlHome } from '../lib/urls';
+import Base from '@layouts/Base.astro';
+import { publishedCertificates, type PublishedCert } from '@lib/data';
+import { agruparPorCompetencia, type GrupoCompetencia } from '@lib/skills';
+import { hoursFloor } from '@lib/stats';
+import { urlCert, urlCompetencias, urlHome } from '@lib/urls';
 
 const certs = await publishedCertificates();
 const grupos = agruparPorCompetencia(certs);

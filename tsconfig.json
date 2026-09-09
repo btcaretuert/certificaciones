@@ -1,5 +1,25 @@
 {
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"]
+  "exclude": ["dist"],
+  "compilerOptions": {
+    // Alias de modulo. Existen para que un componente pueda vivir a cualquier
+    // profundidad sin arrastrar una cadena de ../../.. que hay que reescribir
+    // cada vez que el archivo se mueve.
+    //
+    // Se declara `paths` SIN `baseUrl`: el plugin de alias de Astro trata
+    // `paths` como suficiente, y agregar `baseUrl` genera ademas un alias
+    // atrapatodo que intercepta cualquier especificador desnudo y puede
+    // desviar la resolucion de node_modules.
+    //
+    // Vitest los hereda porque vitest.config.ts pasa por getViteConfig de
+    // Astro; Playwright lee `paths` del tsconfig por su cuenta.
+    "paths": {
+      "@lib/*": ["./src/lib/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@components/*": ["./src/components/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@i18n/*": ["./src/i18n/*"]
+    }
+  }
 }

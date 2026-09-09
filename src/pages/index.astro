@@ -1,9 +1,9 @@
 ---
-import Base from '../layouts/Base.astro';
-import { publishedCertificates, selectFeatured } from '../lib/data';
-import { countBy, hoursFloor, techCoverage, timeline, evidence } from '../lib/stats';
-import { urlCert, urlCompetencias, urlPdf, urlThumb } from '../lib/urls';
-import { AREA_LABEL, TYPE_LABEL } from '../lib/labels';
+import Base from '@layouts/Base.astro';
+import { publishedCertificates, selectFeatured } from '@lib/data';
+import { countBy, hoursFloor, techCoverage, timeline, evidence } from '@lib/stats';
+import { urlCert, urlCompetencias, urlPdf, urlThumb } from '@lib/urls';
+import { AREA_LABEL, TYPE_LABEL } from '@lib/labels';
 
 const certs = await publishedCertificates();
 const featured = selectFeatured(certs);

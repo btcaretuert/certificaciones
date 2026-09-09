@@ -1,9 +1,9 @@
 ---
-import Base from '../../layouts/Base.astro';
-import { publishedCertificates } from '../../lib/data';
-import { urlHome, urlCert, urlPdf, urlThumb } from '../../lib/urls';
-import { AREA_LABEL, TYPE_LABEL, KIND_LABEL } from '../../lib/labels';
-import { dimWebp } from '../../lib/webp';
+import Base from '@layouts/Base.astro';
+import { publishedCertificates } from '@lib/data';
+import { urlHome, urlCert, urlPdf, urlThumb } from '@lib/urls';
+import { AREA_LABEL, TYPE_LABEL, KIND_LABEL } from '@lib/labels';
+import { dimWebp } from '@lib/webp';
 
 export async function getStaticPaths() {
   const certs = await publishedCertificates();
