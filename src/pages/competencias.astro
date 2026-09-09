@@ -6,7 +6,7 @@ import { agruparPorCompetencia, type GrupoCompetencia } from '@lib/skills';
 import { hoursFloor } from '@lib/stats';
 import { fmtHoras } from '@lib/format';
 import { areaLabel } from '@lib/labels';
-import { urlCert, urlCompetencias, urlHome } from '@lib/urls';
+import { urlCert, urlCompetencias, urlHome, urlPdf } from '@lib/urls';
 
 const certs = await publishedCertificates();
 const grupos = agruparPorCompetencia(certs);
@@ -77,14 +77,18 @@ function ordenaCerts(lista: PublishedCert[]) {
   description={`Las ${usos.size} etiquetas que emitieron las plataformas, agrupadas en ${grupos.length} competencias y ordenadas por horas de contenido.`}
   path={urlCompetencias()}
 >
+  <div class="top-nav wrap">
+    <a href={urlHome()}>← Volver al catálogo completo</a>
+  </div>
+
   <header class="hero">
     <div class="wrap">
-      <p class="kicker"><a href={urlHome()}>Certificaciones</a> · Competencias</p>
+      <p class="kicker">Matriz de competencias · Evidencia por dominio</p>
       <h1>Competencias</h1>
       <ul class="stats">
-        <li><Icono nombre="grafo" px={20} /><b>{grupos.length}</b><span>competencias con evidencia</span></li>
-        <li><Icono nombre="capas" px={20} /><b>{certs.length}</b><span>certificados agrupados</span></li>
-        <li><Icono nombre="reloj" px={20} /><b>{hours}</b><span>horas de contenido</span></li>
+        <li class="eje"><b>{grupos.length}</b><span>competencias con evidencia</span><i>agrupadas desde {usos.size} etiquetas</i></li>
+        <li><b>{certs.length}</b><span>certificados agrupados</span><i>un certificado respalda varias</i></li>
+        <li><b>{hours} h</b><span>de contenido</span><i>excluye {itineraries} itinerarios</i></li>
       </ul>
       <div class="intro">
         <p>
@@ -109,19 +113,22 @@ function ordenaCerts(lista: PublishedCert[]) {
   <main class="wrap">
     <section aria-labelledby="resumen">
       <h2 id="resumen"><Icono nombre="grafo" px={17} />Áreas <small>ordenadas por horas de contenido, no por número de certificados</small></h2>
-      <div class="bars">
-        {areas.map((a) => (
-          <a class="bar" href={`#${a.area}`}>
-            <span class="lbl">{areaLabel(a.area)}</span>
-            <span class="track"><span class="fill" style={`width:${(a.horas / maxArea) * 100}%`}></span></span>
-            <span class="num">{a.horas} h</span>
-            <span class="num sub">{a.nCerts}</span>
-          </a>
-        ))}
+      <div class="panel">
+        <div class="bars">
+          {areas.map((a) => (
+            <a class="bar" href={`#${a.area}`}>
+              <span class="bar-meta">
+                <span class="lbl">{areaLabel(a.area)}</span>
+                <span class="bar-val">{a.horas} h · {a.nCerts} certs</span>
+              </span>
+              <span class="track"><span class="fill" style={`width:${(a.horas / maxArea) * 100}%`}></span></span>
+            </a>
+          ))}
+        </div>
+        <p class="pie">La cifra de la derecha es el número de certificados distintos del área. Lo
+          técnico son cursos largos y lo transversal cursos de una hora: ordenar por volumen
+          invierte la lectura.</p>
       </div>
-      <p class="note">La columna de la derecha es el número de certificados distintos del área. Lo
-        técnico son cursos largos y lo transversal cursos de una hora: ordenar por volumen invierte
-        la lectura.</p>
     </section>
 
     {areas.map((a) => (
@@ -137,22 +144,33 @@ function ordenaCerts(lista: PublishedCert[]) {
                 <span class="chev" aria-hidden="true"></span>
                 <span class="name">{g.es} <i>{g.en}</i></span>
                 <span class="track"><span class="fill" style={`width:${(g.horas / maxH) * 100}%`}></span></span>
-                <span class="num">{g.horas} h</span>
-                <span class="num sub">{g.certs.length}</span>
+                <span class="stats-pill">{g.certs.length} certs · {g.horas} h</span>
               </summary>
               <ul class="lista">
                 {ordenaCerts(g.certs).map((c) => (
-                  <li>
-                    <a href={urlCert(c.id)}>{c.title}</a>
-                    <span class="meta">
-                      {c.issuer}{c.issued && ` · ${c.issued.slice(0, 4)}`}
-                      {c.kind === 'itinerario'
-                        ? <span class="tag" title="Agrupa cursos que ya están en esta misma lista; sus horas no se suman">itinerario</span>
-                        : c.hours !== null && <span class="hrs">{fmtHoras(c.hours)}</span>}
-                      {c.expires && (c.expires < hoy
-                        ? <span class="tag exp" title={`Venció el ${c.expires}`}>vencida</span>
-                        : <span class="tag vig" title={`Vigente hasta el ${c.expires}`}>vigente {c.expires.slice(0, 4)}</span>)}
-                    </span>
+                  <li class="item">
+                    <div class="item-info">
+                      <a class="item-name" href={urlCert(c.id)}>{c.title}</a>
+                      <div class="item-meta">
+                        <span>{c.issuer}{c.issued && ` · ${c.issued.slice(0, 4)}`}</span>
+                        {c.kind === 'itinerario'
+                          ? <span class="tag" title="Agrupa cursos que ya están en esta misma lista; sus horas no se suman">itinerario</span>
+                          : c.hours !== null && <span class="tag">{fmtHoras(c.hours)}</span>}
+                        {c.expires && (c.expires < hoy
+                          ? <span class="estado exp" title={`Venció el ${c.expires}`}>vencida</span>
+                          : <span class="estado vig" title={`Vigente hasta el ${c.expires}`}>vigente {c.expires.slice(0, 4)}</span>)}
+                      </div>
+                    </div>
+                    <div class="item-acc">
+                      {c.pdf && (
+                        <a class="btn-doc" href={urlPdf(c.pdf)} target="_blank" rel="noopener noreferrer"
+                           title={`Copia del certificado de «${c.title}», alojada en este sitio`}>PDF</a>
+                      )}
+                      {c.verify_url && (
+                        <a class="btn-doc ver" href={c.verify_url} target="_blank" rel="noopener noreferrer"
+                           title={`Verificar «${c.title}» en el sitio de ${c.issuer}`}>emisor ↗</a>
+                      )}
+                    </div>
                   </li>
                 ))}
               </ul>
@@ -162,60 +180,91 @@ function ordenaCerts(lista: PublishedCert[]) {
       </section>
     ))}
 
-    <p class="foot"><a href={urlHome()}>← Volver al listado completo</a></p>
+    <p class="foot"><a href={urlHome()}>← Volver al catálogo completo</a></p>
   </main>
 
   <style>
-      /* Se queda con ambito: en global empataria con la regla .sub de la
-         portada y perderia por orden de hojas. */
-      .num.sub { font-size: 12px; }
-    .hero { background: var(--accent-soft); border-bottom: 1px solid var(--line); padding: 44px 0 32px; }
-    .kicker a { color: inherit; }
-    h1 { font-size: clamp(28px, 5vw, 40px); }
-    /* Retícula y tipografía en primitivas.css; aquí solo el margen. */
-    .stats { margin: 20px 0 0; }
-    .intro { margin-top: 18px; max-width: 74ch; }
-    .intro p { margin: 0 0 9px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    .top-nav { padding-top: 24px; font-family: var(--mono); font-size: 13px; }
+    .top-nav a { color: var(--accent); text-decoration: none; }
+    .top-nav a:hover { text-decoration: underline; }
+
+    .hero { border-bottom: 1px solid var(--line); padding: 26px 0 34px; margin-bottom: 40px; }
+    h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 700; margin-bottom: 20px; }
+    .stats { margin: 0; }
+    .intro { margin-top: 22px; max-width: 78ch; }
+    .intro p { margin: 0 0 10px; color: var(--muted); font-size: 13px; line-height: 1.65; }
     .intro p:last-child { margin-bottom: 0; }
     .intro i { font-style: italic; }
-    main { padding: 30px 0 70px; }
-    .area h2 { padding-bottom: 8px; border-bottom: 1px solid var(--line); }
-    .area h2 small { display: inline-block; font-variant-numeric: tabular-nums; }
-    .bar { display: grid; grid-template-columns: 210px 1fr 52px 34px; align-items: center; gap: 12px; font-size: 13.5px; text-decoration: none; padding: 3px 0; border-radius: 5px; }
-    .bar:hover .lbl { color: var(--accent); }
-    .note { color: var(--muted); font-size: 12.5px; margin-top: 10px; max-width: 76ch; }
 
-    .comps { display: grid; gap: 6px; }
-    .comp { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); }
-    .comp[open] { border-color: var(--accent); }
-    summary { display: grid; grid-template-columns: 14px 1fr 130px 52px 34px; align-items: center; gap: 12px; padding: 10px 14px; cursor: pointer; font-size: 13.5px; list-style: none; border-radius: var(--radius); }
+    main { padding-bottom: 72px; }
+    .pie { margin-top: 16px; font-size: 11.5px; line-height: 1.5; color: var(--dim); font-family: var(--mono); max-width: 80ch; }
+
+    /* Barras del resumen: enlaces de salto al ancla del area. */
+    .bar { display: block; text-decoration: none; padding: 2px 0; }
+    .bar:hover .lbl { color: var(--accent); }
+    .bar:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: var(--radius-xs); }
+
+    /* ── SECCIONES DE DOMINIO ─────────────────────────────────────────────── */
+    .area h2 { padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+    .comps { display: grid; gap: 12px; }
+    /* Cada competencia es una caja cerrada sobre si misma: cabecera con la
+       cifra a la derecha y, al abrirla, la lista de credenciales que la
+       respaldan. El borde es lo unico que cambia al abrirse; el fondo no, para
+       que el contraste de la lista no dependa del estado. */
+    .comp { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+    .comp[open] { border-color: var(--accent-borde); }
+    summary {
+      display: grid; grid-template-columns: 12px 1fr 150px auto; align-items: center; gap: 14px;
+      padding: 14px 18px; cursor: pointer; font-size: 13.5px; list-style: none;
+    }
     summary::-webkit-details-marker { display: none; }
+    .comp[open] summary { border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--bg) 40%, transparent); }
     summary:hover .name { color: var(--accent); }
     summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
     .chev { width: 0; height: 0; border-left: 5px solid currentColor; border-top: 4px solid transparent; border-bottom: 4px solid transparent; color: var(--muted); transition: transform .12s ease; }
     .comp[open] .chev { transform: rotate(90deg); }
-    .name { font-weight: 600; }
-    .name i { font-style: normal; font-weight: 400; color: var(--muted); font-size: 12px; margin-left: 7px; }
+    .name { font-weight: 600; color: var(--titulo); }
+    .name i { font-style: normal; font-weight: 400; color: var(--muted); font-size: 12px; margin-left: 8px; font-family: var(--mono); }
+    /* La cifra del dominio, como pastilla y no como dos columnas numericas:
+       con 63 competencias, dos columnas de ancho fijo dejaban la mitad del
+       espacio vacio en las que no llegan a tres digitos. */
+    .stats-pill {
+      font-family: var(--mono); font-size: 11.5px; color: var(--accent);
+      background: var(--accent-soft); border: 1px solid var(--accent-borde);
+      padding: 3px 9px; border-radius: var(--radius-xs); white-space: nowrap;
+    }
 
-    .lista { list-style: none; margin: 0; padding: 2px 14px 14px 40px; display: grid; gap: 7px; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); border-top: 1px solid var(--line); padding-top: 12px; }
-    .lista li { font-size: 13px; line-height: 1.4; }
-    .lista a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); }
-    .lista a:hover { color: var(--accent); border-bottom-color: currentColor; }
-    .meta { display: block; color: var(--muted); font-size: 11.5px; margin-top: 2px; }
-    .hrs { margin-left: 6px; font-variant-numeric: tabular-nums; }
-    .hrs::before { content: '· '; }
-    .tag { display: inline-block; margin-left: 6px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; border: 1px solid currentColor; border-radius: 4px; padding: 0 4px; }
-    .tag.exp { color: var(--alerta); }
-    .tag.vig { color: var(--accent); }
+    /* ── LISTA DE CREDENCIALES ────────────────────────────────────────────── */
+    .lista { margin: 0; padding: 0; }
+    .item {
+      display: flex; align-items: baseline; justify-content: space-between; gap: 20px;
+      padding: 12px 18px; border-bottom: 1px solid var(--line-suave);
+    }
+    .item:last-child { border-bottom: none; }
+    .item:hover { background: color-mix(in srgb, var(--fg) 2%, transparent); }
+    .item-info { flex: 1; min-width: 0; }
+    .item-name { font-size: 13.5px; font-weight: 500; color: var(--fg); text-decoration: none; }
+    .item-name:hover { color: var(--accent); text-decoration: underline; }
+    .item-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 5px; font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+    .item-meta .tag { font-size: 10.5px; padding: 1px 5px; color: var(--muted); }
+    .item-acc { display: flex; gap: 6px; flex: none; }
 
-    .foot { font-size: 13px; }
+    /* Estado de vigencia. Sin fondo tintado: --alerta sobre un tinte del 15%
+       cae a 4.35 y queda bajo el minimo AA. */
+    .estado { font-family: var(--mono); font-size: 10.5px; display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+    .estado.vig { color: var(--ok); }
+    .estado.exp { color: var(--alerta); }
+    .estado::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+
+    .foot { font-family: var(--mono); font-size: 13px; }
     .foot a { color: var(--accent); text-decoration: none; }
+    .foot a:hover { text-decoration: underline; }
 
     @media (max-width: 720px) {
-      .bar { grid-template-columns: 118px 1fr 44px 28px; font-size: 12.5px; }
-      summary { grid-template-columns: 14px 1fr 46px 30px; gap: 9px; }
+      summary { grid-template-columns: 12px 1fr auto; gap: 10px; padding: 12px 14px; }
       summary .track { display: none; }
-      .lista { padding-left: 20px; grid-template-columns: 1fr; }
+      .item { flex-direction: column; align-items: stretch; gap: 8px; padding: 12px 14px; }
+      .item-acc { justify-content: flex-start; }
     }
     @media (prefers-reduced-motion: reduce) { .chev { transition: none; } }
   </style>

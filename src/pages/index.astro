@@ -50,6 +50,10 @@ const tech = techCoverage(certs).filter((t) => t.n >= 2);
  * desincroniza el dia que entre una ficha nueva.
  */
 const techTop = tech.slice(0, 12);
+/** Las cuatro de mas peso se realzan dentro de la nube: son el nucleo del
+ *  stack, no una etiqueta mas de la misma tira. El corte sale del mismo orden
+ *  por peso, sin lista escrita a mano. */
+const NUCLEO = 4;
 const { hours, covered, total: nCursos, itineraries } = hoursFloor(certs);
 const hoy = new Date().toISOString().slice(0, 10);
 // 68 cursos otorgan ademas certificado del PMI: otro documento, con su propio
@@ -68,6 +72,9 @@ const heno = (c: (typeof certs)[number]) =>
     .join(' ').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
 const ev = evidence(certs);
 const maxYear = Math.max(1, ...years.map(([, n]) => n));
+/** El año de mas actividad se pinta con el verde de estado en vez del azul.
+ *  Es el unico dato del grafico que se lee sin comparar alturas. */
+const anioPico = years.reduce((a, b) => (b[1] > a[1] ? b : a), years[0] ?? [0, 0])[0];
 /**
  * Alto maximo de una columna del histograma, en px.
  *
@@ -79,27 +86,34 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
  * hacer. Los dos valores viven aqui y en la regla .col, que es donde se ven.
  */
 const ALTO_BARRA = 94;
+const pctDoc = Math.round((ev.withPdf / Math.max(1, certs.length)) * 100);
 ---
 <Base title="Alejandro Retuert — Certificaciones">
   <header class="hero">
     <div class="wrap">
-      <p class="kicker">Formación continua verificable</p>
+      <p class="kicker">Registro verificable · Ingeniería y arquitectura de datos</p>
       <h1>Alejandro Retuert</h1>
-      <p class="sub">Ingeniería y arquitectura de datos</p>
+      <p class="sub">Formación continua con el documento de cada credencial adjunto y comprobable.</p>
       <ul class="stats">
-        <li><Icono nombre="certificado" px={20} /><b>{certs.length}</b><span>certificados</span></li>
-        <li class="eje"><Icono nombre="escudo" px={20} /><b>{ev.official}</b><span>de organismo externo</span></li>
-        <li><Icono nombre="documento" px={20} /><b>{ev.withPdf}</b><span>con documento adjunto</span></li>
-        <li><Icono nombre="verificable" px={20} /><b>{ev.withVerifyUrl}</b><span>verificables en el emisor</span></li>
-        <li><Icono nombre="reloj" px={20} /><b>{hours}</b><span>horas de contenido <i>({covered} de {nCursos} con dato)</i></span></li>
+        <li>
+          <b>{certs.length}</b><span>certificados</span>
+          {anios.length > 0 && <i>{anios[anios.length - 1]}–{anios[0]}</i>}
+        </li>
+        <li class="eje"><b>{ev.official}</b><span>de organismo externo</span><i>examen o acreditación</i></li>
+        <li><b>{hours} h</b><span>de contenido</span><i>{covered} de {nCursos} con dato</i></li>
+        <li><b>{ev.withVerifyUrl}</b><span>verificables en el emisor</span><i>sin depender de este sitio</i></li>
+        <li><b>{ev.withPdf}</b><span>con documento adjunto</span><i>{pctDoc}% del total</i></li>
         {conPmi.length > 0 && (
-          <li><Icono nombre="pmi" px={20} /><b>{conPmi.length}</b><span>con certificado PMI <i>({pdu} PDU)</i></span></li>
+          <li><b>{conPmi.length}</b><span>con certificado PMI</span><i>{pdu} PDU</i></li>
         )}
       </ul>
-      <p class="stack">
-        <span class="vh">Tecnologías con más respaldo: </span>
-        {techTop.map((t) => <code>{t.tech} <b>{t.n}</b></code>)}
-      </p>
+      <div class="stack">
+        <span class="stack-h">Stack con respaldo:</span>
+        <span class="vh">Tecnologías con más certificados, ordenadas por peso: </span>
+        {techTop.map((t, i) => (
+          <code class:list={['tag', { core: i < NUCLEO }]}>{t.tech} <b>{t.n}</b></code>
+        ))}
+      </div>
       {itineraries > 0 && (
         <p class="disclaimer">
           Las horas excluyen {itineraries} itinerarios de LinkedIn Learning, que agrupan cursos
@@ -116,26 +130,32 @@ const ALTO_BARRA = 94;
     </nav>
     {featured.length > 0 && (
       <section>
-        <h2><Icono nombre="estrella" px={17} />Destacados</h2>
+        <h2><Icono nombre="estrella" px={17} />Credenciales destacadas <small>examen de organismo externo o curso de mayor peso</small></h2>
         <div class="grid feat">
           {featured.map((c) => (
-            <article class="card hi">
-              {c.thumb && (
-                <a class="shot" href={urlCert(c.id)}>
-                  <img src={urlThumb(c.thumb)} alt={`Certificado de ${c.title}`}
-                       width={dims.get(c.thumb)?.w ?? 640} height={dims.get(c.thumb)?.h ?? 495}
-                       loading="lazy" decoding="async" />
-                </a>
-              )}
-              <Chip variante={c.type}>{typeLabel(c.type)}</Chip>
-              <h3><a href={urlCert(c.id)}>{c.title}</a></h3>
-              <p class="meta">
-                {c.issuer}{c.issued && ` · ${c.issued.slice(0, 4)}`}
-                {c.expires && (c.expires < hoy
-                  ? <span class="exp">vencida {c.expires.slice(0, 4)}</span>
-                  : <span class="vig">vigente hasta {c.expires.slice(0, 4)}</span>)}
-              </p>
-              {c.tech.length > 0 && <p class="techs">{c.tech.map((t) => <code>{t}</code>)}</p>}
+            <article class="card">
+              <a class="shot" href={urlCert(c.id)}>
+                {c.thumb
+                  ? <img src={urlThumb(c.thumb)} alt={`Certificado de ${c.title}`}
+                         width={dims.get(c.thumb)?.w ?? 640} height={dims.get(c.thumb)?.h ?? 495}
+                         loading="lazy" decoding="async" />
+                  : <span class="sin-doc">Ver la ficha de {c.title}</span>}
+              </a>
+              <div class="card-body">
+                <div class="card-meta">
+                  <Chip variante={c.type}>{typeLabel(c.type)}</Chip>
+                  {c.expires
+                    ? (c.expires < hoy
+                        ? <span class="estado exp">vencida {c.expires.slice(0, 4)}</span>
+                        : <span class="estado vig">vigente hasta {c.expires.slice(0, 4)}</span>)
+                    : c.verify_url && <span class="estado vig">verificable</span>}
+                </div>
+                <h3><a href={urlCert(c.id)}>{c.title}</a></h3>
+                <p class="emisor">{c.issuer}{c.issued && ` · ${c.issued.slice(0, 4)}`}</p>
+                {c.tech.length > 0 && (
+                  <p class="techs">{c.tech.map((t) => <code>{t}</code>)}</p>
+                )}
+              </div>
             </article>
           ))}
         </div>
@@ -143,44 +163,57 @@ const ALTO_BARRA = 94;
     )}
 
     <section>
-      <h2><Icono nombre="grafo" px={17} />Por área <small>ordenado por horas de contenido, no por número de cursos</small></h2>
-      <div class="bars">
-        {areas.map((a) => (
-          <div class="bar">
-            <span class="lbl">{areaLabel(a.area)}</span>
-            <span class="track"><span class="fill" style={`width:${(a.h / maxH) * 100}%`}></span></span>
-            <span class="num">{a.h} h</span>
-            <span class="num sub">{a.n}</span>
+      <h2><Icono nombre="grafo" px={17} />Métricas de especialización <small>volumen por área y cadencia por año</small></h2>
+      <div class="insights">
+        <div class="panel">
+          <p class="panel-h">Horas por área <span>orden por horas, no por número de cursos</span></p>
+          <div class="bars">
+            {areas.map((a) => (
+              <div>
+                <div class="bar-meta">
+                  <span>{areaLabel(a.area)}</span>
+                  <span class="bar-val">{a.h} h · {a.n} certs</span>
+                </div>
+                <span class="track"><span class="fill" style={`width:${(a.h / maxH) * 100}%`}></span></span>
+              </div>
+            ))}
           </div>
-        ))}
+          <p class="pie">Lo técnico son cursos largos y lo transversal cursos de una hora: ordenar
+            por volumen invierte la lectura.</p>
+        </div>
+
+        <div class="panel">
+          <p class="panel-h">Cadencia por año <span>los años sin actividad se dibujan igual</span></p>
+          <div class="years">
+            {years.map(([y, n]) => (
+              <div class="yr" title={`${y}: ${n} certificados`}>
+                <span class="col">
+                  {n > 0 && <span class:list={['yn', { pico: y === anioPico }]}>{n}</span>}
+                  <span class:list={['yb', { pico: y === anioPico }]}
+                        style={`height:${Math.max(n > 0 ? 3 : 0, (n / maxYear) * ALTO_BARRA)}px`}></span>
+                </span>
+                <span class="yl">{String(y).slice(2)}</span>
+              </div>
+            ))}
+          </div>
+          <p class="pie">
+            {undated > 0 && <>{undated} certificados sin fecha registrada, fuera del gráfico. </>}
+            Un año sin certificados se dibuja como columna vacía: el hueco es parte de lo que el
+            gráfico dice.
+          </p>
+        </div>
       </div>
-      <p class="note">La columna de la derecha es el número de credenciales. Lo técnico son cursos
-        largos y lo transversal cursos de una hora: ordenar por volumen invierte la lectura.</p>
     </section>
 
     <section>
       <h2><Icono nombre="pipeline" px={17} />Tecnologías <small>con dos o más certificados</small></h2>
-      <p class="techs big">{tech.map((t) => <code>{t.tech} <b>{t.n}</b></code>)}</p>
-    </section>
-
-    <section>
-      <h2><Icono nombre="barras" px={17} />Actividad por año</h2>
-      <div class="years">
-        {years.map(([y, n]) => (
-          <div class="yr" title={`${y}: ${n} certificados`}>
-            <span class="col">
-              {n > 0 && <span class="yn">{n}</span>}
-              <span class="yb" style={`height:${Math.max(n > 0 ? 3 : 0, (n / maxYear) * ALTO_BARRA)}px`}></span>
-            </span>
-            <span class="yl">{String(y).slice(2)}</span>
-          </div>
-        ))}
+      <div class="panel">
+        <p class="techs big">{tech.map((t) => <code>{t.tech} <b>{t.n}</b></code>)}</p>
       </div>
-      {undated > 0 && <p class="note">{undated} certificados sin fecha registrada, no incluidos en el gráfico.</p>}
     </section>
 
     <section>
-      <h2><Icono nombre="tabla" px={17} />Todos los certificados <small>{certs.length}</small></h2>
+      <h2><Icono nombre="tabla" px={17} />Catálogo completo <small>{certs.length} credenciales · indexable con Ctrl + F</small></h2>
       <form class="filtros" id="filtros" role="search" aria-label="Filtrar certificados">
         <label class="f grow">
           <span>Buscar</span>
@@ -226,36 +259,42 @@ const ALTO_BARRA = 94;
       )}
       <div class="tabla" role="region" aria-label="Listado completo de certificados" tabindex="0">
         <table>
-          <thead><tr><th>Certificado</th><th>Área</th><th>Tipo</th><th>Año</th><th title="Copia del certificado, alojada en este sitio">Documento</th><th title="Comprobable en el sitio del emisor, sin depender de mí">Verificable</th></tr></thead>
+          <thead>
+            <tr>
+              <th class="c-tit">Certificado</th>
+              <th class="c-area">Área</th>
+              <th class="c-tipo">Tipo</th>
+              <th class="c-anio">Año</th>
+              <th class="c-ev" title="A la izquierda la copia alojada aquí; a la derecha lo que comprueba el emisor">Evidencia</th>
+            </tr>
+          </thead>
           <tbody>
             {certs.map((c, i) => (
               <tr class:list={{ par: i % 2 === 1 }}
                   data-area={c.area} data-tipo={c.type} data-anio={c.issued?.slice(0, 4) ?? ''}
                   data-verif={c.verify_url ? '1' : ''} data-pmi={c.pmi_pdf ? '1' : ''}
                   data-ofi={c.official ? '1' : ''} data-q={heno(c)}>
-                <td><a class="tt" href={urlCert(c.id)}>{c.title}</a></td>
-                <td class="dim">{areaLabel(c.area)}</td>
-                <td><Chip variante={c.type} sm>{typeLabel(c.type)}</Chip></td>
-                <td class="dim anio">
-                  {c.issued?.slice(0, 4) ?? '—'}
-                  {c.expires && c.expires < hoy && <span class="exp" title={`Vencio el ${c.expires}`}>vencida</span>}
+                <td class="c-tit"><a class="tt" href={urlCert(c.id)}>{c.title}</a></td>
+                <td class="c-area dim">{areaLabel(c.area)}</td>
+                <td class="c-tipo"><Chip variante={c.type} sm>{typeLabel(c.type)}</Chip></td>
+                <td class="c-anio">
+                  <span class="anio">{c.issued?.slice(0, 4) ?? '—'}</span>
+                  {c.expires && c.expires < hoy && <span class="estado exp" title={`Venció el ${c.expires}`}>vencida</span>}
                 </td>
-                <td class="docs">
+                <td class="c-ev">
                   {c.pdf
-                    ? <a class="doc" href={urlPdf(c.pdf)} target="_blank" rel="noopener noreferrer">PDF ↗</a>
+                    ? <a class="btn-doc" href={urlPdf(c.pdf)} target="_blank" rel="noopener noreferrer">PDF</a>
                     : <span class="dim">—</span>}
                   {c.pmi_pdf && (
-                    <a class="doc pmi" href={urlPdf(c.pmi_pdf)} target="_blank"
+                    <a class="btn-doc pmi" href={urlPdf(c.pmi_pdf)} target="_blank"
                        rel="noopener noreferrer"
-                       title={`Certificado del Project Management Institute${c.pmi_pdus ? ` · ${c.pmi_pdus} PDU` : ''}`}>PMI ↗</a>
+                       title={`Certificado del Project Management Institute${c.pmi_pdus ? ` · ${c.pmi_pdus} PDU` : ''}`}>PMI</a>
                   )}
-                </td>
-                <td class="docs">
-                  {c.verify_url
-                    ? <a class="ok" href={c.verify_url} rel="noopener noreferrer" target="_blank">emisor ↗</a>
-                    : <span class="dim">—</span>}
+                  {c.verify_url && (
+                    <a class="btn-doc ver" href={c.verify_url} rel="noopener noreferrer" target="_blank">emisor ↗</a>
+                  )}
                   {c.pmi_verify_url && (
-                    <a class="ok pmi" href={c.pmi_verify_url} rel="noopener noreferrer" target="_blank"
+                    <a class="btn-doc pmi" href={c.pmi_verify_url} rel="noopener noreferrer" target="_blank"
                        title="Verificar el certificado del PMI en LinkedIn">PMI ↗</a>
                   )}
                 </td>
@@ -326,53 +365,114 @@ const ALTO_BARRA = 94;
   </script>
 
   <style>
-      /* Se queda con ambito: en global empataria con la regla .sub de la
-         portada y perderia por orden de hojas. */
-      .num.sub { font-size: 12px; }
-    .hero { background: var(--accent-soft); border-bottom: 1px solid var(--line); padding: 48px 0 34px; }
-    h1 { font-size: clamp(30px, 5vw, 44px); }
-    .sub { margin: 4px 0 0; color: var(--muted); font-size: 17px; }
-    /* La retícula y la tipografía viven en primitivas.css: competencias.astro
-       declaraba esto mismo palabra por palabra. Aquí solo el margen. */
+    /* ── ENCABEZADO ───────────────────────────────────────────────────────── */
+    /* Sin banda de color de fondo: el encabezado se separa del cuerpo con una
+       regla de 1px, igual que el resto de las divisiones del sitio. Una banda
+       tintada sobre #0d1117 obliga a recalcular el contraste de --muted en una
+       superficie mas que solo existe aqui. */
+    .hero { border-bottom: 1px solid var(--line); padding: 44px 0 34px; margin-bottom: 40px; }
+    h1 { font-size: clamp(30px, 5vw, 42px); font-weight: 700; margin-bottom: 6px; }
+    .sub { color: var(--muted); font-size: 17px; max-width: 62ch; }
     .stats { margin: 26px 0 0; }
-    /* Sin opacity: atenuar --muted lo baja de 4.70 a 2.95 sobre --accent-soft. */
-    .stats i { font-style: normal; }
-    /* Tira de stack en el encabezado. Es lo primero que busca quien lee esto
-       para un puesto técnico y estaba en la quinta sección, bajo el pliegue. */
-    .stack { display: flex; flex-wrap: wrap; gap: 6px; margin: 22px 0 0; }
-    .stack code { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 3px 9px; font-size: 11.5px; }
-    /* El respaldo va atenuado: la etiqueta es lo que se busca, el numero es
-       contexto. En el tono del texto los doce numeros compiten con los doce
-       nombres y la tira deja de leerse de un golpe. */
-    .stack code b { color: var(--muted); font-weight: 600; }
-    main { padding: 34px 0 70px; }
-    section { margin-bottom: 42px; }
-    .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); }
-    .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 15px; overflow: hidden; }
-    .card.hi { transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease); }
-    .card.hi:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); }
-    .card h3 { font-size: 15px; margin: 8px 0 5px; }
-    .meta { margin: 0; color: var(--muted); font-size: 13px; }
-    .techs { margin: 9px 0 0; display: flex; flex-wrap: wrap; gap: 5px; }
-    .bar { display: grid; grid-template-columns: 210px 1fr 52px 34px; align-items: center; gap: 12px; font-size: 13.5px; }
-    .vig { display: inline-block; margin-left: 6px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); border: 1px solid currentColor; border-radius: 4px; padding: 1px 5px 1px 4px; }
-    /* Punto de estado. Va con content vacio y fondo, no con el caracter '●':
-       un bullet en el texto lo anuncian algunos lectores de pantalla como
-       "circulo negro" en medio de la fecha de vigencia. */
-    .vig::before { content: ''; display: inline-block; width: 5px; height: 5px; margin-right: 5px; border-radius: 50%; background: currentColor; vertical-align: .1em; }
+
+    /* Nube de stack: caja propia con etiqueta, no una tira de pastillas suelta.
+       Es lo primero que busca quien lee esto para un puesto tecnico. */
+    .stack {
+      display: flex; flex-wrap: wrap; gap: 7px; align-items: center;
+      margin: 22px 0 0; padding: 12px 14px;
+      background: color-mix(in srgb, var(--card) 55%, transparent);
+      border: 1px solid var(--line); border-radius: var(--radius);
+    }
+    .stack-h { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-right: 4px; }
+    /* Las cuatro de mas peso, realzadas. El tinte del acento las separa de las
+       otras ocho sin cambiarles el tamaño ni sacarlas de la misma tira. */
+    .tag.core { background: var(--accent-soft); border-color: var(--accent-borde); color: var(--accent); }
+    .disclaimer { margin: 16px 0 0; max-width: 68ch; color: var(--dim); font-size: 12.5px; line-height: 1.55; }
+
+    main { padding-bottom: 72px; }
+    .nav { margin: 0 0 24px; font-family: var(--mono); font-size: 13px; }
+    .nav a { color: var(--accent); text-decoration: none; }
+    .nav a:hover { text-decoration: underline; }
+
+    /* ── DESTACADOS ───────────────────────────────────────────────────────── */
+    .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+    .card {
+      display: flex; flex-direction: column; overflow: hidden;
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+      transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+    }
+    .card:hover { border-color: var(--accent-borde); transform: translateY(-2px); }
+    /* Marco del documento: alto fijo y `contain`, no un recorte. La miniatura
+       ES la evidencia; recortarla a 16/10 corta el sello y la firma, que es
+       justo lo que alguien mira. El alto fijo evita el salto de carga sin
+       necesidad de proporcion declarada, y los atributos width/height siguen
+       trayendo la medida real de cada archivo. */
+    .shot {
+      display: flex; align-items: center; justify-content: center;
+      height: 180px; padding: 8px; background: var(--frame);
+      border-bottom: 1px solid var(--line);
+    }
+    .shot img { width: 100%; height: 100%; object-fit: contain; }
+    .sin-doc { font-family: var(--mono); font-size: 12px; color: var(--dim); }
+    .card-body { display: flex; flex-direction: column; flex-grow: 1; padding: 15px 16px; }
+    .card-meta { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 9px; }
+    .card h3 { font-size: 16px; margin-bottom: 5px; }
+    .card h3 a { text-decoration: none; }
+    .card h3 a:hover { color: var(--accent); }
+    .emisor { color: var(--muted); font-size: 13px; }
+    .card .techs { margin-top: auto; padding-top: 13px; }
+
+    /* Estado de vigencia. Sin fondo tintado a proposito: en la variante
+       vencida, --alerta sobre un tinte del 15% cae a 4.35 y queda bajo AA. */
+    .estado { font-family: var(--mono); font-size: 11px; white-space: nowrap; display: inline-flex; align-items: center; gap: 5px; }
+    .estado.vig { color: var(--ok); }
+    .estado.exp { color: var(--alerta); }
+    .estado::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+    /* ── PANELES DE METRICAS ──────────────────────────────────────────────── */
+    .insights { display: grid; gap: 18px; grid-template-columns: 1fr 1fr; }
+    .panel-h span { display: block; font-weight: 400; font-size: 11.5px; color: var(--dim); font-family: var(--mono); margin-top: 3px; }
+    .pie { margin-top: 14px; font-size: 11.5px; line-height: 1.5; color: var(--dim); font-family: var(--mono); }
+    .techs.big { line-height: 1.5; }
+
     /* Histograma con base alineada y conteo pegado a su columna.
        La banda de 110px la fija .col y el alto util de la barra sale de
        ALTO_BARRA en el frontmatter: los 16px de diferencia son el sitio del
-       conteo, que se apoya sobre la barra en vez de flotar en una fila comun.
-       Los años sin certificados se dibujan como columna vacia y no se omiten:
-       el hueco entre 2014 y 2018 es parte de lo que el grafico dice. */
-    .years { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 5px; padding-top: 10px; }
+       conteo, que se apoya sobre la barra en vez de flotar en una fila comun. */
+    .years { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 5px; padding-top: 8px; border-bottom: 1px solid var(--line); }
     .yr { display: grid; grid-template-rows: 110px auto; justify-items: center; }
     .col { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; width: 100%; height: 110px; }
-    .yb { width: 100%; background: var(--accent); border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
-    .yl { font-size: 11px; color: var(--muted); margin-top: 5px; font-variant-numeric: tabular-nums; }
-    .yn { font-size: 10px; color: var(--muted); margin-bottom: 3px; font-variant-numeric: tabular-nums; }
-    .note { color: var(--muted); font-size: 12.5px; margin-top: 10px; }
+    .yb { width: 100%; background: var(--accent); border-radius: 2px 2px 0 0; opacity: .85; }
+    .yb.pico { background: var(--ok); opacity: 1; }
+    .yn { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-bottom: 3px; }
+    .yn.pico { color: var(--ok); }
+    .yl { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-top: 6px; }
+
+    /* ── FILTROS ──────────────────────────────────────────────────────────── */
+    .filtros { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px 16px; margin: 0 0 14px; padding: 14px 16px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); }
+    .f { display: flex; flex-direction: column; gap: 5px; font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; font-family: var(--mono); }
+    .f.grow { flex: 1 1 220px; }
+    .f input, .f select { font: inherit; font-family: inherit; font-size: 13px; text-transform: none; letter-spacing: 0; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 7px 9px; width: 100%; }
+    .f input:focus-visible, .f select:focus-visible, .toggles input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+    .toggles { display: flex; flex-wrap: wrap; gap: 4px 16px; border: 0; font-size: 12.5px; }
+    .toggles label { display: flex; align-items: center; gap: 7px; color: var(--muted); min-height: 24px; }
+    /* 24x24 es el minimo de WCAG 2.2 (2.5.8) para un objetivo tactil. El
+       checkbox por defecto mide 13px y en un telefono se falla al tocarlo. */
+    .toggles input[type='checkbox'] { width: 24px; height: 24px; margin: 0; accent-color: var(--accent); }
+    .cuenta { margin-left: auto; font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+    .cuenta output { font-weight: 700; color: var(--titulo); }
+    .cuenta button { font: inherit; color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
+    .note { color: var(--dim); font-size: 12.5px; line-height: 1.5; }
+    .note.tight { margin: -4px 0 14px; max-width: 78ch; }
+
+    /* ── TABLA DE 252 ─────────────────────────────────────────────────────── */
+    /* El contenedor NO lleva overflow en escritorio, y no es un descuido:
+       `overflow: hidden` lo convertiria en contexto de desplazamiento y el
+       thead pegajoso pasaria a anclarse a la caja en vez de a la ventana, o
+       sea dejaria de anclarse a nada. Las esquinas se redondean celda por
+       celda arriba y la ultima fila se queda sin regla inferior abajo. */
+    .tabla { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: visible; }
+    .tabla:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
     /* Encabezado fijo. Con 252 filas, en la 180 ya no se sabe que columna es
        cual, y el sitio no pagina a proposito: paginar rompe el Ctrl+F, que es
@@ -383,105 +483,64 @@ const ALTO_BARRA = 94;
        La regla inferior va como sombra interior y no como border-bottom: con
        border-collapse el borde lo pinta la tabla, no la celda, y una celda
        pegajosa lo deja atras al desplazarse. */
-    thead th { position: sticky; top: 0; z-index: 1; background: var(--bg); }
-    th { text-align: left; font-weight: 600; color: var(--muted); font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; padding: 9px 10px; box-shadow: inset 0 -1px 0 var(--line); }
-    /* 7px por fila: 252 filas a 9px son 500px de aire que obligan a un scroll
+    thead th { position: sticky; top: 0; z-index: 1; background: var(--card); box-shadow: inset 0 -2px 0 var(--line); }
+    th { text-align: left; font-family: var(--mono); font-weight: 500; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .05em; padding: 11px 14px; }
+    th:first-child { border-top-left-radius: var(--radius); }
+    th:last-child { border-top-right-radius: var(--radius); }
+    /* 7px por fila: 252 filas a 11px son 1000px de aire que obligan a un scroll
        de mas sin aportar legibilidad. */
-    td { padding: 7px 10px; border-bottom: 1px solid var(--line); }
-    /* Franja alterna como ayuda de escaneo horizontal: seis columnas y el ojo
+    td { padding: 7px 14px; border-bottom: 1px solid var(--line-suave); vertical-align: middle; }
+    tbody tr:last-child td { border-bottom: 0; }
+    /* Franja alterna como ayuda de escaneo horizontal: cinco columnas y el ojo
        salta de fila al llegar a la derecha. La clase la mantiene el script
        sobre las filas visibles; el valor esta separado del realce porque los
-       dos se pintan detras del mismo texto y --alerta ya viene justo. */
+       dos se pintan detras del mismo texto. */
     tbody tr.par { background: var(--cebra); }
-    /* Realce neutro, no --accent-soft: sobre ese fondo .dim cae a 2.95.
-       Sobre una fila ya rayada el cambio de fondo es de dos valores y no se ve,
+    tbody tr { transition: background-color var(--dur) var(--ease); }
+    /* Sobre una fila ya rayada el cambio de fondo es de dos valores y no se ve,
        asi que el realce lo cierra un riel de acento al borde izquierdo. Va como
        sombra interior: no se pinta detras de ningun texto y por tanto no toca
        el contraste de nada. */
-    tbody tr { transition: background-color var(--dur) var(--ease); }
     tbody tr:hover { background: var(--surface); box-shadow: inset 2px 0 0 var(--accent); }
-    .dim { color: var(--muted); }
+    .c-tit { width: 44%; }
+    .c-area { width: 20%; }
+    .c-tipo { width: 10%; }
+    .c-anio { width: 9%; }
+    .c-ev { width: 17%; text-align: right; white-space: nowrap; }
+    .c-ev .btn-doc + .btn-doc, .c-ev .btn-doc + .dim { margin-left: 5px; }
+    .btn-doc.ver { color: var(--accent); }
+    /* --dim (#7d8590) NO sirve aqui: sobre la franja alterna da 4.44 y sobre el
+       realce 4.17, los dos bajo el minimo AA. --muted da 5.38 y 5.06. */
+    .dim { color: var(--muted); font-size: 12.5px; }
+    .tt { text-decoration: none; font-weight: 500; }
+    .tt:hover { color: var(--accent); text-decoration: underline; }
     /* El año en monoespaciada: cuatro cifras de ancho fijo se leen en columna,
        que es justo lo que se hace al recorrer 252 filas ordenadas por fecha. */
-    .anio { font-family: var(--mono); font-size: 12px; font-variant-numeric: tabular-nums; }
-    /* Micro-pastillas en vez de enlaces subrayados. Son cuatro por fila y hasta
-       500 en la tabla: el subrayado por omision del navegador convertia la
-       columna de evidencia en una mancha. */
-    .ok, .doc { display: inline-block; font-size: 11px; font-weight: 600; text-decoration: none; padding: 1px 6px; border: 1px solid var(--line); border-radius: var(--radius-sm); color: var(--accent); }
-    .ok:hover, .doc:hover { border-color: currentColor; background: var(--card); }
-    .docs { white-space: nowrap; }
-    .pmi { margin-left: 5px; color: var(--ges); }
-    .note.tight { margin: -4px 0 12px; max-width: 76ch; }
-    .nav { margin: 0 0 22px; font-size: 13.5px; }
-    .nav a { color: var(--accent); font-weight: 600; text-decoration: none; }
-    .nav a:hover { text-decoration: underline; }
-    .shot { display: block; margin: -14px -15px 12px; border-bottom: 1px solid var(--line); background: var(--bg); }
-    .shot { overflow: hidden; }
-    /* Más lenta que la tarjeta a propósito: el desfase entre el contenedor y su
-       contenido es lo que da sensación de material y no de dos transiciones. */
-    /* Proporcion fija en CSS en vez de un alto de 116px: el recorte se adapta
-       al ancho de la columna y todas las tarjetas de una fila siguen midiendo
-       igual. Los atributos width/height del <img> se quedan con la medida real
-       de cada archivo —hay verticales A4 entre las destacadas— porque son los
-       que el navegador usa para reservar el hueco antes de que llegue el CSS.
-       `height: auto` no es decorativo: sin el, ese atributo cuenta como alto
-       explicito y `aspect-ratio` no llega a aplicarse; la tarjeta pasaba a
-       medir el alto del certificado entero, 495 o 842px. */
-    .shot img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top center; border-radius: var(--radius) var(--radius) 0 0; transition: transform .25s var(--ease); }
-    .card.hi:hover .shot img { transform: scale(1.03); }
-    .card h3 a { text-decoration: none; }
-    .card h3 a:hover { text-decoration: underline; }
-    .tt { text-decoration: none; }
-    .tt:hover { text-decoration: underline; color: var(--accent); }
-    .filtros { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px 14px; margin: 0 0 14px; padding: 13px 14px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-1); }
-    .f { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
-    .f.grow { flex: 1 1 210px; }
-    .f input, .f select { font: inherit; font-size: 13.5px; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 7px; padding: 6px 9px; width: 100%; }
-    .f input:focus-visible, .f select:focus-visible, .toggles input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
-    .toggles { display: flex; flex-wrap: wrap; gap: 4px 14px; border: 0; margin: 0; padding: 0; font-size: 12.5px; }
-    .toggles label { display: flex; align-items: center; gap: 7px; color: var(--muted); min-height: 24px; }
-    /* 24x24 es el minimo de WCAG 2.2 (2.5.8) para un objetivo tactil. El
-       checkbox por defecto mide 13px y en un telefono se falla al tocarlo. */
-    .toggles input[type='checkbox'] { width: 24px; height: 24px; margin: 0; accent-color: var(--accent); }
-    .cuenta { margin: 0 0 0 auto; font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
-    .cuenta output { font-weight: 700; color: var(--fg); }
-    .cuenta button { font: inherit; color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
+    .anio { font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+    .c-anio .estado { margin-left: 6px; font-size: 10px; }
     /* Hermano general, no adyacente. Entre el formulario y la tabla hay un <p>
        —la nota del PMI, que se emite siempre porque hay 68 cursos con
        acreditacion— asi que `.filtros + table` no encontraba nada y el aviso de
        "sin resultados" no llegaba a pintarse nunca. La tabla se quedaba muda. */
-    .filtros[data-vacio='1'] ~ .tabla tbody::after { content: 'Ningún certificado coincide con estos filtros.'; display: block; padding: 18px 10px; color: var(--muted); }
-    .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-    .exp { display: inline-block; margin-left: 6px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--alerta); border: 1px solid currentColor; border-radius: 4px; padding: 1px 4px; }
-    .disclaimer { margin: 16px 0 0; max-width: 62ch; color: var(--muted); font-size: 12.5px; line-height: 1.5; }
-    /* Seis columnas no caben en un telefono, y no es cuestion de apretarlas:
-       el minimo lo fijan los propios encabezados —«Verificable» mide 132px a
-       11.5px en versalitas—, asi que ocultar la columna de area dejaba la tabla
-       en 571px sobre un ancho util de 350. Antes de esto desbordaba el
-       DOCUMENTO entero: la portada se desplazaba en horizontal completa, con
-       encabezado y tarjetas incluidos, en cualquier telefono.
-       El desplazamiento se confina a la tabla y solo en movil: en escritorio el
-       contenedor se queda en `visible` para no convertirse en contexto de
-       scroll, que es lo que dejaria de anclar el thead pegajoso.
-       Va con tabindex y nombre porque una region desplazable a la que no se
-       llega con el teclado es un fallo serio de WCAG (2.1.1), no un detalle. */
-    .tabla { overflow: visible; }
-    .tabla:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .filtros[data-vacio='1'] ~ .tabla tbody::after { content: 'Ningún certificado coincide con estos filtros.'; display: block; padding: 20px 14px; color: var(--muted); }
+
+    @media (max-width: 900px) {
+      .insights { grid-template-columns: 1fr; }
+    }
     /* 760px y no el corte de 640 del resto: el punto no es «movil», es el ancho
-       en que la tabla deja de caber. Su minimo es 696px —constante, lo fijan los
-       encabezados— mas los 40px de margen de .wrap, o sea 736px de ventana. Se
-       redondea a 760 porque la media query mide la ventana CON la barra de
-       desplazamiento y clientWidth sin ella: sin ese margen, entre 736 y 753 la
-       consulta dice que cabe y en pantalla no cabe. */
-    @media (max-width: 760px) { .tabla { overflow-x: auto; } }
+       en que la tabla deja de caber. Se redondea al alza porque la media query
+       mide la ventana CON la barra de desplazamiento y clientWidth sin ella. */
+    @media (max-width: 760px) {
+      .tabla { overflow-x: auto; }
+      .c-area { display: none; }
+    }
     @media (max-width: 640px) {
-      .bar { grid-template-columns: 118px 1fr 44px 28px; font-size: 12.5px; }
       table { font-size: 12.5px; }
+      .stats { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
     }
     @media (prefers-reduced-motion: reduce) {
-      .card.hi, .shot img, tbody tr { transition: none; }
-      .card.hi:hover { transform: none; }
-      .card.hi:hover .shot img { transform: none; }
+      .card, tbody tr { transition: none; }
+      .card:hover { transform: none; }
     }
   </style>
 </Base>

@@ -2,21 +2,44 @@
 import Base from '@layouts/Base.astro';
 import Chip from '@components/Chip.astro';
 import Icono from '@components/Icono.astro';
-import { publishedCertificates } from '@lib/data';
-import { urlHome, urlCert, urlPdf, urlThumb } from '@lib/urls';
+import { publishedCertificates, type PublishedCert } from '@lib/data';
+import { urlHome, urlCert, urlCompetencias, urlPdf, urlThumb } from '@lib/urls';
 import { areaLabel, typeLabel, kindLabel, LEVEL_LABEL, LANG_LABEL } from '@lib/labels';
 import { fmtHoras } from '@lib/format';
 import { dimWebp } from '@lib/webp';
 
 export async function getStaticPaths() {
   const certs = await publishedCertificates();
+  /**
+   * Otras credenciales del mismo area, para el pie de la ficha.
+   *
+   * Se resuelve aqui y no en la plantilla porque getStaticPaths ya tiene el
+   * corpus completo en la mano: hacerlo dentro de la pagina obligaria a 252
+   * lecturas de la coleccion, una por ficha emitida.
+   *
+   * El orden es por peso y luego por fecha —que es el que trae `certs`—, asi
+   * que lo que aparece es lo mas fuerte del area y no lo que quedo primero por
+   * orden alfabetico.
+   */
+  const porArea = new Map<string, PublishedCert[]>();
+  for (const c of certs) {
+    if (!porArea.has(c.area)) porArea.set(c.area, []);
+    porArea.get(c.area)!.push(c);
+  }
   return certs.map((c) => ({
     params: { slug: c.id },
-    props: { c, dim: c.thumb ? dimWebp(c.thumb) : null },
+    props: {
+      c,
+      dim: c.thumb ? dimWebp(c.thumb) : null,
+      relacionados: (porArea.get(c.area) ?? [])
+        .filter((o) => o.id !== c.id)
+        .sort((a, b) => b.weight - a.weight)
+        .slice(0, 3),
+    },
   }));
 }
 
-const { c, dim } = Astro.props;
+const { c, dim, relacionados } = Astro.props;
 
 const hoy = new Date().toISOString().slice(0, 10);
 const vencida = !!c.expires && c.expires < hoy;
@@ -30,9 +53,6 @@ const fechaLarga = (iso: string) => {
   const [y, m, d] = iso.split('-');
   return `${Number(d)} de ${MESES[Number(m) - 1]} de ${y}`;
 };
-
-/** Bajo una hora se lee mejor en minutos: hay cursos de 0,19 h. */
-
 
 const recortar = (s: string, n: number) => {
   if (s.length <= n) return s;
@@ -79,6 +99,15 @@ const description = recortar(
   190,
 );
 
+/** Estado que encabeza el expediente. Una sola frase, con su color. */
+const estado = vencida
+  ? { clase: 'exp', txt: `Vencida el ${fechaLarga(c.expires!)}` }
+  : c.expires
+    ? { clase: 'vig', txt: `Vigente hasta el ${fechaLarga(c.expires)}` }
+    : c.verify_url
+      ? { clase: 'vig', txt: 'Verificable en el emisor' }
+      : { clase: 'neutro', txt: 'Documento emitido como evidencia' };
+
 /* JSON-LD. Se serializa con JSON.stringify y se escapan < > & : el esquema de
    contenido ya prohibe esos caracteres en los campos de texto, pero el que
    depende de dos capas para no romper el documento acaba rompiendolo. */
@@ -112,20 +141,83 @@ const ldJson = JSON.stringify(ld)
 >
   <script type="application/ld+json" slot="head" is:inline set:html={ldJson} />
 
-  <div class="detalle">
-    <header class="hero">
-      <div class="wrap">
-        <a class="crumb" href={urlHome()}>← Todos los certificados</a>
-        <p class="kicker">
-          {kindLabel(c.kind)}
-          {c.official && <span> · Organismo externo</span>}
-        </p>
+  <div class="ficha">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href={urlHome()}>Catálogo</a>
+      <span aria-hidden="true">/</span>
+      <a href={urlCompetencias()}>Competencias</a>
+      <span aria-hidden="true">/</span>
+      <span class="aqui">{areaLabel(c.area)}</span>
+    </nav>
+
+    <main class="detalle">
+      {/* COLUMNA IZQUIERDA: el documento y lo que se puede hacer con el */}
+      <div class="preview">
+        <div class="thumb-frame">
+          {c.thumb
+            ? <img
+                src={urlThumb(c.thumb)}
+                alt={`Primera página del certificado «${c.title}», emitido por ${c.issuer}`}
+                width={dim?.w ?? 640}
+                height={dim?.h ?? 495}
+                loading="eager"
+                decoding="async"
+              />
+            : <span class="sin-doc">Sin documento adjunto</span>}
+        </div>
+        <div class="acciones">
+          {c.verify_url ? (
+            <a class="btn primary" href={c.verify_url} target="_blank" rel="noopener noreferrer">
+              Verificar en {c.issuer} ↗
+            </a>
+          ) : (
+            <p class="sin-verif">
+              {c.issuer} no publica hoy una página de verificación en línea para este
+              certificado. La evidencia disponible es el documento emitido.
+            </p>
+          )}
+          {c.pdf && (
+            <a class="btn" href={urlPdf(c.pdf)} target="_blank" rel="noopener noreferrer">
+              Abrir el PDF del certificado ↗
+            </a>
+          )}
+
+          {c.pmi_pdf && (
+            <div class="bloque-pmi">
+              <p class="bloque-h"><Icono nombre="pmi" px={15} />Project Management Institute</p>
+              <p class="bloque-sub">
+                Otro documento del mismo curso, con su propio número
+                {c.pmi_pdus !== null && <> y {String(c.pmi_pdus).replace('.', ',')} PDU</>}
+              </p>
+              <a class="btn" href={urlPdf(c.pmi_pdf)} target="_blank" rel="noopener noreferrer">
+                Abrir el PDF del PMI ↗
+              </a>
+              {c.pmi_verify_url && (
+                <a class="btn" href={c.pmi_verify_url} target="_blank" rel="noopener noreferrer">
+                  Verificar el PMI ↗
+                </a>
+              )}
+            </div>
+          )}
+
+          <p class="nota-ev">
+            Dos cosas distintas: lo que comprueba el emisor sin depender de mí, y la copia del
+            documento que sirvo desde aquí.
+          </p>
+        </div>
+      </div>
+
+      {/* COLUMNA DERECHA: el expediente */}
+      <div class="info">
+        <p class:list={['estado', estado.clase]}>{estado.txt}</p>
         <h1>{c.title}</h1>
         <p class="emisor">
           {c.issuer}
           {mostrarPlataforma && <span> · {c.platform}</span>}
-          {c.issued && <span> · {fechaLarga(c.issued)}</span>}
+          <span> · {kindLabel(c.kind)}</span>
+          {c.official && <span class="oficial">Organismo externo</span>}
         </p>
+
         <ul class="chips">
           <li><Chip variante={c.type}>{typeLabel(c.type)}</Chip></li>
           <li><Chip>{areaLabel(c.area)}</Chip></li>
@@ -134,278 +226,244 @@ const ldJson = JSON.stringify(ld)
           {idiomaTxt && <li><Chip>{idiomaTxt}</Chip></li>}
         </ul>
 
-        {c.expires && (
-          vencida
-            ? (
-              <p class="banner vencida">
-                <b>Credencial vencida.</b> Venció el {fechaLarga(c.expires)}. Se mantiene
-                publicada porque el curso se hizo y el documento existe; lo que ya no está
-                vigente es la credencial.
-              </p>
-            )
-            : (
-              <p class="banner vigente">
-                <b>Credencial vigente</b> hasta el {fechaLarga(c.expires)}.
-              </p>
-            )
-        )}
-      </div>
-    </header>
-
-    <main class="wrap layout">
-      <article>
-        <section>
-          <h2>Evidencia</h2>
-          <p class="note tight">
-            Dos cosas distintas, y conviene no confundirlas: lo que puedes comprobar en el
-            sitio del emisor sin depender de mí, y la copia del documento que sirvo desde
-            aquí.
+        {vencida && (
+          <p class="nota-vencida">
+            Se mantiene publicada porque el curso se hizo y el documento existe: lo que ya no
+            está vigente es la credencial, no el hecho de haberla obtenido.
           </p>
-
-          <div class="ev-grid">
-            <div class="ev emisor">
-              <p class="ev-h"><Icono nombre="escudo" px={16} />{c.verify_url ? 'Verificable en el emisor' : 'Verificación en el emisor'}</p>
-              <p class="ev-sub">
-                {c.verify_url ? 'No depende de este sitio' : 'El emisor no la ofrece para este certificado'}
-              </p>
-              {c.verify_url ? (
-                <p class="ev-act">
-                  <a class="btn" href={c.verify_url} target="_blank" rel="noopener noreferrer">
-                    Comprobar en {c.issuer} ↗
-                  </a>
-                </p>
-              ) : (
-                <p class="ev-txt">
-                  {c.issuer} no publica hoy una página de verificación en línea para este
-                  certificado. La evidencia disponible es el documento emitido.
-                </p>
-              )}
-              {c.credential_id && (
-                <p class="ev-id">
-                  <span>Número de credencial</span>
-                  <code>{c.credential_id}</code>
-                </p>
-              )}
-            </div>
-
-            <div class="ev propio">
-              <p class="ev-h"><Icono nombre="documento" px={16} />Documento alojado aquí</p>
-              <p class="ev-sub">Copia servida desde este sitio, no una verificación</p>
-              {c.thumb && c.pdf && (
-                <a class="shot" href={urlPdf(c.pdf)} target="_blank" rel="noopener noreferrer">
-                  <img
-                    src={urlThumb(c.thumb)}
-                    alt={`Primera página del certificado «${c.title}», emitido por ${c.issuer}`}
-                    width={dim?.w ?? 640}
-                    height={dim?.h ?? 495}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-              )}
-              {c.pdf && (
-                <p class="ev-act">
-                  <a class="btn ghost" href={urlPdf(c.pdf)} target="_blank" rel="noopener noreferrer">
-                    Abrir el PDF ↗
-                  </a>
-                </p>
-              )}
-            </div>
-
-            {c.pmi_pdf && (
-              <div class="ev pmi">
-                <p class="ev-h"><Icono nombre="pmi" px={16} />Certificado del Project Management Institute</p>
-                <p class="ev-sub">
-                  Otro documento del mismo curso, con su propio número
-                  {c.pmi_pdus !== null && <> y {String(c.pmi_pdus).replace('.', ',')} PDU</>}
-                </p>
-                <p class="ev-act">
-                  <a class="btn ghost" href={urlPdf(c.pmi_pdf)} target="_blank" rel="noopener noreferrer">
-                    Abrir el PDF del PMI ↗
-                  </a>
-                  {c.pmi_verify_url && (
-                    <a class="btn" href={c.pmi_verify_url} target="_blank" rel="noopener noreferrer">
-                      Verificar el PMI ↗
-                    </a>
-                  )}
-                </p>
-                {c.pmi_credential_id && (
-                  <p class="ev-id">
-                    <span>Número de credencial PMI</span>
-                    <code>{c.pmi_credential_id}</code>
-                  </p>
-                )}
-              </div>
-            )}
-          </div>
-        </section>
-
-        {(resumen || objetivos.length > 0 || c.instructors.length > 0 || c.course_url || esItinerario || c.retired) && (
-          <section>
-            <h2>Sobre {esItinerario ? 'el itinerario' : 'el curso'}</h2>
-            {resumen && <p class="lead">{resumen}</p>}
-
-            {objetivos.length > 0 && (
-              <>
-                <h3>Lo que cubre</h3>
-                <ul class="objs">{objetivos.map((o) => <li>{o}</li>)}</ul>
-              </>
-            )}
-
-            {c.instructors.length > 0 && (
-              <p class="dato">
-                <span>{c.instructors.length === 1 ? 'Instructor' : 'Instructores'}</span>
-                {c.instructors.join(', ')}
-              </p>
-            )}
-
-            {c.course_url && (
-              <p class="dato">
-                <span>Ficha {esItinerario ? 'del itinerario' : 'del curso'}</span>
-                <a href={c.course_url} target="_blank" rel="noopener noreferrer">
-                  Verla en {c.platform} ↗
-                </a>
-              </p>
-            )}
-
-            {c.retired && (
-              <p class="note aviso">
-                El emisor retiró este {esItinerario ? 'itinerario' : 'curso'} de su catálogo,
-                así que el enlace anterior puede no resolver. La credencial emitida sigue siendo
-                válida: lo que se retira es el contenido, no el certificado.
-              </p>
-            )}
-
-            {esItinerario && (
-              <p class="note aviso">
-                Es un itinerario: agrupa cursos que también están listados por separado en
-                este sitio, cada uno con su propio certificado. Sus horas no se suman al total
-                del portafolio, para no contar dos veces el mismo contenido. La descripción
-                que publica el emisor para los itinerarios es un pie de tarjeta que solo
-                repite el título, así que no se reproduce aquí.
-              </p>
-            )}
-          </section>
         )}
 
-        {(c.skills.length > 0 || c.tech.length > 0) && (
-          <section>
-            <h2>Competencias y tecnologías</h2>
+        <table class="audit">
+          <caption class="vh">Datos de la credencial</caption>
+          <tbody>
+            <tr><th scope="row">Emisor</th><td>{c.issuer}</td></tr>
+            <tr><th scope="row">Plataforma</th><td>{c.platform}</td></tr>
+            <tr><th scope="row">Tipo</th><td>{kindLabel(c.kind)}{c.official && ' · organismo externo'}</td></tr>
+            <tr><th scope="row">Fecha de emisión</th><td class="mono">{c.issued ? fechaLarga(c.issued) : 'Sin registrar'}</td></tr>
+            {c.expires ? (
+              <tr>
+                <th scope="row">Vigencia</th>
+                <td class:list={['mono', vencida ? 'mal' : 'bien']}>
+                  {vencida ? 'Venció el ' : 'Hasta el '}{fechaLarga(c.expires)}
+                </td>
+              </tr>
+            ) : c.kind === 'certificacion' ? (
+              <tr><th scope="row">Vigencia</th><td>Sin fecha de vencimiento</td></tr>
+            ) : null}
+            {horasTxt && <tr><th scope="row">Duración</th><td class="mono">{horasTxt}</td></tr>}
+            {nivelTxt && <tr><th scope="row">Nivel</th><td>{nivelTxt}</td></tr>}
+            {idiomaTxt && <tr><th scope="row">Idioma</th><td>{idiomaTxt}</td></tr>}
+            <tr><th scope="row">Área</th><td>{areaLabel(c.area)}</td></tr>
+            {c.credential_id && (
+              <tr><th scope="row">ID de credencial</th><td><code class="id">{c.credential_id}</code></td></tr>
+            )}
+            {c.pmi_credential_id && (
+              <tr><th scope="row">ID de credencial PMI</th><td><code class="id">{c.pmi_credential_id}</code></td></tr>
+            )}
+          </tbody>
+        </table>
+
+        {(c.tech.length > 0 || c.skills.length > 0) && (
+          <div class="skills">
             {c.tech.length > 0 && (
-              <p class="techs">{c.tech.map((t) => <code>{t}</code>)}</p>
+              <>
+                <h2>Tecnologías</h2>
+                <p class="techs">{c.tech.map((t) => <code>{t}</code>)}</p>
+              </>
             )}
             {c.skills.length > 0 && (
               <>
+                <h2>Competencias declaradas por el emisor</h2>
                 <p class="techs suave">{c.skills.map((s) => <code>{s}</code>)}</p>
                 <p class="note">
-                  Las etiquetas de la segunda fila son las que emitió {c.issuer}, tal cual,
-                  sin normalizar. Las de arriba son la clasificación técnica de este sitio.
+                  Estas son las etiquetas que emitió {c.issuer}, tal cual, sin normalizar. Las de
+                  arriba son la clasificación técnica de este sitio.
                 </p>
               </>
             )}
-          </section>
+          </div>
         )}
-      </article>
-
-      <aside>
-        <h2 class="a-h">Ficha</h2>
-        <dl>
-          <dt>Emisor</dt><dd>{c.issuer}</dd>
-          <dt>Plataforma</dt><dd>{c.platform}</dd>
-          <dt>Tipo</dt><dd>{kindLabel(c.kind)}</dd>
-          <dt>Fecha de emisión</dt><dd>{c.issued ? fechaLarga(c.issued) : 'Sin registrar'}</dd>
-          {horasTxt && <><dt>Duración</dt><dd>{horasTxt}</dd></>}
-          {nivelTxt && <><dt>Nivel</dt><dd>{nivelTxt}</dd></>}
-          {idiomaTxt && <><dt>Idioma</dt><dd>{idiomaTxt}</dd></>}
-          {c.expires ? (
-            <>
-              <dt>Vigencia</dt>
-              <dd class={vencida ? 'mal' : 'bien'}>
-                {vencida ? 'Vencida el ' : 'Hasta el '}{fechaLarga(c.expires)}
-              </dd>
-            </>
-          ) : c.kind === 'certificacion' ? (
-            <><dt>Vigencia</dt><dd>Sin fecha de vencimiento</dd></>
-          ) : null}
-          <dt>Área</dt><dd>{areaLabel(c.area)}</dd>
-        </dl>
-        <p class="volver"><a href={urlHome()}>← Volver al listado completo</a></p>
-      </aside>
+      </div>
     </main>
+
+    {(resumen || objetivos.length > 0 || c.instructors.length > 0 || c.course_url || esItinerario || c.retired) && (
+      <section class="sobre">
+        <h2>Sobre {esItinerario ? 'el itinerario' : 'el curso'}</h2>
+        <div class="panel">
+          {resumen && <p class="lead">{resumen}</p>}
+
+          {objetivos.length > 0 && (
+            <>
+              <h3>Lo que cubre</h3>
+              <ul class="objs">{objetivos.map((o) => <li>{o}</li>)}</ul>
+            </>
+          )}
+
+          {c.instructors.length > 0 && (
+            <p class="dato">
+              <span>{c.instructors.length === 1 ? 'Instructor' : 'Instructores'}</span>
+              {c.instructors.join(', ')}
+            </p>
+          )}
+
+          {c.course_url && (
+            <p class="dato">
+              <span>Ficha {esItinerario ? 'del itinerario' : 'del curso'}</span>
+              <a class="enlace" href={c.course_url} target="_blank" rel="noopener noreferrer">
+                Verla en {c.platform} ↗
+              </a>
+            </p>
+          )}
+
+          {c.retired && (
+            <p class="aviso">
+              El emisor retiró este {esItinerario ? 'itinerario' : 'curso'} de su catálogo,
+              así que el enlace anterior puede no resolver. La credencial emitida sigue siendo
+              válida: lo que se retira es el contenido, no el certificado.
+            </p>
+          )}
+
+          {esItinerario && (
+            <p class="aviso">
+              Es un itinerario: agrupa cursos que también están listados por separado en
+              este sitio, cada uno con su propio certificado. Sus horas no se suman al total
+              del portafolio, para no contar dos veces el mismo contenido. La descripción
+              que publica el emisor para los itinerarios es un pie de tarjeta que solo
+              repite el título, así que no se reproduce aquí.
+            </p>
+          )}
+        </div>
+      </section>
+    )}
+
+    {relacionados.length > 0 && (
+      <section class="relacionados">
+        <h2>Otras credenciales en {areaLabel(c.area)}</h2>
+        <div class="rel-grid">
+          {relacionados.map((r) => (
+            <a class="rel" href={urlCert(r.id)}>
+              <span class="rel-name">{r.title}</span>
+              <span class="rel-meta">
+                {r.issuer}{r.issued && ` · ${r.issued.slice(0, 4)}`} · {typeLabel(r.type)}
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <p class="foot"><a href={urlHome()}>← Volver al catálogo completo</a></p>
   </div>
 
   <style>
-    .hero { background: var(--accent-soft); border-bottom: 1px solid var(--line); padding: 22px 0 30px; }
-    .crumb { display: inline-block; margin-bottom: 18px; font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; }
-    .crumb:hover { text-decoration: underline; }
-    .kicker { margin: 0 0 7px; color: var(--accent); font-size: 12px; letter-spacing: .09em; text-transform: uppercase; font-weight: 600; }
-    h1 { font-size: clamp(23px, 3.6vw, 33px); max-width: 30ch; }
-    .emisor { margin: 9px 0 0; font-size: 16px; }
+    .ficha { max-width: var(--maxw-ficha); margin: 0 auto; padding: 24px 24px 72px; }
+
+    .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12.5px; color: var(--muted); margin-bottom: 26px; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .aqui { color: var(--muted); }
+
+    /* Dos columnas: el documento a la izquierda con lo que se puede hacer con
+       el, y el expediente a la derecha. La izquierda es de ancho fijo porque
+       enmarca una imagen; la derecha es la que absorbe el ancho sobrante. */
+    .detalle { display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 24px; align-items: start; }
+
+    .preview { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+    /* `contain` y no `cover`: la miniatura ES la evidencia y un recorte corta
+       el sello y la firma, que es lo que alguien mira. Los atributos
+       width/height siguen trayendo la medida real de cada archivo, que es lo
+       que el navegador usa para reservar el hueco antes de que llegue el CSS. */
+    .thumb-frame { display: flex; align-items: center; justify-content: center; height: 250px; padding: 14px; background: var(--frame); border-bottom: 1px solid var(--line); }
+    .thumb-frame img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+    .sin-doc { font-family: var(--mono); font-size: 12px; color: var(--dim); }
+
+    .acciones { display: flex; flex-direction: column; gap: 9px; padding: 16px; }
+    .btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 9px 12px; border-radius: var(--radius-sm); font-family: var(--mono);
+      font-size: 12.5px; font-weight: 500; text-decoration: none; text-align: center;
+      background: var(--line-suave); color: var(--fg); border: 1px solid var(--line);
+      transition: border-color var(--dur) var(--ease), background-color var(--dur) var(--ease);
+    }
+    .btn:hover { border-color: var(--accent); }
+    /* El verde OSCURECE al pasar el cursor en vez de aclarar. El frame wire
+       aclaraba a #2ea043 y ahi el blanco cae a 3.37, bajo el minimo AA. */
+    .btn.primary { background: var(--boton); color: #fff; border-color: color-mix(in srgb, #fff 12%, transparent); }
+    .btn.primary:hover { background: var(--boton-hover); border-color: color-mix(in srgb, #fff 22%, transparent); }
+    .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .sin-verif { font-size: 12.5px; line-height: 1.55; color: var(--muted); border-left: 2px solid var(--line); padding-left: 11px; }
+    .nota-ev { font-family: var(--mono); font-size: 11px; line-height: 1.6; color: var(--dim); margin-top: 3px; }
+
+    .bloque-pmi { display: flex; flex-direction: column; gap: 8px; margin-top: 5px; padding-top: 14px; border-top: 1px solid var(--line); }
+    .bloque-h { display: flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 600; color: var(--ges); }
+    .bloque-sub { font-size: 11.5px; line-height: 1.5; color: var(--muted); }
+
+    /* ── EXPEDIENTE ───────────────────────────────────────────────────────── */
+    .info { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 26px; }
+    /* Estado sin fondo tintado: en la variante vencida, --alerta sobre un
+       tinte del 15% da 4.35 y queda bajo el minimo AA. */
+    .estado { display: inline-flex; align-items: center; gap: 7px; font-family: var(--mono); font-size: 12px; margin-bottom: 12px; }
+    .estado::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+    .estado.vig { color: var(--ok); }
+    .estado.exp { color: var(--alerta); }
+    .estado.neutro { color: var(--muted); }
+
+    h1 { font-size: clamp(22px, 3.4vw, 30px); font-weight: 700; margin-bottom: 8px; }
+    .emisor { font-size: 15px; color: var(--fg); }
     .emisor span { color: var(--muted); }
-    .chips { list-style: none; display: flex; flex-wrap: wrap; gap: 7px; padding: 0; margin: 16px 0 0; }
+    .emisor .oficial { display: inline-block; margin-left: 9px; font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); border: 1px solid var(--accent-borde); background: var(--accent-soft); border-radius: var(--radius-xs); padding: 1px 6px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 7px; margin: 16px 0 22px; }
+    .nota-vencida { margin-bottom: 22px; font-size: 12.5px; line-height: 1.6; color: var(--muted); border-left: 2px solid var(--alerta); padding-left: 12px; max-width: 74ch; }
 
-    .banner { margin: 18px 0 0; max-width: 68ch; font-size: 13.5px; line-height: 1.5; padding: 11px 13px; border-radius: var(--radius); border: 1px solid; background: var(--card); }
-    .banner.vencida { color: var(--alerta); border-color: var(--alerta); }
-    .banner.vigente { color: var(--accent); border-color: var(--accent); }
-    .banner b { letter-spacing: .01em; }
+    .audit { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+    .audit tr { border-bottom: 1px solid var(--line-suave); }
+    .audit tr:last-child { border-bottom: none; }
+    .audit th, .audit td { padding: 9px 0; vertical-align: top; text-align: left; }
+    .audit th { width: 38%; font-family: var(--mono); font-size: 12px; font-weight: 400; color: var(--muted); padding-right: 14px; }
+    .audit td { color: var(--fg); font-weight: 500; }
+    .audit td.mono { font-family: var(--mono); font-size: 12.5px; font-weight: 400; }
+    .audit td.mal { color: var(--alerta); }
+    .audit td.bien { color: var(--ok); }
+    /* El numero de credencial se teclea: monoespaciada, cero barrado y corte
+       por caracter, porque algunos son UUID de 36 y no caben en la columna. */
+    .id { display: inline-block; word-break: break-all; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-xs); padding: 4px 7px; font-size: 11.5px; line-height: 1.5; color: var(--accent); }
 
-    .layout { display: grid; gap: 34px; grid-template-columns: minmax(0, 1fr) 268px; align-items: start; padding: 32px 20px 70px; }
-    h2 { font-size: 19px; margin-bottom: 12px; }
-    h3 { font-size: 14px; margin: 20px 0 8px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
-
-    /* La distincion entre "lo comprueba el emisor" y "lo alojo yo" es el punto
-       de esta pagina, asi que se sostiene en tres señales a la vez: encabezado,
-       color de borde y la barra lateral. Solo el color no basta. */
-    .ev-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); }
-    .ev { background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--line); border-radius: var(--radius); padding: 13px 15px; }
-    .ev.emisor { border-left-color: var(--accent); }
-    .ev.propio { border-left-style: dashed; }
-    .ev.pmi { border-left-color: var(--ges); grid-column: 1 / -1; }
-    .ev-h { margin: 0; font-size: 13.5px; font-weight: 600; }
-    /* Hereda el color del encabezado por currentColor: --accent en emisor,
-       --ges en PMI. Es la cuarta señal, junto a encabezado, borde y barra. */
-    .ev-h .ico { margin-right: 6px; }
-    .ev.emisor .ev-h { color: var(--accent); }
-    .ev.pmi .ev-h { color: var(--ges); }
-    .ev-sub { margin: 2px 0 0; color: var(--muted); font-size: 12px; }
-    .ev-txt { margin: 10px 0 0; font-size: 13px; color: var(--muted); line-height: 1.5; }
-    .ev-act { margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
-    .btn { display: inline-block; font-size: 12.5px; font-weight: 600; text-decoration: none; padding: 6px 11px; border-radius: 6px; border: 1px solid var(--accent); color: var(--accent); }
-    .btn:hover { background: var(--accent-soft); }
-    .btn.ghost { border-color: var(--line); color: var(--fg); }
-    .ev-id { margin: 12px 0 0; font-size: 12px; }
-    .ev-id span { display: block; color: var(--muted); margin-bottom: 3px; }
-    .ev-id code { display: block; word-break: break-all; background: var(--bg); border: 1px solid var(--line); border-radius: 5px; padding: 5px 7px; font-size: 11.5px; line-height: 1.45; }
-    .shot { display: block; margin: 12px 0 0; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: var(--bg); }
-    .shot img { display: block; width: 100%; height: auto; }
-
-    .lead { margin: 0; max-width: 72ch; font-size: 15px; line-height: 1.6; }
-    .objs { margin: 0; padding-left: 20px; max-width: 76ch; }
-    .objs li { margin-bottom: 6px; font-size: 14px; line-height: 1.5; }
-    .dato { margin: 14px 0 0; font-size: 14px; }
-    .dato span { display: block; color: var(--muted); font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 2px; }
-    .note { color: var(--muted); font-size: 12.5px; line-height: 1.5; margin-top: 10px; max-width: 76ch; }
-    .note.tight { margin: -2px 0 14px; }
-    .note.aviso { border-left: 2px solid var(--line); padding-left: 11px; }
-
-    .techs { margin: 0; display: flex; flex-wrap: wrap; gap: 5px; }
-    .techs.suave { margin-top: 8px; }
+    .skills { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); }
+    .skills h2 { font-size: 12px; font-family: var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 500; margin-bottom: 10px; }
+    .skills h2 + p + h2 { margin-top: 18px; }
     .techs.suave code { color: var(--muted); border-style: dashed; }
+    .note { margin-top: 10px; font-size: 12px; line-height: 1.55; color: var(--dim); max-width: 76ch; }
 
-    aside { position: sticky; top: 20px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 15px 17px; }
-    .a-h { font-size: 12px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 12px; }
-    dl { margin: 0; font-size: 13.5px; }
-    dt { color: var(--muted); font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; }
-    dd { margin: 2px 0 11px; }
-    dd.mal { color: var(--alerta); font-weight: 600; }
-    dd.bien { color: var(--accent); font-weight: 600; }
-    .volver { margin: 4px 0 0; padding-top: 13px; border-top: 1px solid var(--line); font-size: 13px; }
-    .volver a { color: var(--accent); font-weight: 600; text-decoration: none; }
-    .volver a:hover { text-decoration: underline; }
+    /* ── SOBRE EL CURSO Y RELACIONADOS ────────────────────────────────────── */
+    .sobre, .relacionados { margin-top: 36px; }
+    .lead { font-size: 14.5px; line-height: 1.65; max-width: 74ch; color: var(--fg); }
+    h3 { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 500; margin: 22px 0 10px; }
+    /* El reset global quita las viñetas de toda lista; esta las quiere. */
+    .objs { list-style: disc; padding-left: 20px; max-width: 78ch; }
+    .objs li { margin-bottom: 7px; font-size: 13.5px; line-height: 1.55; }
+    .dato { margin-top: 18px; font-size: 13.5px; }
+    .dato span { display: block; font-family: var(--mono); color: var(--muted); font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 3px; }
+    .enlace { color: var(--accent); text-decoration: none; }
+    .enlace:hover { text-decoration: underline; }
+    .aviso { margin-top: 18px; font-size: 12.5px; line-height: 1.6; color: var(--muted); border-left: 2px solid var(--line); padding-left: 12px; max-width: 78ch; }
 
-    @media (max-width: 860px) {
-      .layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
-      aside { position: static; }
+    .rel-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .rel { display: block; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; text-decoration: none; transition: border-color var(--dur) var(--ease); }
+    .rel:hover { border-color: var(--accent-borde); }
+    .rel-name { display: block; font-size: 13.5px; font-weight: 500; color: var(--fg); margin-bottom: 5px; }
+    .rel:hover .rel-name { color: var(--accent); }
+    .rel-meta { display: block; font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+
+    .foot { margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 13px; }
+    .foot a { color: var(--accent); text-decoration: none; }
+    .foot a:hover { text-decoration: underline; }
+
+    @media (max-width: 820px) {
+      .detalle { grid-template-columns: minmax(0, 1fr); }
+      .info { padding: 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .btn, .rel { transition: none; }
     }
   </style>
 </Base>

@@ -1,68 +1,87 @@
 /* Valores del sistema de diseño.
  *
- * Vivian dentro de <style is:global> del layout. Estan aqui para que las hojas
- * que vienen puedan usarlos sin que el layout sea el unico dueño del sistema.
- * El orden de importacion importa: los tokens van primero.
+ * Paleta unica, oscura, tomada de los frame wire de input/gemini. No hay tema
+ * claro: el sitio declara `color-scheme: dark` y punto. Antes la paleta iba
+ * doble con light-dark(); mantener una rama clara que nadie iba a ver era
+ * pagar dos calibraciones de contraste por cada color.
  *
- * La paleta se declara UNA vez con light-dark(). Antes estaba escrita dos veces
- * palabra por palabra —una bajo prefers-color-scheme y otra bajo
- * [data-theme='dark']— porque no se puede meter una media query dentro de una
- * lista de selectores. Dos copias de trece variables es una deriva esperando
- * ocurrir: basta ajustar un color en un bloque y olvidar el otro para que el
- * tema del sistema y el tema elegido a mano dejen de coincidir.
+ * `color-scheme: dark` no es decorativo: sin el, los controles nativos —el
+ * <select> y el <input type=search> del filtrado, la barra de scroll de la
+ * tabla— se pintan claros sobre #0d1117.
  *
- * light-dark() necesita `color-scheme` declarado, y esta en Baseline desde
- * 2024. Es el unico requisito de navegador que el sitio no tenia antes. */
+ * REGLA DE CONTRASTE, medida y no supuesta (WCAG AA pide 4.5 en texto normal):
+ *
+ *   --dim  #7d8590  solo sobre --bg (5.07) y --card (4.64).
+ *                   Sobre franja alterna cae a 4.44 y sobre realce a 4.17.
+ *   --muted #8b949e sirve en TODAS las superficies del sitio: 6.15 sobre --bg,
+ *                   5.62 sobre --card, 5.38 sobre --cebra, 5.06 sobre
+ *                   --surface, 4.95 sobre --linea-suave.
+ *
+ * Por eso la tabla de 252 —la unica superficie que cambia de fondo bajo el
+ * cursor— usa --muted y nunca --dim. El frame wire usaba su equivalente de
+ * --dim ahi mismo, con 4.12: axe lo habria marcado como violacion seria.
+ */
 :root {
-  color-scheme: light dark;
+  color-scheme: dark;
 
-  --bg: light-dark(#fbfbfa, #14151a);
-  --fg: light-dark(#1a1a18, #e9e9e4);
-  --muted: light-dark(#6b6b63, #9a9a92);
-  --line: light-dark(#e4e4de, #2a2b33);
-  --card: light-dark(#ffffff, #1b1d24);
-  --accent: light-dark(#1f5f4f, #6fd3b8);
-  --accent-soft: light-dark(#e8f2ef, #16302a);
+  --bg: #0d1117;
+  --card: #161b22;
+  /* Fondo de las cajas que enmarcan un documento. Mas oscuro que la pagina a
+     proposito: el certificado es casi siempre blanco y necesita un marco que
+     lo separe de la tarjeta en vez de fundirse con ella. */
+  --frame: #090d12;
+
+  --line: #30363d;
+  /* Separador interno: filas de tabla, filas de lista, fondo de pastilla. Es
+     el borde que NO delimita una superficie, solo divide dentro de una. */
+  --line-suave: #21262d;
+
+  --fg: #e6edf3;
+  /* Los titulos van en blanco puro y el cuerpo en --fg. Es la jerarquia del
+     frame wire y es la que separa un h3 de su parrafo sin cambiar de tamaño. */
+  --titulo: #ffffff;
+  --muted: #8b949e;
+  --dim: #7d8590;
+
+  --accent: #58a6ff;
+  --accent-soft: rgba(88, 166, 255, .1);
+  --accent-borde: rgba(88, 166, 255, .3);
+
+  /* Verde de estado: vigencia, verificacion, tipo tecnico. */
+  --ok: #39d353;
+  --ok-soft: rgba(57, 211, 83, .15);
+  --ok-borde: rgba(57, 211, 83, .3);
+
+  /* Boton de accion primaria. El frame wire aclaraba a #2ea043 al pasar el
+     cursor y ahi el blanco cae a 3.37, bajo el minimo AA. Oscurece en vez de
+     aclarar: 4.63 en reposo, 5.08 con el cursor encima. */
+  --boton: #238636;
+  --boton-hover: #1a7f37;
 
   /* Los tres tipos de la taxonomia: tecnico, gestion y transversal. */
-  --tec: light-dark(#1f5f4f, #6fd3b8);
-  --ges: light-dark(#7a4b8a, #c39ad4);
-  --tra: light-dark(#8a6a2f, #d9b46a);
+  --tec: #39d353;
+  --ges: #bc8cff;
+  --tra: #d29922;
 
-  /* Aviso de credencial vencida. Es variable de tema y no un literal porque
-     #b4562a solo contrasta sobre fondo claro: en oscuro da 3.45. */
-  --alerta: light-dark(#b4562a, #e08a5a);
+  /* Aviso de credencial vencida. Se usa SIEMPRE sobre fondo transparente con
+     borde del mismo color: con un tinte de fondo al 15% cae a 4.35. */
+  --alerta: #f85149;
 
-  /* Franja alterna de la tabla de 252. Separado de --surface porque los dos
-     valores compiten por el mismo pixel: si la franja usara el del realce, al
-     pasar el cursor por una fila ya rayada no cambiaria nada. Y no puede
-     oscurecerse mas, por lo mismo que --surface no puede: el badge .exp de una
-     credencial vencida usa --alerta y sobre #f9f9f7 ya viene en 4.63.
-     Por eso el realce suma ademas un riel de acento al borde izquierdo, que no
-     se pinta detras de ningun texto y por tanto no toca ningun contraste. */
-  --cebra: light-dark(#f9f9f7, #17181d);
+  /* Franja alterna y realce de fila de la tabla de 252. Separados porque los
+     dos compiten por el mismo pixel: si la franja usara el valor del realce,
+     al pasar el cursor por una fila ya rayada no cambiaria nada. Por eso el
+     realce suma ademas un riel de acento al borde izquierdo, que no se pinta
+     detras de ningun texto y por tanto no toca ningun contraste. */
+  --cebra: #1a1f27;
+  --surface: #1f242d;
 
-  /* Realce de fila al pasar el cursor sobre la tabla de 252.
-     El valor lo fija el peor par, no el gusto: el badge .exp de una credencial
-     vencida usa --alerta, que ya viene justo (4.71 sobre --bg). Con #f5f5f2
-     caia a 4.47 y quedaba bajo el minimo AA, y axe no lo habria visto porque
-     evalua el estado en reposo, nunca el hover. Con #f7f7f4 da 4.54. */
-  --surface: light-dark(#f7f7f4, #191a20);
+  /* En oscuro una sombra sobre #0d1117 es casi invisible: la elevacion la
+     sostienen el borde y la diferencia --card / --bg. Estos valores solo la
+     acompañan, y por eso son negro puro y no un tinte de marca. */
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, .34);
+  --shadow-2: 0 2px 4px rgba(0, 0, 0, .34), 0 8px 20px rgba(0, 0, 0, .46);
 
-  /* La sombra lleva la componente cromatica de la marca en vez de negro puro:
-     un rgba(0,0,0,.07) sobre #fbfbfa lee gris sucio.
-     En oscuro una sombra sobre #14151a es casi invisible, asi que ahi la
-     elevacion la sostienen el borde y la diferencia --card / --bg; estos
-     valores solo la acompañan. */
-  --shadow-tint: light-dark(rgba(20, 44, 38, .07), rgba(0, 0, 0, .34));
-  --shadow-tint-fuerte: light-dark(rgba(20, 44, 38, .11), rgba(0, 0, 0, .46));
-  --shadow-1: 0 1px 2px var(--shadow-tint);
-  --shadow-2: 0 2px 4px var(--shadow-tint), 0 8px 20px var(--shadow-tint-fuerte);
-
-  /* La pila monoespaciada faltaba por completo: `code` heredaba la del
-     navegador, que en Windows es Courier New, justo en el parrafo que lleva
-     el stack tecnico.
-     Cascadia Code y DejaVu Sans Mono entran por delante de los fallbacks
+  /* Cascadia Code y DejaVu Sans Mono entran por delante de los fallbacks
      genericos porque son las dos unicas de la pila que traen cero barrado: sin
      ellas `slashed-zero` no tiene de donde salir en Windows ni en Linux. */
   --mono: ui-monospace, 'SF Mono', 'Cascadia Code', 'Cascadia Mono', Menlo,
@@ -71,12 +90,11 @@
   --dur: .15s;
   --ease: cubic-bezier(.2, .6, .3, 1);
 
-  --radius: 10px;
+  --radius: 8px;
   --radius-sm: 6px;
-  --maxw: 1120px;
+  --radius-xs: 4px;
+  --maxw: 1200px;
+  /* La ficha es una columna de lectura, no un tablero: el frame wire la deja
+     en 1000px y con 1200 la tabla de auditoria queda con lineas de 90ch. */
+  --maxw-ficha: 1000px;
 }
-
-/* El tema elegido a mano gana sobre el del sistema. Cambiar `color-scheme` es
-   cuanto hace falta: light-dark() lee de ahi. */
-:root[data-theme='light'] { color-scheme: light; }
-:root[data-theme='dark'] { color-scheme: dark; }

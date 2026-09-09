@@ -2,7 +2,7 @@
  *
  * Estaban repetidas en los <style> con ambito de cada pagina, asi que el CSS
  * viajaba tres veces y quien pasaba de la portada a una ficha se bajaba de
- * nuevo la mitad de lo que ya tenia: 951 B compartidos contra 19 KB por pagina.
+ * nuevo la mitad de lo que ya tenia.
  *
  * Van en una hoja global y no en el <style> de un componente porque
  * assetsInlineLimit esta en 0: cada hoja de componente compartida entre dos
@@ -18,71 +18,123 @@
  * regla .sub sin relacion, y al perder el ambito las dos quedan con la misma
  * especificidad. Vive en cada pagina y ahi se queda. */
 
-.kicker { margin: 0 0 6px; color: var(--accent); font-size: 12px; letter-spacing: .09em; text-transform: uppercase; font-weight: 600; }
+/* Linea de telemetria del encabezado. El punto va con `content` vacio y fondo,
+   no con el caracter '●': un bullet en el texto lo anuncian algunos lectores
+   de pantalla como "circulo negro" en medio de la frase. */
+.kicker {
+  margin: 0 0 10px; color: var(--ok); font-family: var(--mono); font-size: 12px;
+  letter-spacing: .08em; text-transform: uppercase; font-weight: 500;
+  display: flex; align-items: center; gap: 8px;
+}
+.kicker::before {
+  content: ''; flex: none; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--ok); box-shadow: 0 0 8px var(--ok);
+}
 
-/* Banda de indicadores, como panel de instrumentos y no como seis numeros
-   sueltos flotando sobre el encabezado.
-
-   Las reglas de 1px NO salen de `gap` sobre un fondo de color: con seis celdas
-   y `auto-fit`, cualquier ancho en que 6 no divida al numero de columnas deja
-   celdas vacias, y esas celdas pintarian el fondo del contenedor como bloques
-   solidos. Cada celda dibuja su propia regla superior e izquierda y se desplaza
-   -1px para solaparla con la vecina; las del primer borde caen bajo el borde
-   del contenedor y las recorta `overflow: hidden`. Asi funciona con 3 celdas
-   (competencias) y con 6 (portada) sin casos especiales. */
+/* Banda de indicadores, como panel de instrumentos y no como numeros sueltos
+   flotando sobre el encabezado. Reticula de tarjetas independientes, cada una
+   con cifra, etiqueta y una nota al pie que dice de donde sale la cifra. */
 .stats {
-  list-style: none; display: grid; gap: 0; padding: 0;
-  grid-template-columns: repeat(auto-fit, minmax(152px, 1fr));
-  background: var(--card); border: 1px solid var(--line);
-  border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-1);
+  display: grid; gap: 12px; padding: 0; margin: 0;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
 }
 .stats li {
-  display: grid; gap: 2px; align-content: start; padding: 13px 15px;
-  margin: -1px 0 0 -1px;
-  border-top: 1px solid var(--line); border-left: 1px solid var(--line);
+  display: flex; flex-direction: column; padding: 15px 16px;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--radius);
 }
-.stats .ico { color: var(--muted); margin-bottom: 3px; }
 /* Monoespaciada y cifras tabulares: el numero es un dato medido, no un titular.
-   Sin `slashed-zero` a proposito —aqui esta reservado a `code`, donde el cero
-   se teclea—: un 0 barrado a 29px lee como erratum, no como rigor. */
+   Sin `slashed-zero` a proposito —eso esta reservado a `code`, donde el cero se
+   teclea—: un 0 barrado a 30px lee como erratum, no como rigor. */
 .stats b {
-  display: block; font-family: var(--mono); font-size: 29px; font-weight: 600;
-  line-height: 1.1; letter-spacing: -.03em; font-variant-numeric: tabular-nums;
+  font-family: var(--mono); font-size: 30px; font-weight: 700; line-height: 1.1;
+  letter-spacing: -.02em; color: var(--titulo);
 }
-.stats span { color: var(--muted); font-size: 12px; line-height: 1.35; }
+.stats span {
+  color: var(--muted); font-size: 11.5px; text-transform: uppercase;
+  letter-spacing: .05em; margin-top: 6px; line-height: 1.3;
+}
+/* Nota al pie de la cifra: la salvedad que la hace comprobable —"excluye
+   itinerarios", "68 con aval oficial"— en vez de un asterisco a otro sitio. */
+.stats i { font-style: normal; font-family: var(--mono); font-size: 11.5px; color: var(--dim); margin-top: auto; padding-top: 4px; }
 
 /* Un indicador destacado dentro de la banda. Existe por una razon de lectura,
-   no de adorno: 252 certificados y 7 certificaciones de organismo externo son
-   dos cosas distintas, y en una fila de seis numeros iguales el ojo se queda
-   con el mas grande. El tinte y el acento en la cifra separan la credencial
-   auditada del curso de formacion continua sin decirlo con una nota al pie. */
-.stats li.eje { background: var(--accent-soft); }
-.stats li.eje b, .stats li.eje .ico { color: var(--accent); }
-h2 { font-size: 19px; margin-bottom: 14px; }
-h2 .ico { color: var(--muted); vertical-align: -.16em; margin-right: 7px; }
-h2 small { color: var(--muted); font-weight: 400; font-size: 13px; margin-left: 8px; }
-.chip { display: inline-block; font-size: 10.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; padding: 3px 7px; border-radius: 5px; border: 1px solid currentColor; }
+   no de adorno: 252 certificados y 7 de organismo externo son dos cosas
+   distintas, y en una fila de numeros iguales el ojo se queda con el mas
+   grande. El tinte y el acento en la cifra separan la credencial auditada del
+   curso de formacion continua sin decirlo con una nota al pie. */
+.stats li.eje {
+  border-color: var(--accent-borde);
+  background: linear-gradient(180deg, var(--accent-soft) 0%, var(--card) 100%);
+}
+.stats li.eje b { color: var(--accent); }
+
+h2 { font-size: 20px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+h2 .ico { color: var(--muted); align-self: center; }
+h2 small { color: var(--dim); font-weight: 400; font-size: 12.5px; font-family: var(--mono); letter-spacing: 0; }
+
+/* Pastilla de taxonomia. El color lo pone la variante y el fondo y el borde
+   salen de el con color-mix, asi que una variante nueva es una linea de color
+   y no tres. El tinte va al 15% y el borde al 30%, medido: por debajo el
+   relleno no se ve y por encima el texto pierde contraste. */
+.chip {
+  display: inline-block; font-family: var(--mono); font-size: 10.5px; font-weight: 500;
+  letter-spacing: .04em; text-transform: uppercase; padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  border: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+  background: color-mix(in srgb, currentColor 15%, transparent);
+}
 .chip.tecnico { color: var(--tec); }
 .chip.gestion { color: var(--ges); }
 .chip.transversal { color: var(--tra); }
-/* Variantes que vivian con ambito en la portada y en la ficha. Suben aqui
-   porque el componente que las usa ya no lleva el cid de ninguna pagina. */
 .chip.neutro { color: var(--muted); }
-.chip.sm { font-size: 10px; padding: 2px 5px; }
-.techs code { background: var(--bg); border: 1px solid var(--line); border-radius: 5px; padding: 2px 7px; font-size: 12px; }
-/* El conteo que acompaña a la tecnologia es contexto, no la etiqueta: en el
-   tono del texto competia con el nombre, que es lo que se busca. */
-.techs code b { color: var(--muted); font-weight: 600; }
-.bars { display: grid; gap: 7px; }
-.track { background: var(--line); border-radius: var(--radius-sm); height: 9px; overflow: hidden; }
-.fill { display: block; height: 100%; background: var(--accent); border-radius: var(--radius-sm); }
-.num { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
-section { margin-bottom: 38px; }
+.chip.sm { font-size: 10px; padding: 1px 5px; }
+
+/* Etiqueta monoespaciada: tecnologias, competencias emitidas, metadatos de una
+   fila. Es la unidad que mas se repite en el sitio. */
+.techs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
+.techs code, .tag {
+  font-family: var(--mono); font-size: 12px; line-height: 1.5;
+  background: var(--line-suave); border: 1px solid #363b42; color: var(--fg);
+  padding: 2px 7px; border-radius: var(--radius-xs);
+}
+/* El conteo que acompaña a la tecnologia va en el acento: es la cifra que se
+   busca cuando alguien mira si hay respaldo real detras de la etiqueta. */
+.techs code b, .tag b { color: var(--accent); font-weight: 600; }
+
+/* Barras horizontales. La etiqueta y la cifra van ARRIBA de la barra y no en
+   columnas a los lados: con el nombre a la izquierda, la barra empieza en un
+   punto distinto segun lo largo que sea el nombre en cada idioma, y en un
+   telefono la columna del nombre se come la mitad del ancho. */
+.bars { display: grid; gap: 14px; }
+.bar-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 13.5px; margin-bottom: 6px; }
+.bar-val { font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+.track { display: block; background: var(--line-suave); border-radius: 3px; height: 6px; overflow: hidden; }
+.fill { display: block; height: 100%; background: var(--accent); border-radius: 3px; }
+.num { font-family: var(--mono); color: var(--muted); }
+
+/* Panel de datos: la caja que envuelve un grafico o un bloque de metricas. */
+.panel { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
+.panel-h { font-size: 14px; font-weight: 600; color: var(--titulo); margin: 0 0 14px; }
+
+/* Boton compacto de documento: PDF, emisor, PMI. Son hasta cinco por fila y
+   cerca de 700 en la tabla completa; el subrayado por omision del navegador
+   convertia esa columna en una mancha. */
+.btn-doc {
+  display: inline-flex; align-items: center; font-family: var(--mono); font-size: 11.5px;
+  padding: 2px 7px; background: var(--line-suave); border: 1px solid var(--line);
+  color: var(--muted); border-radius: var(--radius-xs); text-decoration: none;
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+.btn-doc:hover { color: var(--titulo); border-color: var(--accent); }
+.btn-doc.pmi { color: var(--ges); }
+.btn-doc:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+section { margin-bottom: 44px; }
 
 /* Glifos. El tamaño llega por atributo desde el componente. */
 .ico { flex: none; vertical-align: -.14em; }
 
-/* Superficies elevadas de las tres plantillas. Hasta ahora todo el relieve era
-   un borde de 1px. En oscuro la sombra apenas se ve sobre #14151a: alli la
-   elevacion la sostienen el borde y la diferencia --card / --bg. */
-.card, .comp, .ev { box-shadow: var(--shadow-1); }
+@media (prefers-reduced-motion: reduce) {
+  .btn-doc { transition: none; }
+}
