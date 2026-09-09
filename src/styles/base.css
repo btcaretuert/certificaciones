@@ -1,0 +1,11 @@
+/* Reset y elementos de documento. Todo lo demas tiene ambito de pagina o de
+ * componente. */
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 15px/1.55 ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+a { color: inherit; }
+h1, h2, h3 { line-height: 1.2; letter-spacing: -0.015em; margin: 0; }

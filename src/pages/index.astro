@@ -262,37 +262,26 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
   </script>
 
   <style>
+      /* Se queda con ambito: en global empataria con la regla .sub de la
+         portada y perderia por orden de hojas. */
+      .num.sub { font-size: 12px; }
     .hero { background: var(--accent-soft); border-bottom: 1px solid var(--line); padding: 48px 0 34px; }
-    .kicker { margin: 0 0 6px; color: var(--accent); font-size: 12px; letter-spacing: .09em; text-transform: uppercase; font-weight: 600; }
     h1 { font-size: clamp(30px, 5vw, 44px); }
     .sub { margin: 4px 0 0; color: var(--muted); font-size: 17px; }
     .stats { list-style: none; display: flex; flex-wrap: wrap; gap: 30px; padding: 0; margin: 26px 0 0; }
-    .stats b { display: block; font-size: 27px; font-variant-numeric: tabular-nums; }
-    .stats span { color: var(--muted); font-size: 13px; }
     /* Sin opacity: atenuar --muted lo baja de 4.70 a 2.95 sobre --accent-soft. */
     .stats i { font-style: normal; }
     main { padding: 34px 0 70px; }
     section { margin-bottom: 42px; }
-    h2 { font-size: 19px; margin-bottom: 14px; }
-    h2 small { color: var(--muted); font-weight: 400; font-size: 13px; margin-left: 8px; }
     .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); }
     .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 15px; }
     .card h3 { font-size: 15px; margin: 8px 0 5px; }
     .meta { margin: 0; color: var(--muted); font-size: 13px; }
-    .chip { display: inline-block; font-size: 10.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; padding: 3px 7px; border-radius: 5px; border: 1px solid currentColor; }
-    .chip.tecnico { color: var(--tec); } .chip.gestion { color: var(--ges); } .chip.transversal { color: var(--tra); }
     .chip.sm { font-size: 10px; padding: 2px 5px; }
     .techs { margin: 9px 0 0; display: flex; flex-wrap: wrap; gap: 5px; }
-    .techs code { background: var(--bg); border: 1px solid var(--line); border-radius: 5px; padding: 2px 7px; font-size: 12px; }
     .techs.big code b { color: var(--accent); }
-    .bars { display: grid; gap: 7px; }
     .bar { display: grid; grid-template-columns: 210px 1fr 52px 34px; align-items: center; gap: 12px; font-size: 13.5px; }
-    /* Sin opacity: la atenuacion dejaba el contraste en 2.30 (exige 4.5). */
-    .num.sub { font-size: 12px; }
     .vig { display: inline-block; margin-left: 6px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); border: 1px solid currentColor; border-radius: 4px; padding: 1px 4px; }
-    .track { background: var(--line); border-radius: 4px; height: 9px; overflow: hidden; }
-    .fill { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
-    .num { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
     .years { display: flex; align-items: flex-end; gap: 5px; height: 130px; padding-top: 10px; }
     .yr { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; }
     .yb { width: 100%; background: var(--accent); border-radius: 3px 3px 0 0; min-height: 3px; }

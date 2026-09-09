@@ -1,0 +1,35 @@
+/* Primitivas: las reglas que mas de una pagina declaraba palabra por palabra.
+ *
+ * Estaban repetidas en los <style> con ambito de cada pagina, asi que el CSS
+ * viajaba tres veces y quien pasaba de la portada a una ficha se bajaba de
+ * nuevo la mitad de lo que ya tenia: 951 B compartidos contra 19 KB por pagina.
+ *
+ * Van en una hoja global y no en el <style> de un componente porque
+ * assetsInlineLimit esta en 0: cada hoja de componente compartida entre dos
+ * paginas se convierte en un chunk propio y en una peticion bloqueante mas, y
+ * el sitio esta hoy en 100 de rendimiento con exactamente dos hojas por pagina.
+ *
+ * Al perder el ambito pierden tambien un punto de especificidad —de
+ * .chip[data-astro-cid-x] a .chip—, asi que una pagina que necesite desviarse
+ * puede hacerlo con su propia regla sin recurrir a !important. La hoja
+ * compartida se importa primero, por lo mismo.
+ *
+ * Por esa misma razon .num.sub NO esta aqui: la portada declara ademas una
+ * regla .sub sin relacion, y al perder el ambito las dos quedan con la misma
+ * especificidad. Vive en cada pagina y ahi se queda. */
+
+.kicker { margin: 0 0 6px; color: var(--accent); font-size: 12px; letter-spacing: .09em; text-transform: uppercase; font-weight: 600; }
+.stats b { display: block; font-size: 27px; font-variant-numeric: tabular-nums; }
+.stats span { color: var(--muted); font-size: 13px; }
+h2 { font-size: 19px; margin-bottom: 14px; }
+h2 small { color: var(--muted); font-weight: 400; font-size: 13px; margin-left: 8px; }
+.chip { display: inline-block; font-size: 10.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; padding: 3px 7px; border-radius: 5px; border: 1px solid currentColor; }
+.chip.tecnico { color: var(--tec); }
+.chip.gestion { color: var(--ges); }
+.chip.transversal { color: var(--tra); }
+.techs code { background: var(--bg); border: 1px solid var(--line); border-radius: 5px; padding: 2px 7px; font-size: 12px; }
+.bars { display: grid; gap: 7px; }
+.track { background: var(--line); border-radius: 4px; height: 9px; overflow: hidden; }
+.fill { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
+.num { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+section { margin-bottom: 38px; }

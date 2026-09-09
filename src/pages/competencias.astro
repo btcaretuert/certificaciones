@@ -165,32 +165,22 @@ function ordenaCerts(lista: PublishedCert[]) {
   </main>
 
   <style>
+      /* Se queda con ambito: en global empataria con la regla .sub de la
+         portada y perderia por orden de hojas. */
+      .num.sub { font-size: 12px; }
     .hero { background: var(--accent-soft); border-bottom: 1px solid var(--line); padding: 44px 0 32px; }
-    .kicker { margin: 0 0 6px; color: var(--accent); font-size: 12px; letter-spacing: .09em; text-transform: uppercase; font-weight: 600; }
     .kicker a { color: inherit; }
     h1 { font-size: clamp(28px, 5vw, 40px); }
     .stats { list-style: none; display: flex; flex-wrap: wrap; gap: 30px; padding: 0; margin: 20px 0 0; }
-    .stats b { display: block; font-size: 27px; font-variant-numeric: tabular-nums; }
-    .stats span { color: var(--muted); font-size: 13px; }
     .intro { margin-top: 18px; max-width: 74ch; }
     .intro p { margin: 0 0 9px; color: var(--muted); font-size: 13px; line-height: 1.6; }
     .intro p:last-child { margin-bottom: 0; }
     .intro i { font-style: italic; }
     main { padding: 30px 0 70px; }
-    section { margin-bottom: 38px; }
-    h2 { font-size: 19px; margin-bottom: 14px; }
-    h2 small { color: var(--muted); font-weight: 400; font-size: 13px; margin-left: 8px; }
     .area h2 { padding-bottom: 8px; border-bottom: 1px solid var(--line); }
     .area h2 small { display: inline-block; font-variant-numeric: tabular-nums; }
-
-    .bars { display: grid; gap: 7px; }
     .bar { display: grid; grid-template-columns: 210px 1fr 52px 34px; align-items: center; gap: 12px; font-size: 13.5px; text-decoration: none; padding: 3px 0; border-radius: 5px; }
     .bar:hover .lbl { color: var(--accent); }
-    .track { background: var(--line); border-radius: 4px; height: 9px; overflow: hidden; }
-    .fill { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
-    .num { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
-    /* Sin opacity: la atenuacion dejaba el contraste en 2.30 (exige 4.5). */
-    .num.sub { font-size: 12px; }
     .note { color: var(--muted); font-size: 12.5px; margin-top: 10px; max-width: 76ch; }
 
     .comps { display: grid; gap: 6px; }

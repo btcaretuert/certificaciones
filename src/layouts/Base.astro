@@ -1,5 +1,8 @@
 ---
 import { urlAsset } from '@lib/urls';
+import '@styles/tokens.css';
+import '@styles/base.css';
+import '@styles/primitivas.css';
 
 interface Props {
   title: string;
@@ -64,38 +67,6 @@ const imgAbs = image && Astro.site ? new URL(image, Astro.site).href : undefined
     {imgAbs && <meta property="og:image" content={imgAbs} />}
     <meta name="twitter:card" content={imgAbs ? 'summary_large_image' : 'summary'} />
     <slot name="head" />
-    <style is:global>
-      :root {
-        --bg: #fbfbfa; --fg: #1a1a18; --muted: #6b6b63; --line: #e4e4de;
-        --card: #ffffff; --accent: #1f5f4f; --accent-soft: #e8f2ef;
-        --tec: #1f5f4f; --ges: #7a4b8a; --tra: #8a6a2f;
-        /* Aviso de credencial vencida. Es variable de tema y no un literal
-           porque #b4562a solo contrasta sobre fondo claro: en oscuro da 3.45. */
-        --alerta: #b4562a;
-        --radius: 10px; --maxw: 1120px;
-      }
-      :root:not([data-theme='light']) {
-        @media (prefers-color-scheme: dark) {
-          --bg: #14151a; --fg: #e9e9e4; --muted: #9a9a92; --line: #2a2b33;
-          --card: #1b1d24; --accent: #6fd3b8; --accent-soft: #16302a;
-          --tec: #6fd3b8; --ges: #c39ad4; --tra: #d9b46a; --alerta: #e08a5a;
-        }
-      }
-      :root[data-theme='dark'] {
-        --bg: #14151a; --fg: #e9e9e4; --muted: #9a9a92; --line: #2a2b33;
-        --card: #1b1d24; --accent: #6fd3b8; --accent-soft: #16302a;
-        --tec: #6fd3b8; --ges: #c39ad4; --tra: #d9b46a; --alerta: #e08a5a;
-      }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0; background: var(--bg); color: var(--fg);
-        font: 15px/1.55 ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-        -webkit-font-smoothing: antialiased;
-      }
-      .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
-      a { color: inherit; }
-      h1, h2, h3 { line-height: 1.2; letter-spacing: -0.015em; margin: 0; }
-    </style>
   </head>
   <body>
     <slot />

@@ -1,0 +1,43 @@
+/* Valores del sistema de diseño.
+ *
+ * Vivian dentro de <style is:global> del layout. Estan aqui para que las hojas
+ * que vienen puedan usarlos sin que el layout sea el unico dueño del sistema.
+ * El orden de importacion importa: los tokens van primero.
+ *
+ * La paleta se declara UNA vez con light-dark(). Antes estaba escrita dos veces
+ * palabra por palabra —una bajo prefers-color-scheme y otra bajo
+ * [data-theme='dark']— porque no se puede meter una media query dentro de una
+ * lista de selectores. Dos copias de trece variables es una deriva esperando
+ * ocurrir: basta ajustar un color en un bloque y olvidar el otro para que el
+ * tema del sistema y el tema elegido a mano dejen de coincidir.
+ *
+ * light-dark() necesita `color-scheme` declarado, y esta en Baseline desde
+ * 2024. Es el unico requisito de navegador que el sitio no tenia antes. */
+:root {
+  color-scheme: light dark;
+
+  --bg: light-dark(#fbfbfa, #14151a);
+  --fg: light-dark(#1a1a18, #e9e9e4);
+  --muted: light-dark(#6b6b63, #9a9a92);
+  --line: light-dark(#e4e4de, #2a2b33);
+  --card: light-dark(#ffffff, #1b1d24);
+  --accent: light-dark(#1f5f4f, #6fd3b8);
+  --accent-soft: light-dark(#e8f2ef, #16302a);
+
+  /* Los tres tipos de la taxonomia: tecnico, gestion y transversal. */
+  --tec: light-dark(#1f5f4f, #6fd3b8);
+  --ges: light-dark(#7a4b8a, #c39ad4);
+  --tra: light-dark(#8a6a2f, #d9b46a);
+
+  /* Aviso de credencial vencida. Es variable de tema y no un literal porque
+     #b4562a solo contrasta sobre fondo claro: en oscuro da 3.45. */
+  --alerta: light-dark(#b4562a, #e08a5a);
+
+  --radius: 10px;
+  --maxw: 1120px;
+}
+
+/* El tema elegido a mano gana sobre el del sistema. Cambiar `color-scheme` es
+   cuanto hace falta: light-dark() lee de ahi. */
+:root[data-theme='light'] { color-scheme: light; }
+:root[data-theme='dark'] { color-scheme: dark; }
