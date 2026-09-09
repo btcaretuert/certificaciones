@@ -29,6 +29,9 @@ significa inaccesible en el repositorio, no solamente ausente del listado.
 | `src/lib/classify/curation.js` | El criterio de exclusión. Dice por qué se ocultó lo que se ocultó, que revela más que la lista misma. `prebuild` copia una plantilla vacía si falta. |
 | `public/admin/` en `dist/` | El panel se retira del artefacto: empaqueta ese mismo criterio. |
 
+Cómo se mueve a otra máquina lo que git no lleva, y cómo comprobar que
+llegó completo: [`docs/sincronizacion.md`](docs/sincronizacion.md).
+
 Consecuencia: un clon puede compilar el HTML y correr las pruebas
 (`SIN_ACTIVOS=1`), pero **el artefacto publicable solo se construye donde están
 los activos**. CI valida estructura; no publica.
