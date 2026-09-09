@@ -19,9 +19,18 @@
  * especificidad. Vive en cada pagina y ahi se queda. */
 
 .kicker { margin: 0 0 6px; color: var(--accent); font-size: 12px; letter-spacing: .09em; text-transform: uppercase; font-weight: 600; }
-.stats b { display: block; font-size: 27px; font-variant-numeric: tabular-nums; }
-.stats span { color: var(--muted); font-size: 13px; }
+
+/* Banda de indicadores. Era una fila flex con gap de 30px y las dos paginas la
+   declaraban igual; en grilla los numeros quedan alineados en columna en vez de
+   caer donde los deje el ajuste de linea, que es lo que se lee de un vistazo.
+   Cada pagina se queda solo con su margen superior. */
+.stats { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(158px, 1fr)); gap: 18px 14px; padding: 0; }
+.stats li { display: grid; gap: 2px; align-content: start; }
+.stats .ico { color: var(--data); margin-bottom: 3px; }
+.stats b { display: block; font-size: 36px; line-height: 1.05; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stats span { color: var(--muted); font-size: 12.5px; line-height: 1.35; }
 h2 { font-size: 19px; margin-bottom: 14px; }
+h2 .ico { color: var(--data); vertical-align: -.16em; margin-right: 7px; }
 h2 small { color: var(--muted); font-weight: 400; font-size: 13px; margin-left: 8px; }
 .chip { display: inline-block; font-size: 10.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; padding: 3px 7px; border-radius: 5px; border: 1px solid currentColor; }
 .chip.tecnico { color: var(--tec); }
@@ -33,7 +42,18 @@ h2 small { color: var(--muted); font-weight: 400; font-size: 13px; margin-left: 
 .chip.sm { font-size: 10px; padding: 2px 5px; }
 .techs code { background: var(--bg); border: 1px solid var(--line); border-radius: 5px; padding: 2px 7px; font-size: 12px; }
 .bars { display: grid; gap: 7px; }
-.track { background: var(--line); border-radius: 4px; height: 9px; overflow: hidden; }
-.fill { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
+.track { background: var(--line); border-radius: var(--radius-sm); height: 9px; overflow: hidden; }
+/* La magnitud va en --data y no en --accent: el verde ya significa "tipo
+   tecnico" en los chips, y con los dos en el mismo color una barra larga se
+   lee como una categoria. Contra --line da 5.88 en claro y 7.32 en oscuro. */
+.fill { display: block; height: 100%; background: var(--data); border-radius: var(--radius-sm); }
 .num { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
 section { margin-bottom: 38px; }
+
+/* Glifos. El tamaño llega por atributo desde el componente. */
+.ico { flex: none; vertical-align: -.14em; }
+
+/* Superficies elevadas de las tres plantillas. Hasta ahora todo el relieve era
+   un borde de 1px. En oscuro la sombra apenas se ve sobre #14151a: alli la
+   elevacion la sostienen el borde y la diferencia --card / --bg. */
+.card, .comp, .ev { box-shadow: var(--shadow-1); }

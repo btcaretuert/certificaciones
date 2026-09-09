@@ -1,6 +1,7 @@
 ---
 import Base from '@layouts/Base.astro';
 import Chip from '@components/Chip.astro';
+import Icono from '@components/Icono.astro';
 import { publishedCertificates } from '@lib/data';
 import { urlHome, urlCert, urlPdf, urlThumb } from '@lib/urls';
 import { areaLabel, typeLabel, kindLabel, LEVEL_LABEL, LANG_LABEL } from '@lib/labels';
@@ -163,7 +164,7 @@ const ldJson = JSON.stringify(ld)
 
           <div class="ev-grid">
             <div class="ev emisor">
-              <p class="ev-h">{c.verify_url ? 'Verificable en el emisor' : 'Verificación en el emisor'}</p>
+              <p class="ev-h"><Icono nombre="escudo" px={16} />{c.verify_url ? 'Verificable en el emisor' : 'Verificación en el emisor'}</p>
               <p class="ev-sub">
                 {c.verify_url ? 'No depende de este sitio' : 'El emisor no la ofrece para este certificado'}
               </p>
@@ -188,7 +189,7 @@ const ldJson = JSON.stringify(ld)
             </div>
 
             <div class="ev propio">
-              <p class="ev-h">Documento alojado aquí</p>
+              <p class="ev-h"><Icono nombre="documento" px={16} />Documento alojado aquí</p>
               <p class="ev-sub">Copia servida desde este sitio, no una verificación</p>
               {c.thumb && c.pdf && (
                 <a class="shot" href={urlPdf(c.pdf)} target="_blank" rel="noopener noreferrer">
@@ -213,7 +214,7 @@ const ldJson = JSON.stringify(ld)
 
             {c.pmi_pdf && (
               <div class="ev pmi">
-                <p class="ev-h">Certificado del Project Management Institute</p>
+                <p class="ev-h"><Icono nombre="pmi" px={16} />Certificado del Project Management Institute</p>
                 <p class="ev-sub">
                   Otro documento del mismo curso, con su propio número
                   {c.pmi_pdus !== null && <> y {String(c.pmi_pdus).replace('.', ',')} PDU</>}
@@ -361,6 +362,9 @@ const ldJson = JSON.stringify(ld)
     .ev.propio { border-left-style: dashed; }
     .ev.pmi { border-left-color: var(--ges); grid-column: 1 / -1; }
     .ev-h { margin: 0; font-size: 13.5px; font-weight: 600; }
+    /* Hereda el color del encabezado por currentColor: --accent en emisor,
+       --ges en PMI. Es la cuarta señal, junto a encabezado, borde y barra. */
+    .ev-h .ico { margin-right: 6px; }
     .ev.emisor .ev-h { color: var(--accent); }
     .ev.pmi .ev-h { color: var(--ges); }
     .ev-sub { margin: 2px 0 0; color: var(--muted); font-size: 12px; }

@@ -8,4 +8,7 @@ body {
 }
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 a { color: inherit; }
-h1, h2, h3 { line-height: 1.2; letter-spacing: -0.015em; margin: 0; }
+h1, h2, h3 { line-height: 1.2; letter-spacing: -0.015em; margin: 0; text-wrap: balance; }
+/* Sin esto `code` cae en la monoespaciada por defecto del navegador: Courier
+   New en Windows, que es donde se va a abrir esto desde LinkedIn. */
+code, kbd, samp, pre { font-family: var(--mono); }

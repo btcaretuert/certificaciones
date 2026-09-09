@@ -1,6 +1,7 @@
 ---
 import Base from '@layouts/Base.astro';
 import Chip from '@components/Chip.astro';
+import Icono from '@components/Icono.astro';
 import { publishedCertificates, selectFeatured } from '@lib/data';
 import { dimWebp } from '@lib/webp';
 import { countBy, hoursFloor, techCoverage, timeline, evidence } from '@lib/stats';
@@ -34,6 +35,11 @@ const areas = countBy(certs, (c) => c.area).map(([a, n]) => ({
 })).sort((x, y) => y.h - x.h || y.n - x.n);
 const maxH = Math.max(1, ...areas.map((a) => a.h));
 const tech = techCoverage(certs).filter((t) => t.n >= 2);
+// Solo para la tira del encabezado. Las 30 de `tech` ocupan tres filas en
+// escritorio pero quince en un telefono, y el enlace llega casi siempre desde
+// el navegador de LinkedIn: arriba van las mas respaldadas y la nube entera se
+// queda en su seccion.
+const techTop = [...tech].sort((a, b) => b.n - a.n).slice(0, 12);
 const { hours, covered, total: nCursos, itineraries } = hoursFloor(certs);
 const hoy = new Date().toISOString().slice(0, 10);
 // 68 cursos otorgan ademas certificado del PMI: otro documento, con su propio
@@ -60,15 +66,19 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
       <h1>Alejandro Retuert</h1>
       <p class="sub">Ingeniería y arquitectura de datos</p>
       <ul class="stats">
-        <li><b>{certs.length}</b><span>certificados</span></li>
-        <li><b>{ev.official}</b><span>de organismo externo</span></li>
-        <li><b>{ev.withPdf}</b><span>con documento adjunto</span></li>
-        <li><b>{ev.withVerifyUrl}</b><span>verificables en el emisor</span></li>
-        <li><b>{hours}</b><span>horas de contenido <i>({covered} de {nCursos} con dato)</i></span></li>
+        <li><Icono nombre="certificado" px={20} /><b>{certs.length}</b><span>certificados</span></li>
+        <li><Icono nombre="escudo" px={20} /><b>{ev.official}</b><span>de organismo externo</span></li>
+        <li><Icono nombre="documento" px={20} /><b>{ev.withPdf}</b><span>con documento adjunto</span></li>
+        <li><Icono nombre="verificable" px={20} /><b>{ev.withVerifyUrl}</b><span>verificables en el emisor</span></li>
+        <li><Icono nombre="reloj" px={20} /><b>{hours}</b><span>horas de contenido <i>({covered} de {nCursos} con dato)</i></span></li>
         {conPmi.length > 0 && (
-          <li><b>{conPmi.length}</b><span>con certificado PMI <i>({pdu} PDU)</i></span></li>
+          <li><Icono nombre="pmi" px={20} /><b>{conPmi.length}</b><span>con certificado PMI <i>({pdu} PDU)</i></span></li>
         )}
       </ul>
+      <p class="stack">
+        <span class="vh">Tecnologías con más certificados: </span>
+        {techTop.map((t) => <code>{t.tech}</code>)}
+      </p>
       {itineraries > 0 && (
         <p class="disclaimer">
           Las horas excluyen {itineraries} itinerarios de LinkedIn Learning, que agrupan cursos
@@ -85,10 +95,10 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
     </nav>
     {featured.length > 0 && (
       <section>
-        <h2>Destacados</h2>
+        <h2><Icono nombre="estrella" px={17} />Destacados</h2>
         <div class="grid feat">
           {featured.map((c) => (
-            <article class="card hi">
+            <article class="card hi" data-tipo={c.type}>
               {c.thumb && (
                 <a class="shot" href={urlCert(c.id)}>
                   <img src={urlThumb(c.thumb)} alt={`Certificado de ${c.title}`}
@@ -112,7 +122,7 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
     )}
 
     <section>
-      <h2>Por área <small>ordenado por horas de contenido, no por número de cursos</small></h2>
+      <h2><Icono nombre="grafo" px={17} />Por área <small>ordenado por horas de contenido, no por número de cursos</small></h2>
       <div class="bars">
         {areas.map((a) => (
           <div class="bar">
@@ -128,12 +138,12 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
     </section>
 
     <section>
-      <h2>Tecnologías <small>con dos o más certificados</small></h2>
+      <h2><Icono nombre="pipeline" px={17} />Tecnologías <small>con dos o más certificados</small></h2>
       <p class="techs big">{tech.map((t) => <code>{t.tech} <b>{t.n}</b></code>)}</p>
     </section>
 
     <section>
-      <h2>Actividad por año</h2>
+      <h2><Icono nombre="barras" px={17} />Actividad por año</h2>
       <div class="years">
         {years.map(([y, n]) => (
           <div class="yr"><span class="yb" style={`height:${(n / maxYear) * 100}%`}></span><span class="yl">{String(y).slice(2)}</span><span class="yn">{n}</span></div>
@@ -143,7 +153,7 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
     </section>
 
     <section>
-      <h2>Todos los certificados <small>{certs.length}</small></h2>
+      <h2><Icono nombre="tabla" px={17} />Todos los certificados <small>{certs.length}</small></h2>
       <form class="filtros" id="filtros" role="search" aria-label="Filtrar certificados">
         <label class="f grow">
           <span>Buscar</span>
@@ -287,13 +297,27 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
     .hero { background: var(--accent-soft); border-bottom: 1px solid var(--line); padding: 48px 0 34px; }
     h1 { font-size: clamp(30px, 5vw, 44px); }
     .sub { margin: 4px 0 0; color: var(--muted); font-size: 17px; }
-    .stats { list-style: none; display: flex; flex-wrap: wrap; gap: 30px; padding: 0; margin: 26px 0 0; }
+    /* La retícula y la tipografía viven en primitivas.css: competencias.astro
+       declaraba esto mismo palabra por palabra. Aquí solo el margen. */
+    .stats { margin: 26px 0 0; }
     /* Sin opacity: atenuar --muted lo baja de 4.70 a 2.95 sobre --accent-soft. */
     .stats i { font-style: normal; }
+    /* Tira de stack en el encabezado. Es lo primero que busca quien lee esto
+       para un puesto técnico y estaba en la quinta sección, bajo el pliegue. */
+    .stack { display: flex; flex-wrap: wrap; gap: 6px; margin: 22px 0 0; }
+    .stack code { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 3px 9px; font-size: 12px; }
     main { padding: 34px 0 70px; }
     section { margin-bottom: 42px; }
     .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); }
-    .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 15px; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 15px; overflow: hidden; }
+    /* Riel de taxonomía: replica lo que .ev.emisor / .ev.propio / .ev.pmi ya
+       hacen en la ficha, donde el borde izquierdo codifica el origen. Deja ver
+       la mezcla técnico/gestión/transversal sin leer un solo chip. */
+    .card.hi { border-left-width: 3px; transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease); }
+    .card.hi[data-tipo='tecnico'] { border-left-color: var(--tec); }
+    .card.hi[data-tipo='gestion'] { border-left-color: var(--ges); }
+    .card.hi[data-tipo='transversal'] { border-left-color: var(--tra); }
+    .card.hi:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); }
     .card h3 { font-size: 15px; margin: 8px 0 5px; }
     .meta { margin: 0; color: var(--muted); font-size: 13px; }
     .techs { margin: 9px 0 0; display: flex; flex-wrap: wrap; gap: 5px; }
@@ -302,13 +326,16 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
     .vig { display: inline-block; margin-left: 6px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); border: 1px solid currentColor; border-radius: 4px; padding: 1px 4px; }
     .years { display: flex; align-items: flex-end; gap: 5px; height: 130px; padding-top: 10px; }
     .yr { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; }
-    .yb { width: 100%; background: var(--accent); border-radius: 3px 3px 0 0; min-height: 3px; }
+    .yb { width: 100%; background: var(--data); border-radius: var(--radius-sm) var(--radius-sm) 0 0; min-height: 3px; }
     .yl { font-size: 11px; color: var(--muted); margin-top: 5px; }
     .yn { font-size: 10px; color: var(--muted); }
     .note { color: var(--muted); font-size: 12.5px; margin-top: 10px; }
     table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
     th { text-align: left; font-weight: 600; color: var(--muted); font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; padding: 8px 10px; border-bottom: 1px solid var(--line); }
     td { padding: 9px 10px; border-bottom: 1px solid var(--line); }
+    /* Realce neutro, no --accent-soft: sobre ese fondo .dim cae a 2.95. */
+    tbody tr { transition: background-color var(--dur) var(--ease); }
+    tbody tr:hover { background: var(--surface); }
     .dim { color: var(--muted); }
     .ok { color: var(--accent); font-weight: 600; font-size: 12px; }
     .doc { color: var(--accent); font-weight: 600; font-size: 12px; }
@@ -319,12 +346,16 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
     .nav a { color: var(--accent); font-weight: 600; text-decoration: none; }
     .nav a:hover { text-decoration: underline; }
     .shot { display: block; margin: -14px -15px 12px; border-bottom: 1px solid var(--line); background: var(--bg); }
-    .shot img { display: block; width: 100%; height: 116px; object-fit: cover; object-position: top center; border-radius: var(--radius) var(--radius) 0 0; }
+    .shot { overflow: hidden; }
+    /* Más lenta que la tarjeta a propósito: el desfase entre el contenedor y su
+       contenido es lo que da sensación de material y no de dos transiciones. */
+    .shot img { display: block; width: 100%; height: 116px; object-fit: cover; object-position: top center; border-radius: var(--radius) var(--radius) 0 0; transition: transform .25s var(--ease); }
+    .card.hi:hover .shot img { transform: scale(1.03); }
     .card h3 a { text-decoration: none; }
     .card h3 a:hover { text-decoration: underline; }
     .tt { text-decoration: none; }
     .tt:hover { text-decoration: underline; color: var(--accent); }
-    .filtros { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px 14px; margin: 0 0 14px; padding: 13px 14px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); }
+    .filtros { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px 14px; margin: 0 0 14px; padding: 13px 14px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-1); }
     .f { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
     .f.grow { flex: 1 1 210px; }
     .f input, .f select { font: inherit; font-size: 13.5px; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 7px; padding: 6px 9px; width: 100%; }
@@ -341,6 +372,11 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
     .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
     .exp { display: inline-block; margin-left: 6px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--alerta); border: 1px solid currentColor; border-radius: 4px; padding: 1px 4px; }
     .disclaimer { margin: 16px 0 0; max-width: 62ch; color: var(--muted); font-size: 12.5px; line-height: 1.5; }
-    @media (max-width: 640px) { .bar { grid-template-columns: 118px 1fr 44px 28px; font-size: 12.5px; } table { font-size: 12.5px; } }
+    @media (max-width: 640px) { .bar { grid-template-columns: 118px 1fr 44px 28px; font-size: 12.5px; } table { font-size: 12.5px; } .stats b { font-size: 30px; } }
+    @media (prefers-reduced-motion: reduce) {
+      .card.hi, .shot img, tbody tr { transition: none; }
+      .card.hi:hover { transform: none; }
+      .card.hi:hover .shot img { transform: none; }
+    }
   </style>
 </Base>

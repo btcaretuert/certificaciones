@@ -1,5 +1,6 @@
 ---
 import Base from '@layouts/Base.astro';
+import Icono from '@components/Icono.astro';
 import { publishedCertificates, type PublishedCert } from '@lib/data';
 import { agruparPorCompetencia, type GrupoCompetencia } from '@lib/skills';
 import { hoursFloor } from '@lib/stats';
@@ -81,9 +82,9 @@ function ordenaCerts(lista: PublishedCert[]) {
       <p class="kicker"><a href={urlHome()}>Certificaciones</a> · Competencias</p>
       <h1>Competencias</h1>
       <ul class="stats">
-        <li><b>{grupos.length}</b><span>competencias con evidencia</span></li>
-        <li><b>{certs.length}</b><span>certificados agrupados</span></li>
-        <li><b>{hours}</b><span>horas de contenido</span></li>
+        <li><Icono nombre="grafo" px={20} /><b>{grupos.length}</b><span>competencias con evidencia</span></li>
+        <li><Icono nombre="capas" px={20} /><b>{certs.length}</b><span>certificados agrupados</span></li>
+        <li><Icono nombre="reloj" px={20} /><b>{hours}</b><span>horas de contenido</span></li>
       </ul>
       <div class="intro">
         <p>
@@ -107,7 +108,7 @@ function ordenaCerts(lista: PublishedCert[]) {
 
   <main class="wrap">
     <section aria-labelledby="resumen">
-      <h2 id="resumen">Áreas <small>ordenadas por horas de contenido, no por número de certificados</small></h2>
+      <h2 id="resumen"><Icono nombre="grafo" px={17} />Áreas <small>ordenadas por horas de contenido, no por número de certificados</small></h2>
       <div class="bars">
         {areas.map((a) => (
           <a class="bar" href={`#${a.area}`}>
@@ -171,7 +172,8 @@ function ordenaCerts(lista: PublishedCert[]) {
     .hero { background: var(--accent-soft); border-bottom: 1px solid var(--line); padding: 44px 0 32px; }
     .kicker a { color: inherit; }
     h1 { font-size: clamp(28px, 5vw, 40px); }
-    .stats { list-style: none; display: flex; flex-wrap: wrap; gap: 30px; padding: 0; margin: 20px 0 0; }
+    /* Retícula y tipografía en primitivas.css; aquí solo el margen. */
+    .stats { margin: 20px 0 0; }
     .intro { margin-top: 18px; max-width: 74ch; }
     .intro p { margin: 0 0 9px; color: var(--muted); font-size: 13px; line-height: 1.6; }
     .intro p:last-child { margin-bottom: 0; }
