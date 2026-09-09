@@ -58,6 +58,13 @@ npm-debug.log*
 # retuvieron, que es un perfil mas especifico que la propia lista.
 /docs/checkpoints/
 
+# Plan maestro. Describe la curaduria en prosa: cuantos registros se retuvieron
+# y bajo que criterio, que es justo lo que curation.js dejo de versionarse para
+# no decir. Los auditores no lo alcanzan —buscan slugs y titulos, no prosa que
+# describa la regla—, asi que la unica defensa es esta linea, y la prueba de
+# ignorados versionados es la que la sostiene.
+/docs/plan/
+
 # Criterio de curaduria. Vive fuera del repo por la misma razon por la que el
 # panel no se publica: dice por que se oculto lo que se oculto. prebuild lo
 # crea neutro si falta, para que un clon siga funcionando.

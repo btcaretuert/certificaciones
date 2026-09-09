@@ -20,6 +20,7 @@ La razón de fondo está en `.gitignore`, comentario por comentario, y en
 | `data/_raw/`, `data/origen_linkedin.json` | sincronizar | Inventario sin curar. |
 | `src/lib/classify/curation.js` | sincronizar | El criterio de exclusión. Dice por qué se ocultó lo que se ocultó. |
 | `docs/checkpoints/` | opcional | Bitácoras de sesión. Nombran fichas retenidas y su motivo. |
+| `docs/plan/` | opcional | Plan maestro. Describe la curaduría en prosa. |
 | `node_modules/` | **NO** | Se reconstruye con `npm ci`. Copiarlo rompe los permisos. |
 | `.tools/` | **NO** | Se descarga con `npm run tools:security`, verificado por SHA256. |
 | `dist/`, `.astro/`, `test-results/` | **NO** | Artefactos. Se regeneran. |
@@ -52,6 +53,7 @@ rsync -a --info=progress2 input/      "$DEST/input/"
 rsync -a data/_raw/                   "$DEST/data/_raw/"
 rsync -a data/origen_linkedin.json    "$DEST/data/"
 rsync -a src/lib/classify/curation.js "$DEST/src/lib/classify/"
+rsync -a docs/plan/ docs/checkpoints/   "$DEST/docs/"   # si los quieres allá
 ```
 
 Si el material ya llegó por un medio que perdió los permisos, no hay que volver
@@ -61,6 +63,14 @@ a copiarlo; alcanza con reponerlos:
 chmod +x .tools/* scripts/build/*.sh
 rm -rf node_modules && npm ci
 ```
+
+Los tres archivos ignorados de `docs/` y `curation.js` comparten una propiedad
+incómoda: **los auditores no los alcanzan.** `audit-repo` busca los slugs y los
+títulos de las fichas retenidas; ninguno de esos archivos los nombra. Lo que
+llevan es la regla —cuántos registros se retuvieron y bajo qué criterio—, que
+es más específica que la lista. La única defensa es su línea en `.gitignore`,
+y lo que la sostiene es la prueba de ignorados versionados: un `git add -f`
+sobre cualquiera de ellos hace fallar `audit-repo`.
 
 ## 3. Puesta a punto de una máquina nueva
 
