@@ -27,6 +27,10 @@ h2 small { color: var(--muted); font-weight: 400; font-size: 13px; margin-left: 
 .chip.tecnico { color: var(--tec); }
 .chip.gestion { color: var(--ges); }
 .chip.transversal { color: var(--tra); }
+/* Variantes que vivian con ambito en la portada y en la ficha. Suben aqui
+   porque el componente que las usa ya no lleva el cid de ninguna pagina. */
+.chip.neutro { color: var(--muted); }
+.chip.sm { font-size: 10px; padding: 2px 5px; }
 .techs code { background: var(--bg); border: 1px solid var(--line); border-radius: 5px; padding: 2px 7px; font-size: 12px; }
 .bars { display: grid; gap: 7px; }
 .track { background: var(--line); border-radius: 4px; height: 9px; overflow: hidden; }

@@ -1,5 +1,6 @@
 ---
 import Base from '@layouts/Base.astro';
+import Chip from '@components/Chip.astro';
 import { publishedCertificates, selectFeatured } from '@lib/data';
 import { countBy, hoursFloor, techCoverage, timeline, evidence } from '@lib/stats';
 import { urlCert, urlCompetencias, urlPdf, urlThumb } from '@lib/urls';
@@ -77,7 +78,7 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
                        width="640" height="480" loading="lazy" decoding="async" />
                 </a>
               )}
-              <span class={`chip ${c.type}`}>{typeLabel(c.type)}</span>
+              <Chip variante={c.type}>{typeLabel(c.type)}</Chip>
               <h3><a href={urlCert(c.id)}>{c.title}</a></h3>
               <p class="meta">
                 {c.issuer}{c.issued && ` · ${c.issued.slice(0, 4)}`}
@@ -177,7 +178,7 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
                 data-ofi={c.official ? '1' : ''} data-q={heno(c)}>
               <td><a class="tt" href={urlCert(c.id)}>{c.title}</a></td>
               <td class="dim">{areaLabel(c.area)}</td>
-              <td><span class={`chip sm ${c.type}`}>{typeLabel(c.type)}</span></td>
+              <td><Chip variante={c.type} sm>{typeLabel(c.type)}</Chip></td>
               <td class="dim">
                 {c.issued?.slice(0, 4) ?? '—'}
                 {c.expires && c.expires < hoy && <span class="exp" title={`Vencio el ${c.expires}`}>vencida</span>}
@@ -277,7 +278,6 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
     .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 15px; }
     .card h3 { font-size: 15px; margin: 8px 0 5px; }
     .meta { margin: 0; color: var(--muted); font-size: 13px; }
-    .chip.sm { font-size: 10px; padding: 2px 5px; }
     .techs { margin: 9px 0 0; display: flex; flex-wrap: wrap; gap: 5px; }
     .techs.big code b { color: var(--accent); }
     .bar { display: grid; grid-template-columns: 210px 1fr 52px 34px; align-items: center; gap: 12px; font-size: 13.5px; }

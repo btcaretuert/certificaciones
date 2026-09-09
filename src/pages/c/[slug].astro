@@ -1,5 +1,6 @@
 ---
 import Base from '@layouts/Base.astro';
+import Chip from '@components/Chip.astro';
 import { publishedCertificates } from '@lib/data';
 import { urlHome, urlCert, urlPdf, urlThumb } from '@lib/urls';
 import { areaLabel, typeLabel, kindLabel, LEVEL_LABEL, LANG_LABEL } from '@lib/labels';
@@ -125,11 +126,11 @@ const ldJson = JSON.stringify(ld)
           {c.issued && <span> · {fechaLarga(c.issued)}</span>}
         </p>
         <ul class="chips">
-          <li><span class={`chip ${c.type}`}>{typeLabel(c.type)}</span></li>
-          <li><span class="chip neutro">{areaLabel(c.area)}</span></li>
-          {horasTxt && <li><span class="chip neutro">{horasTxt}</span></li>}
-          {nivelTxt && <li><span class="chip neutro">Nivel: {nivelTxt}</span></li>}
-          {idiomaTxt && <li><span class="chip neutro">{idiomaTxt}</span></li>}
+          <li><Chip variante={c.type}>{typeLabel(c.type)}</Chip></li>
+          <li><Chip>{areaLabel(c.area)}</Chip></li>
+          {horasTxt && <li><Chip>{horasTxt}</Chip></li>}
+          {nivelTxt && <li><Chip>Nivel: {nivelTxt}</Chip></li>}
+          {idiomaTxt && <li><Chip>{idiomaTxt}</Chip></li>}
         </ul>
 
         {c.expires && (
@@ -341,7 +342,6 @@ const ldJson = JSON.stringify(ld)
     .emisor { margin: 9px 0 0; font-size: 16px; }
     .emisor span { color: var(--muted); }
     .chips { list-style: none; display: flex; flex-wrap: wrap; gap: 7px; padding: 0; margin: 16px 0 0; }
-    .chip.neutro { color: var(--muted); }
 
     .banner { margin: 18px 0 0; max-width: 68ch; font-size: 13.5px; line-height: 1.5; padding: 11px 13px; border-radius: var(--radius); border: 1px solid; background: var(--card); }
     .banner.vencida { color: var(--alerta); border-color: var(--alerta); }

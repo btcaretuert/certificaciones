@@ -1,0 +1,21 @@
+---
+/**
+ * Etiqueta breve: tipo de certificado, area, nivel, idioma.
+ *
+ * No decide su texto ni su color: recibe la variante ya resuelta. Asi el
+ * componente no sabe nada de la taxonomia y las etiquetas siguen teniendo una
+ * sola definicion, en lib/labels.ts.
+ *
+ * Sin <style> propio a proposito. Con assetsInlineLimit en 0, una hoja de
+ * componente compartida entre dos paginas se convierte en un chunk aparte y en
+ * una peticion bloqueante mas; sus reglas viven en styles/primitivas.css.
+ */
+interface Props {
+  /** tecnico | gestion | transversal | neutro — decide el color */
+  variante?: string;
+  /** version compacta, para las filas de la tabla */
+  sm?: boolean;
+}
+const { variante = 'neutro', sm = false } = Astro.props;
+---
+<span class:list={['chip', variante, { sm }]}><slot /></span>
