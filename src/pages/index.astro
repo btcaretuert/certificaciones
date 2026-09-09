@@ -2,12 +2,29 @@
 import Base from '@layouts/Base.astro';
 import Chip from '@components/Chip.astro';
 import { publishedCertificates, selectFeatured } from '@lib/data';
+import { dimWebp } from '@lib/webp';
 import { countBy, hoursFloor, techCoverage, timeline, evidence } from '@lib/stats';
 import { urlCert, urlCompetencias, urlPdf, urlThumb } from '@lib/urls';
 import { areaLabel, typeLabel, TYPE_LABEL } from '@lib/labels';
 
 const certs = await publishedCertificates();
 const featured = selectFeatured(certs);
+
+/**
+ * Alto y ancho REALES de cada miniatura destacada.
+ *
+ * Antes iban fijos en 640x480 y ninguna miniatura mide eso: la mayoria es
+ * 640x495 y tres de las destacadas son 596x842, es decir A4 vertical
+ * declarado como horizontal. El navegador reserva el hueco con la proporcion
+ * del atributo, asi que la pagina saltaba al cargar justo en el bloque que
+ * mas arriba esta.
+ *
+ * Son siete lecturas en build, no 252: solo los destacados llevan miniatura
+ * en esta pagina. La ficha hace lo mismo desde getStaticPaths.
+ */
+const dims = new Map(
+  featured.filter((c) => c.thumb).map((c) => [c.thumb!, dimWebp(c.thumb!)]),
+);
 const areas = countBy(certs, (c) => c.area).map(([a, n]) => ({
   area: a,
   n,
@@ -75,7 +92,8 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
               {c.thumb && (
                 <a class="shot" href={urlCert(c.id)}>
                   <img src={urlThumb(c.thumb)} alt={`Certificado de ${c.title}`}
-                       width="640" height="480" loading="lazy" decoding="async" />
+                       width={dims.get(c.thumb)?.w ?? 640} height={dims.get(c.thumb)?.h ?? 495}
+                       loading="lazy" decoding="async" />
                 </a>
               )}
               <Chip variante={c.type}>{typeLabel(c.type)}</Chip>

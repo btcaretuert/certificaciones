@@ -172,6 +172,27 @@ test.describe('dimensiones de las miniaturas', () => {
    */
   test.skip(SIN_ACTIVOS, 'necesita certs-src/, que no se versiona');
 
+  test('la portada declara la proporcion real de cada destacada', async ({ page }) => {
+    // Iban fijas en 640x480, que no es la medida de ninguna miniatura: la
+    // mayoria es 640x495 y tres de las destacadas son 596x842, A4 vertical
+    // declarado como horizontal. El navegador reserva el hueco con esa
+    // proporcion, asi que la pagina saltaba al cargar en el primer bloque.
+    await page.goto('');
+    const imgs = page.locator('.shot img');
+    const n = await imgs.count();
+    expect(n).toBeGreaterThan(0);
+    const medidas = new Set<string>();
+    for (let i = 0; i < n; i++) {
+      const w = await imgs.nth(i).getAttribute('width');
+      const h = await imgs.nth(i).getAttribute('height');
+      expect(`${w}x${h}`, 'ninguna miniatura mide 640x480').not.toBe('640x480');
+      medidas.add(`${w}x${h}`);
+    }
+    // Hay verticales y horizontales: una sola medida significaria que se
+    // volvio a un literal.
+    expect(medidas.size, `medidas: ${[...medidas].join(', ')}`).toBeGreaterThan(1);
+  });
+
   test('el alto sale de cada archivo, no de un valor por omision', async ({ page }) => {
     const altos = new Set<string>();
     for (const slug of ['apache-airflow-the-hands-on-guide', 'scrum-master', 'basics-of-deep-learning']) {
