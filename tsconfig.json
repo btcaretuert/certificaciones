@@ -1,7 +1,10 @@
 {
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"],
+  // El bundle de Sveltia es de terceros y aporta 4 de los errores de tipos.
+  // No es codigo que se pueda arreglar, y contarlo hace que el numero deje de
+  // decir nada sobre el estado del proyecto.
+  "exclude": ["dist", "public/admin/sveltia-cms.js"],
   "compilerOptions": {
     // Alias de modulo. Existen para que un componente pueda vivir a cualquier
     // profundidad sin arrastrar una cadena de ../../.. que hay que reescribir

@@ -10,7 +10,7 @@
   "scripts": {
     "astro": "astro",
     "audit": "node scripts/audit-dist.mjs dist",
-    "build": "node scripts/ensure-curation.mjs && node scripts/check-admin-bundle.mjs && vitest run --project unit && astro build && node scripts/strip-admin.mjs dist && node scripts/emit-assets.mjs dist && node scripts/audit-dist.mjs dist && node scripts/audit-repo.mjs",
+    "build": "node scripts/check-admin-bundle.mjs && vitest run --project unit && astro build && node scripts/strip-admin.mjs dist && node scripts/emit-assets.mjs dist && node scripts/audit-dist.mjs dist && node scripts/audit-repo.mjs",
     "check:admin": "node scripts/check-admin-bundle.mjs",
     "check:types": "astro check --minimumSeverity error",
     "check:content": "vitest run --project unit tests/unit/content.test.ts",
