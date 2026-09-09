@@ -1,0 +1,52 @@
+title: "Fundamentos de la gestión de programas"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "agile-proyectos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Gestión de proyectos", "Project Management"]
+issued: "2019-11-06"
+hours: 0.86
+credential_id: "c10c7f720c64bc2fc67bfc9bac51e99213cb150abaa657f9a8dc346e248be3c0"
+verify_url: "https://www.linkedin.com/learning/certificates/c10c7f720c64bc2fc67bfc9bac51e99213cb150abaa657f9a8dc346e248be3c0"
+pdf: "fundamentos-de-la-gestion-de-programas"
+thumb: "fundamentos-de-la-gestion-de-programas"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "agile-proyectos"
+  type: "gestion"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:750058"
+course_url: "https://www.linkedin.com/learning/fundamentos-de-la-gestion-de-programas"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Michael Boyle"]
+summary: "Aprende las habilidades necesarias para ser gestor de programas: vincula los programas a las estrategias de negocio, ofrece resultados beneficiosos y traza organigramas."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de la gestion de programas.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Fundamentos De La Gestion De Programas.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "f552bad1b31cd5c1f0f237c5a49c4d7649a5936c8f2400c12afff2534a584ca1"
+pmi_verify_url: null
+pmi_pdus: 0.75
+kind: "curso"
+pmi_pdf: "fundamentos-de-la-gestion-de-programas-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de la gestion de programas (PMI).pdf"

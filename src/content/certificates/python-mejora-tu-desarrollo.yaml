@@ -1,0 +1,52 @@
+title: "Python: Mejora tu desarrollo"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "desarrollo-y-herramientas"
+domain: "programacion"
+tech: ["python"]
+type: "tecnico"
+official: false
+skills: ["Desarrollo de software", "soft skills", "Python (Programming Language)"]
+issued: "2019-11-18"
+hours: 2.77
+credential_id: "1a2a508c8a3436aa22013e7f4d4ea05d14758a5e0b51b2c79f0b353d80bdf4e0"
+verify_url: "https://www.linkedin.com/learning/certificates/1a2a508c8a3436aa22013e7f4d4ea05d14758a5e0b51b2c79f0b353d80bdf4e0"
+pdf: "python-mejora-tu-desarrollo"
+thumb: "python-mejora-tu-desarrollo"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "desarrollo-y-herramientas"
+  domain: "programacion"
+  type: "tecnico"
+  tech: ["python"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:403417"
+course_url: "https://www.linkedin.com/learning/python-mejora-tu-desarrollo"
+level: "Intermediate"
+language: "es"
+retired: true
+instructors: ["Jose Dimas Lujan Castillo"]
+summary: "Adéntrate en Python en profundidad, sacando más provecho de los módulos, las funciones y las oportunidades que este lenguaje nos proporciona de manera avanzada."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Python Mejora tu desarrollo.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Python Mejora Tu Desarrollo.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

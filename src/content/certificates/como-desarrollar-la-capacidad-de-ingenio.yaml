@@ -1,0 +1,52 @@
+title: "Cómo desarrollar la capacidad de ingenio"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Desarrollo personal", "Habilidades para la vida", "ingenio", "Creative Problem Solving"]
+issued: "2019-11-07"
+hours: 0.47
+credential_id: "90e75ab5358e20f8d5b7015927ff10918222f296de3ced53b45a8308a0d2a8da"
+verify_url: "https://www.linkedin.com/learning/certificates/90e75ab5358e20f8d5b7015927ff10918222f296de3ced53b45a8308a0d2a8da"
+pdf: "como-desarrollar-la-capacidad-de-ingenio"
+thumb: "como-desarrollar-la-capacidad-de-ingenio"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:466002"
+course_url: "https://www.linkedin.com/learning/como-desarrollar-la-capacidad-de-ingenio"
+level: "General"
+language: "es"
+retired: false
+instructors: ["Todd Dewett"]
+summary: "Sé capaz de hacer más con menos, aprendiendo a tener iniciativa y a medir tu ingenio evaluando primero tus recursos profesionales y cómo decidir cuándo y cómo usarlos."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como desarrollar la capacidad de ingenio.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Desarrollar La Capacidad De Ingenio.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

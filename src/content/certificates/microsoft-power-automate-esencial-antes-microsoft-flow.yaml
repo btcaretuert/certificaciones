@@ -1,0 +1,52 @@
+title: "Microsoft Power Automate esencial (antes Microsoft Flow)"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "desarrollo-y-herramientas"
+domain: "ofimatica-colaboracion"
+tech: ["office-365", "power-automate"]
+type: "transversal"
+official: false
+skills: ["Gestión de tareas", "Automatización de procesos empresariales", "Power Automate", "Microsoft Flow", "Microsoft Power Automate"]
+issued: "2021-01-02"
+hours: 1.8
+credential_id: "6ccd888a5af74a45bde9daddbee0a959842cfe99478c27ea76012969adf7a38b"
+verify_url: "https://www.linkedin.com/learning/certificates/6ccd888a5af74a45bde9daddbee0a959842cfe99478c27ea76012969adf7a38b"
+pdf: "microsoft-power-automate-esencial-antes-microsoft-flow"
+thumb: "microsoft-power-automate-esencial-antes-microsoft-flow"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "desarrollo-y-herramientas"
+  domain: "ofimatica-colaboracion"
+  type: "transversal"
+  tech: ["office-365"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:2929117"
+course_url: "https://www.linkedin.com/learning/power-automate-esencial-2020"
+level: "Beginner + Intermediate"
+language: "es"
+retired: true
+instructors: ["Isabel Fernandez Gutierrez"]
+summary: "Descubre la magia de los flujos de trabajo automatizados con Power Automate (antes Microsoft Flow) y dale la bienvenida al futuro de la automatización trabajando de forma más productiva."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Power Automate esencial 2020.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

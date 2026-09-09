@@ -1,0 +1,52 @@
+title: "Microsoft Teams esencial"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "desarrollo-y-herramientas"
+domain: "ofimatica-colaboracion"
+tech: ["office-365"]
+type: "transversal"
+official: false
+skills: ["Colaboración virtual", "Trabajo en equipo", "Microsoft Teams", "Herramientas de colaboración"]
+issued: "2020-12-21"
+hours: 4.11
+credential_id: "2881026ed13c6dcfb91fcaff3518830566c0e821577a3b93a45063e826dbfc14"
+verify_url: "https://www.linkedin.com/learning/certificates/2881026ed13c6dcfb91fcaff3518830566c0e821577a3b93a45063e826dbfc14"
+pdf: "microsoft-teams-esencial"
+thumb: "microsoft-teams-esencial"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "desarrollo-y-herramientas"
+  domain: "ofimatica-colaboracion"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:2929105"
+course_url: "https://www.linkedin.com/learning/microsoft-teams-esencial-2019"
+level: "Beginner + Intermediate"
+language: "es"
+retired: true
+instructors: ["Isabel Fernandez Gutierrez"]
+summary: "Domina Microsoft Teams y empieza a colaborar con tus compañeros. Cuando termines este curso, serás capaz de tener colaboraciones más efectivas y rápidas con tu equipo."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Microsoft Teams esencial 2019.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Microsoft Teams esencial.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

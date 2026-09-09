@@ -1,0 +1,52 @@
+title: "La escucha activa"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Comunicación", "Escucha activa", "Active Listening"]
+issued: "2019-09-04"
+hours: 1.16
+credential_id: "4a98fe0f9bb1983d5414ebeff698e7d9b6001f4ea9aac503af55150973503d66"
+verify_url: "https://www.linkedin.com/learning/certificates/4a98fe0f9bb1983d5414ebeff698e7d9b6001f4ea9aac503af55150973503d66"
+pdf: "la-escucha-activa"
+thumb: "la-escucha-activa"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:514006"
+course_url: "https://www.linkedin.com/learning/la-escucha-activa"
+level: "General"
+language: "es"
+retired: true
+instructors: ["Brenda Bailey Hughes", "Tatiana Kolovou"]
+summary: "Aprende a evaluar tus habilidades de escucha, a afrontar las dificultades de la escucha activa y a desarrollar las conductas necesarias para que sepas escuchar."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_La escucha activa.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_La Escucha Activa.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

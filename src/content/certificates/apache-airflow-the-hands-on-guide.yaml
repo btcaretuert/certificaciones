@@ -1,0 +1,46 @@
+title: "Apache Airflow: The Hands-On Guide"
+issuer: "Udemy"
+platform: "Udemy"
+area: "cloud-e-infraestructura"
+domain: "sin-clasificar"
+tech: ["airflow", "aws", "docker", "etl", "hadoop", "kubernetes", "six-sigma", "spark"]
+type: "tecnico"
+official: false
+skills: []
+issued: "2021-11-06"
+hours: 11.0
+credential_id: "UC-78b05c9c-ccf5-4dc0-8bc6-231d4567de42"
+verify_url: "https://www.udemy.com/certificate/UC-78b05c9c-ccf5-4dc0-8bc6-231d4567de42/"
+pdf: "apache-airflow-the-hands-on-guide"
+thumb: "apache-airflow-the-hands-on-guide"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot: null
+classification_confidence: "low"
+classification_signals: ""
+classification_rules_version: ""
+needs_review: true
+extracted_fields: []
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/the-ultimate-hands-on-course-to-master-apache-airflow/"
+level: null
+language: null
+retired: false
+instructors: ["Marc Lamberti"]
+summary: "Master Apache Airflow from A to Z. Hands-on videos on Airflow with AWS, Kubernetes, Docker and more"
+source_files: ["certs-src/_origen/Certs Udemy/https:／www.udemy.com／certificate／UC-78b05c9c-ccf5-4dc0-8bc6-231d4567de42.txt", "certs-src/_udemy_2026/UC-78b05c9c-ccf5-4dc0-8bc6-231d4567de42.pdf"]
+expires: null
+active: null
+objectives: ["Coding Production Grade Data pipelines by Mastering Airflow through Hands-on Examples", "How to Follow Best Practices with Apache Airflow", "How to Scale Airflow with the Local, Celery and Kubernetes Wxecutors", "How to Set Up Monitoring with Elasticsearch and Grafana", "How to Secure Airflow with authentication, crypto and the RBAC UI", "Core and Advanced Concepts with Pros and Limitations", "Mastering DAGs with timezones, unit testing, backfill and catchup", "Organising the DAG folder and keep things clean"]
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

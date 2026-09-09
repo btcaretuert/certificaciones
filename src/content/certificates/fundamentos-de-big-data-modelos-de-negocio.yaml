@@ -1,0 +1,52 @@
+title: "Fundamentos de big data: Modelos de negocio"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "datos-y-analitica"
+domain: "ingenieria-datos"
+tech: ["big-data"]
+type: "tecnico"
+official: false
+skills: ["Big data", "Modelo de negocio", "Business Modeling"]
+issued: "2019-08-12"
+hours: 1.17
+credential_id: "e8e7e89afabc03f7356c6d4e3f5849031e17e81df6895930e09b3244f5de21d0"
+verify_url: "https://www.linkedin.com/learning/certificates/e8e7e89afabc03f7356c6d4e3f5849031e17e81df6895930e09b3244f5de21d0"
+pdf: "fundamentos-de-big-data-modelos-de-negocio"
+thumb: "fundamentos-de-big-data-modelos-de-negocio"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ingenieria-datos"
+  type: "tecnico"
+  tech: []
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:680865"
+course_url: "https://www.linkedin.com/learning/fundamentos-de-big-data-modelos-de-negocio"
+level: "Intermediate"
+language: "es"
+retired: false
+instructors: ["Miriam Hatibi Zagmal"]
+summary: "Aprende en qué consiste el big data y cómo te puede ayudar a definir la ventaja competitiva respecto a tus clientes y a aprovechar las nuevas oportunidades de tu sector."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de big data Modelos de negocio.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Fundamentos De Big Data Modelos De Negocio.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

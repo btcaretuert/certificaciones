@@ -1,0 +1,56 @@
+title: "Desarrolla tu capacidad para gestionar equipos"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Organizational Leadership", "Talent Management", "Teamwork"]
+issued: "2019-09-04"
+hours: 12.51
+credential_id: "8ed9e9ad376b8af3a43f1a6e7017006e7f85f5c0838d34a6ea435d5762bdc0ca"
+verify_url: "https://www.linkedin.com/learning/certificates/8ed9e9ad376b8af3a43f1a6e7017006e7f85f5c0838d34a6ea435d5762bdc0ca"
+pdf: "desarrolla-tu-capacidad-para-gestionar-equipos"
+thumb: "desarrolla-tu-capacidad-para-gestionar-equipos"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:llsServePath:5006792"
+course_url: "https://www.linkedin.com/learning/paths/desarrolla-tu-capacidad-para-gestionar-equipos"
+level: "Beginner + Intermediate"
+language: null
+retired: false
+instructors: []
+summary: "Conviértete en la persona responsable de un equipo con los cursos de estos especialistas:"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Desarrolla tu capacidad para gestionar equipos.pdf", "certs-src/_origen/Certs Linkedin Itinerarios/CertificadoDeFinalizacion_Desarrolla tu capacidad para gestionar equipos.pdf"]
+expires: null
+active: null
+objectives:
+  - "Identifica las habilidades necesarias para conseguir el éxito como responsable de equipo."
+  - "Ayuda a tus fuerza de trabajo a desarrollarse profesionalmente."
+  - "Crea una cultura de motivación y responsabilidad."
+  - "Conviértete en líder."
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "itinerario"
+pmi_pdf: null
+pmi_source_file: null

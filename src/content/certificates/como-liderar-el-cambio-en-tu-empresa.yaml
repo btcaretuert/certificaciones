@@ -1,0 +1,52 @@
+title: "Cómo liderar el cambio en tu empresa"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Liderazgo de cambios positivos", "Gestión de cambio estructural", "Transformación Digital", "Lead Change"]
+issued: "2019-08-30"
+hours: 1.73
+credential_id: "51a925c78b6b4c31802eb667c3471827fba3dcb021397e7929cd461d1cdf32ed"
+verify_url: "https://www.linkedin.com/learning/certificates/51a925c78b6b4c31802eb667c3471827fba3dcb021397e7929cd461d1cdf32ed"
+pdf: "como-liderar-el-cambio-en-tu-empresa"
+thumb: "como-liderar-el-cambio-en-tu-empresa"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:454096"
+course_url: "https://www.linkedin.com/learning/como-liderar-el-cambio-en-tu-empresa"
+level: "General"
+language: "es"
+retired: false
+instructors: ["Britt Andreatta"]
+summary: "Ayuda a tu empresa a adoptar procesos de cambio y asegúrate de que las nuevas iniciativas se llevan a cabo con éxito. En este curso aprenderás cómo liderar una empresa mediante el cambio"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como liderar el cambio en tu empresa.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Liderar El Cambio En Tu Empresa.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "4f1577d78dbccc33988a78e029e5e4148535cc07b71ee312a02c99d6176692ee"
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: "como-liderar-el-cambio-en-tu-empresa-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Como liderar el cambio en tu empresa (PMI).pdf"

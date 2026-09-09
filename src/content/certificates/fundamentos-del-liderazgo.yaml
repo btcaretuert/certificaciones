@@ -1,0 +1,51 @@
+title: "Fundamentos del liderazgo"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Gestión", "Liderazgo", "Leadership"]
+issued: "2019-08-20"
+hours: 1.46
+credential_id: "9d30a9b61982c4d9ae7c13d9f06c9734b0deb42d807d627e3c2747c555248611"
+verify_url: "https://www.linkedin.com/learning/certificates/9d30a9b61982c4d9ae7c13d9f06c9734b0deb42d807d627e3c2747c555248611"
+pdf: "fundamentos-del-liderazgo"
+thumb: "fundamentos-del-liderazgo"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:530654"
+course_url: "https://www.linkedin.com/learning/fundamentos-del-liderazgo-2014"
+level: "Beginner"
+language: "es"
+retired: true
+instructors: ["Britt Andreatta"]
+summary: "Conviértete en un gran líder para tu equipo, que lleve sus proyectos al éxito y consiga que todos los miembros del equipo alcancen su máxima capacidad profesional."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Fundamentos del liderazgo 2014.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Fundamentos Del Liderazgo 5.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "ef043a93fd2d88e41b6e533f460213697058d4c12c29b148acf1ba8e54453da3"
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: "fundamentos-del-liderazgo-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Fundamentos del liderazgo 2014 (PMI).pdf"

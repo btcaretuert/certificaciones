@@ -1,0 +1,52 @@
+title: "Bill George sobre autoconocimiento, autenticidad, y liderazgo"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Liderazgo", "autoconocimiento autenticidad", "Interpersonal Leadership"]
+issued: "2019-09-05"
+hours: 0.51
+credential_id: "06c9ad8adf681e3ac2d4492ea3faa304943e117eaf02a0bae270fcba2dc28ca3"
+verify_url: "https://www.linkedin.com/learning/certificates/06c9ad8adf681e3ac2d4492ea3faa304943e117eaf02a0bae270fcba2dc28ca3"
+pdf: "bill-george-sobre-autoconocimiento-autenticidad-y-liderazgo"
+thumb: "bill-george-sobre-autoconocimiento-autenticidad-y-liderazgo"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:778412"
+course_url: "https://www.linkedin.com/learning/bill-george-sobre-autoconocimiento-autenticidad-y-liderazgo"
+level: "General"
+language: "es"
+retired: false
+instructors: ["Bill George"]
+summary: "Aprende a analizar tus puntos fuertes y débiles, a pedir feedback sincero y a ser más auténtico con tu conducta y tu guía. Conviértete en un jefe más verdadero."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Bill George sobre autoconocimiento autenticidad y liderazgo.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Bill George Sobre Autoconocimiento Autenticidad Y Liderazgo.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

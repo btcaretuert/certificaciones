@@ -1,0 +1,52 @@
+title: "Del victimismo a la acción: Asume el control"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Gestión", "Liderazgo", "Accountability"]
+issued: "2019-09-03"
+hours: 0.99
+credential_id: "5b290d679513c62b149d1f0ec5fe41109cebdf102606f75c86fd674c4c6358b3"
+verify_url: "https://www.linkedin.com/learning/certificates/5b290d679513c62b149d1f0ec5fe41109cebdf102606f75c86fd674c4c6358b3"
+pdf: "del-victimismo-a-la-accion-asume-el-control"
+thumb: "del-victimismo-a-la-accion-asume-el-control"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:508725"
+course_url: "https://www.linkedin.com/learning/del-victimismo-a-la-accion-asume-el-control"
+level: "Beginner + Intermediate"
+language: "es"
+retired: false
+instructors: ["Fred Kofman"]
+summary: "Enfréntate a tus miedos, deja de buscar responsabilidades en otros y ayuda a tus grupos de trabajo mostrando ese liderazgo que tanto se necesita. ¡Es hora de ser el héroe!"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Del victimismo a la accion Asume el control.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Del Victimismo A La Accion Asume El Control.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

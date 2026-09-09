@@ -1,0 +1,55 @@
+title: "Mejora tus habilidades para resolver problemas"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Critical Thinking", "Leadership", "Decision-Making"]
+issued: "2019-10-21"
+hours: 10.73
+credential_id: "846018aa6a1b5ac10c72fa67c23396697cab570fb58730ccb47b217541abfa3f"
+verify_url: "https://www.linkedin.com/learning/certificates/846018aa6a1b5ac10c72fa67c23396697cab570fb58730ccb47b217541abfa3f"
+pdf: "mejora-tus-habilidades-para-resolver-problemas"
+thumb: "mejora-tus-habilidades-para-resolver-problemas"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:llsServePath:1555568"
+course_url: "https://www.linkedin.com/learning/paths/mejora-tus-habilidades-para-resolver-problemas"
+level: "Beginner + Intermediate"
+language: null
+retired: false
+instructors: []
+summary: "Mejora tus capacidades estratégicas con ayuda de especialistas en la materia:"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Mejora tus habilidades para resolver problemas.pdf", "certs-src/_origen/Certs Linkedin Itinerarios/CertificadoDeFinalizacion_Mejora tus habilidades para resolver problemas.pdf"]
+expires: null
+active: null
+objectives:
+  - "Mejora tus capacidades de pensamiento crítico."
+  - "Desarrolla tu habilidad para resolver problemas."
+  - "Aprende estrategias para la toma de decisiones."
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "itinerario"
+pmi_pdf: null
+pmi_source_file: null

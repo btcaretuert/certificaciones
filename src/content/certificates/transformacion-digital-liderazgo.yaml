@@ -1,0 +1,52 @@
+title: "Transformación digital: Liderazgo"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "transformacion-digital"
+tech: []
+type: "gestion"
+official: false
+skills: ["Transformación digital", "Liderazgo", "Organizational Leadership", "Digital Transformation"]
+issued: "2019-10-28"
+hours: 1.55
+credential_id: "562a0a8a90d58cc33dc639cb9d45f6c8b2692d4179c9467df61bb529640031d8"
+verify_url: "https://www.linkedin.com/learning/certificates/562a0a8a90d58cc33dc639cb9d45f6c8b2692d4179c9467df61bb529640031d8"
+pdf: "transformacion-digital-liderazgo"
+thumb: "transformacion-digital-liderazgo"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "negocio-e-innovacion"
+  domain: "transformacion-digital"
+  type: "gestion"
+  tech: []
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:631126"
+course_url: "https://www.linkedin.com/learning/transformacion-digital-liderazgo"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Lorena Diaz Quijano"]
+summary: "Adentráte en la transformación digital, descubre cómo convertírte en una persona de referencia dentro de tu empresa durante esta transición y para tus equipos de trabajo."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Transformacion digital Liderazgo.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Transformacion Digital Liderazgo.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "8ce12592d2da0c6dd6730476e4654c2a96199e861ab7cf028c3b2731f84b443c"
+pmi_verify_url: null
+pmi_pdus: 3.0
+kind: "curso"
+pmi_pdf: "transformacion-digital-liderazgo-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Transformacion digital Liderazgo (PMI).pdf"

@@ -1,0 +1,52 @@
+title: "Cómo trabajar con gente difícil"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Interpersonal Relationships", "Emotional Intelligence", "Difficult Situations"]
+issued: "2022-03-21"
+hours: 1.77
+credential_id: "b225ae7df046a16508ff901ae25525ee19d6f919c2d5f31ea8a0b6b1359011dc"
+verify_url: "https://www.linkedin.com/learning/certificates/b225ae7df046a16508ff901ae25525ee19d6f919c2d5f31ea8a0b6b1359011dc"
+pdf: "como-trabajar-con-gente-dificil"
+thumb: "como-trabajar-con-gente-dificil"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: "Publicada como competencia de liderazgo, no como circunstancia personal (decision del 2026-09-08)."
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:3124065"
+course_url: "https://www.linkedin.com/learning/como-trabajar-con-gente-dificil"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Chris Croft"]
+summary: "Aprende a identificar a las personas difíciles (o si eres tú una de ellas) y a lidiar con su agresividad, negatividad, manipulación, incompetencia, inmadurez o egoísmo."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como trabajar con gente dificil.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como trabajar con gente dificil.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "884261cdd27563dbbf98c8ff7844791478f9a08c60dde68735603a4d8128c99a"
+pmi_verify_url: null
+pmi_pdus: 1.75
+kind: "curso"
+pmi_pdf: "como-trabajar-con-gente-dificil-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Como trabajar con gente dificil (PMI).pdf"

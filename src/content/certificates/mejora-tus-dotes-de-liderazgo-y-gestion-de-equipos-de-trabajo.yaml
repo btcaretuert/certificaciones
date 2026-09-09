@@ -1,0 +1,55 @@
+title: "Mejora tus dotes de liderazgo y gestión de equipos de trabajo"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Talent Management", "Management", "People Management"]
+issued: "2019-08-27"
+hours: 10.82
+credential_id: "659e48646753d66f14da69437b17a12d2ceaae47ad889b3dfc0e4e3c85adaa97"
+verify_url: "https://www.linkedin.com/learning/certificates/659e48646753d66f14da69437b17a12d2ceaae47ad889b3dfc0e4e3c85adaa97"
+pdf: "mejora-tus-dotes-de-liderazgo-y-gestion-de-equipos-de-trabajo"
+thumb: "mejora-tus-dotes-de-liderazgo-y-gestion-de-equipos-de-trabajo"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:llsServePath:4958488"
+course_url: "https://www.linkedin.com/learning/paths/mejora-tus-dotes-de-liderazgo-y-gestion-de-equipos-de-trabajo"
+level: "Beginner"
+language: null
+retired: false
+instructors: []
+summary: "Mejora tus dotes de liderazgo y gestión de equipos de trabajo con ayuda de estos especialistas en la materia:"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Mejora tus dotes de liderazgo y gestion de equipos de trabajo.pdf", "certs-src/_origen/Certs Linkedin Itinerarios/CertificadoDeFinalizacion_Mejora tus dotes de liderazgo y gestion de equipos de trabajo.pdf"]
+expires: null
+active: null
+objectives:
+  - "Mejora tus capacidades de liderazgo."
+  - "Avanza en técnicas de gestión de equipos y delegación de tareas."
+  - "Aprende a motivar a tu equipo y a proveerle de feedback o retroalimentación."
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "itinerario"
+pmi_pdf: null
+pmi_source_file: null

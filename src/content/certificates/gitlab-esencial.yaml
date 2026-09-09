@@ -1,0 +1,52 @@
+title: "GitLab esencial"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "desarrollo-y-herramientas"
+domain: "devops"
+tech: ["gitlab"]
+type: "tecnico"
+official: false
+skills: ["Administración de sistemas", "Instalación de software", "Implantación de software", "GitLab"]
+issued: "2021-02-06"
+hours: 3.19
+credential_id: "43a82a10db94cc9df67aa81aabee31cfa5c718ec8755ec9160be1f57ed5b217c"
+verify_url: "https://www.linkedin.com/learning/certificates/43a82a10db94cc9df67aa81aabee31cfa5c718ec8755ec9160be1f57ed5b217c"
+pdf: "gitlab-esencial"
+thumb: "gitlab-esencial"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "cloud-e-infraestructura"
+  domain: "devops"
+  type: "tecnico"
+  tech: ["gitlab"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:556167"
+course_url: "https://www.linkedin.com/learning/gitlab-esencial"
+level: "Beginner + Intermediate"
+language: "es"
+retired: true
+instructors: ["Alvaro Gonzalez Crespo"]
+summary: "Aprende a instalar y administrar GitLab, bien en tu propio servidor o en un servicio web gratuito o de pago, y cómo crear un perfil y generar tu primer proyecto en GitLab."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_GitLab esencial.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_GitLab esencial.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

@@ -1,0 +1,54 @@
+title: "Big Data y Spark: ingeniería de datos con Python y PySpark"
+issuer: "Udemy"
+platform: "Udemy"
+area: "datos-y-analitica"
+domain: "ingenieria-datos"
+tech: ["python", "spark", "api", "big-data", "machine-learning", "sql"]
+type: "tecnico"
+official: false
+skills: []
+issued: "2024-11-03"
+hours: 9.5
+credential_id: "UC-15483d5c-1ded-4842-b46b-b155dc26b81b"
+verify_url: "https://www.udemy.com/certificate/UC-15483d5c-1ded-4842-b46b-b155dc26b81b/"
+pdf: "big-data-y-spark-ingenieria-de-datos-con-python-y-pyspark"
+thumb: "big-data-y-spark-ingenieria-de-datos-con-python-y-pyspark"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ingenieria-datos"
+  type: "tecnico"
+  tech: ["python", "spark"]
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=2"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields: []
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/big-data-y-spark-ingenieria-de-datos-con-python-y-pyspark/"
+level: null
+language: null
+retired: false
+instructors: ["José Miguel Moya"]
+summary: "Trabajo desde niveles básicos hasta avanzados con RDD y DataFrame."
+source_files: ["certs-src/_origen/Certs Udemy/UC-15483d5c-1ded-4842-b46b-b155dc26b81b.pdf", "input/otros_certs/mas/Big Data y Spark: ingeniería de datos con Python y pyspark-UC-15483d5c-1ded-4842-b46b-b155dc26b81b.pdf"]
+expires: null
+active: null
+objectives:
+  - "Conocer el funcionamiento y la estructura de Apache Spark"
+  - "Trabajar con RDDs de Spark desde niveles básicos hasta avanzados"
+  - "Trabajar con DataFrames en Spark mediante el API de SQL desde niveles básicos hasta avanzados"
+  - "Optimizar sus aplicaciones de Apache Spark para el manejo de grandes volúmenes de datos a través de DataFrames"
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

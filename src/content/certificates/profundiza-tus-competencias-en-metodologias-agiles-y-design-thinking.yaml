@@ -1,0 +1,55 @@
+title: "Profundiza tus competencias en metodologías ágiles y Design Thinking"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "agile-proyectos"
+tech: ["agile"]
+type: "gestion"
+official: false
+skills: ["Design Thinking", "Agile Methodologies", "Project Management"]
+issued: "2022-03-26"
+hours: 11.09
+credential_id: "401264ec73ce2b630d03d1664f57c85064fea79b2a360a599ed685ff13557b51"
+verify_url: "https://www.linkedin.com/learning/certificates/401264ec73ce2b630d03d1664f57c85064fea79b2a360a599ed685ff13557b51"
+pdf: "profundiza-tus-competencias-en-metodologias-agiles-y-design-thinking"
+thumb: "profundiza-tus-competencias-en-metodologias-agiles-y-design-thinking"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "agile-proyectos"
+  type: "gestion"
+  tech: []
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:llsServePath:914273"
+course_url: "https://www.linkedin.com/learning/paths/profundiza-tus-competencias-en-metodologias-agiles-y-design-thinking"
+level: "Beginner + Intermediate"
+language: null
+retired: false
+instructors: []
+summary: "Profundiza tus competencias en metodologías ágiles y Design Thinking con la ayuda de estos instructores expertos:"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Profundiza tus competencias en metodologias agiles y Design Thinking.pdf", "certs-src/_origen/Certs Linkedin Itinerarios/CertificadoDeFinalizacion_Profundiza tus competencias en metodologias agiles y Design Thinking.pdf"]
+expires: null
+active: null
+objectives:
+  - "Descubre distintas metodologías, herramientas y procesos de gestión de proyectos."
+  - "Elige la perspectiva más conveniente para gestionar proyectos ágiles."
+  - "Comprende diversas metodologías avanzadas como lean, scrum y six sigma."
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "itinerario"
+pmi_pdf: null
+pmi_source_file: null

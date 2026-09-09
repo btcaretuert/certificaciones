@@ -1,0 +1,56 @@
+title: "Apache Kafka and Spring Boot (Consumer, Producer)"
+issuer: "Udemy"
+platform: "Udemy"
+area: "datos-y-analitica"
+domain: "ingenieria-datos"
+tech: ["kafka"]
+type: "tecnico"
+official: false
+skills: ["Apache Kafka", "Spring Boot"]
+issued: "2020-03-16"
+hours: 1.0
+credential_id: "UC-8ea57561-87d5-4430-8fe3-e23aba566eb9"
+verify_url: "https://www.udemy.com/certificate/UC-8ea57561-87d5-4430-8fe3-e23aba566eb9/"
+pdf: "apache-kafka-and-spring-boot-consumer-producer"
+thumb: "apache-kafka-and-spring-boot-consumer-producer"
+weight: 3
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ingenieria-datos"
+  type: "tecnico"
+  tech: ["kafka"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+  - "credential_id"
+  - "verify_url"
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/apache-kafka-and-spring-boot-consumer-producer/"
+level: null
+language: null
+retired: false
+instructors: ["Arbi Elezi"]
+summary: "In this course Apache Kafka and Spring Boot will be used to establish communication between them."
+source_files: ["certs-src/_origen/Certs Udemy/UC-8ea57561-87d5-4430-8fe3-e23aba566eb9.pdf"]
+expires: null
+active: null
+objectives:
+  - "You will learn how to create a Kafka Consumer using Spring Boot"
+  - "You will learn how to create a Kafka Producer using Spring Boot"
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

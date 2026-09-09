@@ -1,0 +1,57 @@
+title: "Ethical Hacking Crash Course 2020"
+issuer: "Udemy"
+platform: "Udemy"
+area: "cloud-e-infraestructura"
+domain: "seguridad"
+tech: ["linux", "seguridad"]
+type: "tecnico"
+official: false
+skills: ["Ethical Hacking", "Linux"]
+issued: "2021-10-05"
+hours: 0.7
+credential_id: "UC-56efded2-b0d5-41e3-bfed-e519c1fd005b"
+verify_url: "https://www.udemy.com/certificate/UC-56efded2-b0d5-41e3-bfed-e519c1fd005b/"
+pdf: "ethical-hacking-crash-course-2020"
+thumb: "ethical-hacking-crash-course-2020"
+weight: 3
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "cloud-e-infraestructura"
+  domain: "seguridad"
+  type: "tecnico"
+  tech: ["linux"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "credential_id"
+  - "verify_url"
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/draft/2531702/"
+level: null
+language: null
+retired: false
+instructors: ["Learn Pro"]
+summary: "Learn and understand ethical hacking from scratch. Get your ethical hacking certificate."
+source_files: ["certs-src/_origen/Certs Udemy/UC-56efded2-b0d5-41e3-bfed-e519c1fd005b.pdf"]
+expires: null
+active: null
+objectives:
+  - "Gain knowledge of Ethical Hacking"
+  - "Gain the skills to launch your own hacking attacks"
+  - "Acquire the pre-requisite of hacking skills to move into Ethical Hacking job fields"
+  - "Have the skills and understanding of Ethical Hacking to confidently apply for jobs related to Hacking"
+  - "Get practical examples of Hacking"
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

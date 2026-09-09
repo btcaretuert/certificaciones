@@ -1,0 +1,52 @@
+title: "Aprende MongoDB: Bases de datos NoSQL"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "datos-y-analitica"
+domain: "bases-datos"
+tech: ["mongodb", "nosql", "sql"]
+type: "tecnico"
+official: false
+skills: ["MongoDB", "Desarrollo de base de datos", "Diseño de bases de datos", "NoSQL"]
+issued: "2019-12-26"
+hours: 2.3
+credential_id: "cfa13d32d2e68940b79a399c3f6ab562e9ef5d1f0a75e3a1951aa37ad6414c50"
+verify_url: "https://www.linkedin.com/learning/certificates/cfa13d32d2e68940b79a399c3f6ab562e9ef5d1f0a75e3a1951aa37ad6414c50"
+pdf: "aprende-mongodb-bases-de-datos-nosql"
+thumb: "aprende-mongodb-bases-de-datos-nosql"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "bases-datos"
+  type: "tecnico"
+  tech: ["mongodb"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:190403"
+course_url: "https://www.linkedin.com/learning/aprende-mongodb-bases-de-datos-nosql"
+level: "Beginner"
+language: "es"
+retired: true
+instructors: ["Luis Berganza"]
+summary: null
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Aprende MongoDB Bases de datos NoSQL.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Aprende Mongodb Bases De Datos Nosql.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

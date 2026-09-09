@@ -1,0 +1,55 @@
+title: "Amplía tus competencias de trabajo en equipo colaborativo y digital"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Communication", "Time Management", "Productivity Improvement"]
+issued: "2021-03-08"
+hours: 18.33
+credential_id: "f25ee486b5ca2a7f768c580bae0b200dc3a67ee4704397481b1bb9075f52405e"
+verify_url: "https://www.linkedin.com/learning/certificates/f25ee486b5ca2a7f768c580bae0b200dc3a67ee4704397481b1bb9075f52405e"
+pdf: "amplia-tus-competencias-de-trabajo-en-equipo-colaborativo-y-digital"
+thumb: "amplia-tus-competencias-de-trabajo-en-equipo-colaborativo-y-digital"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:llsServePath:4741238"
+course_url: "https://www.linkedin.com/learning/paths/amplia-tus-competencias-de-trabajo-en-equipo-colaborativo-y-digital"
+level: "Beginner"
+language: null
+retired: false
+instructors: []
+summary: "Amplía tus competencias de trabajo en equipo colaborativo y digital con la ayuda de especialistas en la materia:"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Amplia tus competencias de trabajo en equipo colaborativo y digital.pdf", "certs-src/_origen/Certs Linkedin Itinerarios/CertificadoDeFinalizacion_Amplia tus competencias de trabajo en equipo colaborativo y digital.pdf"]
+expires: null
+active: null
+objectives:
+  - "Descubre qué es la transformación digital y cómo afecta a tu trabajo. "
+  - "Aprende consejos prácticos para tener éxito en el trabajo remoto e híbrido."
+  - "Desarrolla habilidades que te convertirán en un mejor trabajador en tiempos de transformación digital."
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "itinerario"
+pmi_pdf: null
+pmi_source_file: null

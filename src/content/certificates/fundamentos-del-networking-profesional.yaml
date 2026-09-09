@@ -1,0 +1,52 @@
+title: "Fundamentos del networking profesional"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Networking empresarial", "Gestión de carrera profesional", "Career Management", "Business Networking"]
+issued: "2019-09-10"
+hours: 1.18
+credential_id: "e3be019295a0884160beaf264b2b07c07d22444abbb11cdfb3645f19ff70244a"
+verify_url: "https://www.linkedin.com/learning/certificates/e3be019295a0884160beaf264b2b07c07d22444abbb11cdfb3645f19ff70244a"
+pdf: "fundamentos-del-networking-profesional"
+thumb: "fundamentos-del-networking-profesional"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:587152"
+course_url: "https://www.linkedin.com/learning/fundamentos-del-networking-profesional-2017"
+level: "General"
+language: "es"
+retired: true
+instructors: ["Lorena Diaz Quijano"]
+summary: "Aprende los fundamentos necesarios para crear, cuidar y desarrollar tu networking profesional, y cómo entablar contacto ya sea un conocido o una nueva persona que te interese."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Fundamentos del networking profesional 2017.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Fundamentos Del Networking Profesional.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "ff35e40e025001eb04c4a0a441d5c210b2367be06016b7aa569bf34a9eefe22a"
+pmi_verify_url: null
+pmi_pdus: 1.0
+kind: "curso"
+pmi_pdf: "fundamentos-del-networking-profesional-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Fundamentos del networking profesional 2017 (PMI).pdf"

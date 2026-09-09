@@ -1,0 +1,50 @@
+title: "Bienestar, coordinación y flexibilidad en casa y en el trabajo"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Mindfulness", "Control del estrés", "Desarrollo personal", "Habilidades para la vida", "Work-Life Balance"]
+issued: "2020-02-12"
+hours: 0.47
+credential_id: "1a12729870d871aa16e97c8beda0b5604f4f22ebee01e298e860ca65fb814930"
+verify_url: "https://www.linkedin.com/learning/certificates/1a12729870d871aa16e97c8beda0b5604f4f22ebee01e298e860ca65fb814930"
+pdf: "bienestar-coordinacion-y-flexibilidad-en-casa-y-en-el-trabajo"
+thumb: "bienestar-coordinacion-y-flexibilidad-en-casa-y-en-el-trabajo"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields: []
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:5024269"
+course_url: "https://www.linkedin.com/learning/bienestar-coordinacion-y-flexibilidad-en-casa-y-en-el-trabajo"
+level: "General"
+language: "es"
+retired: false
+instructors: ["Juan Carlos Silva"]
+summary: "Mejora tu concentración, optimiza tu productividad y alcanza el bienestar tanto laboral como personal."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Bienestar coordinacion y flexibilidad en casa y en el trabajo.pdf", "certs-src/_origen/Certs Linkedin/Bienestar, coordinación y flexibilidad en casa y en el trabajo"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

@@ -1,0 +1,63 @@
+title: "The Ultimate Hands-On Hadoop - Tame your Big Data!"
+issuer: "Udemy"
+platform: "Udemy"
+area: "datos-y-analitica"
+domain: "ingenieria-datos"
+tech: ["hadoop", "analitica", "big-data", "kafka", "nosql", "spark"]
+type: "tecnico"
+official: false
+skills: ["Hadoop"]
+issued: "2020-01-23"
+hours: 14.5
+credential_id: "UC-1GTQMHGE"
+verify_url: "https://www.udemy.com/certificate/UC-1GTQMHGE/"
+pdf: "the-ultimate-hands-on-hadoop-tame-your-big-data"
+thumb: "the-ultimate-hands-on-hadoop-tame-your-big-data"
+weight: 3
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ingenieria-datos"
+  type: "tecnico"
+  tech: ["hadoop"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "credential_id"
+  - "verify_url"
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/the-ultimate-hands-on-hadoop-tame-your-big-data/"
+level: null
+language: null
+retired: false
+instructors: ["Sundog Education by Frank Kane", "Frank Kane", "Sundog Education Team"]
+summary: "Data Engineering and Hadoop tutorial with MapReduce, HDFS, Spark, Flink, Hive, HBase, MongoDB, Cassandra, Kafka + more!"
+source_files: ["certs-src/_origen/Certs Udemy/UC-1GTQMHGE.pdf"]
+expires: null
+active: null
+objectives:
+  - "Design distributed systems that manage \"big data\" using Hadoop and related data engineering technologies."
+  - "Use HDFS and MapReduce for storing and analyzing data at scale."
+  - "Use Pig and Spark to create scripts to process data on a Hadoop cluster in more complex ways."
+  - "Analyze relational data using Hive and MySQL"
+  - "Analyze non-relational data using HBase, Cassandra, and MongoDB"
+  - "Query data interactively with Drill, Phoenix, and Presto"
+  - "Choose an appropriate data storage technology for your application"
+  - "Understand how Hadoop clusters are managed by YARN, Tez, Mesos, Zookeeper, Zeppelin, Hue, and Oozie."
+  - "Publish data to your Hadoop cluster using Kafka, Sqoop, and Flume"
+  - "Consume streaming data using Spark Streaming, Flink, and Storm"
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

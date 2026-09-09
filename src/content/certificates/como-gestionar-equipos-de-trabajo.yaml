@@ -1,0 +1,51 @@
+title: "Cómo gestionar equipos de trabajo"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: ["office-365"]
+type: "gestion"
+official: false
+skills: ["Gestión de personas", "Dirección y desarrollo de equipos de trabajo", "Liderazgo", "Team Management"]
+issued: "2019-08-23"
+hours: 1.33
+credential_id: "bdcf296f2d8a3f1fd709e0884c73a77ad6d5369cda7ecddee91cfb943057357e"
+verify_url: "https://www.linkedin.com/learning/certificates/bdcf296f2d8a3f1fd709e0884c73a77ad6d5369cda7ecddee91cfb943057357e"
+pdf: "como-gestionar-equipos-de-trabajo"
+thumb: "como-gestionar-equipos-de-trabajo"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:420457"
+course_url: "https://www.linkedin.com/learning/como-gestionar-equipos-de-trabajo-2015"
+level: "Beginner"
+language: "es"
+retired: true
+instructors: ["Todd Dewett"]
+summary: "Aprende a liderar equipos, a motivar a los trabajadores y a llevar todo el trabajo al éxito, prediciendo y solventando los problemas que puedan aparecer en el proceso."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como gestionar equipos de trabajo 2015.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Gestionar Equipos De Trabajo.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "acd906d04595077d7cbc4413a13e0fecd6062a1652475b8a5c855a204bbec2e0"
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: "como-gestionar-equipos-de-trabajo-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Como gestionar equipos de trabajo 2015 (PMI).pdf"

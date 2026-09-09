@@ -1,0 +1,52 @@
+title: "Fundamentos de Six Sigma"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "agile-proyectos"
+tech: ["six-sigma"]
+type: "gestion"
+official: false
+skills: ["Lean Six Sigma"]
+issued: "2022-03-26"
+hours: 1.88
+credential_id: "4224c2bd9f411c137f9b2c48f54f9801a3a7f0094d5fe03b02ba3fa3a8782c78"
+verify_url: "https://www.linkedin.com/learning/certificates/4224c2bd9f411c137f9b2c48f54f9801a3a7f0094d5fe03b02ba3fa3a8782c78"
+pdf: "fundamentos-de-six-sigma"
+thumb: "fundamentos-de-six-sigma"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "agile-proyectos"
+  type: "gestion"
+  tech: ["six-sigma"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:714745"
+course_url: "https://www.linkedin.com/learning/fundamentos-de-six-sigma-2018"
+level: "Beginner + Intermediate"
+language: "es"
+retired: true
+instructors: ["Richard Chua"]
+summary: "Aprende Six Sigma para implementar mejoras en el rendimiento de tus procesos. Veremos conceptos básicos y los criterios para identificar a qué proyectos aplicarles este enfoque."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de Six Sigma 2018.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Fundamentos de Six Sigma.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "5bdd851960c272b35d65c0dc565c8cdcef2cb79908e757c729e95ab081b93b91"
+pmi_verify_url: null
+pmi_pdus: 1.75
+kind: "curso"
+pmi_pdf: "fundamentos-de-six-sigma-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de Six Sigma 2018 (PMI).pdf"

@@ -1,0 +1,52 @@
+title: "Cómo crear una cultura de la responsabilidad"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Gestión", "Rendición de cuentas", "Cultura organizativa", "Liderazgo", "Organizational Culture", "Accountability"]
+issued: "2019-09-04"
+hours: 0.56
+credential_id: "502a06dc5585b0108de3e26eb033cec0b80047e4397c7ce4f17b495dc910c4d5"
+verify_url: "https://www.linkedin.com/learning/certificates/502a06dc5585b0108de3e26eb033cec0b80047e4397c7ce4f17b495dc910c4d5"
+pdf: "como-crear-una-cultura-de-la-responsabilidad"
+thumb: "como-crear-una-cultura-de-la-responsabilidad"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:608977"
+course_url: "https://www.linkedin.com/learning/como-crear-una-cultura-de-la-responsabilidad"
+level: "Intermediate"
+language: "es"
+retired: false
+instructors: ["Mike Figliuolo"]
+summary: "Crea una cultura de responsabilidad en tu empresa, empezando a dar ejemplo como líder a tu equipo para que ellos sigan tu modelo y sigan la ideología que deseas implantar."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como crear una cultura de la responsabilidad.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Crear Una Cultura De La Responsabilidad.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

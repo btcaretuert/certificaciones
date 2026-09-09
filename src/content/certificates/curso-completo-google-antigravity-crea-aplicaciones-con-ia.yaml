@@ -1,0 +1,46 @@
+title: "Curso Completo Google Antigravity. Crea Aplicaciones con IA"
+issuer: "Udemy"
+platform: "Udemy"
+area: "desarrollo-y-herramientas"
+domain: "sin-clasificar"
+tech: ["analitica", "ia-generativa"]
+type: "tecnico"
+official: false
+skills: []
+issued: "2026-09-05"
+hours: 6.0
+credential_id: "UC-5e2779c2-324a-4ab3-981e-e7834381d2a3"
+verify_url: "https://www.udemy.com/certificate/UC-5e2779c2-324a-4ab3-981e-e7834381d2a3/"
+pdf: "curso-completo-google-antigravity-crea-aplicaciones-con-ia"
+thumb: "curso-completo-google-antigravity-crea-aplicaciones-con-ia"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot: null
+classification_confidence: "low"
+classification_signals: ""
+classification_rules_version: ""
+needs_review: true
+extracted_fields: []
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/curso-completo-google-antigravity-crea-aplicaciones-con-ia/"
+level: null
+language: null
+retired: false
+instructors: ["Ivan AlsiGo"]
+summary: "Domina Google Antigravity para crear Apps con IA y vibe coding usando Agentes que programan por ti con MCP, Skills y más"
+source_files: ["certs-src/_origen/Certs Udemy/UC-5e2779c2-324a-4ab3-981e-e7834381d2a3.pdf"]
+expires: null
+active: null
+objectives: ["Construir aplicaciones completas desde cero utilizando únicamente instrucciones en lenguaje natural en Google Antigravity", "Conectar aplicaciones con bases de datos como Supabase o Airtable para almacenar y gestionar información real", "Replantear tu forma de desarrollar software adoptando un modelo basado en agentes de inteligencia artificial", "Diseñar y aplicar Rules, Workflows y Skills para mejorar, automatizar y especializar agentes por proyectos", "Orquestar múltiples agentes en paralelo para acelerar el desarrollo y multiplicar tu productividad", "Crear dashboards dinámicos para analizar datos de negocio y visualizar métricas clave", "Integrar automatizaciones y procesos backend mediante herramientas como n8n, Make, Zapier y más", "Utilizar MCP para conectar Antigravity con herramientas externas como Notion, NotebookLM y más", "Desplegar aplicaciones en la nube y llevar proyectos del entorno local a producción", "Pasar de una idea a una solución digital funcional sin escribir ni una sola línea de código con Google Antigravity"]
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

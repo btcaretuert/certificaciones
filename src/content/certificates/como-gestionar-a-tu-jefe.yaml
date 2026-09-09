@@ -1,0 +1,51 @@
+title: "Cómo gestionar a tu jefe"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Comunicación", "Gestión", "Gestión de carrera profesional", "Management"]
+issued: "2019-08-18"
+hours: 1.05
+credential_id: "d8e5893da6124c4e8abda283c00b8e0230d7299433353b3a1f7609d7f30865f7"
+verify_url: "https://www.linkedin.com/learning/certificates/d8e5893da6124c4e8abda283c00b8e0230d7299433353b3a1f7609d7f30865f7"
+pdf: "como-gestionar-a-tu-jefe"
+thumb: "como-gestionar-a-tu-jefe"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:646303"
+course_url: "https://www.linkedin.com/learning/como-gestionar-a-tu-superior"
+level: "General"
+language: "es"
+retired: true
+instructors: ["Roberta Matuson"]
+summary: "Empieza a analizar las tareas de tu jefe y descubre cómo, al gestionar a tus superiores, será más sencillo conseguir ese ascenso que te interesa al descubrir que buscan en un líder."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como gestionar a tu superior.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "ce18ec94239656539af2d28c9df41100a2f5ffa79804363dbb66c47f9ee8ac92"
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: "como-gestionar-a-tu-jefe-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Como gestionar a tu superior (PMI).pdf"

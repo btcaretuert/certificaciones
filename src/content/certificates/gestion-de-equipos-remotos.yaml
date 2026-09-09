@@ -1,0 +1,52 @@
+title: "Gestión de equipos remotos"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: ["office-365"]
+type: "gestion"
+official: false
+skills: ["Equipos virtuales", "Dirección y desarrollo de equipos de trabajo", "teletrabajo", "Virtual Teams"]
+issued: "2019-10-23"
+hours: 2.35
+credential_id: "b910679ddda0dd56a7f4fcd81897a7c4b53888e88a839123d23f969ebdd856e0"
+verify_url: "https://www.linkedin.com/learning/certificates/b910679ddda0dd56a7f4fcd81897a7c4b53888e88a839123d23f969ebdd856e0"
+pdf: "gestion-de-equipos-remotos"
+thumb: "gestion-de-equipos-remotos"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:622424"
+course_url: "https://www.linkedin.com/learning/teletrabajo-y-gestion-de-equipos-remotos-2017"
+level: "Beginner"
+language: "es"
+retired: true
+instructors: ["Francisco Rabano", "Bob Mcgannon"]
+summary: "Aprende a gestionar tu equipo sin importar desde dónde trabaje cada uno, a día de hoy es común encontrarse con que cada uno puede trabajar desde distintas partes del mundo."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Teletrabajo y gestion de equipos remotos 2017.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "75813d9438309b8c4f8f509bc355dff36be69a3dbc2239e64351c3bb3f9cf1c9"
+pmi_verify_url: null
+pmi_pdus: 2.25
+kind: "curso"
+pmi_pdf: "gestion-de-equipos-remotos-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Teletrabajo y gestion de equipos remotos 2017 (PMI).pdf"

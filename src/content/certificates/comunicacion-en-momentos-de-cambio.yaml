@@ -1,0 +1,52 @@
+title: "Comunicación en momentos de cambio"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Comunicación", "Transformación Digital", "Change Communications"]
+issued: "2019-08-30"
+hours: 0.86
+credential_id: "630ce4dc07ba5fd8d9792a5728c81107fc1c471de4d730feecb34b53dd55d2a2"
+verify_url: "https://www.linkedin.com/learning/certificates/630ce4dc07ba5fd8d9792a5728c81107fc1c471de4d730feecb34b53dd55d2a2"
+pdf: "comunicacion-en-momentos-de-cambio"
+thumb: "comunicacion-en-momentos-de-cambio"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:714719"
+course_url: "https://www.linkedin.com/learning/comunicacion-en-momentos-de-cambio"
+level: "General"
+language: "es"
+retired: true
+instructors: ["Brenda Bailey Hughes", "Tatiana Kolovou"]
+summary: "Adopta una estrategia de comunicación gracias a la que tus iniciativas de cambio se aplicarán con éxito. Responde a las preguntas típicas que surgen con los cambios."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Comunicacion en momentos de cambio.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Comunicacion En Momentos De Cambio.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "f3538d5974cd48c10a5c49e5241a24430b4711317655dc20635aa276f325cd1a"
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: "comunicacion-en-momentos-de-cambio-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Comunicacion en momentos de cambio (PMI).pdf"

@@ -1,0 +1,71 @@
+# ─── CRÍTICO: fichas y PDFs retenidos. NUNCA deben llegar al remoto. ───
+# Repo público: si una ficha retenida se versiona, "no publicado" significa
+# "no sale en el sitio", no "es inaccesible". El título ES el dato sensible.
+# El CMS en modo local las ve porque lee del disco; git jamás.
+/private/
+
+# Salida de las pruebas de navegador: trazas y capturas, se regeneran
+/test-results/
+/playwright-report/
+
+# Build
+dist/
+.astro/
+node_modules/
+
+# Activos generados por la migración (se regeneran; pesan ~110 MB)
+/certs-src/
+
+# Bundle del clasificador, generado en prebuild
+/public/admin/classifier.js
+
+# Reportes locales de migración y curaduría (pueden nombrar fichas retenidas)
+/reports/
+
+# Entorno
+.env
+.env.production
+.DS_Store
+*.log
+npm-debug.log*
+
+# Cosecha cruda de las plataformas. Contiene los 261 tokens de LinkedIn y la
+# lista completa sin curar, incluidos los títulos que se decidió no publicar.
+# El token es inerte mientras el certificado no esté compartido, pero publicar
+# la lista entrega de golpe el catálogo completo y URLs que quedarían vivas en
+# cuanto se active el enlace público de cada certificado.
+/data/_raw/
+/data/mapa-certificados.json
+/data/mapa-certificados.tsv
+/data/reimpresos.json
+/data/legado.json
+/data/otros.json
+/data/otros_certs.json
+/data/certificados.json
+
+# Material de entrada de la migracion: el HTML crudo de LinkedIn (43
+# trackingToken, el id de miembro y titulos que se decidio no publicar) y 47
+# PDFs de certificado, de los cuales 41 no corresponden a ninguna ficha
+# publica. Versionarlos hace accesible en el repo justo lo que la curaduria
+# saco del sitio.
+/input/
+
+# Inventario de origen de LinkedIn: nombra los PDF de fichas retenidas y lleva
+# 225 identificadores de curso heredados.
+/data/origen_linkedin.json
+
+# Bitacoras de sesion. Nombran las fichas retenidas y el motivo por el que se
+# retuvieron, que es un perfil mas especifico que la propia lista.
+/docs/checkpoints/
+
+# Criterio de curaduria. Vive fuera del repo por la misma razon por la que el
+# panel no se publica: dice por que se oculto lo que se oculto. prebuild lo
+# crea neutro si falta, para que un clon siga funcionando.
+/src/lib/classify/curation.js
+
+# Binarios de escaneo de seguridad, fijados por SHA256 y descargables con
+# `npm run tools:security`.
+/.tools/
+
+# Capturas de trabajo, no son entregable
+/reports/capturas/

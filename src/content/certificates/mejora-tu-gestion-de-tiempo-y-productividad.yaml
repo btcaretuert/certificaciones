@@ -1,0 +1,55 @@
+title: "Mejora tu gestión de tiempo y productividad"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Time Management", "Priority Management", "Personal Development"]
+issued: "2019-08-29"
+hours: 13.02
+credential_id: "919988b0ed6c7ecc3fef83528a08c9de6165e5bba5eb782c9508c8021b2da2a3"
+verify_url: "https://www.linkedin.com/learning/certificates/919988b0ed6c7ecc3fef83528a08c9de6165e5bba5eb782c9508c8021b2da2a3"
+pdf: "mejora-tu-gestion-de-tiempo-y-productividad"
+thumb: "mejora-tu-gestion-de-tiempo-y-productividad"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:llsServePath:1556036"
+course_url: "https://www.linkedin.com/learning/paths/mejora-tu-gestion-de-tiempo-y-productividad"
+level: "Beginner"
+language: null
+retired: false
+instructors: []
+summary: "Mejora tu productividad y gestión de tiempo y energía con ayuda de especialistas en la materia:"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Mejora tu gestion de tiempo y productividad.pdf", "certs-src/_origen/Certs Linkedin Itinerarios/CertificadoDeFinalizacion_Mejora tu gestion de tiempo y productividad.pdf"]
+expires: null
+active: null
+objectives:
+  - "Gestiona tu tiempo con eficacia trabajando en cualquier entorno."
+  - "Mejora tu productividad priorizando adecuadamente las tareas que más impacto generan."
+  - "Maneja las distracciones y la procrastinación para tener una jornada más efectiva."
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "itinerario"
+pmi_pdf: null
+pmi_source_file: null

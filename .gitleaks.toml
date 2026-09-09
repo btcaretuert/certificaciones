@@ -1,0 +1,20 @@
+# Configuracion de gitleaks. Extiende las reglas por defecto; aqui solo van
+# las excepciones, cada una con su motivo.
+#
+# gitleaks se mantiene aunque el proyecto no tenga ningun token: el modo local
+# del panel evita las credenciales, pero no evita que alguien pegue por
+# descuido un `credential_id`, una clave de API o el HTML crudo de una
+# plataforma. Eso es lo que busca.
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = """
+Bundle de Sveltia CMS, auto-hospedado y minificado. Su unica coincidencia es
+`i.anchor.key,<literal>`: entropia alta dentro de codigo minificado, no un
+secreto. No se revisa a mano porque no hace falta: check-admin-bundle.mjs
+verifica su SHA256 contra el valor fijado en el repositorio en cada build, asi
+que cualquier cambio en este archivo detiene la compilacion antes que gitleaks.
+"""
+paths = ['''public/admin/sveltia-cms\.js''']

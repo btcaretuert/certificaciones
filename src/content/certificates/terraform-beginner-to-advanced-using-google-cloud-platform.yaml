@@ -1,0 +1,60 @@
+title: "Terraform Beginner to Advanced - Using Google Cloud Platform"
+issuer: "Udemy"
+platform: "Udemy"
+area: "cloud-e-infraestructura"
+domain: "devops"
+tech: ["gcp", "terraform", "devops", "seguridad", "sql"]
+type: "tecnico"
+official: false
+skills: ["Terraform", "Google Cloud Platform"]
+issued: "2021-01-15"
+hours: 2.5
+credential_id: "UC-726a34d3-9602-47b1-abd4-656b30dfd06b"
+verify_url: "https://www.udemy.com/certificate/UC-726a34d3-9602-47b1-abd4-656b30dfd06b/"
+pdf: "terraform-beginner-to-advanced-using-google-cloud-platform"
+thumb: "terraform-beginner-to-advanced-using-google-cloud-platform"
+weight: 3
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "cloud-e-infraestructura"
+  domain: "devops"
+  type: "tecnico"
+  tech: ["gcp", "terraform"]
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=2"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+  - "credential_id"
+  - "verify_url"
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/terraform-beginner-to-advanced-using-google-cloud-platform/"
+level: null
+language: null
+retired: false
+instructors: ["DevOps Made Easy"]
+summary: "An in-depth course going through the basics concepts of Terraform V12 all the way to advanced techniques using GCP."
+source_files: ["certs-src/_origen/Certs Udemy/UC-726a34d3-9602-47b1-abd4-656b30dfd06b.pdf"]
+expires: null
+active: null
+objectives:
+  - "Learn the core Terraform skills needed for DevOps proffesionals."
+  - "Be able to demonstrate your understanding of Terraform to future employers."
+  - "Gain an understanding of real world examples of how to use Terraform from within the workplace."
+  - "Gain an understanding of the key concepts of Interpolation, Methods, Resources, Providers and Outputs."
+  - "Learn industry best practices in Terraform coding."
+  - "Gain an understanding of how Google Cloud Platform works."
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

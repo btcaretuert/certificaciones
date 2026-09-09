@@ -1,0 +1,52 @@
+title: "Transición de jefe a líder"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Gestión", "Liderazgo", "Gestión de carrera profesional", "Career Management", "Leadership"]
+issued: "2019-09-09"
+hours: 1.04
+credential_id: "e2ed44c147484c6be75cbc150f2d99fe132bb93169b7a1f0996b0222fd61b808"
+verify_url: "https://www.linkedin.com/learning/certificates/e2ed44c147484c6be75cbc150f2d99fe132bb93169b7a1f0996b0222fd61b808"
+pdf: "transicion-de-jefe-a-lider"
+thumb: "transicion-de-jefe-a-lider"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:608980"
+course_url: "https://www.linkedin.com/learning/transicion-de-responsable-a-lider-2017"
+level: "General"
+language: "es"
+retired: true
+instructors: ["Sara Canaday"]
+summary: "Realiza la transformación de responsable a líder mediante una serie de pasos que te ayudarán a cambiar tu mentalidad, a trabajar y a desarrollar tu inteligencia emocional."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Transicion de responsable a lider 2017.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "5e89a7e59504e51596e68977205b3c3c86312ddef23af7f0ff24298e75fd4372"
+pmi_verify_url: null
+pmi_pdus: 1.0
+kind: "curso"
+pmi_pdf: "transicion-de-jefe-a-lider-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Transicion de responsable a lider 2017 (PMI).pdf"

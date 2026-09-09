@@ -1,0 +1,55 @@
+title: "Mejora tu capacidad para comunicar con las personas"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Communication", "Interpersonal Communication", "Professional Communication"]
+issued: "2019-10-22"
+hours: 11.79
+credential_id: "97a2ac39eca816a9d7ebb521667c75ec43f402730a28c2bf1f44e9e3ecd43e03"
+verify_url: "https://www.linkedin.com/learning/certificates/97a2ac39eca816a9d7ebb521667c75ec43f402730a28c2bf1f44e9e3ecd43e03"
+pdf: "mejora-tu-capacidad-para-comunicar-con-las-personas"
+thumb: "mejora-tu-capacidad-para-comunicar-con-las-personas"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:llsServePath:1556037"
+course_url: "https://www.linkedin.com/learning/paths/mejora-tu-capacidad-para-comunicar-con-las-personas"
+level: "Beginner"
+language: null
+retired: false
+instructors: []
+summary: "Domina las habilidades de vida personales con la ayuda de especialistas en la materia:"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Mejora tu capacidad para comunicar con las personas.pdf", "certs-src/_origen/Certs Linkedin Itinerarios/CertificadoDeFinalizacion_Mejora tu capacidad para comunicar con las personas.pdf"]
+expires: null
+active: null
+objectives:
+  - "Identifica tus emociones y esquemas de comportamiento creando hábitos eficientes para mejorar tu vida personal y profesional."
+  - "Modula la comunicación en base a quién tienes delante y qué situación estés afrontando."
+  - "Comunica con eficacia, empatía y asertividad con todas las personas."
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "itinerario"
+pmi_pdf: null
+pmi_source_file: null

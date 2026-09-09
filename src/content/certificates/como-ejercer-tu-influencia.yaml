@@ -1,0 +1,52 @@
+title: "Cómo ejercer tu influencia"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Comunicación", "Ventas", "Influencia estratégica", "Influencing Others"]
+issued: "2019-09-02"
+hours: 1.38
+credential_id: "068c3ee6cbbd0ea6745b843860035d0a9ef59aea99252a766161852d02057c8c"
+verify_url: "https://www.linkedin.com/learning/certificates/068c3ee6cbbd0ea6745b843860035d0a9ef59aea99252a766161852d02057c8c"
+pdf: "como-ejercer-tu-influencia"
+thumb: "como-ejercer-tu-influencia"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:561656"
+course_url: "https://www.linkedin.com/learning/como-ejercer-tu-influencia-2016"
+level: "General"
+language: "es"
+retired: true
+instructors: ["John Ullmen"]
+summary: "Ejerce influencia en otras personas gracias a unas metodologías probadas científicamente con las que aprender a determinar los mejores pasos cuando los demás busquen tu consejo."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como ejercer tu influencia 2016.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Ejercer Tu Influencia.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "080dc75acb65b0f0eee23e709aa650b0262ff35a3cbb9c4ae5dcf44e66538eaf"
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: "como-ejercer-tu-influencia-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Como ejercer tu influencia 2016 (PMI).pdf"

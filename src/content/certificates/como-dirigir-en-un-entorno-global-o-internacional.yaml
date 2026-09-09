@@ -1,0 +1,52 @@
+title: "Cómo dirigir en un entorno global o internacional"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Gestión de operaciones internacionales", "Habilidades de comunicación intercultural", "Global", "Global Management", "Multicultural Team Leadership"]
+issued: "2021-02-14"
+hours: 0.78
+credential_id: "98a8a12974de8ab73813e3e9066bcd4e835e4a47255ef5226e8fbc85561d9fbd"
+verify_url: "https://www.linkedin.com/learning/certificates/98a8a12974de8ab73813e3e9066bcd4e835e4a47255ef5226e8fbc85561d9fbd"
+pdf: "como-dirigir-en-un-entorno-global-o-internacional"
+thumb: "como-dirigir-en-un-entorno-global-o-internacional"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:800903"
+course_url: "https://www.linkedin.com/learning/como-dirigir-en-un-entorno-global-o-internacional-2019"
+level: "Intermediate"
+language: "es"
+retired: true
+instructors: ["Paula Caligiuri"]
+summary: "Evalúa el entorno cultural en el que trabajas y dirige a tus equipos apropiadamente. Ajusta tu comunicación y tu estilo de gestión para que las demás culturas te entiendan."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como dirigir en un entorno global o internacional 2019.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como dirigir en un entorno global o internacional.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "836b7ac5d4e4f71698eedc330b8b055a923917ea812ec9b13f6478383af643e3"
+pmi_verify_url: null
+pmi_pdus: 0.75
+kind: "curso"
+pmi_pdf: "como-dirigir-en-un-entorno-global-o-internacional-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Como dirigir en un entorno global o internacional 2019 (PMI).pdf"

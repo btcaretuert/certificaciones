@@ -1,0 +1,52 @@
+title: "Cómo mejorar tu confianza"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Confianza en uno mismo", "Desarrollo personal", "Habilidades para la vida", "Self-confidence"]
+issued: "2019-10-28"
+hours: 0.36
+credential_id: "04bf2a32c8ca3b030791a53c079388ab0fc29b755f3713b0c0efa1e1323c5b70"
+verify_url: "https://www.linkedin.com/learning/certificates/04bf2a32c8ca3b030791a53c079388ab0fc29b755f3713b0c0efa1e1323c5b70"
+pdf: "como-mejorar-tu-confianza"
+thumb: "como-mejorar-tu-confianza"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:190393"
+course_url: "https://www.linkedin.com/learning/como-mejorar-tu-confianza"
+level: "General"
+language: "es"
+retired: true
+instructors: ["Todd Dewett"]
+summary: "Adquiere con este curso online una mayor confianza en ti mismo y en tus posibilidades para conseguir así un mayor éxito tanto en tu vida laboral como en la personal."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como mejorar tu confianza.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Mejorar Tu Confianza.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

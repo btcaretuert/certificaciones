@@ -1,0 +1,22 @@
+# Actualizaciones de dependencias. El proyecto no tiene ningun secreto, asi que
+# el riesgo de la cadena de suministro no es el robo de credenciales sino que
+# una version comprometida se lleve al artefacto lo que la curaduria retuvo.
+# Por eso las actualizaciones llegan como PR y pasan por CI, nunca solas.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      # Un PR por grupo: 20 PR sueltos se revisan peor que 2.
+      astro:
+        patterns: ['astro', '@astrojs/*']
+      pruebas:
+        patterns: ['@playwright/*', 'playwright', 'vitest', '@axe-core/*', 'lighthouse']
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

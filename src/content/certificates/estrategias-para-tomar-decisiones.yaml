@@ -1,0 +1,52 @@
+title: "Estrategias para tomar decisiones"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "estrategia-negocio"
+tech: []
+type: "gestion"
+official: false
+skills: ["Gestión", "Toma de decisiones", "Liderazgo", "Decision-Making"]
+issued: "2019-09-17"
+hours: 0.79
+credential_id: "1fb99bba0d567a9cc3b19ac58e5733ed09e72609c7f1566e75c836621f8f307f"
+verify_url: "https://www.linkedin.com/learning/certificates/1fb99bba0d567a9cc3b19ac58e5733ed09e72609c7f1566e75c836621f8f307f"
+pdf: "estrategias-para-tomar-decisiones"
+thumb: "estrategias-para-tomar-decisiones"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "negocio-e-innovacion"
+  domain: "estrategia-negocio"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:479575"
+course_url: "https://www.linkedin.com/learning/estrategias-para-tomar-decisiones"
+level: "General"
+language: "es"
+retired: true
+instructors: ["Mike Figliuolo"]
+summary: "Conoce los cuatro estilos de toma de decisiones (autocrático, participativo, democrático y consensuado), y decide cuál es el más adecuado según tu situación y necesidades."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Estrategias para tomar decisiones.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Estrategias Para Tomar Decisiones.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

@@ -1,0 +1,52 @@
+title: "Cómo aprender del fracaso"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Desarrollo profesional", "Habilidades para la vida", "Accountability"]
+issued: "2019-10-08"
+hours: 0.47
+credential_id: "433b54454070f2be56bd24a54fd811cc23b44c3763ddb6822eb794ca9748ef21"
+verify_url: "https://www.linkedin.com/learning/certificates/433b54454070f2be56bd24a54fd811cc23b44c3763ddb6822eb794ca9748ef21"
+pdf: "como-aprender-del-fracaso"
+thumb: "como-aprender-del-fracaso"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:588022"
+course_url: "https://www.linkedin.com/learning/como-aprender-del-fracaso"
+level: "Beginner"
+language: "es"
+retired: true
+instructors: ["Todd Dewett"]
+summary: "Descubre en este curso cómo, de las situaciones de fracaso, puedes aprender para así seguir creciendo y desarrollar más aún tus capacidades, sacando lo positivo de este fracaso."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como aprender del fracaso.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Aprender Del Fracaso.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "63b56592b29ab9b36bff4bd821c9b6b062fbb96b2a6458c378c63b7c073120ec"
+pmi_verify_url: null
+pmi_pdus: 0.25
+kind: "curso"
+pmi_pdf: "como-aprender-del-fracaso-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Como aprender del fracaso (PMI).pdf"

@@ -1,0 +1,52 @@
+title: "Aprende análisis de datos"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "datos-y-analitica"
+domain: "analitica-bi"
+tech: ["analitica"]
+type: "tecnico"
+official: false
+skills: ["Análisis de datos", "Analítica de datos", "Data Analytics"]
+issued: "2019-12-30"
+hours: 2.13
+credential_id: "fb66fa36e97379a5c8971a8d30f4701c3f9e3d021a55d4d22babbbaf8c63d592"
+verify_url: "https://www.linkedin.com/learning/certificates/fb66fa36e97379a5c8971a8d30f4701c3f9e3d021a55d4d22babbbaf8c63d592"
+pdf: "aprende-analisis-de-datos"
+thumb: "aprende-analisis-de-datos"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "analitica-bi"
+  type: "tecnico"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:793655"
+course_url: "https://www.linkedin.com/learning/aprende-analisis-de-datos"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Ana Maria Bisbe York", "Robin Hunt"]
+summary: "Aprende análisis de datos. Conviértete en un experto en la ciencia de la información"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Aprende analisis de datos.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Aprende Analisis De Datos.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

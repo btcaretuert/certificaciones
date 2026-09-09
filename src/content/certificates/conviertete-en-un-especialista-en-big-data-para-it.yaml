@@ -1,0 +1,55 @@
+title: "Conviértete en un especialista en Big Data para IT"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "datos-y-analitica"
+domain: "ingenieria-datos"
+tech: ["analitica", "big-data"]
+type: "tecnico"
+official: false
+skills: ["Data Analysis", "Big Data", "Business Intelligence (BI)"]
+issued: "2019-12-23"
+hours: 11.25
+credential_id: "b174838422544011edc4f6ba1fe7953881040844aceae3a4934aa0d7846517af"
+verify_url: "https://www.linkedin.com/learning/certificates/b174838422544011edc4f6ba1fe7953881040844aceae3a4934aa0d7846517af"
+pdf: "conviertete-en-un-especialista-en-big-data-para-it"
+thumb: "conviertete-en-un-especialista-en-big-data-para-it"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ingenieria-datos"
+  type: "tecnico"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:llsServePath:4975095"
+course_url: "https://www.linkedin.com/learning/paths/conviertete-en-especialista-en-big-data-para-it"
+level: "Beginner + Intermediate"
+language: null
+retired: false
+instructors: []
+summary: "Conviértete en especialista en Big Data para IT con la ayuda de especialistas en la materia:"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Conviertete en especialista en Big Data para IT.pdf"]
+expires: null
+active: null
+objectives:
+  - "Aprende cómo organizar tu departamento IT para crear una división para Big Data."
+  - "Utiliza lenguajes de programación para trabajar con los datos."
+  - "Aprende cómo preparar los datos par una mejor visualización y análisis."
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "itinerario"
+pmi_pdf: null
+pmi_source_file: null

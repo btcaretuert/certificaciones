@@ -1,0 +1,52 @@
+title: "Fundamentos de la negociación"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Comunicación", "Negociación", "Negotiation"]
+issued: "2019-09-09"
+hours: 1.28
+credential_id: "620bcee38d833394877ad8b55bdaa046b7cfc136a6e59c3c2f4c422fe3462f73"
+verify_url: "https://www.linkedin.com/learning/certificates/620bcee38d833394877ad8b55bdaa046b7cfc136a6e59c3c2f4c422fe3462f73"
+pdf: "fundamentos-de-la-negociacion"
+thumb: "fundamentos-de-la-negociacion"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:593066"
+course_url: "https://www.linkedin.com/learning/fundamentos-de-la-negociacion"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Elena Compte Tordesillas"]
+summary: "Aprende técnicas que podrás poner en práctica en un gran número de situaciones para ser capaz de llevar la negociación a tu propio terreno y que el resultado te sea más propicio."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de la negociacion.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Fundamentos De La Negociacion.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "285214813b65d98d1dcbe8fb36296b4a51bc4043f7baa800ec99f2239988f432"
+pmi_verify_url: null
+pmi_pdus: 1.25
+kind: "curso"
+pmi_pdf: "fundamentos-de-la-negociacion-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de la negociacion (PMI).pdf"

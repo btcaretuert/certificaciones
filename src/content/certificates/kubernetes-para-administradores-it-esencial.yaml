@@ -1,0 +1,52 @@
+title: "Kubernetes para administradores IT esencial"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "cloud-e-infraestructura"
+domain: "cloud-plataforma"
+tech: ["kubernetes"]
+type: "tecnico"
+official: false
+skills: ["Computación en la nube", "Kubernetes", "Implantación de software"]
+issued: "2020-01-09"
+hours: 2.41
+credential_id: "2837c9da6870db13523c1cc44fc572712e6d74224ddb86bc264d0f7c0912401c"
+verify_url: "https://www.linkedin.com/learning/certificates/2837c9da6870db13523c1cc44fc572712e6d74224ddb86bc264d0f7c0912401c"
+pdf: "kubernetes-para-administradores-it-esencial"
+thumb: "kubernetes-para-administradores-it-esencial"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "cloud-e-infraestructura"
+  domain: "cloud-plataforma"
+  type: "tecnico"
+  tech: ["kubernetes"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:680861"
+course_url: "https://www.linkedin.com/learning/kubernetes-para-administradores-it-esencial"
+level: "Beginner + Intermediate"
+language: "es"
+retired: false
+instructors: ["Alvaro Gonzalez Crespo"]
+summary: "Aprende los conceptos básicos de Kubernetes, cómo se distribuye toda su infraestructura y cómo gestiona sus contenedores. Empieza a gestionar y desplegar aplicaciones."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Kubernetes para administradores IT esencial.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Kubernetes Para Administradores It Esencial.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

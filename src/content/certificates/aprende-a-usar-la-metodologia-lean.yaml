@@ -1,0 +1,52 @@
+title: "Aprende a usar la metodología Lean"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "agile-proyectos"
+tech: ["six-sigma", "agile"]
+type: "gestion"
+official: false
+skills: ["Lean", "Agile", "Lean Software Development"]
+issued: "2021-07-18"
+hours: 1.09
+credential_id: "4489d07275e888a3810fad84d302b1e6eeb059bbb0d1c91110e8b1a665ba3b65"
+verify_url: "https://www.linkedin.com/learning/certificates/4489d07275e888a3810fad84d302b1e6eeb059bbb0d1c91110e8b1a665ba3b65"
+pdf: "aprende-a-usar-la-metodologia-lean"
+thumb: "aprende-a-usar-la-metodologia-lean"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "agile-proyectos"
+  type: "gestion"
+  tech: ["six-sigma"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:404104"
+course_url: "https://www.linkedin.com/learning/aprende-a-usar-la-metodologia-lean"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Carlos Solis"]
+summary: "Aprende a desarrollar, planificar y validar tus ideas utilizando la metodología Lean, ágil y rápida, que aumentará tus probabilidades de alcanzar el éxito con tu idea."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Aprende a usar la metodologia Lean.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Aprende a usar la metodologia Lean.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "52c8ac42f4cd94b1f0bf8801d3ef8641c6e2952a41c3ad389acdeac408783d02"
+pmi_verify_url: null
+pmi_pdus: 1.0
+kind: "curso"
+pmi_pdf: "aprende-a-usar-la-metodologia-lean-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Aprende a usar la metodologia Lean (PMI).pdf"

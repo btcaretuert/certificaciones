@@ -1,0 +1,52 @@
+title: "Gestionar en todas las direcciones del organigrama empresarial"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "gestion-personas"
+tech: []
+type: "gestion"
+official: false
+skills: ["Comunicación", "Gestión del talento", "Recursos humanos (RR. HH.)", "Management"]
+issued: "2019-09-11"
+hours: 1.16
+credential_id: "3a2f804a5528f7a851fca35993012bd35364f8e43e7b3e69b02f504bcd0287d2"
+verify_url: "https://www.linkedin.com/learning/certificates/3a2f804a5528f7a851fca35993012bd35364f8e43e7b3e69b02f504bcd0287d2"
+pdf: "gestionar-en-todas-las-direcciones-del-organigrama-empresarial"
+thumb: "gestionar-en-todas-las-direcciones-del-organigrama-empresarial"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "gestion-personas"
+  type: "gestion"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:5024266"
+course_url: "https://www.linkedin.com/learning/gestionar-en-todas-las-direcciones-del-organigrama-empresarial"
+level: "Intermediate"
+language: "es"
+retired: false
+instructors: ["Ariela Schulman"]
+summary: "Amplía y expande tu habilidad para gestionar tus relaciones interpersonales dentro del organigrama empresarial. Consigue una administración más exitosa utilizando diferentes perspectivas. "
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Gestionar en todas las direcciones del organigrama empresarial.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Gestionar En Todas Las Direcciones Del Organigrama Empresarial.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "78e1d4cc6032a27e0253d26695fb55b504ab81e68ec713f51480f2e52cad0065"
+pmi_verify_url: null
+pmi_pdus: 1.0
+kind: "curso"
+pmi_pdf: "gestionar-en-todas-las-direcciones-del-organigrama-empresarial-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Gestionar en todas las direcciones del organigrama empresarial (PMI).pdf"

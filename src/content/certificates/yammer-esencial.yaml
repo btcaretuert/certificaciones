@@ -1,0 +1,52 @@
+title: "Yammer esencial"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "desarrollo-y-herramientas"
+domain: "ofimatica-colaboracion"
+tech: ["office-365"]
+type: "transversal"
+official: false
+skills: ["Medios sociales", "Yammer", "Mensajería"]
+issued: "2020-12-23"
+hours: 1.29
+credential_id: "6371d20e1a47b15fc166576d371577084a2613d3ca0fb246dbd341ee587bf943"
+verify_url: "https://www.linkedin.com/learning/certificates/6371d20e1a47b15fc166576d371577084a2613d3ca0fb246dbd341ee587bf943"
+pdf: "yammer-esencial"
+thumb: "yammer-esencial"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "desarrollo-y-herramientas"
+  domain: "ofimatica-colaboracion"
+  type: "transversal"
+  tech: ["office-365"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:2220561"
+course_url: "https://www.linkedin.com/learning/yammer-esencial"
+level: "Beginner + Intermediate"
+language: "es"
+retired: false
+instructors: ["Isabel Fernandez Gutierrez"]
+summary: "Aprende a usar Yammer y comunícate con toda tu organización de forma más eficaz. Domina hoy la red mejor social privada para organizaciones."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Yammer esencial.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Yammer esencial.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

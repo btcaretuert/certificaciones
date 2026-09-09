@@ -1,0 +1,52 @@
+title: "Cómo tener conversaciones difíciles"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Comunicación", "Desarrollo personal", "Habilidades para la vida", "feedback", "Communication"]
+issued: "2019-09-16"
+hours: 1.21
+credential_id: "a6b223b7fb4fbb1afbba572da526be4a6d97d8ba9b40459b9200234d86a76f6b"
+verify_url: "https://www.linkedin.com/learning/certificates/a6b223b7fb4fbb1afbba572da526be4a6d97d8ba9b40459b9200234d86a76f6b"
+pdf: "como-tener-conversaciones-dificiles"
+thumb: "como-tener-conversaciones-dificiles"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:774932"
+course_url: "https://www.linkedin.com/learning/como-tener-conversaciones-dificiles"
+level: "Advanced"
+language: "es"
+retired: false
+instructors: ["Unai Vicente"]
+summary: "Amplía y expande tus habilidades para lidiar con conversaciones difíciles. Domina el arte de acertar con lo que debes decir para lograr interacciones directas y efectivas."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como tener conversaciones dificiles.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Tener Conversaciones Dificiles.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "a5455d42bc0b6b3a710c787279fb9c2edb1832f1d009ef7f6db5e0a3f8440dc9"
+pmi_verify_url: null
+pmi_pdus: 1.0
+kind: "curso"
+pmi_pdf: "como-tener-conversaciones-dificiles-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Como tener conversaciones dificiles (PMI).pdf"

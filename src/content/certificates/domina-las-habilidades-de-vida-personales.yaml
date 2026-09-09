@@ -1,0 +1,55 @@
+title: "Domina las habilidades de vida personales"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Emotional Intelligence", "Resiliency", "Critical Thinking"]
+issued: "2019-10-14"
+hours: 13.31
+credential_id: "4cc08805d0273cf0c9fa33c7201b0f2cd4500926bf2f07272e59eb0c64a58a50"
+verify_url: "https://www.linkedin.com/learning/certificates/4cc08805d0273cf0c9fa33c7201b0f2cd4500926bf2f07272e59eb0c64a58a50"
+pdf: "domina-las-habilidades-de-vida-personales"
+thumb: "domina-las-habilidades-de-vida-personales"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:llsServePath:1555177"
+course_url: "https://www.linkedin.com/learning/paths/domina-las-habilidades-de-vida-personales"
+level: "General"
+language: null
+retired: false
+instructors: []
+summary: "Domina las habilidades de vida personales con la ayuda de especialistas en la materia:"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Domina las habilidades de vida personales.pdf", "certs-src/_origen/Certs Linkedin Itinerarios/CertificadoDeFinalizacion_Domina las habilidades de vida personales.pdf"]
+expires: null
+active: null
+objectives:
+  - "Entiende quién eres, tu propósito y aplica este conocimiento en tu camino personal."
+  - "Construye un proceso sólido para lograr tus objetivos y recuperarte en situaciones difíciles."
+  - "Piensa y comunica con claridad en modo oral y escrito."
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "itinerario"
+pmi_pdf: null
+pmi_source_file: null

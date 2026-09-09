@@ -1,0 +1,52 @@
+title: "Digital Transformation: Interfaces conversacionales"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "datos-y-analitica"
+domain: "ml-ia"
+tech: []
+type: "tecnico"
+official: false
+skills: ["Transformación Digital", "Digital Transformation"]
+issued: "2021-04-12"
+hours: 1.4
+credential_id: "20e0bc96cfc897c30346203fd08c2da3d247024498ce11fff18c4b7b9c5f66de"
+verify_url: "https://www.linkedin.com/learning/certificates/20e0bc96cfc897c30346203fd08c2da3d247024498ce11fff18c4b7b9c5f66de"
+pdf: "digital-transformation-interfaces-conversacionales"
+thumb: "digital-transformation-interfaces-conversacionales"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ml-ia"
+  type: "tecnico"
+  tech: []
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:2823386"
+course_url: "https://www.linkedin.com/learning/digital-transformation-interfaces-conversacionales"
+level: "Beginner + Intermediate"
+language: "es"
+retired: false
+instructors: ["Cristina Santamarina"]
+summary: "Descubre el gran potencial que tienen las interfaces conversacionales para las organizaciones. Aumenta tu eficiencia, en cuanto a satisfacción del cliente, abrazando esta transformación digital."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Digital Transformation Interfaces conversacionales.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Digital Transformation Interfaces conversacionales.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

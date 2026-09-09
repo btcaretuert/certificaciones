@@ -1,0 +1,55 @@
+title: "Domina las habilidades de vida a nivel de liderazgo"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Communication", "Management", "Leadership"]
+issued: "2019-09-19"
+hours: 14.78
+credential_id: "9cc2a4e46397f43c52c36bfb6c74ba8dda83891ce1b1719ed05ccd0111b01f17"
+verify_url: "https://www.linkedin.com/learning/certificates/9cc2a4e46397f43c52c36bfb6c74ba8dda83891ce1b1719ed05ccd0111b01f17"
+pdf: "domina-las-habilidades-de-vida-a-nivel-de-liderazgo"
+thumb: "domina-las-habilidades-de-vida-a-nivel-de-liderazgo"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:llsServePath:1557069"
+course_url: "https://www.linkedin.com/learning/paths/domina-las-habilidades-de-vida-a-nivel-de-liderazgo"
+level: "Beginner + Intermediate"
+language: null
+retired: false
+instructors: []
+summary: "Domina las habilidades de vida a nivel de liderazgo con la ayuda de especialistas en la materia:				"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Domina las habilidades de vida a nivel de liderazgo.pdf", "certs-src/_origen/Certs Linkedin Itinerarios/CertificadoDeFinalizacion_Domina las habilidades de vida a nivel de liderazgo.pdf"]
+expires: null
+active: null
+objectives:
+  - "Aprende a comunicar con confianza para dar y recibir retroalimentación."
+  - "Mejora tus habilidades de liderazgo para ejercer influencia con y sin autoridad formal."
+  - "Resuelve conflictos en situaciones difíciles y negociaciones clave."
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "itinerario"
+pmi_pdf: null
+pmi_source_file: null

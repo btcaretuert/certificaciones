@@ -1,0 +1,52 @@
+title: "Desarrolla tu propia filosofía de liderazgo"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Gestión", "Liderazgo", "Leadership"]
+issued: "2019-09-06"
+hours: 1.41
+credential_id: "1566552c51e56359f04ff20df653087f7ca3bd4bfea02b9e2fddaf1814f49589"
+verify_url: "https://www.linkedin.com/learning/certificates/1566552c51e56359f04ff20df653087f7ca3bd4bfea02b9e2fddaf1814f49589"
+pdf: "desarrolla-tu-propia-filosofia-de-liderazgo"
+thumb: "desarrolla-tu-propia-filosofia-de-liderazgo"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:598071"
+course_url: "https://www.linkedin.com/learning/desarrolla-tu-propia-filosofia-de-liderazgo"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Mike Figliuolo"]
+summary: "Aprende a comprimir la filosofía del liderazgo en sus cuatro aspectos críticos: encaminarte, guiar el pensamiento, orientar a tus empleados y llevar una vida equilibrada."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Desarrolla tu propia filosofia de liderazgo.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Desarrolla Tu Propia Filosofia De Liderazgo.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "3abccad9ee7a21e5389d5f8f02b934f35658d68e8881c639e61cf579d29a289f"
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: "desarrolla-tu-propia-filosofia-de-liderazgo-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Desarrolla tu propia filosofia de liderazgo (PMI).pdf"

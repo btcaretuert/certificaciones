@@ -1,0 +1,51 @@
+title: "Estrategia: en vez de competir, innove"
+issuer: "Universidad del Desarrollo"
+platform: "MOOC"
+area: "negocio-e-innovacion"
+domain: "estrategia-negocio"
+tech: []
+type: "gestion"
+official: false
+skills: ["Estrategia empresarial", "Innovación"]
+issued: "2014-11-19"
+hours: 40
+credential_id: "12A8EE107365"
+verify_url: null
+pdf: "estrategia-en-vez-de-competir-innove"
+thumb: "estrategia-en-vez-de-competir-innove"
+weight: 5
+featured: false
+visibility: "public"
+curation_note: "PDF no publicado: contiene datos personales impresos"
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "negocio-e-innovacion"
+  domain: "estrategia-negocio"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+verified_public: false
+program: "MOOC"
+course_urn: null
+course_url: null
+level: null
+language: null
+retired: false
+instructors: []
+summary: "Dictado por Patricio del Sol, Ph.D. Stanford El portal de validación impreso en el diploma (diplomadosmoocs.com) ya no existe: el dominio no resuelve y no hay copia en Wayback. El código queda como identificador."
+source_files: ["certs-src/_redactados/ESTRATEGIA, EN VEZ DE COMPETIR, INNOVE - 12A8EE107365 (redactado).pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

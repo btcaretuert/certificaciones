@@ -1,0 +1,103 @@
+---
+import { urlAsset } from '../lib/urls';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** Ruta absoluta de la pagina, para canonical y og:url. */
+  path?: string;
+  /** Imagen social, ruta absoluta dentro del sitio. */
+  image?: string;
+}
+const {
+  title,
+  description = 'Certificaciones y formación continua',
+  path,
+  image,
+} = Astro.props;
+
+// Astro.site es la URL publica; en dev puede faltar, y una og:url relativa no
+// sirve de nada, asi que solo se emite cuando se puede construir absoluta.
+const url = path && Astro.site ? new URL(path, Astro.site).href : undefined;
+const imgAbs = image && Astro.site ? new URL(image, Astro.site).href : undefined;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {/*
+      CSP del sitio publico. Va en <meta> porque GitHub Pages no deja poner
+      cabeceras, y eso trae un limite que conviene decir en vez de tapar:
+      `frame-ancestors`, `sandbox` y `report-to` SOLO funcionan en cabecera, asi
+      que aqui no hay proteccion declarativa contra clickjacking. El panel lo
+      compensa con un guardia frame-busting; el sitio publico no lo necesita
+      porque no tiene ninguna accion que un clic robado pueda disparar.
+
+      `default-src 'none'` y se abre lo justo. El sitio no hace ni una peticion
+      en tiempo de ejecucion: el filtrado corre sobre el DOM ya renderizado.
+      Aun asi `connect-src` es 'self' y no 'none', por una razon medida:
+      Lighthouse pide /robots.txt desde el contexto de la pagina y con 'none'
+      la peticion se bloquea, lo que baja SEO a 92 con un fallo que no existe.
+      Como `script-src` se queda en 'self' y no hay scripts en linea, entre
+      'self' y 'none' aqui no hay diferencia defensiva real.
+
+      `style-src` lleva 'unsafe-inline' por los graficos: el ancho de cada
+      barra sale de los datos y viaja en un atributo `style` en linea. Sacarlo
+      exigiria emitir una clase por valor. Sin scripts en linea, una inyeccion
+      de CSS sola no llega a mucho; lo que importa es que `script-src` se queda
+      en 'self', y para eso el build emite los scripts como archivo aparte
+      (vite.build.assetsInlineLimit en astro.config.mjs).
+    */}
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; base-uri 'none'; form-action 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'"
+    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href={urlAsset('favicon.svg')} type="image/svg+xml" />
+    {url && <link rel="canonical" href={url} />}
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {url && <meta property="og:url" content={url} />}
+    {imgAbs && <meta property="og:image" content={imgAbs} />}
+    <meta name="twitter:card" content={imgAbs ? 'summary_large_image' : 'summary'} />
+    <slot name="head" />
+    <style is:global>
+      :root {
+        --bg: #fbfbfa; --fg: #1a1a18; --muted: #6b6b63; --line: #e4e4de;
+        --card: #ffffff; --accent: #1f5f4f; --accent-soft: #e8f2ef;
+        --tec: #1f5f4f; --ges: #7a4b8a; --tra: #8a6a2f;
+        /* Aviso de credencial vencida. Es variable de tema y no un literal
+           porque #b4562a solo contrasta sobre fondo claro: en oscuro da 3.45. */
+        --alerta: #b4562a;
+        --radius: 10px; --maxw: 1120px;
+      }
+      :root:not([data-theme='light']) {
+        @media (prefers-color-scheme: dark) {
+          --bg: #14151a; --fg: #e9e9e4; --muted: #9a9a92; --line: #2a2b33;
+          --card: #1b1d24; --accent: #6fd3b8; --accent-soft: #16302a;
+          --tec: #6fd3b8; --ges: #c39ad4; --tra: #d9b46a; --alerta: #e08a5a;
+        }
+      }
+      :root[data-theme='dark'] {
+        --bg: #14151a; --fg: #e9e9e4; --muted: #9a9a92; --line: #2a2b33;
+        --card: #1b1d24; --accent: #6fd3b8; --accent-soft: #16302a;
+        --tec: #6fd3b8; --ges: #c39ad4; --tra: #d9b46a; --alerta: #e08a5a;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0; background: var(--bg); color: var(--fg);
+        font: 15px/1.55 ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+      a { color: inherit; }
+      h1, h2, h3 { line-height: 1.2; letter-spacing: -0.015em; margin: 0; }
+    </style>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

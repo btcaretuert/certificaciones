@@ -1,0 +1,55 @@
+{
+  "name": "certificaciones",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Listado de certificaciones profesionales — sitio estatico en GitHub Pages",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "astro": "astro",
+    "audit": "node scripts/audit-dist.mjs dist",
+    "build": "node scripts/ensure-curation.mjs && node scripts/check-admin-bundle.mjs && vitest run --project unit && astro build && node scripts/strip-admin.mjs dist && node scripts/emit-assets.mjs dist && node scripts/audit-dist.mjs dist && node scripts/audit-repo.mjs",
+    "check:admin": "node scripts/check-admin-bundle.mjs",
+    "check:types": "astro check --minimumSeverity error",
+    "check:content": "vitest run --project unit tests/unit/content.test.ts",
+    "check:skills": "python3 scripts/build/check_skills.py",
+    "curation:report": "node scripts/curation-report.mjs",
+    "dev": "npm run prebuild && astro dev",
+    "emit": "node scripts/emit-assets.mjs dist",
+    "map": "bash scripts/build/map.sh",
+    "map:report": "python3 scripts/build/report.py",
+    "prebuild": "node scripts/ensure-curation.mjs && node scripts/bundle-classifier.mjs",
+    "preview": "astro preview",
+    "test": "node scripts/ensure-curation.mjs && vitest run",
+    "test:a11y": "playwright test --project a11y",
+    "test:e2e": "playwright test",
+    "test:unit": "node scripts/ensure-curation.mjs && vitest run --project unit",
+    "thumbs": "python3 scripts/build/thumbs.py",
+    "test:perf": "node scripts/lighthouse.mjs",
+    "panel": "npm run prebuild && node scripts/panel-server.mjs",
+    "audit:repo": "node scripts/audit-repo.mjs",
+    "audit:repo:historial": "node scripts/audit-repo.mjs --historial",
+    "tools:security": "node scripts/get-security-tools.mjs",
+    "check:security": "node scripts/security-scan.mjs",
+    "serve": "node scripts/serve-dist.mjs"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.3.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0",
+    "esbuild": "^0.28.0",
+    "lighthouse": "^13.4.1",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.0",
+    "yaml": "^2.9.0"
+  },
+  "allowScripts": {
+    "esbuild": true
+  }
+}

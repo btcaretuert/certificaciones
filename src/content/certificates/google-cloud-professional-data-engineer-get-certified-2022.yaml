@@ -1,0 +1,46 @@
+title: "Google Cloud Professional Data Engineer: Get Certified 2022"
+issuer: "Udemy"
+platform: "Udemy"
+area: "datos-y-analitica"
+domain: "sin-clasificar"
+tech: ["arquitectura", "data-warehouse", "etl", "gcp", "hadoop", "machine-learning", "nosql", "spark", "sql"]
+type: "tecnico"
+official: false
+skills: []
+issued: "2023-06-05"
+hours: 6.5
+credential_id: "UC-37c10d3e-afcf-4706-b7e0-e06c3646abf1"
+verify_url: "https://www.udemy.com/certificate/UC-37c10d3e-afcf-4706-b7e0-e06c3646abf1/"
+pdf: "google-cloud-professional-data-engineer-get-certified-2022"
+thumb: "google-cloud-professional-data-engineer-get-certified-2022"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot: null
+classification_confidence: "low"
+classification_signals: ""
+classification_rules_version: ""
+needs_review: true
+extracted_fields: []
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/google-cloud-professional-data-engineer-get-certified/"
+level: null
+language: null
+retired: false
+instructors: ["Dan Sullivan", "Dan Sullivan"]
+summary: "Build scalable, reliable data pipelines, databases, and machine learning applications."
+source_files: ["certs-src/_udemy_2026/UC-37c10d3e-afcf-4706-b7e0-e06c3646abf1.pdf"]
+expires: null
+active: null
+objectives: ["How to pass the Google Cloud Professional Data Engineer Exam", "Build scalable, reliable data pipelines", "Choose appropriate storage systems, including relational, NoSQL and analytical databases", "Apply multiple types of machine learning techniques to different use cases", "Deploy machine learning models in production", "Monitor data pipelines and machine learning models", "Design scalable, resilient distributed data intensive applications", "Migrate data warehouse from on-premises to Google Cloud", "Evaluate and improve the quality of machine learning models", "Grasp fundamental concepts in machine learning, such as backpropagation, feature engineering, overfitting and underfitting."]
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

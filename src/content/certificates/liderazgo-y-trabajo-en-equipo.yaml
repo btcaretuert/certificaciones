@@ -1,0 +1,52 @@
+title: "Liderazgo y trabajo en equipo"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: ["office-365"]
+type: "gestion"
+official: false
+skills: ["Trabajo en equipo", "Liderazgo de equipos", "Teamwork", "Team Leadership"]
+issued: "2019-09-17"
+hours: 1.43
+credential_id: "22a2190bc64fbec4c9bd82d661023e54c00bb0bbb1f26b8d94e4075d157fe49c"
+verify_url: "https://www.linkedin.com/learning/certificates/22a2190bc64fbec4c9bd82d661023e54c00bb0bbb1f26b8d94e4075d157fe49c"
+pdf: "liderazgo-y-trabajo-en-equipo"
+thumb: "liderazgo-y-trabajo-en-equipo"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:608964"
+course_url: "https://www.linkedin.com/learning/liderazgo-y-trabajo-en-equipo"
+level: "General"
+language: "es"
+retired: false
+instructors: ["Francisco Rabano"]
+summary: "Gestiona tus equipos de forma eficiente y actúa como un auténtico líder. Aplica la metodología que se está empleando hoy día en Silicon Valley para la gestión de equipos."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Liderazgo y trabajo en equipo.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Liderazgo Y Trabajo En Equipo.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

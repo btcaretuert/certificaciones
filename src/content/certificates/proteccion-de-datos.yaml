@@ -1,0 +1,50 @@
+title: "Protección de datos"
+issuer: "Axity (formación interna)"
+platform: "MOOC"
+area: "cloud-e-infraestructura"
+domain: "seguridad"
+tech: ["data-governance"]
+type: "tecnico"
+official: false
+skills: ["Protección de datos", "Gobierno de datos", "GDPR"]
+issued: "2020-12-28"
+hours: null
+credential_id: null
+verify_url: null
+pdf: "proteccion-de-datos"
+thumb: "proteccion-de-datos"
+weight: 5
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "cloud-e-infraestructura"
+  domain: "seguridad"
+  type: "tecnico"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields: []
+verified_public: false
+program: "curso"
+course_urn: null
+course_url: null
+level: null
+language: null
+retired: false
+instructors: []
+summary: "LMS corporativo; el enlace exige sesión y no sirve como verificación pública."
+source_files: ["certs-src/_origen/Datos y Varios/Certificado de Curso proteccion de datos.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

@@ -1,0 +1,52 @@
+title: "Cómo liderar con eficacia"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Liderazgo de equipos", "Leadership"]
+issued: "2019-12-20"
+hours: 0.71
+credential_id: "dafa0882177d72925ee969f52f3f3688147fffa915f82551c594d3bb9e6f36a1"
+verify_url: "https://www.linkedin.com/learning/certificates/dafa0882177d72925ee969f52f3f3688147fffa915f82551c594d3bb9e6f36a1"
+pdf: "como-liderar-con-eficacia"
+thumb: "como-liderar-con-eficacia"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:5025664"
+course_url: "https://www.linkedin.com/learning/como-liderar-con-eficacia-2019"
+level: "Intermediate"
+language: "es"
+retired: true
+instructors: ["Mike Figliuolo"]
+summary: "Aprende a invertir el capital de liderazgo: dirige a los empleados, asegúrate de que se lleva a cabo el trabajo, confirma que se cumple con el trabajo y ayuda al equipo a crecer."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como liderar con eficacia 2019.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Liderar Con Eficacia.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "01015287d90e47087cf053911b91db8892cebe70418a10e7694365ce0525acf1"
+pmi_verify_url: null
+pmi_pdus: 0.5
+kind: "curso"
+pmi_pdf: "como-liderar-con-eficacia-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Como liderar con eficacia 2019 (PMI).pdf"

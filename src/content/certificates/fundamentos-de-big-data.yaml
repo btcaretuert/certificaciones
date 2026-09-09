@@ -1,0 +1,52 @@
+title: "Fundamentos de big data"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "datos-y-analitica"
+domain: "ingenieria-datos"
+tech: ["big-data"]
+type: "tecnico"
+official: false
+skills: ["Análisis de Big Data", "Big data"]
+issued: "2019-08-09"
+hours: 1.6
+credential_id: "6560b61378c3a1d9c3d084924862e4043ad65e64ac2e5febbd56b73585d5014d"
+verify_url: "https://www.linkedin.com/learning/certificates/6560b61378c3a1d9c3d084924862e4043ad65e64ac2e5febbd56b73585d5014d"
+pdf: "fundamentos-de-big-data"
+thumb: "fundamentos-de-big-data"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ingenieria-datos"
+  type: "tecnico"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:680864"
+course_url: "https://www.linkedin.com/learning/fundamentos-de-big-data"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Miriam Hatibi Zagmal"]
+summary: "Conoce la evolución y los avances en Big Data de los últimos años y las diferentes aplicaciones que tiene para tu organización, independientemente de su sector o tamaño."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de big data.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Fundamentos De Big Data.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

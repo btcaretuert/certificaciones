@@ -1,0 +1,52 @@
+title: "La importancia de las habilidades de vida o soft skills"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Comunicación interpersonal", "Desarrollo personal", "Habilidades para la vida", "Personal Development"]
+issued: "2019-11-20"
+hours: 1.11
+credential_id: "68527547fe8c7c67b01877dd8535827991118015e96d4d214065b83d3d46f3a8"
+verify_url: "https://www.linkedin.com/learning/certificates/68527547fe8c7c67b01877dd8535827991118015e96d4d214065b83d3d46f3a8"
+pdf: "la-importancia-de-las-habilidades-de-vida-o-soft-skills"
+thumb: "la-importancia-de-las-habilidades-de-vida-o-soft-skills"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:714716"
+course_url: "https://www.linkedin.com/learning/la-importancia-de-las-habilidades-de-vida-o-soft-skills"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Francisco Rabano"]
+summary: "No dejes de lado las habilidades que las empresas consideran fundamentales para cualquier puesto. Escucha, dirige, atiende a las necesidades del contexto y sé compasivo."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_La importancia de las habilidades de vida o soft skills.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_La Importancia De Las Habilidades De Vida O Soft Skills.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

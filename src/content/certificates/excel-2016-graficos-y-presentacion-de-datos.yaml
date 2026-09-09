@@ -1,0 +1,52 @@
+title: "Excel 2016: Gráficos y presentación de datos"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "datos-y-analitica"
+domain: "ofimatica-colaboracion"
+tech: ["office-365", "excel"]
+type: "transversal"
+official: false
+skills: ["Microsoft Excel", "Hojas de cálculo", "presentación de datos"]
+issued: "2019-12-10"
+hours: 3.0
+credential_id: "ac2805565f8397d73fd11ea1337b16270fa7d086102598acf74e0ccbfc8a3664"
+verify_url: "https://www.linkedin.com/learning/certificates/ac2805565f8397d73fd11ea1337b16270fa7d086102598acf74e0ccbfc8a3664"
+pdf: "excel-2016-graficos-y-presentacion-de-datos"
+thumb: "excel-2016-graficos-y-presentacion-de-datos"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "desarrollo-y-herramientas"
+  domain: "ofimatica-colaboracion"
+  type: "transversal"
+  tech: ["office-365"]
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:544545"
+course_url: "https://www.linkedin.com/learning/excel-2016-graficos-y-presentacion-de-datos"
+level: "Intermediate"
+language: "es"
+retired: false
+instructors: ["Jose Manuel Pomares"]
+summary: "Aprende a dar un aspecto profesional con acabados elegantes a tus gráficos de Excel 2016, para conseguir ese impacto a primera vista en tus clientes y compañeros de trabajo."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Excel 2016 Graficos y presentacion de datos.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Excel 2016 Graficos Y Presentacion De Datos.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

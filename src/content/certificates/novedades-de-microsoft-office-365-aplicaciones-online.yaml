@@ -1,0 +1,52 @@
+title: "Novedades de Microsoft Office 365: Aplicaciones online"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "desarrollo-y-herramientas"
+domain: "ofimatica-colaboracion"
+tech: ["office-365"]
+type: "transversal"
+official: false
+skills: ["Office 365"]
+issued: "2021-03-10"
+hours: 4.1
+credential_id: "8136570fb640d25aab0e3d80edd33fb8111ec020738ad5bf07a3535e12548966"
+verify_url: "https://www.linkedin.com/learning/certificates/8136570fb640d25aab0e3d80edd33fb8111ec020738ad5bf07a3535e12548966"
+pdf: "novedades-de-microsoft-office-365-aplicaciones-online"
+thumb: "novedades-de-microsoft-office-365-aplicaciones-online"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "desarrollo-y-herramientas"
+  domain: "ofimatica-colaboracion"
+  type: "transversal"
+  tech: ["office-365"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:800579"
+course_url: "https://www.linkedin.com/learning/novedades-de-office-microsoft-365-aplicaciones-online"
+level: "Beginner + Intermediate"
+language: "es"
+retired: false
+instructors: ["Isabel Fernandez Gutierrez"]
+summary: "Conoce las nuevas funcionalidades y las mejoras de las aplicaciones de la nube de Office 365 que aumentarán tu productividad y rapidez a la hora de desempeñar tareas cotidianas."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Novedades de OfficeMicrosoft 365 Aplicaciones online.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

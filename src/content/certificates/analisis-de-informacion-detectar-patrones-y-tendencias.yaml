@@ -1,0 +1,52 @@
+title: "Análisis de información: Detectar patrones y tendencias"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "datos-y-analitica"
+domain: "analitica-bi"
+tech: []
+type: "tecnico"
+official: false
+skills: ["Trend Analysis"]
+issued: "2022-03-27"
+hours: 1.2
+credential_id: "8c927a5cbf14e528cda2fcc228ac20161ca3b4ec7398c697ed660655ecaa4b52"
+verify_url: "https://www.linkedin.com/learning/certificates/8c927a5cbf14e528cda2fcc228ac20161ca3b4ec7398c697ed660655ecaa4b52"
+pdf: "analisis-de-informacion-detectar-patrones-y-tendencias"
+thumb: "analisis-de-informacion-detectar-patrones-y-tendencias"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "analitica-bi"
+  type: "tecnico"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:2930972"
+course_url: "https://www.linkedin.com/learning/analisis-de-informacion-detectar-patrones-y-tendencias"
+level: "Intermediate"
+language: "es"
+retired: false
+instructors: ["Abdo Lopez", "Norah Walsh"]
+summary: "En este curso aprenderás cómo analizar la información que brindan las tendencias sociales. Profundiza en sus características, importancia, funcionamiento, significado e impacto."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Analisis de informacion Detectar patrones y tendencias.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Analisis de informacion Detectar patrones y tendencias.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "561bf6486c085e2390ea8b22e066c7e9558e7151dea6fde395fbee5daddead5c"
+pmi_verify_url: null
+pmi_pdus: 1.0
+kind: "curso"
+pmi_pdf: "analisis-de-informacion-detectar-patrones-y-tendencias-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Analisis de informacion Detectar patrones y tendencias (PMI).pdf"

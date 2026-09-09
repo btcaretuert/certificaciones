@@ -1,0 +1,58 @@
+title: "GCP: Complete Google Data Engineer and Cloud Architect Guide"
+issuer: "Udemy"
+platform: "Udemy"
+area: "datos-y-analitica"
+domain: "ingenieria-datos"
+tech: ["gcp", "api", "aws", "big-data", "devops", "hadoop", "kubernetes", "machine-learning", "seguridad", "spark", "sql"]
+type: "tecnico"
+official: false
+skills: ["GCP", "Google Cloud Platform", "Data Engineer", "Data Architect"]
+issued: "2021-04-12"
+hours: 28.0
+credential_id: "UC-9e03e3d8-f43d-4ac1-bf7c-4d671ff1f8d4"
+verify_url: "https://www.udemy.com/certificate/UC-9e03e3d8-f43d-4ac1-bf7c-4d671ff1f8d4/"
+pdf: "gcp-complete-google-data-engineer-and-cloud-architect-guide"
+thumb: "gcp-complete-google-data-engineer-and-cloud-architect-guide"
+weight: 3
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ingenieria-datos"
+  type: "tecnico"
+  tech: ["gcp"]
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+  - "credential_id"
+  - "verify_url"
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/gcp-data-engineer-and-cloud-architect/"
+level: null
+language: null
+retired: false
+instructors: ["Loony Corn"]
+summary: "The Google Cloud for ML with TensorFlow, Big Data with Managed Hadoop"
+source_files: ["certs-src/_origen/Certs Udemy/UC-9e03e3d8-f43d-4ac1-bf7c-4d671ff1f8d4.pdf"]
+expires: null
+active: null
+objectives:
+  - "Deploy Managed Hadoop apps on the Google Cloud"
+  - "Build deep learning models on the cloud using TensorFlow"
+  - "Make informed decisions about Containers, VMs and AppEngine"
+  - "Use big data technologies such as BigTable, Dataflow, Apache Beam and Pub/Sub"
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

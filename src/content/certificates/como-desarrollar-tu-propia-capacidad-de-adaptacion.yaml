@@ -1,0 +1,52 @@
+title: "Cómo desarrollar tu propia capacidad de adaptación"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Desarrollo personal", "capacidad de adaptación", "Personal Development"]
+issued: "2021-02-20"
+hours: 0.49
+credential_id: "22ead5980da5154e3b47df8daba5e7e68d29a42d0584a6b26dea07386d2f069b"
+verify_url: "https://www.linkedin.com/learning/certificates/22ead5980da5154e3b47df8daba5e7e68d29a42d0584a6b26dea07386d2f069b"
+pdf: "como-desarrollar-tu-propia-capacidad-de-adaptacion"
+thumb: "como-desarrollar-tu-propia-capacidad-de-adaptacion"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:2929354"
+course_url: "https://www.linkedin.com/learning/como-desarrollar-tu-propia-capacidad-de-adaptacion"
+level: "General"
+language: "es"
+retired: false
+instructors: ["Juan Carlos Silva"]
+summary: "Consigue la capacidad de adaptación que necesitas para enfrentar mejor los retos que se te presenten. Gracias a este curso, dominarás el arte de ajustarte a los imprevistos con una mayor efectividad."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como desarrollar tu propia capacidad de adaptacion.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como desarrollar tu propia capacidad de adaptacion.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

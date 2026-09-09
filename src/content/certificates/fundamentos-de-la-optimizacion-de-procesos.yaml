@@ -1,0 +1,52 @@
+title: "Fundamentos de la optimización de procesos"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "negocio-e-innovacion"
+domain: "estrategia-negocio"
+tech: []
+type: "gestion"
+official: false
+skills: ["Mejora de procesos de negocio", "Mejora de procesos continua", "Mejora de procesos", "Business Process Improvement"]
+issued: "2019-11-06"
+hours: 1.56
+credential_id: "08c8c8714328694b130a1bb2a933a92b7bb941b66d20fc3ae1a8c3efe377b18b"
+verify_url: "https://www.linkedin.com/learning/certificates/08c8c8714328694b130a1bb2a933a92b7bb941b66d20fc3ae1a8c3efe377b18b"
+pdf: "fundamentos-de-la-optimizacion-de-procesos"
+thumb: "fundamentos-de-la-optimizacion-de-procesos"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "negocio-e-innovacion"
+  domain: "estrategia-negocio"
+  type: "gestion"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:608975"
+course_url: "https://www.linkedin.com/learning/fundamentos-de-la-optimizacion-de-procesos-2017"
+level: "General"
+language: "es"
+retired: true
+instructors: ["Chris Croft"]
+summary: "Descubre las diferentes acciones que puedes llevar a cabo en tu empresa para mejorar los procesos que ya tenéis establecidos, y aprende cómo mejorar el trabajo diario."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de la optimizacion de procesos 2017.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Fundamentos De La Optimizacion De Procesos.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "17ef6d0a979ddc1ccb1348ca8b23b4d70419b31e13777f4215fcf5dfd33c158e"
+pmi_verify_url: null
+pmi_pdus: 1.5
+kind: "curso"
+pmi_pdf: "fundamentos-de-la-optimizacion-de-procesos-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de la optimizacion de procesos 2017 (PMI).pdf"

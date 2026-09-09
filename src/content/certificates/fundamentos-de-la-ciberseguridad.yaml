@@ -1,0 +1,52 @@
+title: "Fundamentos de la ciberseguridad"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "cloud-e-infraestructura"
+domain: "seguridad"
+tech: ["seguridad"]
+type: "tecnico"
+official: false
+skills: ["Seguridad de redes", "Ciberseguridad", "IT Security Operations"]
+issued: "2019-11-05"
+hours: 1.92
+credential_id: "fc7440382a554fba074ae52844648fcb0fda7631cd7b7245f30ad6679bc0efe9"
+verify_url: "https://www.linkedin.com/learning/certificates/fc7440382a554fba074ae52844648fcb0fda7631cd7b7245f30ad6679bc0efe9"
+pdf: "fundamentos-de-la-ciberseguridad"
+thumb: "fundamentos-de-la-ciberseguridad"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "cloud-e-infraestructura"
+  domain: "seguridad"
+  type: "tecnico"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:588026"
+course_url: "https://www.linkedin.com/learning/fundamentos-de-la-ciberseguridad"
+level: "Beginner"
+language: "es"
+retired: true
+instructors: ["Sergio R Solis"]
+summary: "Asienta las bases de la seguridad IT y progresa así en el mundo de la ciberseguridad y para implementarlas con garantías en los procesos de tus proyectos profesionales."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de la ciberseguridad.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Fundamentos De La Ciberseguridad.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

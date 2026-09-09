@@ -1,0 +1,52 @@
+title: "Cómo desarrollar la presencia ejecutiva"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Liderazgo ejecutivo", "Desarrollo personal", "Executive Leadership"]
+issued: "2019-09-02"
+hours: 1.45
+credential_id: "021915610c7e47ac980762608b4ba5231523bdf994a5fc8879d4d380da6112bc"
+verify_url: "https://www.linkedin.com/learning/certificates/021915610c7e47ac980762608b4ba5231523bdf994a5fc8879d4d380da6112bc"
+pdf: "como-desarrollar-la-presencia-ejecutiva"
+thumb: "como-desarrollar-la-presencia-ejecutiva"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:793663"
+course_url: "https://www.linkedin.com/learning/como-desarrollar-la-presencia-ejecutiva"
+level: "Intermediate"
+language: "es"
+retired: false
+instructors: ["John Ullmen"]
+summary: "Aprende a proyectar autoconfianza, claridad y credibilidad incluso en condiciones de estrés, presión e incertidumbre. Todo sin parecer falso o sentirte poco auténtico."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como desarrollar la presencia ejecutiva.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Desarrollar La Presencia Ejecutiva.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

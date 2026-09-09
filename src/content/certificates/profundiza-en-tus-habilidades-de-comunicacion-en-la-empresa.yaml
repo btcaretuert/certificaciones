@@ -1,0 +1,55 @@
+title: "Profundiza en tus habilidades de comunicación en la empresa"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Communication", "Public Speaking"]
+issued: "2019-10-15"
+hours: 12.08
+credential_id: "3a85ff5be3ec2bb87f49cc42903548c06a8e5081ba342fef34f19f1f87146030"
+verify_url: "https://www.linkedin.com/learning/certificates/3a85ff5be3ec2bb87f49cc42903548c06a8e5081ba342fef34f19f1f87146030"
+pdf: "profundiza-en-tus-habilidades-de-comunicacion-en-la-empresa"
+thumb: "profundiza-en-tus-habilidades-de-comunicacion-en-la-empresa"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:llsServePath:5009717"
+course_url: "https://www.linkedin.com/learning/paths/profundiza-en-tus-habilidades-de-comunicacion-en-la-empresa"
+level: "General"
+language: null
+retired: false
+instructors: []
+summary: "Profundiza en tus habilidades de comunicación en la empresa con ayuda de especialistas en la materia:"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Profundiza en tus habilidades de comunicacion en la empresa.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Profundiza En Tus Habilidades De Comunicacion En La Empresa.pdf", "certs-src/_origen/Certs Linkedin Itinerarios/CertificadoDeFinalizacion_Profundiza en tus habilidades de comunicacion en la empresa.pdf"]
+expires: null
+active: null
+objectives:
+  - "Aprende a escuchar, ponderar e incluir perspectivas diversas."
+  - "Mejora tu capacidad de comunicar en entornos de trabajo multinacionales."
+  - "Mejora tu eficacia en la comunicación escrita."
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "itinerario"
+pmi_pdf: null
+pmi_source_file: null

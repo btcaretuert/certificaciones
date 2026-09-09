@@ -1,0 +1,52 @@
+title: "Big data: Escucha activa"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "datos-y-analitica"
+domain: "ingenieria-datos"
+tech: ["big-data"]
+type: "tecnico"
+official: false
+skills: ["Marketing digital", "Marketing de redes sociales", "Conocimiento del consumidor", "Social Listening"]
+issued: "2019-08-16"
+hours: 1.49
+credential_id: "86e4eddba3084db4ada2870fb1567a7610cffae1a883ccc0850c358ae9bb4772"
+verify_url: "https://www.linkedin.com/learning/certificates/86e4eddba3084db4ada2870fb1567a7610cffae1a883ccc0850c358ae9bb4772"
+pdf: "big-data-escucha-activa"
+thumb: "big-data-escucha-activa"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ingenieria-datos"
+  type: "tecnico"
+  tech: []
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:680866"
+course_url: "https://www.linkedin.com/learning/big-data-escucha-activa"
+level: "Intermediate"
+language: "es"
+retired: false
+instructors: ["Miriam Hatibi Zagmal"]
+summary: "Pon en marcha una estrategia de escucha activa de principio a fin. Con este curso, entenderás qué es la escucha activa en redes sociales y qué puede ofrecernos."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Big data Escucha activa.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Big Data Escucha Activa.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

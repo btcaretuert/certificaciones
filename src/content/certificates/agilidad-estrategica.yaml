@@ -1,0 +1,52 @@
+title: "Agilidad estratégica"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "negocio-e-innovacion"
+domain: "estrategia-negocio"
+tech: ["agile"]
+type: "gestion"
+official: false
+skills: ["Gestión", "Liderazgo", "Agilidad", "Business Strategy", "Business Agility"]
+issued: "2021-02-14"
+hours: 0.96
+credential_id: "322b9d774f1aace91b43042a4e535a32ad01c0a4267d045a84ea976915aaf3ac"
+verify_url: "https://www.linkedin.com/learning/certificates/322b9d774f1aace91b43042a4e535a32ad01c0a4267d045a84ea976915aaf3ac"
+pdf: "agilidad-estrategica"
+thumb: "agilidad-estrategica"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "negocio-e-innovacion"
+  domain: "estrategia-negocio"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:766239"
+course_url: "https://www.linkedin.com/learning/agilidad-estrategica"
+level: "Advanced"
+language: "es"
+retired: false
+instructors: ["Oriol Reull Dominguez"]
+summary: "Trabaja de manera estratégica, más productiva y orientándote hacia tus objetivos. Aprende, construye y mide de forma ágil y flexible en la empresa, e incluso invirtiendo menos recursos."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Agilidad estrategica.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Agilidad estrategica.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "d1ad4181000b77ebb23f92c76b34d1a53c9e0fe6d7a7bf224fd2e6b78d9b4696"
+pmi_verify_url: null
+pmi_pdus: 0.75
+kind: "curso"
+pmi_pdf: "agilidad-estrategica-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Agilidad estrategica (PMI).pdf"

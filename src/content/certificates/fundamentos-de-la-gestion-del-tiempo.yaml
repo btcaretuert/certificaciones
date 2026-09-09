@@ -1,0 +1,52 @@
+title: "Fundamentos de la gestión del tiempo"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Gestión del tiempo", "Time Management"]
+issued: "2021-01-28"
+hours: 1.47
+credential_id: "e25d130cf5dd656c1fac0d6441c941963d5878b51a2b82fbb5d4bb18121676a7"
+verify_url: "https://www.linkedin.com/learning/certificates/e25d130cf5dd656c1fac0d6441c941963d5878b51a2b82fbb5d4bb18121676a7"
+pdf: "fundamentos-de-la-gestion-del-tiempo"
+thumb: "fundamentos-de-la-gestion-del-tiempo"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:608963"
+course_url: "https://www.linkedin.com/learning/fundamentos-de-la-gestion-del-tiempo"
+level: "General"
+language: "es"
+retired: false
+instructors: ["Francisco Rabano"]
+summary: "Gestiona tu tiempo de forma óptima gracias a una serie de trucos y técnicas. Aprende cómo posicionarte ante las diferentes tareas y a organizar bien tus tareas."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de la gestion del tiempo.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Fundamentos de la gestion del tiempo.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "94e2cc6328c1e7e6877fcab51efd3c5180b287bedd02a159b45b8e360f330f13"
+pmi_verify_url: null
+pmi_pdus: 1.25
+kind: "curso"
+pmi_pdf: "fundamentos-de-la-gestion-del-tiempo-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de la gestion del tiempo (PMI).pdf"

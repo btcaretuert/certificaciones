@@ -1,0 +1,52 @@
+title: "Cómo generar confianza"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Gestión", "Forjar confianza", "Liderazgo", "Desarrollo personal", "Habilidades para la vida", "Interpersonal Relationships", "Building Trust"]
+issued: "2019-09-05"
+hours: 1.01
+credential_id: "e99cc2665cc0557ce72af6c13a32c8892017c3f60438e6771381fef5e558fb15"
+verify_url: "https://www.linkedin.com/learning/certificates/e99cc2665cc0557ce72af6c13a32c8892017c3f60438e6771381fef5e558fb15"
+pdf: "como-generar-confianza"
+thumb: "como-generar-confianza"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:555153"
+course_url: "https://www.linkedin.com/learning/como-generar-confianza-2016"
+level: "General"
+language: "es"
+retired: true
+instructors: ["Brenda Bailey Hughes"]
+summary: "Aprende a fortalecer las relaciones gracias a los tres círculos de la confianza, así como a recuperar la confianza perdida y a disculparte para acelerar la regeneración de confianza."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como generar confianza 2016.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Generar Confianza.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "42d8388c0521421659dfc13084b8b6936558441ad4dcd19e61fed95168cd9abc"
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: "como-generar-confianza-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Como generar confianza 2016 (PMI).pdf"

@@ -1,0 +1,52 @@
+title: "Cómo montar una oficina móvil"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Teletrabajo", "Telecommuting", "Home Offices"]
+issued: "2021-03-13"
+hours: 4.86
+credential_id: "e1fff7e6ea95790891c7b0d03e7e31e2e8af87f2bf5a7ecea7acbfc99a97f2bc"
+verify_url: "https://www.linkedin.com/learning/certificates/e1fff7e6ea95790891c7b0d03e7e31e2e8af87f2bf5a7ecea7acbfc99a97f2bc"
+pdf: "como-montar-una-oficina-movil"
+thumb: "como-montar-una-oficina-movil"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:404156"
+course_url: "https://www.linkedin.com/learning/como-montar-una-oficina-movil"
+level: "General"
+language: "es"
+retired: true
+instructors: ["Carlos Burges Ruiz De Gopegui"]
+summary: "Consigue mantener tu productividad estés en tu oficina o en cualquier otra parte, con las herramientas que te permitirán seguir trabajando en tus proyectos desde donde necesites."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como montar una oficina movil.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como montar una oficina movil.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

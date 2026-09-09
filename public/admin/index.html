@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!--
+      CSP del panel. Parte de la politica que publica Sveltia, con unpkg.com
+      eliminado de script-src: el bundle esta auto-hospedado en este mismo
+      origen y fijado por hash, asi que NADA ejecutable entra desde el CDN.
+
+      unpkg.com SI queda en connect-src, y no por descuido. El plan daba por
+      hecho que auto-hospedar cortaba toda relacion con el CDN; es falso, y se
+      comprobo ejecutando el panel: el bundle lleva `https://unpkg.com`
+      cableado como constante —no es configurable— y en arranque pide su
+      package.json y el JSON del idioma del navegador. Con esas peticiones
+      bloqueadas, el fallo del idioma entra en un bucle de reintentos que cuelga
+      la pagina ANTES de renderizar. En un navegador en ingles no se nota; en
+      uno en español, que es el del dueño, el panel no abre nunca.
+
+      Lo que se cede es que el panel pide dos JSON a un CDN al arrancar. Lo que
+      se conserva es lo que importa: de unpkg no puede venir codigo, porque
+      script-src sigue en 'self'. Efecto lateral asumido: los import()
+      dinamicos del bundle (resaltado de sintaxis y otros modulos opcionales)
+      quedan bloqueados; el flujo de edicion no los usa.
+
+      Limitacion que no se puede resolver en GitHub Pages, y conviene decirla
+      en vez de taparla: `frame-ancestors`, `sandbox` y `report-to` solo
+      funcionan como cabecera HTTP, que este hosting no permite. Tampoco hay
+      X-Frame-Options. Contra clickjacking solo queda el guardia de guard.js.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'none';
+        style-src 'self' 'unsafe-inline';
+        font-src 'self' https://cdn.jsdelivr.net;
+        img-src 'self' blob: data: https://*.githubusercontent.com;
+        media-src blob:;
+        frame-src blob:;
+        script-src 'self';
+        connect-src 'self' blob: data: https://unpkg.com https://api.github.com https://www.githubstatus.com;
+        manifest-src blob:;
+        base-uri 'none';
+        form-action 'none';
+      "
+    />
+
+    <title>Certificados — panel</title>
+  </head>
+  <body>
+    <!-- 1. guardia + desactivar auto-init. Antes que nada. -->
+    <script src="./guard.js"></script>
+
+    <!--
+      2. Bundle auto-hospedado, fijado en @sveltia/cms@0.208.0.
+         Un 0.x que se auto-actualiza desde un CDN es riesgo de rotura y de
+         cadena de suministro. El hash esta en admin-bundle.sha256 y lo
+         verifica scripts/check-admin-bundle.mjs.
+         Sin type="module": el bundle no lo admite.
+    -->
+    <script src="./sveltia-cms.js"></script>
+
+    <!-- 3. registra el hook de clasificacion y recien ahi inicializa. -->
+    <script type="module" src="./init.js"></script>
+  </body>
+</html>

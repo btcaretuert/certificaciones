@@ -1,0 +1,52 @@
+title: "Cloud Digital Leader"
+issuer: "Google Cloud"
+platform: "International"
+area: "cloud-e-infraestructura"
+domain: "cloud-plataforma"
+tech: ["gcp", "data-governance", "seguridad"]
+type: "tecnico"
+official: true
+skills: ["Artificial Intelligence (AI)", "Cloud Computing", "Cloud Digital Leader", "Cloud Security", "Data Governance", "Google Cloud Platform (GCP)", "IT Digital Transformation"]
+issued: "2025-09-01"
+hours: null
+credential_id: "f7a80ef3-3122-4263-a85b-4dbf6f35dfd9"
+verify_url: "https://www.credly.com/badges/f7a80ef3-3122-4263-a85b-4dbf6f35dfd9"
+pdf: "cloud-digital-leader"
+thumb: "cloud-digital-leader"
+weight: 30
+featured: true
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "cloud-e-infraestructura"
+  domain: "cloud-plataforma"
+  type: "tecnico"
+  tech: ["gcp"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "credential_id"
+verified_public: true
+program: "certificación"
+course_urn: null
+course_url: null
+level: null
+language: null
+retired: false
+instructors: []
+summary: "A Cloud Digital Leader can articulate the capabilities of Google Cloud core products and services and how they benefit organizations. They can also describe common business use cases and how cloud solutions support an enterprise.This certification is for anyone who wishes to demonstrate their knowle"
+source_files: ["certs-src/_origen/Internacionales/CloudDigitalLeader20250908-32-xd6pww.pdf", "certs-src/_credly/Cloud_Digital_Leader_Certification.png"]
+expires: "2028-09-01"
+active: true
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "certificacion"
+pmi_pdf: null
+pmi_source_file: null

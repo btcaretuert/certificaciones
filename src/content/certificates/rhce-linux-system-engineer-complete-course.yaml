@@ -1,0 +1,65 @@
+title: "RHCE Linux System Engineer Complete Course"
+issuer: "Udemy"
+platform: "Udemy"
+area: "cloud-e-infraestructura"
+domain: "sistemas-linux"
+tech: ["linux"]
+type: "tecnico"
+official: false
+skills: ["Linux", "RHCE"]
+issued: "2020-03-06"
+hours: 5.0
+credential_id: "UC-5b268258-3de7-4b71-9b79-2c66270d17ad"
+verify_url: "https://www.udemy.com/certificate/UC-5b268258-3de7-4b71-9b79-2c66270d17ad/"
+pdf: "rhce-linux-system-engineer-complete-course"
+thumb: "rhce-linux-system-engineer-complete-course"
+weight: 3
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "cloud-e-infraestructura"
+  domain: "sistemas-linux"
+  type: "tecnico"
+  tech: ["linux"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+  - "credential_id"
+  - "verify_url"
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/centos-7-system-engineer-complete-course/"
+level: null
+language: null
+retired: false
+instructors: ["Aly Ragab", "Moe T"]
+summary: "RHCE Complete Linux Administration Course covering advanced Network, Storage"
+source_files: ["certs-src/_origen/Certs Udemy/UC-5b268258-3de7-4b71-9b79-2c66270d17ad (en).pdf", "certs-src/_origen/Certs Udemy/UC-5b268258-3de7-4b71-9b79-2c66270d17ad.pdf", "certs-src/_origen/Certs Udemy/UC-5b268258-3de7-4b71-9b79-2c66270d17ad (en).jpg", "certs-src/_origen/Certs Udemy/UC-5b268258-3de7-4b71-9b79-2c66270d17ad.jpg"]
+expires: null
+active: null
+objectives:
+  - "Configuring and Managing Kerberos Authentication ( Server & Client )"
+  - "Configuring and Managing Advanced Networking using Network Manager"
+  - "Configuring and Managing Firewalld"
+  - "Configuring and Managing Unbound DNS"
+  - "Configuring and Managing Apache Web Service"
+  - "Configuring and Managing iSCSI SAN Storage"
+  - "Securing SSH Service"
+  - "Managing MariaDB"
+  - "Configuring and Managing NFS and Samba for File Sharing"
+  - "Getting Started with Bash Scripting"
+  - "Managing and Configuring Postfix for Relay SMTP"
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

@@ -1,0 +1,52 @@
+title: "Cómo superar el miedo a hablar en público"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Hablar en público", "Public Speaking"]
+issued: "2019-08-23"
+hours: 0.42
+credential_id: "38603ed32e249dd1b62731c457a1ab59ddd5a1595df39c8f83424f4f21da58ad"
+verify_url: "https://www.linkedin.com/learning/certificates/38603ed32e249dd1b62731c457a1ab59ddd5a1595df39c8f83424f4f21da58ad"
+pdf: "como-superar-el-miedo-a-hablar-en-publico"
+thumb: "como-superar-el-miedo-a-hablar-en-publico"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:433789"
+course_url: "https://www.linkedin.com/learning/como-superar-el-miedo-a-hablar-en-publico"
+level: "General"
+language: "es"
+retired: true
+instructors: ["Todd Dewett"]
+summary: "Supera tu miedo a hablar en público con este curso con el que trabajarás los problemas que te provocan pánico escénico y te impiden hablar en público de forma cómoda y segura."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como superar el miedo a hablar en publico.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Superar El Miedo A Hablar En Publico.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

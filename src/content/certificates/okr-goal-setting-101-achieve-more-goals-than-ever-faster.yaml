@@ -1,0 +1,63 @@
+title: "OKR Goal Setting 101 - Achieve more goals than ever! Faster!"
+issuer: "Udemy"
+platform: "Udemy"
+area: "negocio-e-innovacion"
+domain: "estrategia-negocio"
+tech: ["agile", "ia-generativa"]
+type: "gestion"
+official: false
+skills: ["OKR"]
+issued: "2020-03-17"
+hours: 3.5
+credential_id: "UC-4a77756e-c3ee-45da-a69d-9dc05b2a40f9"
+verify_url: "https://www.udemy.com/certificate/UC-4a77756e-c3ee-45da-a69d-9dc05b2a40f9/"
+pdf: "okr-goal-setting-101-achieve-more-goals-than-ever-faster"
+thumb: "okr-goal-setting-101-achieve-more-goals-than-ever-faster"
+weight: 3
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "negocio-e-innovacion"
+  domain: "estrategia-negocio"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+  - "credential_id"
+  - "verify_url"
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/okr-101-set-and-achieve-your-goal/"
+level: null
+language: null
+retired: false
+instructors: ["Axel Rittershaus"]
+summary: "Achieve 'impossible' goals, set goals effectively, act highly motivated using OKR. Free AI powered OKR validator!"
+source_files: ["certs-src/_origen/Certs Udemy/UC-4a77756e-c3ee-45da-a69d-9dc05b2a40f9.pdf"]
+expires: null
+active: null
+objectives:
+  - "#1 OKR course on Udemy (including 41-page workbook, real examples, BEST practices) - you will know exactly how to use OKRs in your business (35,000+ attendees)"
+  - "You confidently set and achieve your goals by writing purposeful, measurable key results (and have more success)"
+  - "AI powered OKR validator (ChatGPT) will help you define better OKRs"
+  - "You clearly communicate OKR-based goals and cascade them up and down the organisation"
+  - "You avoid the 10 most common mistakes when setting and working towards goals"
+  - "You write strong, metric-driven, motivating OKR to manage yourself and your team"
+  - "Your remote, virtual, or hybrid team is perfectly aligned using OKRs"
+  - "You lead your team, project, or company using Googles success principle and achieve your goals"
+  - "You master the OKR framework and are a role model in using Objectives and Key Results"
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

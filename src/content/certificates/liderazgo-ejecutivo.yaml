@@ -1,0 +1,52 @@
+title: "Liderazgo ejecutivo"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Liderazgo ejecutivo", "Executive Leadership"]
+issued: "2020-01-02"
+hours: 1.79
+credential_id: "0d229a67977ef3f6d6758b581fcaeaa2b2dd24238486cb1ccb3f1ace48932788"
+verify_url: "https://www.linkedin.com/learning/certificates/0d229a67977ef3f6d6758b581fcaeaa2b2dd24238486cb1ccb3f1ace48932788"
+pdf: "liderazgo-ejecutivo"
+thumb: "liderazgo-ejecutivo"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:5025683"
+course_url: "https://www.linkedin.com/learning/liderazgo-ejecutivo"
+level: "Intermediate"
+language: "es"
+retired: false
+instructors: ["John Ullmen"]
+summary: "Adquiere las habilidades de liderazgo que diferencian a los mejores de los demás. Establece el rumbo, crea una visión convincente del futuro de la empresa y motiva a los empleados."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Liderazgo ejecutivo.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Liderazgo Ejecutivo.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "6c330d6be06cc25a1d42a8f00f6c5b1ad6156d3f9a554dfce059bfc091e5bc1f"
+pmi_verify_url: null
+pmi_pdus: 1.75
+kind: "curso"
+pmi_pdf: "liderazgo-ejecutivo-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Liderazgo ejecutivo (PMI).pdf"

@@ -1,0 +1,52 @@
+title: "Fundamentos de la resolución de conflictos"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Comunicación", "Trabajo en equipo", "Conflictología", "Conflict Resolution"]
+issued: "2019-10-09"
+hours: 1.58
+credential_id: "582fb2af12ff949769139c81564e9cf5d1dfd2e8a27bf0e4f0f5d513830a3af4"
+verify_url: "https://www.linkedin.com/learning/certificates/582fb2af12ff949769139c81564e9cf5d1dfd2e8a27bf0e4f0f5d513830a3af4"
+pdf: "fundamentos-de-la-resolucion-de-conflictos"
+thumb: "fundamentos-de-la-resolucion-de-conflictos"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: "Publicada como competencia de liderazgo, no como circunstancia personal (decision del 2026-09-08)."
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:631125"
+course_url: "https://www.linkedin.com/learning/fundamentos-de-la-resolucion-de-conflictos-2018"
+level: "General"
+language: "es"
+retired: false
+instructors: ["Lorena Diaz Quijano"]
+summary: "Aprende los conceptos y técnicas fundamentales para tratar y solucionar los conflictos que se puedan ocasionar dentro de tu empresa, entre los miembros de tu equipo y compañeros."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de la resolucion de conflictos 2018.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Fundamentos De La Resolucion De Conflictos.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "7acd69c1b211f9c6c3403b284fb080ba6e35dda2c95faacbe0065ffd502c319c"
+pmi_verify_url: null
+pmi_pdus: 1.5
+kind: "curso"
+pmi_pdf: "fundamentos-de-la-resolucion-de-conflictos-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de la resolucion de conflictos 2018 (PMI).pdf"

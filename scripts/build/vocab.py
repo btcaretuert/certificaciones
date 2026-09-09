@@ -1,0 +1,123 @@
+"""Controlled vocabulary that turns free-form skill labels and course titles
+into a small set of technology slugs a recruiter actually filters on."""
+
+# slug -> regexes matched against title + skills, case-insensitive
+TECH = {
+    "gcp":         [r"google cloud", r"\bgcp\b", r"cloud digital leader", r"dataflow",
+                    r"bigquery", r"apache beam", r"\bgke\b"],
+    "aws":         [r"\baws\b", r"amazon web services"],
+    "azure":       [r"\bazure\b"],
+    "kubernetes":  [r"kubernetes", r"\bgke\b", r"contenedor|container"],
+    "docker":      [r"\bdocker\b"],
+    "hadoop":      [r"hadoop", r"\bhdfs\b", r"\bhive\b"],
+    "spark":       [r"\bspark\b", r"pyspark"],
+    "kafka":       [r"\bkafka\b"],
+    "dbt":         [r"\bdbt\b"],
+    "airflow":     [r"airflow"],
+    "python":      [r"\bpython\b", r"pandas", r"pyspark"],
+    "sql":         [r"\bsql\b", r"bigquery", r"base de datos|database"],
+    "nosql":       [r"nosql", r"mongodb", r"cassandra"],
+    "linux":       [r"\blinux\b", r"\bbash\b", r"shell script"],
+    "git":         [r"\bgit\b", r"github", r"control de versiones"],
+    "terraform":   [r"terraform", r"infrastructure as code"],
+    "power-bi":    [r"power bi"],
+    "tableau":     [r"tableau"],
+    "excel":       [r"\bexcel\b"],
+    "office-365":  [r"office 365", r"microsoft 365", r"sharepoint", r"onedrive", r"\bteams\b"],
+    "power-automate": [r"power automate", r"\bflow\b"],
+    "postman":     [r"postman"],
+    "api":         [r"\bapi\b", r"\brest\b"],
+    "ia-generativa": [r"generative ai|ia generativa", r"\bclaude\b", r"\bchatgpt\b", r"\bllm\b",
+                      r"prompt", r"antigravity"],
+    "machine-learning": [r"machine learning", r"aprendizaje autom", r"deep learning",
+                         r"redes neuronales", r"data science|ciencia de datos"],
+    "big-data":    [r"big data", r"macrodatos"],
+    "etl":         [r"\betl\b", r"ingesta|ingestion", r"data pipeline|pipeline de datos"],
+    "data-governance": [r"data governance|gobierno de datos", r"data quality|calidad de datos",
+                        r"\bgdpr\b|protecci[oó]n de datos"],
+    "data-warehouse": [r"data warehouse|almac[eé]n de datos", r"data lake", r"data mart"],
+    "analitica":   [r"anal[ií]tica|analytics", r"visualizaci[oó]n de datos|data visualization",
+                    r"business intelligence"],
+    "devops":      [r"devops", r"\bci/cd\b", r"integraci[oó]n continua"],
+    "agile":       [r"\bagile\b|[aá]gil", r"scrum", r"kanban", r"design thinking"],
+    "seguridad":   [r"seguridad|security", r"ciberseg|cybersec", r"\biso 27\d{3}\b"],
+    "arquitectura": [r"arquitectura|architecture", r"microservic"],
+    "six-sigma":   [r"six sigma", r"lean\b"],
+    "itil":        [r"\bitil\b", r"lean it"],
+}
+
+# area <- first match wins; the order encodes priority
+AREA = [
+    ("datos-analitica", [
+        r"big data", r"\bdata\b", r"datos", r"anal[ií]tic|analytic", r"machine learning",
+        r"bigquery", r"spark", r"hadoop", r"\bsql\b", r"\betl\b", r"\bdbt\b",
+        r"business intelligence", r"power bi", r"tableau", r"estad[ií]stic|statistic",
+        r"an[aá]lisis de informaci|trend analysis", r"patrones y tendencias",
+        r"visualizaci[oó]n", r"\bkpi\b|m[eé]tricas", r"minería|mining",
+    ]),
+    ("cloud-infraestructura", [
+        r"cloud|nube", r"\bgcp\b", r"\baws\b", r"azure", r"kubernetes", r"docker",
+        r"servidor|server", r"\bred(es)?\b|network", r"infraestructura", r"terraform",
+        r"linux", r"contenedor|container", r"virtualiza",
+        r"seguridad|security|ciberseg|cybersec", r"riesgo|risk", r"privacidad|privacy",
+        r"protecci[oó]n de datos|\bgdpr\b|\biso 27\d{3}\b",
+    ]),
+    ("desarrollo-herramientas", [
+        r"python|javascript|\bjava\b|\bjson\b|\bxml\b", r"programaci|coding",
+        r"desarrollo de software|software development", r"\bapi\b|\brest\b|postman",
+        r"\bgit\b|github", r"devops", r"office ?365|microsoft ?365|onenote|onedrive",
+        r"sharepoint|microsoft forms|microsoft teams|\bexcel\b|\bword\b|powerpoint",
+        r"power automate|automatiza", r"blockchain", r"low.?code|no.?code",
+        r"herramienta|tool", r"linkedin learning",
+    ]),
+    ("liderazgo-gestion", [
+        r"lider|leader", r"gesti[oó]n|management|gerent|manager|direcci[oó]n",
+        r"equipo|team", r"proyecto|project", r"scrum|kanban|[aá]gil|agile",
+        r"coaching|mentor", r"delegaci|delegat", r"contrataci|onboarding|hiring|reclut",
+        r"desempe[nñ]o|performance", r"acoso|bullying|clima laboral|work environment",
+        r"conflicto|conflict", r"cambio|change management", r"talento|talent",
+        r"motivaci|motivat", r"reuni[oó]n|meeting", r"presupuesto|budget",
+        r"seis sigma|six sigma|lean", r"\bitil\b|servicio|service",
+    ]),
+    ("comunicacion-efectividad", [
+        r"comunicaci|communicat", r"presentaci|presentation|hablar en p[uú]blico|public speaking",
+        r"negociaci|negotiat", r"escucha|listening", r"tiempo|time management",
+        r"productivid|productivity", r"asertiv|assertive", r"ingl[eé]s|english",
+        r"storytelling|narrativ", r"redacci|writing|escritura", r"estr[eé]s|stress",
+        r"h[aá]bito|habit", r"confianza|confidence", r"empat|empath",
+        r"influen", r"elevator pitch", r"teletrabajo|telecommut|trabajo remoto|virtual work|remote",
+        r"sesgo|bias", r"pensamiento cr[ií]tico|critical thinking",
+        r"decisi[oó]n|decision", r"resilien", r"fracaso|failure", r"aprendizaje continuo|lifelong",
+        r"creativ|ingenio", r"emocional|emotional", r"interpersonal|gente dif[ií]cil",
+        r"memoria|concentraci|focus|atenci[oó]n", r"bienestar|wellbeing|mindfulness",
+        r"entrevista|interview|empleo|job search|curr[ií]culum|\bcv\b",
+        r"marca personal|personal brand", r"networking",
+        r"desarrollo personal|personal development|crecimiento personal",
+        r"adaptaci|adaptab", r"zona de confort|comfort zone", r"autoconoc|self.aware",
+    ]),
+    ("negocio-innovacion", [
+        r"negocio|business", r"innovaci|innovation", r"estrategia|strateg",
+        r"transformaci[oó]n digital|digital transformation", r"finanz|financ|contab",
+        r"marketing|ventas|sales", r"cliente|customer", r"emprend|entrepreneur",
+        r"econom", r"design thinking", r"modelo de negocio|business model",
+        r"producto|product", r"sostenib|sustainab", r"tecnolog[ií]a|technology",
+    ]),
+]
+
+TIPO_TECNICO = {"datos-analitica", "cloud-infraestructura", "desarrollo-herramientas"}
+
+# Titles whose wording sends the scorer to the wrong area. Each key is matched
+# as a case-insensitive substring of the title; first hit wins.
+OVERRIDES_AREA = {
+    "generative ai leader": "datos-analitica",
+    "devops fundamentals": "desarrollo-herramientas",
+    "apache kafka": "datos-analitica",
+    "basics of deep learning": "datos-analitica",
+    "splunk": "datos-analitica",
+    "complete google data engineer": "datos-analitica",
+    "claude code": "desarrollo-herramientas",
+    "claude ai": "desarrollo-herramientas",
+    "antigravity": "desarrollo-herramientas",
+    "unix command": "cloud-infraestructura",
+    "linkedin learning": "comunicacion-efectividad",
+}

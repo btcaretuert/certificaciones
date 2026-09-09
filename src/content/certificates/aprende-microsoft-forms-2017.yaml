@@ -1,0 +1,52 @@
+title: "Aprende Microsoft Forms (2017)"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "desarrollo-y-herramientas"
+domain: "ofimatica-colaboracion"
+tech: ["office-365"]
+type: "transversal"
+official: false
+skills: ["Microsoft Excel", "Office 365", "Forms", "Microsoft Forms"]
+issued: "2021-01-31"
+hours: 1.21
+credential_id: "837a72d24bcb601351d9a1598535905b06e399c80354ca37470ebdf0a56a33d7"
+verify_url: "https://www.linkedin.com/learning/certificates/837a72d24bcb601351d9a1598535905b06e399c80354ca37470ebdf0a56a33d7"
+pdf: "aprende-microsoft-forms-2017"
+thumb: "aprende-microsoft-forms-2017"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "desarrollo-y-herramientas"
+  domain: "ofimatica-colaboracion"
+  type: "transversal"
+  tech: ["office-365"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:643387"
+course_url: "https://www.linkedin.com/learning/aprende-microsoft-forms-2017"
+level: "Beginner"
+language: "es"
+retired: true
+instructors: ["Ignacio Lirio"]
+summary: "Aprende a realizar formularios y encuestas con Microsoft Forms, un nuevo integrante de las herramientas de Office online que te ayudará a recopilar información fácilmente."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Aprende Microsoft Forms 2017.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Aprende Microsoft Forms 2017.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "a30fc26823f536d2b199aba5173810a8485901fc2c6b153d228e9bacf3fd2aaf"
+pmi_verify_url: null
+pmi_pdus: 1.0
+kind: "curso"
+pmi_pdf: "aprende-microsoft-forms-2017-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Aprende Microsoft Forms 2017 (PMI).pdf"

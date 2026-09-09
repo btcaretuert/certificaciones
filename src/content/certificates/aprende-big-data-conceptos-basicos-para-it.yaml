@@ -1,0 +1,52 @@
+title: "Aprende big data: Conceptos básicos para IT"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "datos-y-analitica"
+domain: "ingenieria-datos"
+tech: ["analitica", "big-data"]
+type: "tecnico"
+official: false
+skills: ["Inteligencia empresarial", "Big data", "Business Intelligence (BI)"]
+issued: "2019-08-21"
+hours: 1.33
+credential_id: "974df3d61e8f50cf2f9cdb8490912385ef7102fae5c7fa44bcffbdc84990a5bc"
+verify_url: "https://www.linkedin.com/learning/certificates/974df3d61e8f50cf2f9cdb8490912385ef7102fae5c7fa44bcffbdc84990a5bc"
+pdf: "aprende-big-data-conceptos-basicos-para-it"
+thumb: "aprende-big-data-conceptos-basicos-para-it"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ingenieria-datos"
+  type: "tecnico"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: null
+course_url: null
+level: null
+language: null
+retired: false
+instructors: []
+summary: null
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Aprende big data Conceptos basicos para IT.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Aprende Big Data Conceptos Basicos Para It.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

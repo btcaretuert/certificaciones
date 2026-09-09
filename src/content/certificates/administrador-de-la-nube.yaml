@@ -1,0 +1,51 @@
+title: "Administrador de la Nube"
+issuer: "Capacítate para el Empleo (Fundación Carlos Slim)"
+platform: "MOOC"
+area: "cloud-e-infraestructura"
+domain: "cloud-plataforma"
+tech: []
+type: "tecnico"
+official: false
+skills: ["Computación en la nube", "Cloud"]
+issued: "2021-01-03"
+hours: null
+credential_id: "70dyye9m5"
+verify_url: null
+pdf: "administrador-de-la-nube"
+thumb: "administrador-de-la-nube"
+weight: 5
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "cloud-e-infraestructura"
+  domain: "cloud-plataforma"
+  type: "tecnico"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+verified_public: false
+program: "curso"
+course_urn: null
+course_url: null
+level: null
+language: null
+retired: false
+instructors: []
+summary: "El portal del emisor ya no resuelve el folio: comprobado el 2026-09-08, un folio válido y uno inventado devuelven la misma portada. El folio queda como identificador, no como verificación."
+source_files: ["certs-src/_origen/Datos y Varios/Certificado de Curso Administrador de la nube.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

@@ -1,0 +1,52 @@
+title: "Cómo presentar en público con eficacia"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Hablar en público", "Public Speaking"]
+issued: "2019-09-04"
+hours: 1.76
+credential_id: "23c5bb17330ad71e60834d10c58800e965a8c23d06d235d9781a58ba4c6c49ec"
+verify_url: "https://www.linkedin.com/learning/certificates/23c5bb17330ad71e60834d10c58800e965a8c23d06d235d9781a58ba4c6c49ec"
+pdf: "como-presentar-en-publico-con-eficacia"
+thumb: "como-presentar-en-publico-con-eficacia"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:426412"
+course_url: "https://www.linkedin.com/learning/como-presentar-en-publico-con-eficacia"
+level: "General"
+language: "es"
+retired: true
+instructors: ["Elena Compte Tordesillas"]
+summary: "Aprende a expresar tus ideas tanto en grandes foros como en grupos pequeños. Tendrás trucos para evitar los nervios, preparar tus exposiciones y cómo empatizar con tu audiencia."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como presentar en publico con eficacia.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Presentar En Publico Con Eficacia.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "abdb6e9b0e9db3975c724fd35402e173b0d0d2e93ba6feefdf6b0f3b527d9aba"
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: "como-presentar-en-publico-con-eficacia-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Como presentar en publico con eficacia (PMI).pdf"

@@ -1,0 +1,52 @@
+title: "Cómo decir que no"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Comunicación", "Communication"]
+issued: "2019-10-21"
+hours: 0.36
+credential_id: "0d2d67d537198a99cd4345732cf54a56590431c6f10a7d2f3f74df334400b74c"
+verify_url: "https://www.linkedin.com/learning/certificates/0d2d67d537198a99cd4345732cf54a56590431c6f10a7d2f3f74df334400b74c"
+pdf: "como-decir-que-no"
+thumb: "como-decir-que-no"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:561223"
+course_url: "https://www.linkedin.com/learning/como-decir-que-no"
+level: "General"
+language: "es"
+retired: true
+instructors: ["Todd Dewett"]
+summary: "Aprende a decir que no para organizar tu trabajo en función de la importancia y las metas que tú estás buscando, siempre de forma honesta, positiva y respetuosa."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como decir que no.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Decir Que No.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "eefbca3155d32c7e11e92a4d14d076e045f3038d64ee1052b99fd9d497477a9b"
+pmi_verify_url: null
+pmi_pdus: 0.25
+kind: "curso"
+pmi_pdf: "como-decir-que-no-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Como decir que no (PMI).pdf"

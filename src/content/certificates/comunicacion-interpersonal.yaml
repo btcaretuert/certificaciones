@@ -1,0 +1,52 @@
+title: "Comunicación interpersonal"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Comunicación", "Comunicación interpersonal", "Interpersonal Communication"]
+issued: "2019-10-21"
+hours: 1.88
+credential_id: "22f5c603a080af18c1c03afacfa9a08ab43b3bb79a114943ce1bdd8397df0b12"
+verify_url: "https://www.linkedin.com/learning/certificates/22f5c603a080af18c1c03afacfa9a08ab43b3bb79a114943ce1bdd8397df0b12"
+pdf: "comunicacion-interpersonal"
+thumb: "comunicacion-interpersonal"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:544236"
+course_url: "https://www.linkedin.com/learning/comunicacion-interpersonal"
+level: "General"
+language: "es"
+retired: true
+instructors: ["Elena Compte Tordesillas", "Rudi Bruchez"]
+summary: "Aprende a comunicarte de una manera eficaz, para lo que es importante tanto expresarse bien como interpretar las respuestas y reacciones de nuestro interlocutor."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Comunicacion interpersonal.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Comunicacion Interpersonal.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "3104142dc74b8858a33fdc8f5e70c1ee2098cebd7bcdc49f33148f42aaa4e547"
+pmi_verify_url: null
+pmi_pdus: 1.5
+kind: "curso"
+pmi_pdf: "comunicacion-interpersonal-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Comunicacion interpersonal (PMI).pdf"

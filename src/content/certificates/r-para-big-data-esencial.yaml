@@ -1,0 +1,52 @@
+title: "R para big data esencial"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "datos-y-analitica"
+domain: "ingenieria-datos"
+tech: ["big-data"]
+type: "tecnico"
+official: false
+skills: ["R", "Administración de bases de datos", "R (Programming Language)", "Big Data"]
+issued: "2019-12-23"
+hours: 2.67
+credential_id: "ae377603084ea340ae619a830fb2ca9f7ab91d77e7582efcd1ec228d69d2f06c"
+verify_url: "https://www.linkedin.com/learning/certificates/ae377603084ea340ae619a830fb2ca9f7ab91d77e7582efcd1ec228d69d2f06c"
+pdf: "r-para-big-data-esencial"
+thumb: "r-para-big-data-esencial"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ingenieria-datos"
+  type: "tecnico"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:762684"
+course_url: "https://www.linkedin.com/learning/r-para-big-data-esencial-2018"
+level: "Beginner + Intermediate"
+language: "es"
+retired: true
+instructors: ["Joan Gasull Jolis"]
+summary: "Explora los paquetes más útiles del entorno y lenguaje de programación R, y aprende los fundamentos para trabajar con grandes volúmenes de datos y computación en paralelo."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_R para big data esencial 2018.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_R Para Big Data Esencial.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

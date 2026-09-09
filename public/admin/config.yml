@@ -1,0 +1,264 @@
+# Panel de edicion — Sveltia CMS en modo local.
+#
+# No hay token en ninguna parte. El backend declara `github` porque Sveltia
+# exige un backend git valido, pero el flujo real es "Work with Local
+# Repository": el panel abre la carpeta del proyecto con la File System Access
+# API y escribe los YAML en disco. El dueño hace `git commit` y `git push` a
+# mano, y ese paso manual ES el control de publicacion.
+#
+# TODOS los campos del esquema estan declarados, incluidos los que escribe la
+# maquina (como `hidden`). No esta documentado si Sveltia conserva las claves
+# que no aparecen aqui, y apoyar la integridad de 252 fichas en un
+# comportamiento no documentado de un 0.x seria perder datos en silencio.
+
+backend:
+  name: github
+  repo: btcaretuert/certificaciones
+  branch: main
+
+# Los PDFs viven fuera de public/ a proposito: un paso posterior al build
+# (emit-assets.mjs) copia a dist/certs/ SOLO los de las fichas publicas.
+# Publicar deja de ser el estado por omision.
+media_folder: certs-src/_admin
+public_folder: /certificaciones/certs
+
+# Sin borrado desde el panel: retirar una ficha es cambiar `visibility`, no
+# borrar el archivo. El registro de lo retenido es justamente lo que no se
+# quiere perder.
+collections:
+  - name: certificates
+    label: Certificados publicables
+    label_singular: Certificado
+    folder: src/content/certificates
+    create: true
+    delete: false
+    extension: yaml
+    format: yaml
+    identifier_field: title
+    slug: '{{fields.title | slugify}}'
+    summary: '{{title}} — {{issuer}} [{{visibility}}]'
+    sortable_fields: [title, issued, hours, weight, visibility]
+    view_filters:
+      - { label: 'Publicados', field: visibility, pattern: public }
+      - { label: 'En revision', field: visibility, pattern: review }
+      - { label: 'Marcados por la maquina', field: curation_flag, pattern: true }
+      - { label: 'Pendientes de revisar', field: needs_review, pattern: true }
+    fields: &campos
+      # ── identidad ──────────────────────────────────────────────────────
+      - { name: title, label: Titulo, widget: string, minlength: 3, maxlength: 200 }
+      - { name: issuer, label: Emisor, widget: string, maxlength: 120 }
+      - name: platform
+        label: Plataforma
+        widget: select
+        options: [LinkedIn, PMI, Udemy, MOOC, International]
+      - name: kind
+        label: Tipo de credencial
+        widget: select
+        default: curso
+        hint: Un itinerario agrupa cursos ya contados. Sus horas NO se suman al total.
+        options:
+          - { label: Curso, value: curso }
+          - { label: Itinerario, value: itinerario }
+          - { label: Certificacion, value: certificacion }
+      - name: official
+        label: Certificacion de organismo externo
+        widget: boolean
+        default: false
+        hint: Distingue una credencial acreditada de un curso de plataforma.
+
+      # ── curaduria: decision humana, nunca de la maquina ────────────────
+      - name: visibility
+        label: Visibilidad
+        widget: select
+        default: review
+        hint: 'Fail-closed: solo `public` se publica. `review` se comporta como `private`.'
+        options:
+          - { label: 'Publico', value: public }
+          - { label: 'Retenido', value: private }
+          - { label: 'En revision', value: review }
+      - name: curation_note
+        label: Motivo de la decision
+        widget: string
+        required: false
+        default: ''
+        maxlength: 200
+        hint: Solo para fichas retenidas. En repo publico, el motivo no se versiona.
+
+      # ── clasificacion: la sugiere la maquina, la confirma el humano ────
+      - name: area
+        label: Area
+        widget: select
+        options:
+          - { label: 'Datos y Analitica', value: datos-y-analitica }
+          - { label: 'Cloud e Infraestructura', value: cloud-e-infraestructura }
+          - { label: 'Desarrollo y Herramientas', value: desarrollo-y-herramientas }
+          - { label: 'Liderazgo y Gestion', value: liderazgo-y-gestion }
+          - { label: 'Comunicacion y Efectividad', value: comunicacion-y-efectividad }
+          - { label: 'Negocio e Innovacion', value: negocio-e-innovacion }
+          - { label: 'Sin clasificar', value: sin-clasificar }
+      - name: domain
+        label: Dominio
+        widget: select
+        options:
+          - ingenieria-datos
+          - gobierno-datos
+          - analitica-bi
+          - ml-ia
+          - bases-datos
+          - cloud-plataforma
+          - devops
+          - seguridad
+          - sistemas-linux
+          - programacion
+          - ofimatica-colaboracion
+          - liderazgo-equipos
+          - gestion-personas
+          - agile-proyectos
+          - comunicacion
+          - efectividad-personal
+          - estrategia-negocio
+          - creatividad-innovacion
+          - transformacion-digital
+          - sin-clasificar
+      - name: type
+        label: Naturaleza
+        widget: select
+        options:
+          - { label: Tecnico, value: tecnico }
+          - { label: Gestion, value: gestion }
+          - { label: Transversal, value: transversal }
+      - name: tech
+        label: Tecnologias
+        widget: list
+        required: false
+        default: []
+        max: 20
+        hint: Slugs en minuscula con guiones (gcp, kubernetes, spark).
+      - name: skills
+        label: Competencias
+        widget: list
+        required: false
+        default: []
+        max: 30
+
+      # ── fechas y evidencia ─────────────────────────────────────────────
+      - name: issued
+        label: Fecha de emision
+        widget: datetime
+        required: false
+        date_format: YYYY-MM-DD
+        time_format: false
+        picker_utc: true
+      - name: expires
+        label: Fecha de vencimiento
+        widget: datetime
+        required: false
+        date_format: YYYY-MM-DD
+        time_format: false
+        picker_utc: true
+        hint: Vacio = no caduca.
+      - { name: hours, label: Horas, widget: number, required: false, value_type: float, min: 0, max: 1000 }
+      - { name: credential_id, label: ID de credencial, widget: string, required: false, maxlength: 120 }
+      - name: verify_url
+        label: URL de verificacion
+        widget: string
+        required: false
+        pattern: ['^https://', 'Debe ser https']
+      - name: verified_public
+        label: La URL de verificacion resuelve hoy
+        widget: boolean
+        default: false
+        hint: Comprobado por HTTP, no supuesto.
+
+      # ── activos ────────────────────────────────────────────────────────
+      # El esquema Zod extrae el basename de cualquier ruta, asi que el
+      # widget file puede devolver la ruta completa sin romper nada.
+      - { name: pdf, label: PDF del certificado, widget: file, required: false, accept: 'application/pdf,.pdf' }
+      - { name: thumb, label: Miniatura, widget: file, required: false, accept: 'image/webp,.webp' }
+      - name: source_files
+        label: Archivos de origen
+        widget: list
+        required: false
+        default: []
+        max: 8
+        hint: Rutas dentro de certs-src/. Es lo que el build usa para localizar el PDF real.
+
+      # ── presentacion ───────────────────────────────────────────────────
+      - name: weight
+        label: Ponderacion
+        widget: select
+        default: 1
+        value_type: int
+        options: [1, 2, 3, 5, 20, 30]
+      - { name: featured, label: Destacado, widget: boolean, default: false }
+
+      # ── procedencia del emisor ─────────────────────────────────────────
+      - { name: program, label: Programa acreditador, widget: string, required: false, default: '', maxlength: 40 }
+      - name: course_url
+        label: URL del curso
+        widget: string
+        required: false
+        pattern: ['^https://', 'Debe ser https']
+      - { name: level, label: Nivel, widget: string, required: false, maxlength: 40 }
+      - name: language
+        label: Idioma
+        widget: string
+        required: false
+        pattern: ['^[a-z]{2}$', 'Codigo ISO de dos letras']
+      - name: retired
+        label: Retirado del catalogo del emisor
+        widget: boolean
+        default: false
+        hint: La credencial sigue valida; el curso ya no existe.
+      # Oculto a proposito, no por descuido. El esquema distingue null (no
+      # caduca) de false (caduco y ya vencido), y un widget boolean no puede
+      # expresar "sin valor": al guardar escribia false, que habria marcado
+      # como vencidas las 248 fichas que hoy valen null. Un select de tres
+      # estados tampoco sirve, porque Sveltia rechaza '' , true y false como
+      # valores de option. Ademas el sitio no lee este campo —la vigencia se
+      # deriva de `expires`— y su valor viene del emisor en la cosecha, no de
+      # una decision editorial. Declarado como hidden se conserva intacto.
+      - { name: active, widget: hidden, default: null }
+      - { name: instructors, label: Instructores, widget: list, required: false, default: [], max: 10 }
+      - { name: summary, label: Resumen, widget: text, required: false, maxlength: 400 }
+      - { name: objectives, label: Objetivos, widget: list, required: false, default: [], max: 12 }
+
+      # ── acreditacion PMI del MISMO curso ───────────────────────────────
+      - { name: pmi_credential_id, label: 'PMI · ID de credencial', widget: string, required: false, maxlength: 120 }
+      - name: pmi_verify_url
+        label: 'PMI · URL de verificacion'
+        widget: string
+        required: false
+        pattern: ['^https://', 'Debe ser https']
+        hint: Solo si el enlace resuelve. Hoy 67 de 70 devuelven 404.
+      - { name: pmi_pdus, label: 'PMI · PDU', widget: number, required: false, value_type: float, min: 0, max: 100 }
+      - { name: pmi_pdf, label: 'PMI · PDF', widget: file, required: false, accept: 'application/pdf,.pdf' }
+      - { name: pmi_source_file, label: 'PMI · archivo de origen', widget: string, required: false, maxlength: 300 }
+
+      # ── escritos por el clasificador en preSave ────────────────────────
+      # Declarados para que Sveltia no pueda descartarlos al guardar.
+      - { name: curation_flag, widget: hidden, default: false }
+      - { name: manual_fields, widget: hidden, default: [] }
+      - { name: auto_snapshot, widget: hidden, default: null }
+      - { name: classification_confidence, widget: hidden, default: low }
+      - { name: classification_signals, widget: hidden, default: '' }
+      - { name: classification_rules_version, widget: hidden, default: '' }
+      - { name: needs_review, widget: hidden, default: true }
+      - { name: extracted_fields, widget: hidden, default: [] }
+      - { name: course_urn, widget: hidden, default: null }
+
+  # Las fichas retenidas viven fuera del arbol publicable y git las ignora.
+  # El panel local las ve porque lee del disco; el remoto nunca las recibe.
+  - name: retained
+    label: Retenidos (no versionados)
+    label_singular: Retenido
+    folder: private/certificates
+    create: true
+    delete: false
+    extension: yaml
+    format: yaml
+    identifier_field: title
+    slug: '{{fields.title | slugify}}'
+    summary: '{{title}} — {{curation_note}}'
+    sortable_fields: [title, issued]
+    fields: *campos

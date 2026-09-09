@@ -1,0 +1,52 @@
+title: "Docker esencial"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "cloud-e-infraestructura"
+domain: "cloud-plataforma"
+tech: ["docker", "kubernetes", "linux"]
+type: "tecnico"
+official: false
+skills: ["Gestión de servicios de TI", "Docker", "Docker Products"]
+issued: "2019-12-28"
+hours: 2.32
+credential_id: "22757cfe511747c0fa5d00c1188fc6a5480e58f4e1af9d09a4744f84e63da650"
+verify_url: "https://www.linkedin.com/learning/certificates/22757cfe511747c0fa5d00c1188fc6a5480e58f4e1af9d09a4744f84e63da650"
+pdf: "docker-esencial"
+thumb: "docker-esencial"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "cloud-e-infraestructura"
+  domain: "cloud-plataforma"
+  type: "tecnico"
+  tech: ["docker"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:587147"
+course_url: "https://www.linkedin.com/learning/docker-esencial-2017"
+level: "Beginner"
+language: "es"
+retired: true
+instructors: ["Alvaro Gonzalez Crespo"]
+summary: "Descubre lo que te ofrece Docker y aprende a empaquetar aplicaciones junto con todas sus dependencias en un contenedor virtual que podrás ejecutar desde cualquier servidor Linux."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Docker esencial 2017.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Docker Esencial.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

@@ -1,0 +1,52 @@
+title: "Los cinco pasos del proceso creativo"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "negocio-e-innovacion"
+domain: "creatividad-innovacion"
+tech: []
+type: "gestion"
+official: false
+skills: ["Creatividad", "Desarrollo de ideas", "Creative Process Development"]
+issued: "2019-11-08"
+hours: 0.33
+credential_id: "5aa8b0fba6539b2216f0e2cadba84701d222d37f90f276d13217950716d247e7"
+verify_url: "https://www.linkedin.com/learning/certificates/5aa8b0fba6539b2216f0e2cadba84701d222d37f90f276d13217950716d247e7"
+pdf: "los-cinco-pasos-del-proceso-creativo"
+thumb: "los-cinco-pasos-del-proceso-creativo"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "negocio-e-innovacion"
+  domain: "creatividad-innovacion"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:688052"
+course_url: "https://www.linkedin.com/learning/los-cinco-pasos-del-proceso-creativo-2018"
+level: "General"
+language: "es"
+retired: true
+instructors: ["Stefan Mumaw"]
+summary: "Descubre los diferentes estadios que debes recorrer en cualquier proceso creativo que emprendas. Estos pasos son: Identificación, recopilación, diseño, ideación y selección."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Los cinco pasos del proceso creativo 2018.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Los Cinco Pasos Del Proceso Creativo.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

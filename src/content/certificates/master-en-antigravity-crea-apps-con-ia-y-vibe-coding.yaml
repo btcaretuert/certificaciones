@@ -1,0 +1,62 @@
+title: "Master en Antigravity: Crea apps con IA y Vibe Coding"
+issuer: "Udemy"
+platform: "Udemy"
+area: "desarrollo-y-herramientas"
+domain: "ml-ia"
+tech: ["llm-genai", "ia-generativa", "linux"]
+type: "tecnico"
+official: false
+skills: []
+issued: "2026-08-30"
+hours: 9.0
+credential_id: "UC-c79ba487-68fa-4a79-a42d-7e3a080da0d3"
+verify_url: "https://www.udemy.com/certificate/UC-c79ba487-68fa-4a79-a42d-7e3a080da0d3/"
+pdf: "master-en-antigravity-crea-apps-con-ia-y-vibe-coding"
+thumb: "master-en-antigravity-crea-apps-con-ia-y-vibe-coding"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ml-ia"
+  type: "tecnico"
+  tech: ["llm-genai"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields: []
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/master-google-antigravity-crea-apps-reales-con-ia-y-vibe-coding/"
+level: null
+language: null
+retired: false
+instructors: ["Víctor Robles"]
+summary: "Aprende Desarrollo Web FullStack con Google Antigravity, Stitch, Supabase y Vibe Coding 2026 desde cero (+10 proyectos)"
+source_files: ["certs-src/_origen/Certs Udemy/UC-c79ba487-68fa-4a79-a42d-7e3a080da0d3.pdf"]
+expires: null
+active: null
+objectives:
+  - "Dominar Google Antigravity"
+  - "Vibe Coding desde cero"
+  - "Aprender Spec Driven Development"
+  - "Dominar el Agentic Development"
+  - "Desarrollo de aplicaciones web con IA"
+  - "Depuración de código de IA con IA"
+  - "Desarrollo de cualquier proyecto de software con IA"
+  - "Desarrollo full stack de aplicaciones en minutos con Antigravity"
+  - "Ingeniería de prompts"
+  - "Aprender Diseño web con Stitch"
+  - "Dominar Google AI Studio"
+  - "Conocer Supabase"
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

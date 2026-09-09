@@ -1,0 +1,52 @@
+title: "Fundamentos de Design Thinking"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "negocio-e-innovacion"
+domain: "creatividad-innovacion"
+tech: ["agile"]
+type: "gestion"
+official: false
+skills: ["Design Thinking"]
+issued: "2021-08-19"
+hours: 1.1
+credential_id: "13b4bdda97033d0f2f64d7f33ad3e9734231f4e163077608b9837a4de061eba9"
+verify_url: "https://www.linkedin.com/learning/certificates/13b4bdda97033d0f2f64d7f33ad3e9734231f4e163077608b9837a4de061eba9"
+pdf: "fundamentos-de-design-thinking"
+thumb: "fundamentos-de-design-thinking"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "negocio-e-innovacion"
+  domain: "creatividad-innovacion"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:2817177"
+course_url: "https://www.linkedin.com/learning/fundamentos-de-design-thinking"
+level: "Beginner + Intermediate"
+language: "es"
+retired: false
+instructors: ["Alicia Chavero Claver"]
+summary: "Domina la metodología Design Thinking. Conoce en profundidad todos sus detalles en este curso: de dónde viene, cómo funciona y cómo puedes aplicarla en tu día a día."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de Design Thinking.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Fundamentos de Design Thinking.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

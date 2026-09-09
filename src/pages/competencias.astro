@@ -1,0 +1,237 @@
+---
+import Base from '../layouts/Base.astro';
+import { publishedCertificates, type PublishedCert } from '../lib/data';
+import { agruparPorCompetencia, type GrupoCompetencia } from '../lib/skills';
+import { hoursFloor } from '../lib/stats';
+import { urlCert, urlCompetencias, urlHome } from '../lib/urls';
+
+const certs = await publishedCertificates();
+const grupos = agruparPorCompetencia(certs);
+const { hours, itineraries } = hoursFloor(certs);
+const hoy = new Date().toISOString().slice(0, 10);
+
+// El tamaño del ruido que esta pagina existe para ordenar se cuenta en vivo
+// sobre lo publicado, no se copia del comentario de skills.yaml: si mañana
+// entran fichas nuevas, la cifra del texto sigue siendo cierta.
+const usos = new Map<string, number>();
+for (const c of certs) for (const s of c.skills) usos.set(s, (usos.get(s) ?? 0) + 1);
+const etiquetasUnicas = [...usos.values()].filter((n) => n === 1).length;
+
+const AREA_LABEL: Record<string, string> = {
+  'datos-y-analitica': 'Datos y Analítica',
+  'cloud-e-infraestructura': 'Cloud e Infraestructura',
+  'desarrollo-y-herramientas': 'Desarrollo y Herramientas',
+  'liderazgo-y-gestion': 'Liderazgo y Gestión',
+  'comunicacion-y-efectividad': 'Comunicación y Efectividad',
+  'negocio-e-innovacion': 'Negocio e Innovación',
+  'sin-clasificar': 'Sin clasificar',
+};
+
+/**
+ * Horas de un area: sobre los certificados DISTINTOS que la respaldan.
+ *
+ * Sumar las horas de sus competencias daria mas —660 h en datos frente a 259—
+ * porque un certificado respalda varias competencias a la vez y se contaria
+ * una vez por cada una. Las competencias son facetas, no un reparto. Se
+ * excluyen los itinerarios, igual que en el total del sitio.
+ */
+function agrupaArea(comps: GrupoCompetencia[]) {
+  const unicos = new Map<string, PublishedCert>();
+  for (const g of comps) for (const c of g.certs) unicos.set(c.id, c);
+  const lista = [...unicos.values()];
+  return {
+    horas: Math.round(lista.filter((c) => c.kind !== 'itinerario').reduce((s, c) => s + (c.hours ?? 0), 0)),
+    nCerts: lista.length,
+  };
+}
+
+const porArea = new Map<string, GrupoCompetencia[]>();
+for (const g of grupos) {
+  if (!porArea.has(g.area)) porArea.set(g.area, []);
+  porArea.get(g.area)!.push(g);
+}
+
+const areas = [...porArea.entries()]
+  .map(([area, comps]) => ({
+    area,
+    // agruparPorCompetencia ya devuelve ordenado por horas; se reafirma aqui
+    // porque el orden dentro del area es parte de lo que la pagina promete
+    comps: [...comps].sort((a, b) => b.horas - a.horas || b.certs.length - a.certs.length),
+    ...agrupaArea(comps),
+  }))
+  .sort((a, b) => b.horas - a.horas || b.nCerts - a.nCerts);
+
+// Escala unica para todas las barras: comparar competencias entre areas es
+// justamente lo que se quiere poder hacer de un vistazo.
+const maxH = Math.max(1, ...grupos.map((g) => g.horas));
+const maxArea = Math.max(1, ...areas.map((a) => a.horas));
+
+const horasTxt = (h: number) => (Number.isInteger(h) ? String(h) : h.toFixed(1).replace('.', ','));
+
+/** Primero lo que pesa; los itinerarios al final, porque no suman horas. */
+function ordenaCerts(lista: PublishedCert[]) {
+  return [...lista].sort((a, b) => {
+    const ia = a.kind === 'itinerario' ? 1 : 0;
+    const ib = b.kind === 'itinerario' ? 1 : 0;
+    if (ia !== ib) return ia - ib;
+    return (b.hours ?? -1) - (a.hours ?? -1);
+  });
+}
+---
+<Base
+  title="Competencias — Alejandro Retuert"
+  description={`Las ${usos.size} etiquetas que emitieron las plataformas, agrupadas en ${grupos.length} competencias y ordenadas por horas de contenido.`}
+  path={urlCompetencias()}
+>
+  <header class="hero">
+    <div class="wrap">
+      <p class="kicker"><a href={urlHome()}>Certificaciones</a> · Competencias</p>
+      <h1>Competencias</h1>
+      <ul class="stats">
+        <li><b>{grupos.length}</b><span>competencias con evidencia</span></li>
+        <li><b>{certs.length}</b><span>certificados agrupados</span></li>
+        <li><b>{hours}</b><span>horas de contenido</span></li>
+      </ul>
+      <div class="intro">
+        <p>
+          Esto no es una autoevaluación. Es la agrupación de las {usos.size} etiquetas distintas
+          que las plataformas escribieron en los certificados — {etiquetasUnicas} de ellas aparecen
+          una sola vez, y varias están repetidas en dos idiomas (Liderazgo y <i>Leadership</i>,
+          Python y <i>Python (Programming Language)</i>). El vocabulario del sitio las reúne en
+          {' '}{grupos.length} competencias. No hay nivel, ni puntaje, ni años de experiencia
+          declarados: solo la etiqueta que puso el emisor y el certificado que la respalda, que
+          puede abrirse y revisarse uno por uno.
+        </p>
+        <p>
+          Las horas excluyen los {itineraries} itinerarios de LinkedIn Learning, que agrupan cursos
+          ya contados aquí mismo. Un certificado respalda varias competencias a la vez, así que la
+          suma de las competencias de un área es mayor que el total del área: ese total cuenta cada
+          certificado una sola vez.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section aria-labelledby="resumen">
+      <h2 id="resumen">Áreas <small>ordenadas por horas de contenido, no por número de certificados</small></h2>
+      <div class="bars">
+        {areas.map((a) => (
+          <a class="bar" href={`#${a.area}`}>
+            <span class="lbl">{AREA_LABEL[a.area] ?? a.area}</span>
+            <span class="track"><span class="fill" style={`width:${(a.horas / maxArea) * 100}%`}></span></span>
+            <span class="num">{a.horas} h</span>
+            <span class="num sub">{a.nCerts}</span>
+          </a>
+        ))}
+      </div>
+      <p class="note">La columna de la derecha es el número de certificados distintos del área. Lo
+        técnico son cursos largos y lo transversal cursos de una hora: ordenar por volumen invierte
+        la lectura.</p>
+    </section>
+
+    {areas.map((a) => (
+      <section class="area" id={a.area} aria-labelledby={`h-${a.area}`}>
+        <h2 id={`h-${a.area}`}>
+          {AREA_LABEL[a.area] ?? a.area}
+          <small>{a.horas} h · {a.nCerts} certificados · {a.comps.length} competencias</small>
+        </h2>
+        <div class="comps">
+          {a.comps.map((g) => (
+            <details class="comp">
+              <summary>
+                <span class="chev" aria-hidden="true"></span>
+                <span class="name">{g.es} <i>{g.en}</i></span>
+                <span class="track"><span class="fill" style={`width:${(g.horas / maxH) * 100}%`}></span></span>
+                <span class="num">{g.horas} h</span>
+                <span class="num sub">{g.certs.length}</span>
+              </summary>
+              <ul class="lista">
+                {ordenaCerts(g.certs).map((c) => (
+                  <li>
+                    <a href={urlCert(c.id)}>{c.title}</a>
+                    <span class="meta">
+                      {c.issuer}{c.issued && ` · ${c.issued.slice(0, 4)}`}
+                      {c.kind === 'itinerario'
+                        ? <span class="tag" title="Agrupa cursos que ya están en esta misma lista; sus horas no se suman">itinerario</span>
+                        : c.hours !== null && <span class="hrs">{horasTxt(c.hours)} h</span>}
+                      {c.expires && (c.expires < hoy
+                        ? <span class="tag exp" title={`Venció el ${c.expires}`}>vencida</span>
+                        : <span class="tag vig" title={`Vigente hasta el ${c.expires}`}>vigente {c.expires.slice(0, 4)}</span>)}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <p class="foot"><a href={urlHome()}>← Volver al listado completo</a></p>
+  </main>
+
+  <style>
+    .hero { background: var(--accent-soft); border-bottom: 1px solid var(--line); padding: 44px 0 32px; }
+    .kicker { margin: 0 0 6px; color: var(--accent); font-size: 12px; letter-spacing: .09em; text-transform: uppercase; font-weight: 600; }
+    .kicker a { color: inherit; }
+    h1 { font-size: clamp(28px, 5vw, 40px); }
+    .stats { list-style: none; display: flex; flex-wrap: wrap; gap: 30px; padding: 0; margin: 20px 0 0; }
+    .stats b { display: block; font-size: 27px; font-variant-numeric: tabular-nums; }
+    .stats span { color: var(--muted); font-size: 13px; }
+    .intro { margin-top: 18px; max-width: 74ch; }
+    .intro p { margin: 0 0 9px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    .intro p:last-child { margin-bottom: 0; }
+    .intro i { font-style: italic; }
+    main { padding: 30px 0 70px; }
+    section { margin-bottom: 38px; }
+    h2 { font-size: 19px; margin-bottom: 14px; }
+    h2 small { color: var(--muted); font-weight: 400; font-size: 13px; margin-left: 8px; }
+    .area h2 { padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+    .area h2 small { display: inline-block; font-variant-numeric: tabular-nums; }
+
+    .bars { display: grid; gap: 7px; }
+    .bar { display: grid; grid-template-columns: 210px 1fr 52px 34px; align-items: center; gap: 12px; font-size: 13.5px; text-decoration: none; padding: 3px 0; border-radius: 5px; }
+    .bar:hover .lbl { color: var(--accent); }
+    .track { background: var(--line); border-radius: 4px; height: 9px; overflow: hidden; }
+    .fill { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
+    .num { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+    /* Sin opacity: la atenuacion dejaba el contraste en 2.30 (exige 4.5). */
+    .num.sub { font-size: 12px; }
+    .note { color: var(--muted); font-size: 12.5px; margin-top: 10px; max-width: 76ch; }
+
+    .comps { display: grid; gap: 6px; }
+    .comp { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); }
+    .comp[open] { border-color: var(--accent); }
+    summary { display: grid; grid-template-columns: 14px 1fr 130px 52px 34px; align-items: center; gap: 12px; padding: 10px 14px; cursor: pointer; font-size: 13.5px; list-style: none; border-radius: var(--radius); }
+    summary::-webkit-details-marker { display: none; }
+    summary:hover .name { color: var(--accent); }
+    summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+    .chev { width: 0; height: 0; border-left: 5px solid currentColor; border-top: 4px solid transparent; border-bottom: 4px solid transparent; color: var(--muted); transition: transform .12s ease; }
+    .comp[open] .chev { transform: rotate(90deg); }
+    .name { font-weight: 600; }
+    .name i { font-style: normal; font-weight: 400; color: var(--muted); font-size: 12px; margin-left: 7px; }
+
+    .lista { list-style: none; margin: 0; padding: 2px 14px 14px 40px; display: grid; gap: 7px; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); border-top: 1px solid var(--line); padding-top: 12px; }
+    .lista li { font-size: 13px; line-height: 1.4; }
+    .lista a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); }
+    .lista a:hover { color: var(--accent); border-bottom-color: currentColor; }
+    .meta { display: block; color: var(--muted); font-size: 11.5px; margin-top: 2px; }
+    .hrs { margin-left: 6px; font-variant-numeric: tabular-nums; }
+    .hrs::before { content: '· '; }
+    .tag { display: inline-block; margin-left: 6px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; border: 1px solid currentColor; border-radius: 4px; padding: 0 4px; }
+    .tag.exp { color: var(--alerta); }
+    .tag.vig { color: var(--accent); }
+
+    .foot { font-size: 13px; }
+    .foot a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 720px) {
+      .bar { grid-template-columns: 118px 1fr 44px 28px; font-size: 12.5px; }
+      summary { grid-template-columns: 14px 1fr 46px 30px; gap: 9px; }
+      summary .track { display: none; }
+      .lista { padding-left: 20px; grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) { .chev { transition: none; } }
+  </style>
+</Base>

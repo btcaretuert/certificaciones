@@ -1,0 +1,317 @@
+# Vocabulario canonico de competencias.
+#
+# El campo `skills` de cada ficha guarda las etiquetas TAL COMO las emitio la
+# plataforma o las escribio el dueno en la hoja: son evidencia y no se tocan.
+# Este archivo las agrupa. Traducir 392 etiquetas —271 de un solo uso, con
+# duplicados bilingues (Liderazgo/Leadership, Python/Python (Programming
+# Language))— en un puñado de competencias es lo que convierte volumen en
+# senal; un filtro con 392 opciones es el mismo ruido que se quiso eliminar.
+#
+# La correspondencia se aplica en build, no en los YAML, por tres razones:
+# no se pierde el dato original, el mapeo se audita en un solo archivo, y
+# reagrupar no obliga a reescribir 246 fichas.
+#
+# `match` compara en minusculas y sin acentos. `patterns` son expresiones
+# regulares sobre esa misma forma normalizada, para familias enteras.
+# Una etiqueta puede caer en varias competencias: son facetas, no categorias.
+
+competencias:
+  # ── Datos y analitica ────────────────────────────────────────────────
+  - slug: big-data
+    es: Big data
+    en: Big data
+    area: datos-y-analitica
+    match: [big data, big data analytics, analisis de big data, big data & analytics, hadoop, spark, apache spark]
+    patterns: ['\bhadoop\b', '\bspark\b', '\bhdfs\b', '\bmapreduce\b', '\byarn\b', '\bhive\b', '\bhbase\b', '\bcassandra\b', '\bpig\b', '\bpresto\b', '\bdrill\b', '\bphoenix\b', '\boozie\b', '\bzookeeper\b', '\bmesos\b', '\bambari\b', '\bhue\b']
+
+  - slug: analitica-de-datos
+    es: Analitica de datos
+    en: Data analytics
+    area: datos-y-analitica
+    match: [analisis de datos, data analysis, data analytics, analitica de datos, data science, splunk, analyze data, data analysts, business intelligence (bi), inteligencia empresarial, intercambio de datos, metrics, trend analysis, analisis de riesgos]
+    patterns: ['\banalyz(e|ing) (relational|non-relational) data\b', '\bquery data\b']
+
+  - slug: visualizacion-de-datos
+    es: Visualizacion de datos
+    en: Data visualization
+    area: datos-y-analitica
+    match: [data visualization, visualizacion de datos, visualization, presentacion de datos]
+    patterns: ['\bdashboards?\b']
+
+  - slug: ingenieria-de-datos
+    es: Ingenieria de datos
+    en: Data engineering
+    area: datos-y-analitica
+    match: [etl, pipelines, data engineer, data architect, enterprise architect, apache beam, dataflow, apache kafka, big query, automation architects]
+    patterns: ['\bdbt\b', '\bpipelines?\b', '\betl/elt\b', '\bkafka\b', '\bbigquery\b', '\bpub/sub\b', '\bbigtable\b', '\bslowly changing dimensions\b', '\banalytics engineering\b', '\bdata transformations\b', '\bmodern data stack\b']
+
+  - slug: machine-learning
+    es: Machine learning
+    en: Machine learning
+    area: datos-y-analitica
+    match: [machine learning, machine learning basics, deep learning, basics of deep learning, regression, classification, clustering, dimensionality reduction]
+    patterns: ['\bneural network', '\bann, cnn and rnn\b', '\btensorflow\b', '\bdeep neural\b']
+
+  - slug: inteligencia-artificial
+    es: Inteligencia artificial
+    en: Artificial intelligence
+    area: datos-y-analitica
+    match: [artificial intelligence (ai), inteligencia artificial, generative ai, ai ethics, artificial intelligence applications, artificial intelligence foundations]
+    patterns: ['artificial intelligence \(ai\)']
+
+  - slug: gobierno-de-datos
+    es: Gobierno de datos
+    en: Data governance
+    area: datos-y-analitica
+    match: [data governance, gobierno de datos, dama, gdpr, proteccion de datos, general data protection regulation (gdpr), reglamento general de proteccion de datos (gdpr), gestion documental]
+
+  - slug: bases-de-datos
+    es: Bases de datos
+    en: Databases
+    area: datos-y-analitica
+    match: [bases de datos, administracion de bases de datos, diseno de bases de datos, desarrollo de base de datos, nosql, mongodb, json]
+    patterns: ['\bmariadb\b', '\bmysql\b', '\bsnowflake\b', '\bdata storage technology\b']
+
+  # ── Cloud e infraestructura ──────────────────────────────────────────
+  - slug: cloud
+    es: Cloud
+    en: Cloud
+    area: cloud-e-infraestructura
+    match: [cloud, cloud computing, computacion en la nube, cloud architecture, almacenamiento en la nube, desarrollo en la nube, cloud storage, google cloud storage, compute engine, gcp, google cloud, google cloud platform, google cloud platform (gcp), cloud digital leader, firebase]
+    patterns: ['google cloud', '\bgcp\b', '\baws\b', '\bappengine\b', '\bcloud (platform|services|bigquery)\b']
+
+  - slug: contenedores
+    es: Contenedores
+    en: Containers
+    area: cloud-e-infraestructura
+    match: [docker, docker products, kubernetes, gke, gestion de cluster]
+    patterns: ['\bkubernetes\b', '\bcontainers\b', '\bclustering architectures\b']
+
+  - slug: devops
+    es: DevOps
+    en: DevOps
+    area: cloud-e-infraestructura
+    match: [devops, ci/cd, terraform, gitlab, dasa fundamentals, what is a pipeline]
+    patterns: ['\bterraform\b', '\bci/cd\b', '\bcontinuous (integration|delivery|deployment)\b', '\bgitlab\b', '\bautomate your (build|deployment)']
+
+  - slug: linux-y-sistemas
+    es: Linux y sistemas
+    en: Linux and systems
+    area: cloud-e-infraestructura
+    match: [linux, rhce, administracion de sistemas, instalacion de software, implantacion de software]
+    patterns: ['configuring and managing', '\bssh\b', '\bdns\b', '\biscsi\b', '\bfirewalld\b', '\bkerberos\b', '\bapache web service\b', '\bnetwork manager\b']
+
+  - slug: ciberseguridad
+    es: Ciberseguridad
+    en: Cybersecurity
+    area: cloud-e-infraestructura
+    match: [ciberseguridad, seguridad informatica, cloud security, ethical hacking, it security operations, seguridad de redes, seguridad de servidores, identity and access management (iam)]
+    patterns: ['\bhacking\b', '\bsandboxing\b', '\bprompt injection\b']
+
+  # ── Desarrollo y herramientas ────────────────────────────────────────
+  - slug: programacion
+    es: Programacion
+    en: Programming
+    area: desarrollo-y-herramientas
+    match: [python, python (programming language), r, r (programming language), javascript, django, spring boot, learn to program, desarrollo de software, desarrollo de aplicaciones, web development, desarrollo web, desarrollo web back end, desarrollo full stack de aplicaciones en minutos con antigravity]
+    patterns: ['\bpython\b', '\bjavascript\b', '\bdjango\b', '\bspring boot\b']
+
+  - slug: apis-e-integracion
+    es: APIs e integracion
+    en: APIs and integration
+    area: desarrollo-y-herramientas
+    match: [api, software integration]
+    patterns: ['\bpostman\b', '\bapis?\b', '\bpeticiones http\b']
+
+  - slug: ia-aplicada-al-trabajo
+    es: IA aplicada al trabajo
+    en: AI-assisted work
+    area: desarrollo-y-herramientas
+    match: [vibe coding desde cero, dominar el agentic development, dominar google antigravity, aprender spec driven development, depuracion de codigo de ia con ia]
+    patterns: ['\bclaude (code|ai|chat|cowork|design)\b', '\bantigravity\b', '\bsubagentes\b', '\bmcp\b', '\bvibe coding\b', '\bagentic\b', '\bprompts profesionales\b', '\bcon ia\b']
+
+  - slug: ofimatica-y-colaboracion
+    es: Ofimatica y colaboracion
+    en: Office and collaboration
+    area: desarrollo-y-herramientas
+    match: [office 365, microsoft 365, microsoft excel, hojas de calculo, herramientas de colaboracion, onedrive, microsoft onedrive, onenote, to do, microsoft to do, planner, delve, microsoft office delve, sway, microsoft sway, yammer, forms, microsoft forms, microsoft teams, microsoft outlook, microsoft flow, power automate, microsoft power automate, sharepoint, productivity software]
+    patterns: ['\bmicrosoft \w+', '\boffice/?microsoft 365\b', '\bexcel\b']
+
+  # ── Liderazgo y gestion ──────────────────────────────────────────────
+  - slug: liderazgo
+    es: Liderazgo
+    en: Leadership
+    area: liderazgo-y-gestion
+    match: [liderazgo, leadership, team leadership, executive leadership, liderazgo ejecutivo, organizational leadership, liderazgo organizacional, interpersonal leadership, leadership development, desarrollo de liderazgo, liderazgo de equipos, multicultural team leadership, agile leadership, liderazgo agile, desarrollo de alto potencial, lideres reuniones]
+
+  - slug: gestion-de-equipos
+    es: Gestion de equipos
+    en: Team management
+    area: liderazgo-y-gestion
+    match: [gestion, management, gestion de personas, people management, team management, employee management, trabajo en equipo, teamwork, motivacion de equipo, team motivation, direccion y desarrollo de equipos de trabajo, delegacion, delegation, equipos virtuales, virtual teams, employee engagement]
+
+  - slug: gestion-de-proyectos
+    es: Gestion de proyectos
+    en: Project management
+    area: liderazgo-y-gestion
+    match: [project management, gestion de proyectos, project planning, planificacion de proyectos, gestion agil de proyectos, agile project management, meeting planning, "planning & scheduling", gestion de proyectos de programas de software]
+
+  - slug: agilidad
+    es: Agilidad
+    en: Agile
+    area: liderazgo-y-gestion
+    match: [agile, agilidad, agile methodologies, metodologias agiles, scrum, scrum master, lean, lean it, lean six sigma, lean software development, business agility, incremental delivery, agile software development]
+
+  - slug: gestion-del-cambio
+    es: Gestion del cambio
+    en: Change management
+    area: liderazgo-y-gestion
+    match: [change management, gestion de cambio estructural, organizational change, lead change, change readiness, change communications, business transition, liderazgo de cambios positivos]
+
+  - slug: transformacion-digital
+    es: Transformacion digital
+    en: Digital transformation
+    area: liderazgo-y-gestion
+    match: [transformacion digital, digital transformation, it digital transformation, industry 4.0, technology trends, digital service, internet de las cosas, internet of things (iot), iot, blockchain]
+
+  - slug: talento-y-rrhh
+    es: Talento y RR. HH.
+    en: Talent and HR
+    area: liderazgo-y-gestion
+    match: [talent management, gestion del talento, human resources (hr), "recursos humanos (rr. hh.)", hiring practices, strategic hiring, contratacion estrategica, strategic human resource planning, onboarding, incorporacion de personal, new hire processes, procesos de nuevas contrataciones, interviewing, technical recruiting, linkedin recruiter, staff retention, retencion de personal, learning and development, creacion de perfiles]
+
+  - slug: mejora-de-procesos
+    es: Mejora de procesos
+    en: Process improvement
+    area: liderazgo-y-gestion
+    match: [mejora continua, continual improvement, business process improvement, mejora de procesos, mejora de procesos continua, mejora de procesos de negocio, procesos, management processes, automatizacion de procesos empresariales, gestion de servicios de ti, it service management, it management, global management, gestion de operaciones internacionales]
+
+  - slug: toma-de-decisiones
+    es: Toma de decisiones
+    en: Decision-making
+    area: liderazgo-y-gestion
+    match: [toma de decisiones, decision-making, critical thinking, pensamiento critico, problem solving, resolucion de problemas, creative problem solving, sesgos cognitivos]
+
+  # ── Comunicacion y efectividad ───────────────────────────────────────
+  - slug: comunicacion
+    es: Comunicacion
+    en: Communication
+    area: comunicacion-y-efectividad
+    match: [comunicacion, communication, comunicacion interpersonal, interpersonal communication, business communications, professional communication, comunicacion empresarial, leadership communication, escucha activa, active listening, redaccion, comunicaciones escritas comerciales, mensajeria, gestion de correos electronicos, gestion de la conversacion, business english, body language, lenguaje no verbal, diplomacy, tactfulness]
+
+  - slug: presentaciones-y-narrativa
+    es: Presentaciones y narrativa
+    en: Presenting and storytelling
+    area: comunicacion-y-efectividad
+    match: [public speaking, hablar en publico, presentation skills, aptitudes para hacer presentaciones, diseno de presentaciones, elevator pitch, elevator pitches, orador convincente, storytelling, narrativa o storytelling, historias y narrativa]
+
+  - slug: negociacion-e-influencia
+    es: Negociacion e influencia
+    en: Negotiation and influence
+    area: comunicacion-y-efectividad
+    match: [negociacion, negotiation, persuasion, persuacion, influencing others, influencing without authority, influencia estrategica, conflict management, conflict resolution, gestion de conflictos, conflictologia, critica constructiva, constructive feedback, feedback, difficult situations]
+
+  - slug: productividad-personal
+    es: Productividad personal
+    en: Personal productivity
+    area: comunicacion-y-efectividad
+    match: [gestion del tiempo, time management, priority management, task management, gestion de tareas, getting things done (gtd) method, productivity improvement, mejora de la productividad, toma de notas, note taking, planificacion de agenda]
+
+  - slug: desarrollo-personal
+    es: Desarrollo personal
+    en: Personal development
+    area: comunicacion-y-efectividad
+    match: [desarrollo personal, personal development, habilidades para la vida, life skills, soft skills, self-confidence, confianza en uno mismo, resiliencia, resiliency, adaptabilidad, capacidad de adaptacion, mindfulness, control del estres, stress management, emotional intelligence, inteligencia emocional, asertividad, autoconocimiento autenticidad, accountability, rendicion de cuentas, lifelong learning, aprendizaje continuo, building trust, forjar confianza, desarrollo profesional]
+
+  - slug: trabajo-remoto
+    es: Trabajo remoto
+    en: Remote work
+    area: comunicacion-y-efectividad
+    match: [teletrabajo, telecommuting, home offices, virtual work, colaboracion virtual, video conferencing, work-life balance, principio de los trabajos virtuales, trabajo colaborativo]
+
+  - slug: diversidad-e-inclusion
+    es: Diversidad e inclusion
+    en: Diversity and inclusion
+    area: comunicacion-y-efectividad
+    match: [diversity and inclusion, diversidad e inclusion, diversidad cultural, cultural awareness, unconscious bias awareness training, comunicacion intercultural, habilidades de comunicacion intercultural, global, cultura organizativa, organizational culture]
+
+  - slug: marca-personal-y-red
+    es: Marca personal y red
+    en: Personal brand and network
+    area: comunicacion-y-efectividad
+    match: [personal branding, marca personal, business networking, networking empresarial, gestion de carrera profesional, career management, peer relationships, relaciones entre companeros, relaciones de trabajo, interpersonal relationships, interpersonal skills, client engagement, participacion en la empresa]
+
+  # ── Negocio e innovacion ─────────────────────────────────────────────
+  - slug: estrategia-de-negocio
+    es: Estrategia de negocio
+    en: Business strategy
+    area: negocio-e-innovacion
+    match: [business strategy, estrategia empresarial, strategic planning, planificacion estrategica, business modeling, modelo de negocio, business acumen, business awareness, business management, business analysis, business analyist, economics, cost reduction strategies, okr, performance measurement, medicion del rendimiento, business ethics, computer ethics]
+    patterns: ['\bokrs?\b']
+
+  - slug: innovacion-y-creatividad
+    es: Innovacion y creatividad
+    en: Innovation and creativity
+    area: negocio-e-innovacion
+    match: [design thinking, creatividad, creativity and innovation, innovacion, creative process development, creative blocks, bloqueos creativos, desarrollo de ideas, ingenio, ecosistemas]
+
+  - slug: emprendimiento-y-fintech
+    es: Emprendimiento y fintech
+    en: Entrepreneurship and fintech
+    area: negocio-e-innovacion
+    match: [entrepreneurship, espiritu empresarial, fintech, financial technology, tecnologia financiera]
+
+  - slug: marketing-digital
+    es: Marketing digital
+    en: Digital marketing
+    area: negocio-e-innovacion
+    match: [marketing digital, marketing online, marketing de contenido, marketing de redes sociales, medios sociales, social listening, ventas, conocimiento del consumidor]
+
+# Correspondencia tecnologia -> competencia.
+#
+# Necesaria porque los 29 cursos de Udemy no traen etiquetas de competencia:
+# su unica senal estructurada es `tech`. Sin esto, 11 fichas —justo las mas
+# tecnicas del corpus— quedarian fuera de la vista por competencias.
+tecnologias:
+  big-data: [big-data]
+  hadoop: [big-data]
+  spark: [big-data]
+  analitica: [analitica-de-datos]
+  splunk: [analitica-de-datos]
+  sql: [analitica-de-datos, bases-de-datos]
+  nosql: [bases-de-datos]
+  mongodb: [bases-de-datos]
+  data-warehouse: [ingenieria-de-datos]
+  etl: [ingenieria-de-datos]
+  dbt: [ingenieria-de-datos]
+  kafka: [ingenieria-de-datos]
+  apache-beam: [ingenieria-de-datos]
+  airflow: [ingenieria-de-datos]
+  arquitectura: [ingenieria-de-datos]
+  data-governance: [gobierno-de-datos]
+  machine-learning: [machine-learning]
+  ia-generativa: [inteligencia-artificial]
+  llm-genai: [inteligencia-artificial]
+  gcp: [cloud]
+  aws: [cloud]
+  azure: [cloud]
+  firebase: [cloud]
+  kubernetes: [contenedores]
+  docker: [contenedores]
+  devops: [devops]
+  terraform: [devops]
+  gitlab: [devops]
+  git: [devops]
+  linux: [linux-y-sistemas]
+  seguridad: [ciberseguridad]
+  python: [programacion]
+  api: [apis-e-integracion]
+  postman: [apis-e-integracion]
+  json: [apis-e-integracion, bases-de-datos]
+  office-365: [ofimatica-y-colaboracion]
+  excel: [ofimatica-y-colaboracion]
+  power-automate: [ofimatica-y-colaboracion]
+  agile: [agilidad]
+  scrum: [agilidad]
+  six-sigma: [mejora-de-procesos]
+  itil: [mejora-de-procesos]

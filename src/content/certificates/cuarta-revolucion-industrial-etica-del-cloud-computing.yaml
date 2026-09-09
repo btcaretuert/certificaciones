@@ -1,0 +1,52 @@
+title: "Cuarta revolución industrial: Ética del cloud computing"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "cloud-e-infraestructura"
+domain: "cloud-plataforma"
+tech: []
+type: "tecnico"
+official: false
+skills: ["Industry 4.0", "Cloud Computing"]
+issued: "2022-02-22"
+hours: 0.7
+credential_id: "255c3082f68012561e4d1b16f70eaf9449cefc5941b2862ecb2b0f3ad539707f"
+verify_url: "https://www.linkedin.com/learning/certificates/255c3082f68012561e4d1b16f70eaf9449cefc5941b2862ecb2b0f3ad539707f"
+pdf: "cuarta-revolucion-industrial-etica-del-cloud-computing"
+thumb: "cuarta-revolucion-industrial-etica-del-cloud-computing"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "cloud-e-infraestructura"
+  domain: "cloud-plataforma"
+  type: "tecnico"
+  tech: []
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:2823300"
+course_url: "https://www.linkedin.com/learning/cuarta-revolucion-industrial-etica-del-cloud-computing"
+level: "General"
+language: "es"
+retired: false
+instructors: ["David Carrasco Lopez"]
+summary: "Explora el ámbito ético del cloud computing en el marco de la cuarta revolución industrial. Entiende los cambios que sufrirán tanto los recursos humanos como la propia producción y adáptate a tiempo."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Cuarta revolucion industrial Etica del cloud computing.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Cuarta revolucion industrial Etica del cloud computing.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

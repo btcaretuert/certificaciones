@@ -1,0 +1,52 @@
+title: "DevOps esencial"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "cloud-e-infraestructura"
+domain: "devops"
+tech: ["devops"]
+type: "tecnico"
+official: false
+skills: ["DevOps", "CI/CD", "pipelines"]
+issued: "2021-07-19"
+hours: 0.84
+credential_id: "c8699ee38840da2db0cf0b5512e791810a838ead9463fe8cf75cdd1a85afa8ec"
+verify_url: "https://www.linkedin.com/learning/certificates/c8699ee38840da2db0cf0b5512e791810a838ead9463fe8cf75cdd1a85afa8ec"
+pdf: "devops-esencial"
+thumb: "devops-esencial"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "cloud-e-infraestructura"
+  domain: "devops"
+  type: "tecnico"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:680863"
+course_url: "https://www.linkedin.com/learning/devops-esencial"
+level: "Beginner + Intermediate"
+language: "es"
+retired: false
+instructors: ["Alvaro Gonzalez Crespo"]
+summary: "Familiarízate con la filosofía de trabajo DevOps. Aprende de dónde proviene, qué nos ofrece para mejorar nuestros flujos de trabajo y cómo aplicarla a nuestros procesos."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_DevOps esencial.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_DevOps esencial.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

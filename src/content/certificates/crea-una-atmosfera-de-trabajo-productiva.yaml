@@ -1,0 +1,55 @@
+title: "Crea una atmósfera de trabajo productiva"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Management", "Leadership"]
+issued: "2019-09-03"
+hours: 8.89
+credential_id: "0727dbdec7f3f73e5f6ac58730baf8c1fe17175e6bc360302a62039a16137b56"
+verify_url: "https://www.linkedin.com/learning/certificates/0727dbdec7f3f73e5f6ac58730baf8c1fe17175e6bc360302a62039a16137b56"
+pdf: "crea-una-atmosfera-de-trabajo-productiva"
+thumb: "crea-una-atmosfera-de-trabajo-productiva"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:llsServePath:1555551"
+course_url: "https://www.linkedin.com/learning/paths/crea-una-atmosfera-de-trabajo-productiva"
+level: "Beginner"
+language: null
+retired: false
+instructors: []
+summary: "Crea una atmósfera de trabajo productiva con ayuda de especialistas en la materia:"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Crea una atmosfera de trabajo productiva.pdf", "certs-src/_origen/Certs Linkedin Itinerarios/CertificadoDeFinalizacion_Crea una atmosfera de trabajo productiva.pdf"]
+expires: null
+active: null
+objectives:
+  - "Crea una buena atmósfera de trabajo basada en el respeto y la inclusión."
+  - "Mejora el ambiente laboral con la capacidad de relación entre miembros del equipo."
+  - "Desarrolla la productividad desde la serenidad, la inclusión y el compromiso emocional."
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "itinerario"
+pmi_pdf: null
+pmi_source_file: null

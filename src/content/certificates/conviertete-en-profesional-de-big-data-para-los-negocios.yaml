@@ -1,0 +1,55 @@
+title: "Conviértete en profesional de Big Data para los negocios"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "datos-y-analitica"
+domain: "ingenieria-datos"
+tech: ["analitica", "big-data"]
+type: "tecnico"
+official: false
+skills: ["Big Data", "Big Data Analytics", "Business Intelligence (BI)"]
+issued: "2019-08-22"
+hours: 11.58
+credential_id: "bf1f98e68a878800c7b14af6b1681a77d72a1881c5ad2ab4b081103b84d14d69"
+verify_url: "https://www.linkedin.com/learning/certificates/bf1f98e68a878800c7b14af6b1681a77d72a1881c5ad2ab4b081103b84d14d69"
+pdf: "conviertete-en-profesional-de-big-data-para-los-negocios"
+thumb: "conviertete-en-profesional-de-big-data-para-los-negocios"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ingenieria-datos"
+  type: "tecnico"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:llsServePath:5011417"
+course_url: "https://www.linkedin.com/learning/paths/conviertete-en-profesional-de-big-data-para-los-negocios"
+level: null
+language: null
+retired: false
+instructors: []
+summary: "Domina las habilidades de vida a nivel de liderazgo con la ayuda de especialistas en la materia:"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Conviertete en profesional de Big Data para los negocios.pdf", "certs-src/_origen/Certs Linkedin Itinerarios/CertificadoDeFinalizacion_Conviertete en profesional de Big Data para los negocios.pdf"]
+expires: null
+active: null
+objectives:
+  - "Desarrolla una base de conocimientos sólida sobre el análisis y pronóstico con datos"
+  - "Domina la estructura de los proyectos de Big Data"
+  - "Aprende a escuchar lo que tus clientes o el mercado opinan de tu productos"
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "itinerario"
+pmi_pdf: null
+pmi_source_file: null

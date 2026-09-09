@@ -1,0 +1,52 @@
+title: "Cómo liderar a los millennials"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Gestión", "Liderazgo", "Management"]
+issued: "2019-09-11"
+hours: 2.31
+credential_id: "01b5fec8b931570835b37a7418f3dbd81b2140ad463d3e5e592710c79cfd4222"
+verify_url: "https://www.linkedin.com/learning/certificates/01b5fec8b931570835b37a7418f3dbd81b2140ad463d3e5e592710c79cfd4222"
+pdf: "como-liderar-a-los-millennials"
+thumb: "como-liderar-a-los-millennials"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:587151"
+course_url: "https://www.linkedin.com/learning/como-liderar-a-la-generacion-y-2017"
+level: "Intermediate"
+language: "es"
+retired: true
+instructors: ["Lorena Diaz Quijano"]
+summary: "Aprende cómo liderar a los millennials conociendo sus características, necesidades y motivaciones, para lograr que estén felices y sean productivos en el trabajo."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como liderar a la generacion Y 2017.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

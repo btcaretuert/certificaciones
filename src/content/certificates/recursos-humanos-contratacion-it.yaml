@@ -1,0 +1,46 @@
+title: "Recursos humanos: Contratación IT"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "sin-clasificar"
+tech: []
+type: "transversal"
+official: false
+skills: ["Human Resources (HR)", "Technical Recruiting"]
+issued: "2019-10-16"
+hours: 1.33
+credential_id: "8a619043f364d74e9847a257b7b6983e1131a80d03b5395c80903c274ba6f4ef"
+verify_url: "https://www.linkedin.com/learning/certificates/8a619043f364d74e9847a257b7b6983e1131a80d03b5395c80903c274ba6f4ef"
+pdf: "recursos-humanos-contratacion-it"
+thumb: "recursos-humanos-contratacion-it"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: "Publicada como competencia de liderazgo, no como circunstancia personal (decision del 2026-09-08)."
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot: null
+classification_confidence: "low"
+classification_signals: ""
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields: []
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:5036702"
+course_url: "https://www.linkedin.com/learning/recursos-humanos-contratacion-it"
+level: "Beginner + Intermediate"
+language: "es"
+retired: false
+instructors: ["Laura Almudena Boro Diaz"]
+summary: "Domina el proceso de reclutamiento para perfiles IT. Consigue atraer y conservar el mejor talento del entorno tecnológico."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Recursos humanos Contratacion IT.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

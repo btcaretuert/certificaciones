@@ -1,0 +1,62 @@
+title: "The Complete dbt (Data Build Tool) Bootcamp: Zero to Hero"
+issuer: "Udemy"
+platform: "Udemy"
+area: "datos-y-analitica"
+domain: "ingenieria-datos"
+tech: ["dbt", "analitica", "arquitectura", "data-warehouse", "etl", "machine-learning", "sql"]
+type: "tecnico"
+official: false
+skills: []
+issued: "2026-02-16"
+hours: 13.0
+credential_id: "UC-4b14bf41-88dd-47ff-aa7d-ac26a0814cbc"
+verify_url: "https://www.udemy.com/certificate/UC-4b14bf41-88dd-47ff-aa7d-ac26a0814cbc/"
+pdf: "the-complete-dbt-data-build-tool-bootcamp-zero-to-hero"
+thumb: "the-complete-dbt-data-build-tool-bootcamp-zero-to-hero"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ingenieria-datos"
+  type: "tecnico"
+  tech: ["dbt"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields: []
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/complete-dbt-data-build-tool-bootcamp-zero-to-hero-learn-dbt/"
+level: null
+language: null
+retired: false
+instructors: ["Zoltan C. Toth (Nordquant)"]
+summary: "ALL-IN-ONE Bootcamp for Master dbt hands-on and get dbt Certification-ready"
+source_files: ["input/otros_certs/DBT: UC-4b14bf41-88dd-47ff-aa7d-ac26a0814cbc.pdf"]
+expires: null
+active: null
+objectives:
+  - "Learn to use the dbt platform professionally through the creation of an exhaustive, real-world, hands-on dbt - Airbnb project covering both Theory and Practice"
+  - "Set up the complete development environment on Mac & Windows, Connect to Snowflake and BI, Configure dbt profile, extend the IDE with dbt tools"
+  - "Learn core dbt concepts such as Models, Materialization, Sources, Seeds, Snapshots, Packages, Hooks, Exposures, Analyses, write complex SQL queries"
+  - "Understand the dbt project structure and learn about dbt tips & tricks, advanced techniques and best practices, extend dbt with your own / third-party macros"
+  - "Implement singular and generic dbt tests, work with additional arguments and default config values, customize dbt built-in tests"
+  - "Document your models and pipeline, customize the dbt docs page, Explore and analyse dependencies between transformation steps"
+  - "Understand how dbt fits into the modern data stack, learn about the stages of the Data-Maturity Model, and well functioning Data Architectures"
+  - "Master ETL/ELT procedures, Data Transformations, Modern Data Stack, Slowly Changing Dimensions, Common Table Expressions and Analytics Engineering"
+  - "Understand what is a Data Warehouse, Data Lake, or Data Lakehouse and when to use which,  handle Data Collection, Data Wrangling and Data Integrations"
+  - "See how advanced testing works using dbt-expectations, a Great Expectations inspired testing framework"
+  - "Test your knowledge with certification preparation question"
+  - "Listen to real-world use-cases from industry professionals"
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

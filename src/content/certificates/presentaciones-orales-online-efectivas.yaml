@@ -1,0 +1,52 @@
+title: "Presentaciones orales online efectivas"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Comunicación interpersonal", "Public Speaking"]
+issued: "2021-03-05"
+hours: 1.97
+credential_id: "b9447fcc021646b1d5dd5a295d8f5e146d0e5da73dcc43befef0d4623610c6b2"
+verify_url: "https://www.linkedin.com/learning/certificates/b9447fcc021646b1d5dd5a295d8f5e146d0e5da73dcc43befef0d4623610c6b2"
+pdf: "presentaciones-orales-online-efectivas"
+thumb: "presentaciones-orales-online-efectivas"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:559597"
+course_url: "https://www.linkedin.com/learning/presentaciones-orales-online-efectivas"
+level: "Beginner + Intermediate"
+language: "es"
+retired: false
+instructors: ["Lorena Diaz Quijano"]
+summary: "Conoce las peculiaridades que te ofrecen las videoconferencias o cualquier recurso en línea para ponerte en comunicación con tu equipo o clientes de forma efectiva."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Presentaciones orales online efectivas.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Presentaciones orales online efectivas.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "0932d2334bff9300bdbe9712deb2f30cfe328c7d0af375f1e11e0b8832c15f74"
+pmi_verify_url: null
+pmi_pdus: 1.75
+kind: "curso"
+pmi_pdf: "presentaciones-orales-online-efectivas-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Presentaciones orales online efectivas (PMI).pdf"

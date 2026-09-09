@@ -1,0 +1,52 @@
+title: "Transformación digital: El rol de recursos humanos"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "gestion-personas"
+tech: []
+type: "gestion"
+official: false
+skills: ["Recursos humanos (RR. HH.)", "Transformación digital", "Human Resources (HR)", "Digital Transformation"]
+issued: "2019-11-07"
+hours: 1.34
+credential_id: "648540fc507f3527fc79a5c10d2b5b1f8b86381b129b1478db712f0e3c3bfefe"
+verify_url: "https://www.linkedin.com/learning/certificates/648540fc507f3527fc79a5c10d2b5b1f8b86381b129b1478db712f0e3c3bfefe"
+pdf: "transformacion-digital-el-rol-de-recursos-humanos"
+thumb: "transformacion-digital-el-rol-de-recursos-humanos"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "gestion-personas"
+  type: "gestion"
+  tech: []
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:651777"
+course_url: "https://www.linkedin.com/learning/transformacion-digital-el-rol-de-recursos-humanos"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Lorena Diaz Quijano"]
+summary: "Conoce qué papel juega el departamento de recursos humanos dentro de una empresa a la hora de dar el paso hacía la transformación digital de cada empleado de la compañía."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Transformacion digital El rol de recursos humanos.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Transformacion Digital El Rol De Recursos Humanos.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

@@ -1,0 +1,51 @@
+title: "Primeros pasos para nuevos jefes"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Gestión", "Desarrollo de liderazgo", "Liderazgo", "Management", "Leadership Development"]
+issued: "2019-08-19"
+hours: 1.25
+credential_id: "0bf6536152fc04248f02e945c78941304031e9cbe922a482b9995d78b56af7d4"
+verify_url: "https://www.linkedin.com/learning/certificates/0bf6536152fc04248f02e945c78941304031e9cbe922a482b9995d78b56af7d4"
+pdf: "primeros-pasos-para-nuevos-jefes"
+thumb: "primeros-pasos-para-nuevos-jefes"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:688053"
+course_url: "https://www.linkedin.com/learning/primeros-pasos-en-el-liderazgo-de-equipos"
+level: "Beginner"
+language: "es"
+retired: true
+instructors: ["Roberta Matuson"]
+summary: "Aprende la mejor forma de adaptarte a tu nuevo rol de líder de equipo tras conseguir el ascenso por el que tanto has trabajado para conseguirlo, gracias a estos consejos."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Primeros pasos en el liderazgo de equipos.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "be61483b460f38dae5d671e29e36f1c654b0238a17f62984c10c90cffd68a8cd"
+pmi_verify_url: "https://www.linkedin.com/learning/certificates/be61483b460f38dae5d671e29e36f1c654b0238a17f62984c10c90cffd68a8cd"
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: "primeros-pasos-para-nuevos-jefes-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Primeros pasos en el liderazgo de equipos (PMI).pdf"

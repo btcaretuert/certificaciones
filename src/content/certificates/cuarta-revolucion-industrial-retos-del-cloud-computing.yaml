@@ -1,0 +1,52 @@
+title: "Cuarta revolución industrial: Retos del cloud computing"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "cloud-e-infraestructura"
+domain: "cloud-plataforma"
+tech: []
+type: "tecnico"
+official: false
+skills: ["Industry 4.0"]
+issued: "2022-02-22"
+hours: 0.72
+credential_id: "7c58b65b758c85ad3c15b6135289cef04b90191ca078d98ec46597cd042d09e4"
+verify_url: "https://www.linkedin.com/learning/certificates/7c58b65b758c85ad3c15b6135289cef04b90191ca078d98ec46597cd042d09e4"
+pdf: "cuarta-revolucion-industrial-retos-del-cloud-computing"
+thumb: "cuarta-revolucion-industrial-retos-del-cloud-computing"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "cloud-e-infraestructura"
+  domain: "cloud-plataforma"
+  type: "tecnico"
+  tech: []
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:2822353"
+course_url: "https://www.linkedin.com/learning/cuarta-revolucion-industrial-retos-del-cloud-computing"
+level: "General"
+language: "es"
+retired: false
+instructors: ["David Carrasco Lopez"]
+summary: "Prepárate para afrontar los retos del cloud computing en la cuarta revolución industrial. Descubre, gracias a este curso, qué necesitas para adaptarte rápidamente."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Cuarta revolucion industrial Retos del cloud computing.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Cuarta revolucion industrial Retos del cloud computing.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

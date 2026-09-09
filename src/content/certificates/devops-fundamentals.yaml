@@ -1,0 +1,50 @@
+title: "DevOps Fundamentals"
+issuer: "APMG International"
+platform: "International"
+area: "cloud-e-infraestructura"
+domain: "devops"
+tech: ["agile", "devops", "six-sigma"]
+type: "tecnico"
+official: true
+skills: ["DevOps", "Mejora continua", "Agile", "Business Transition", "Continual Improvement", "DASA Fundamentals", "Digital Service", "Enterprise Architect", "IT Management"]
+issued: "2018-12-16"
+hours: null
+credential_id: "10d54f3b-f00e-45e8-b1a3-d231178888e2"
+verify_url: "https://www.credly.com/badges/10d54f3b-f00e-45e8-b1a3-d231178888e2"
+pdf: "devops-fundamentals"
+thumb: "devops-fundamentals"
+weight: 20
+featured: true
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "cloud-e-infraestructura"
+  domain: "devops"
+  type: "tecnico"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields: []
+verified_public: true
+program: "certificación"
+course_urn: null
+course_url: null
+level: null
+language: null
+retired: false
+instructors: []
+summary: "The Badge holder has shown an understanding of the DASA DevOps Fundamentals. The qualification is designed to provide the core education necessary to build your DevOps vocabulary and to understand its principles and practices. Badge holders will be able to describe how DevOps relates to Lean and Agi"
+source_files: ["certs-src/_origen/Internacionales/DevOps-8eb79cedeedf.pdf", "certs-src/_credly/DASA_DevOps_Fundamentals.png"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "certificacion"
+pmi_pdf: null
+pmi_source_file: null

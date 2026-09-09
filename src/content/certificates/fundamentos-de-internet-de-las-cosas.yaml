@@ -1,0 +1,52 @@
+title: "Fundamentos de internet de las cosas"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "desarrollo-y-herramientas"
+domain: "programacion"
+tech: []
+type: "tecnico"
+official: false
+skills: ["Internet de las cosas", "IoT", "Internet of Things (IoT)"]
+issued: "2019-10-25"
+hours: 1.72
+credential_id: "725afd32a4131ef822117c216d8456b6cf008fa87e741667d3f7cc149c360654"
+verify_url: "https://www.linkedin.com/learning/certificates/725afd32a4131ef822117c216d8456b6cf008fa87e741667d3f7cc149c360654"
+pdf: "fundamentos-de-internet-de-las-cosas"
+thumb: "fundamentos-de-internet-de-las-cosas"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "desarrollo-y-herramientas"
+  domain: "programacion"
+  type: "tecnico"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:714718"
+course_url: "https://www.linkedin.com/learning/fundamentos-de-internet-de-las-cosas"
+level: "General"
+language: "es"
+retired: true
+instructors: ["Oriol Reull Dominguez"]
+summary: "Ponte manos a la obra con la transformación digital de tu empresa con estos ejemplos prácticos, casos de uso, aplicaciones y herramientas prácticas de Internet of Things."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de internet de las cosas.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Fundamentos De Internet De Las Cosas.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

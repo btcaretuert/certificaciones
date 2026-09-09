@@ -1,0 +1,52 @@
+title: "Resolución de problemas empresariales"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "negocio-e-innovacion"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Resolución de problemas", "Desarrollo personal", "Habilidades para la vida", "Problem Solving"]
+issued: "2019-10-21"
+hours: 0.6
+credential_id: "bb6b3f12a0801b884bc00af9c5c2f9d92a49e085e687b3d6af022a3328cf4331"
+verify_url: "https://www.linkedin.com/learning/certificates/bb6b3f12a0801b884bc00af9c5c2f9d92a49e085e687b3d6af022a3328cf4331"
+pdf: "resolucion-de-problemas-empresariales"
+thumb: "resolucion-de-problemas-empresariales"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:502982"
+course_url: "https://www.linkedin.com/learning/resolucion-de-problemas-empresariales"
+level: "General"
+language: "es"
+retired: false
+instructors: ["Mike Figliuolo"]
+summary: "Aprende a localizar y definir el problema, generar posibles soluciones, determinar la mejor de ellas y crear una recomendación clara para resolver tu caso en particular."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Resolucion de problemas empresariales.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Resolucion De Problemas Empresariales.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "74832af7de2ab939e11afc48520425073e6f1d2dfaca35c5602a4144adbb27ae"
+pmi_verify_url: null
+pmi_pdus: 3.0
+kind: "curso"
+pmi_pdf: "resolucion-de-problemas-empresariales-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Resolucion de problemas empresariales (PMI).pdf"

@@ -1,0 +1,55 @@
+title: "Economía naranja: Introducción a la transformación digital"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "negocio-e-innovacion"
+domain: "transformacion-digital"
+tech: []
+type: "gestion"
+official: false
+skills: ["Digital Transformation", "Technology Trends"]
+issued: "2022-03-18"
+hours: 8.31
+credential_id: "140f2c67fcccba91b8500f9f274aac1a9514bb75ee0d75cc48cd62bb9f0dc804"
+verify_url: "https://www.linkedin.com/learning/certificates/140f2c67fcccba91b8500f9f274aac1a9514bb75ee0d75cc48cd62bb9f0dc804"
+pdf: "economia-naranja-introduccion-a-la-transformacion-digital"
+thumb: "economia-naranja-introduccion-a-la-transformacion-digital"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "negocio-e-innovacion"
+  domain: "transformacion-digital"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:llsServePath:5743516"
+course_url: "https://www.linkedin.com/learning/paths/economia-naranja-introduccion-a-la-transformacion-digital"
+level: "Beginner"
+language: null
+retired: true
+instructors: []
+summary: "Aprende qué es la transformación digital con la ayuda de especialistas en la materia:				"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Economia naranja Introduccion a la transformacion digital.pdf", "certs-src/_origen/Certs Linkedin Itinerarios/CertificadoDeFinalizacion_Economia naranja Introduccion a la transformacion digital.pdf"]
+expires: null
+active: null
+objectives:
+  - "Entiende qué es la transformación digital. "
+  - "Descubre cuales son las tecnologías clave para la transformación digital. "
+  - "Aprende técnicas y mejores prácticas para hacer frente al trabajo digital y colaborativo. "
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "itinerario"
+pmi_pdf: null
+pmi_source_file: null

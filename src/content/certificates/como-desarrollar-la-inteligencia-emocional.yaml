@@ -1,0 +1,52 @@
+title: "Cómo desarrollar la inteligencia emocional"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Inteligencia emocional", "Desarrollo personal", "Habilidades para la vida", "Emotional Intelligence"]
+issued: "2019-10-07"
+hours: 1.41
+credential_id: "724db05eca51b31ad140e686ea969534c8002f7e562346cc193d1a11fc2256c5"
+verify_url: "https://www.linkedin.com/learning/certificates/724db05eca51b31ad140e686ea969534c8002f7e562346cc193d1a11fc2256c5"
+pdf: "como-desarrollar-la-inteligencia-emocional"
+thumb: "como-desarrollar-la-inteligencia-emocional"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:587150"
+course_url: "https://www.linkedin.com/learning/como-desarrollar-la-inteligencia-emocional-2017"
+level: "Beginner"
+language: "es"
+retired: true
+instructors: ["Lorena Diaz Quijano"]
+summary: "Descubre qué es la inteligencia emocional y por qué es importante tomar control de las emociones, para mejorar tus relaciones con compañeros y clientes en el ámbito laboral."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como desarrollar la inteligencia emocional 2017.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Desarrollar La Inteligencia Emocional.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "a2137db414424d2cd257c5bed494dc30b5f276789229fce58575bcc17c46cdfd"
+pmi_verify_url: null
+pmi_pdus: 1.0
+kind: "curso"
+pmi_pdf: "como-desarrollar-la-inteligencia-emocional-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Como desarrollar la inteligencia emocional 2017 (PMI).pdf"

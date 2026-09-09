@@ -1,0 +1,52 @@
+title: "Cómo establecer y cumplir tus objetivos profesionales"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Gestión de carrera profesional", "Desarrollo personal", "Career Management"]
+issued: "2019-12-19"
+hours: 0.55
+credential_id: "3e43774a089ac37bf475514890228538396ed43566af20b78610f73ebf82f5cc"
+verify_url: "https://www.linkedin.com/learning/certificates/3e43774a089ac37bf475514890228538396ed43566af20b78610f73ebf82f5cc"
+pdf: "como-establecer-y-cumplir-tus-objetivos-profesionales"
+thumb: "como-establecer-y-cumplir-tus-objetivos-profesionales"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:5025626"
+course_url: "https://www.linkedin.com/learning/como-establecer-y-cumplir-tus-objetivos-profesionales"
+level: "General"
+language: "es"
+retired: false
+instructors: ["Dorie Clark"]
+summary: "Conoce estrategias específicas para conseguir tus objetivos. Identifica tus metas, supervisa tu avance y recompénsate por el éxito. Convierte tus metas en hábitos."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como establecer y cumplir tus objetivos profesionales.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Establecer Y Cumplir Tus Objetivos Profesionales.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "35d13d3ba0f7ee91f7cbf37b651b309a2e45b833dc87b549f3d93e0e0648784d"
+pmi_verify_url: null
+pmi_pdus: 0.5
+kind: "curso"
+pmi_pdf: "como-establecer-y-cumplir-tus-objetivos-profesionales-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Como establecer y cumplir tus objetivos profesionales (PMI).pdf"

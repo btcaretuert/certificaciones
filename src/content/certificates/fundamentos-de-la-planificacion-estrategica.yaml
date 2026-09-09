@@ -1,0 +1,51 @@
+title: "Fundamentos de la planificación estratégica"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "negocio-e-innovacion"
+domain: "estrategia-negocio"
+tech: []
+type: "gestion"
+official: false
+skills: ["Planificación estratégica", "Strategic Planning"]
+issued: "2019-08-27"
+hours: 1.43
+credential_id: "69383d85f7f19b0e61fe502706a139898a698cbbedad1e1cd903b763b117716d"
+verify_url: "https://www.linkedin.com/learning/certificates/69383d85f7f19b0e61fe502706a139898a698cbbedad1e1cd903b763b117716d"
+pdf: "fundamentos-de-la-planificacion-estrategica"
+thumb: "fundamentos-de-la-planificacion-estrategica"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "negocio-e-innovacion"
+  domain: "estrategia-negocio"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:478330"
+course_url: "https://www.linkedin.com/learning/fundamentos-de-la-planificacion-estrategica"
+level: "Intermediate"
+language: "es"
+retired: false
+instructors: ["Mike Figliuolo"]
+summary: "Aprende a realizar una planificación estratégica en tu empresa, priorizando y asignando recursos a iniciativas creativas, obteniendo como resultado un plan estratégico a tu medida."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de la planificacion estrategica.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Fundamentos De La Planificacion Estrategica.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "e090e72c3144da2cb78d9af41a800730e16a9eec4d5dd1f7302cd282485a655c"
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: "fundamentos-de-la-planificacion-estrategica-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de la planificacion estrategica (PMI).pdf"

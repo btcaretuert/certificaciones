@@ -1,0 +1,51 @@
+title: "Motivación e implicación en la empresa"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Participación en la empresa", "Motivación de equipo", "Team Motivation", "Employee Engagement"]
+issued: "2019-08-27"
+hours: 1.81
+credential_id: "242eab51ea43decb9564f3b4ce2ab8c83475eab76784644363f128b4bf1a506e"
+verify_url: "https://www.linkedin.com/learning/certificates/242eab51ea43decb9564f3b4ce2ab8c83475eab76784644363f128b4bf1a506e"
+pdf: "motivacion-e-implicacion-en-la-empresa"
+thumb: "motivacion-e-implicacion-en-la-empresa"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:449379"
+course_url: "https://www.linkedin.com/learning/motivacion-e-implicacion-en-la-empresa"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Todd Dewett"]
+summary: "Aprende las claves para la participación de tu equipo y el incremento de la confianza en el mismo. Descubre lo necesario para tener un grupo a pleno rendimiento y motivado."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Motivacion e implicacion en la empresa.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Motivacion E Implicacion En La Empresa.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "fa9d98b0ee5bf7e0ac8f27e2ee96951572bbb2dd4d0454f08e350a5a46b26fd7"
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: "motivacion-e-implicacion-en-la-empresa-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Motivacion e implicacion en la empresa (PMI).pdf"

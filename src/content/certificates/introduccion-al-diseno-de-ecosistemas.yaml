@@ -1,0 +1,52 @@
+title: "Introducción al diseño de ecosistemas"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "negocio-e-innovacion"
+domain: "agile-proyectos"
+tech: ["arquitectura"]
+type: "gestion"
+official: false
+skills: ["Gestión de proyectos de programas de software", "ecosistemas", "Software Integration"]
+issued: "2019-11-04"
+hours: 1.19
+credential_id: "9a0c882d716b2da3f91d9ff951faa664947b403156e952b99424b10dd61e19cd"
+verify_url: "https://www.linkedin.com/learning/certificates/9a0c882d716b2da3f91d9ff951faa664947b403156e952b99424b10dd61e19cd"
+pdf: "introduccion-al-diseno-de-ecosistemas"
+thumb: "introduccion-al-diseno-de-ecosistemas"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "agile-proyectos"
+  type: "gestion"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:714721"
+course_url: "https://www.linkedin.com/learning/introduccion-al-diseno-de-ecosistemas"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Carlos Solis"]
+summary: "Conoce la arquitectura general de un ecosistema y los riesgos que puedes encontrar al crear una infraestructura tecnológica que sostenga todo tu ecosistema de software."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Introduccion al diseno de ecosistemas.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Introduccion Al Diseno De Ecosistemas.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

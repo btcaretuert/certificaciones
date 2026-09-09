@@ -1,0 +1,52 @@
+title: "Fundamentos de cloud computing"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "cloud-e-infraestructura"
+domain: "cloud-plataforma"
+tech: []
+type: "tecnico"
+official: false
+skills: ["Computación en la nube", "Cloud", "Cloud Computing"]
+issued: "2019-10-16"
+hours: 1.01
+credential_id: "1732293386707e553c520bd4ff9ee08aa5988eb785a0bd75ea8daccf993feaf2"
+verify_url: "https://www.linkedin.com/learning/certificates/1732293386707e553c520bd4ff9ee08aa5988eb785a0bd75ea8daccf993feaf2"
+pdf: "fundamentos-de-cloud-computing"
+thumb: "fundamentos-de-cloud-computing"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "cloud-e-infraestructura"
+  domain: "cloud-plataforma"
+  type: "tecnico"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:762660"
+course_url: "https://www.linkedin.com/learning/fundamentos-de-cloud-computing"
+level: "Intermediate"
+language: "es"
+retired: false
+instructors: ["Luis Eduardo Lunar Guevara"]
+summary: "Conoce la repercusión de la computación en la nube en las operaciones de tu negocio y entiende la transformación digital como el mayor motivador del cambio organizativo."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de cloud computing.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Fundamentos De Cloud Computing.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

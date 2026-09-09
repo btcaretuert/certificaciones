@@ -1,0 +1,52 @@
+title: "Cómo mejorar tu capacidad de toma de decisiones"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "estrategia-negocio"
+tech: []
+type: "gestion"
+official: false
+skills: ["Desarrollo personal", "Habilidades para la vida", "toma de decisiones", "Decision-Making"]
+issued: "2019-08-26"
+hours: 0.43
+credential_id: "4ac7c3c238e0e37fa9c46b16dd03b7a1d09d78c0c8664b90c7e1494224f84757"
+verify_url: "https://www.linkedin.com/learning/certificates/4ac7c3c238e0e37fa9c46b16dd03b7a1d09d78c0c8664b90c7e1494224f84757"
+pdf: "como-mejorar-tu-capacidad-de-toma-de-decisiones"
+thumb: "como-mejorar-tu-capacidad-de-toma-de-decisiones"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "negocio-e-innovacion"
+  domain: "estrategia-negocio"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:498951"
+course_url: "https://www.linkedin.com/learning/como-mejorar-tu-capacidad-de-toma-de-decisiones"
+level: "General"
+language: "es"
+retired: false
+instructors: ["Drew Boyd"]
+summary: "Mejora tu capacidad de juzgar y aprende a tomar decisiones de calidad, para alcanzar el éxito profesional en tus tareas dominado los sesgos cognitivos más importantes."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como mejorar tu capacidad de toma de decisiones.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Mejorar Tu Capacidad De Toma De Decisiones.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

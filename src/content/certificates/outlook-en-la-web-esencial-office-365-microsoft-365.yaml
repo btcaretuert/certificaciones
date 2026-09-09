@@ -1,0 +1,52 @@
+title: "Outlook en la web esencial (Office 365/Microsoft 365)"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "desarrollo-y-herramientas"
+domain: "ofimatica-colaboracion"
+tech: ["office-365", "agile"]
+type: "transversal"
+official: false
+skills: ["Planificación de agenda", "Microsoft Outlook", "Gestión de correos electrónicos", "Office 365"]
+issued: "2021-01-31"
+hours: 3.25
+credential_id: "0d3684d6cbe17190f3111588c2aae75eb9b292ef30ff1ea0e7b53ba2fe30161d"
+verify_url: "https://www.linkedin.com/learning/certificates/0d3684d6cbe17190f3111588c2aae75eb9b292ef30ff1ea0e7b53ba2fe30161d"
+pdf: "outlook-en-la-web-esencial-office-365-microsoft-365"
+thumb: "outlook-en-la-web-esencial-office-365-microsoft-365"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "desarrollo-y-herramientas"
+  domain: "ofimatica-colaboracion"
+  type: "transversal"
+  tech: ["office-365"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:2814062"
+course_url: "https://www.linkedin.com/learning/outlook-en-la-web-esencial-office-365-microsoft-365"
+level: "Beginner + Intermediate"
+language: "es"
+retired: false
+instructors: ["Isabel Fernandez Gutierrez"]
+summary: "Domina el correo electrónico con Outlook Online. Agiliza tu trabajo diario y consigue una jornada laboral más productiva. "
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Outlook en la web esencial Office 365Microsoft 365.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Outlook en la web esencial Office 365Microsoft 365.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

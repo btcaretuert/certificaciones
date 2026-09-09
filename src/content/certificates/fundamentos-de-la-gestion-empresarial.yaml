@@ -1,0 +1,51 @@
+title: "Fundamentos de la gestión empresarial"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Gestión", "Liderazgo", "Business Management"]
+issued: "2019-08-22"
+hours: 2.13
+credential_id: "044627731dec9346d3f0b57917d14407d5d2c57b4693205ee338faa7616cb21b"
+verify_url: "https://www.linkedin.com/learning/certificates/044627731dec9346d3f0b57917d14407d5d2c57b4693205ee338faa7616cb21b"
+pdf: "fundamentos-de-la-gestion-empresarial"
+thumb: "fundamentos-de-la-gestion-empresarial"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:404770"
+course_url: "https://www.linkedin.com/learning/fundamentos-de-la-gestion-empresarial"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Britt Andreatta"]
+summary: "Lleva a tu empresa al éxito aprendiendo a administrar recursos, trabajadores y tareas de forma óptima tanto para ti personalmente como para el funcionamiento de la empresa."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de la gestion empresarial.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Fundamentos De La Gestion Empresarial.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "355ddab31acc106d186de5b82c707fb578a091a1a5b10a62cccf4550907f89a9"
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: "fundamentos-de-la-gestion-empresarial-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de la gestion empresarial (PMI).pdf"

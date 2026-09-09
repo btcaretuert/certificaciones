@@ -1,0 +1,88 @@
+# Integracion continua. No despliega nada: el artefacto publicable se
+# construye en la maquina del dueno, que es la unica que tiene los PDF.
+#
+# certs-src/ esta en .gitignore —126 MB, y con los PDF de las fichas retenidas
+# dentro—, asi que aqui SIN_ACTIVOS=1: se compila el HTML y se prueba sobre el,
+# sin emitir un solo activo. Lo que CI valida es la estructura del sitio, no el
+# artefacto final. Lo que CI no puede ver queda dicho en el paso 11 del plan.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+# Solo lectura. Este flujo no escribe en el repositorio ni publica nada.
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Con CI=true los scripts propios dejan de imprimir titulos, slugs y
+  # credential_id: los logs de Actions de un repo publico los lee cualquiera.
+  CI: 'true'
+  SIN_ACTIVOS: '1'
+
+jobs:
+  calidad:
+    runs-on: ubuntu-latest
+    steps:
+      # Acciones fijadas por SHA y no por tag: un tag se puede mover al commit
+      # que quiera su dueno, y aqui corre con acceso al arbol del repositorio.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      # npm ci y no npm install: instala exactamente el lockfile y falla si
+      # package.json y package-lock.json divergen.
+      - run: npm ci
+      - name: Bundle del panel, contra su SHA256 fijado
+        run: npm run check:admin
+      - run: npm run test:unit
+      - name: Build, auditor del artefacto y auditor del repositorio
+        run: npm run build
+
+  seguridad:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # gitleaks revisa el historial completo, que es lo que un push
+          # transfiere. Con el checkout superficial por defecto solo veria el
+          # ultimo commit y daria verde sobre un secreto de hace tres.
+          fetch-depth: 0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Escaneres, fijados por SHA256
+        run: npm run tools:security
+      - name: gitleaks, osv-scanner, npm audit y auditor de curaduria
+        run: npm run check:security
+
+  navegador:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      # Las pruebas usan el Chrome del sistema (channel: 'chrome'). Instalarlo
+      # explicitamente evita depender de lo que traiga la imagen del runner.
+      - run: npx playwright install --with-deps chrome
+      - name: Accesibilidad, CSP y funcional
+        run: npx playwright test
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: failure()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7

@@ -1,0 +1,52 @@
+title: "Aprende SCRUM"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "agile-proyectos"
+tech: ["scrum", "agile"]
+type: "gestion"
+official: false
+skills: ["Scrum", "Agile"]
+issued: "2021-07-18"
+hours: 1.54
+credential_id: "91aaf3d5c1ab09d71b7e6951de66067a1ba330fa08a30f499eaca026c003c22f"
+verify_url: "https://www.linkedin.com/learning/certificates/91aaf3d5c1ab09d71b7e6951de66067a1ba330fa08a30f499eaca026c003c22f"
+pdf: "aprende-scrum"
+thumb: "aprende-scrum"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "agile-proyectos"
+  type: "gestion"
+  tech: ["scrum"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:429782"
+course_url: "https://www.linkedin.com/learning/aprende-scrum"
+level: "Beginner"
+language: "es"
+retired: true
+instructors: ["Carlos Solis"]
+summary: "Conoce SCRUM, la metodología ágil de desarrollo de proyectos que marca una tendencia en la industria de la programación. Reduce el trabajo innecesario y aumenta la motivación y productividad."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Aprende SCRUM.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Aprende SCRUM.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "5083510dd824d623d97865cf04bd25467cd831a06e13f6cb3fa0cad7c8847509"
+pmi_verify_url: null
+pmi_pdus: 1.5
+kind: "curso"
+pmi_pdf: "aprende-scrum-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Aprende SCRUM (PMI).pdf"

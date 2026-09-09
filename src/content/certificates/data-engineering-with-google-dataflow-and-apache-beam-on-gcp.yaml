@@ -1,0 +1,57 @@
+title: "Data Engineering with Google Dataflow and Apache Beam on GCP"
+issuer: "Udemy"
+platform: "Udemy"
+area: "datos-y-analitica"
+domain: "ingenieria-datos"
+tech: ["apache-beam", "gcp", "etl", "machine-learning", "python"]
+type: "tecnico"
+official: false
+skills: []
+issued: "2025-11-13"
+hours: 2.5
+credential_id: "UC-08efceaa-b30b-4059-90e3-03a1f8568e77"
+verify_url: "https://www.udemy.com/certificate/UC-08efceaa-b30b-4059-90e3-03a1f8568e77/"
+pdf: "data-engineering-with-google-dataflow-and-apache-beam-on-gcp"
+thumb: "data-engineering-with-google-dataflow-and-apache-beam-on-gcp"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ingenieria-datos"
+  type: "tecnico"
+  tech: ["apache-beam", "gcp"]
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=2"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields: []
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/data-engineering-with-google-dataflow-and-apache-beam/"
+level: null
+language: null
+retired: false
+instructors: ["Cassio Alessandro de Bolba"]
+summary: "First steps to Extract, Transform and Load data using Apache Beam and Deploy Pipelines on Google Dataflow"
+source_files: ["certs-src/_origen/Certs Udemy/UC-08efceaa-b30b-4059-90e3-03a1f8568e77.pdf", "input/otros_certs/mas/Data Engineering with Google Dataflow and Apache Beam on GCP-UC-08efceaa-b30b-4059-90e3-03a1f8568e77.pdf", "input/otros_certs/mas/Apache_Beam_GCP_UC-08efceaa-b30b-4059-90e3-03a1f8568e77.pdf"]
+expires: null
+active: null
+objectives:
+  - "Apache Beam"
+  - "ETL"
+  - "Python"
+  - "Google Cloud"
+  - "DataFlow"
+  - "Google Cloud Storage"
+  - "Big Query"
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

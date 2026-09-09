@@ -1,0 +1,61 @@
+title: "Postman: Dominá las pruebas de API e integración!"
+issuer: "Udemy"
+platform: "Udemy"
+area: "desarrollo-y-herramientas"
+domain: "programacion"
+tech: ["postman", "api", "devops"]
+type: "tecnico"
+official: false
+skills: []
+issued: "2024-10-16"
+hours: 3.5
+credential_id: "UC-70e1aa72-1b09-4bc2-8b09-d318d557484f"
+verify_url: "https://www.udemy.com/certificate/UC-70e1aa72-1b09-4bc2-8b09-d318d557484f/"
+pdf: "postman-domina-las-pruebas-de-api-e-integracion"
+thumb: "postman-domina-las-pruebas-de-api-e-integracion"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "desarrollo-y-herramientas"
+  domain: "programacion"
+  type: "tecnico"
+  tech: ["postman"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields: []
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/postman-domina-las-pruebas-de-api-e-integracion/"
+level: null
+language: null
+retired: false
+instructors: ["The Free Range Tester"]
+summary: "\"Domina Postman: Impulsa tus habilidades de pruebas API y automatización para acelerar tu camino al éxito!!"
+source_files: ["certs-src/_origen/Certs Udemy/UC-70e1aa72-1b09-4bc2-8b09-d318d557484f.pdf", "input/otros_certs/mas/Postman: Dominá las pruebas de API e integración!-UC-70e1aa72-1b09-4bc2-8b09-d318d557484f.pdf"]
+expires: null
+active: null
+objectives:
+  - "Aprenderás a utilizar POSTMan para realizar peticiones HTTP básicas como GET, POST, PUT y DELETE"
+  - "Aprenderás a trabajar con headers y parámetros en las peticiones"
+  - "Aprenderás a realizar autenticación y autorización en las peticiones"
+  - "Aprenderás a probar y documentar APIs utilizando POSTMan"
+  - "Aprenderás a utilizar variables y variables globales en POSTMan"
+  - "Aprenderás a crear scripts de prueba y automatizar las pruebas"
+  - "Aprenderás a utilizar las funciones avanzadas de POSTMan"
+  - "Aprenderás a trabajar con colecciones de peticiones y documentar API"
+  - "Aprenderás a implementar los conocimientos adquiridos en un proyecto real."
+  - "Aprenderás a usar la librería Newman para ejecutar desde la terminal tus colecciones"
+  - "Aprenderás a crear mocks para facilitar el trabajo de Testers y Devs"
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

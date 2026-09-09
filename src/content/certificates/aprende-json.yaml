@@ -1,0 +1,52 @@
+title: "Aprende JSON"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "desarrollo-y-herramientas"
+domain: "programacion"
+tech: ["json"]
+type: "tecnico"
+official: false
+skills: ["Intercambio de datos", "JSON", "JavaScript"]
+issued: "2019-12-24"
+hours: 1.91
+credential_id: "cdd64d171df460f114a112d3e0157b67a317ffc4e1e5df030f3e38e81bb8e090"
+verify_url: "https://www.linkedin.com/learning/certificates/cdd64d171df460f114a112d3e0157b67a317ffc4e1e5df030f3e38e81bb8e090"
+pdf: "aprende-json"
+thumb: "aprende-json"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "desarrollo-y-herramientas"
+  domain: "programacion"
+  type: "tecnico"
+  tech: ["json"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:190353"
+course_url: "https://www.linkedin.com/learning/aprende-json"
+level: "Beginner"
+language: "es"
+retired: true
+instructors: ["Luis Berganza"]
+summary: null
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Aprende JSON.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Aprende Json.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

@@ -1,0 +1,52 @@
+title: "Kubernetes para desarrolladores esencial"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "cloud-e-infraestructura"
+domain: "cloud-plataforma"
+tech: ["kubernetes"]
+type: "tecnico"
+official: false
+skills: ["Gestión de clúster", "Kubernetes", "Desarrollo en la nube", "Implantación de software"]
+issued: "2020-01-10"
+hours: 1.63
+credential_id: "b481997665efe5604207557fd1b07da384971a4cc911635b75738e9eb95e02cf"
+verify_url: "https://www.linkedin.com/learning/certificates/b481997665efe5604207557fd1b07da384971a4cc911635b75738e9eb95e02cf"
+pdf: "kubernetes-para-desarrolladores-esencial"
+thumb: "kubernetes-para-desarrolladores-esencial"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "cloud-e-infraestructura"
+  domain: "cloud-plataforma"
+  type: "tecnico"
+  tech: ["kubernetes"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:680862"
+course_url: "https://www.linkedin.com/learning/kubernetes-para-desarrollo-de-aplicaciones-esencial"
+level: "Beginner + Intermediate"
+language: "es"
+retired: false
+instructors: ["Alvaro Gonzalez Crespo"]
+summary: "Aprende qué es y qué nos ofrece Kubernetes, cuál es su rol en nuestra infraestructura, cómo se comporta y cómo diseñar aplicaciones para su despliegue en un cluster."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Kubernetes para desarrollo de aplicaciones esencial.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

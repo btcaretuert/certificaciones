@@ -1,0 +1,52 @@
+title: "Gestión del cambio"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Comunicación", "Gestión", "Gestión de cambio estructural", "Liderazgo", "Transformación Digital", "Change Management"]
+issued: "2019-09-19"
+hours: 1.68
+credential_id: "d2f921df225ef096a14a326263a3a51f821fa767ba02e7a07166b8248406ce6c"
+verify_url: "https://www.linkedin.com/learning/certificates/d2f921df225ef096a14a326263a3a51f821fa767ba02e7a07166b8248406ce6c"
+pdf: "gestion-del-cambio"
+thumb: "gestion-del-cambio"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=2;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:608974"
+course_url: "https://www.linkedin.com/learning/gestion-del-cambio-2017"
+level: "Beginner"
+language: "es"
+retired: true
+instructors: ["Bob Mcgannon"]
+summary: "Conoce las distintas técnicas y estrategias que se pueden implementar cuando debas afrontar un cambio en el desarrollo de tus proyectos empresariales y la política de tu empresa."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Gestion del cambio 2017.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Gestion Del Cambio.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "cc1662d0375f6e55e5ff803d97e340de1e1cdea8d2796c521c74feda7b5b0bbd"
+pmi_verify_url: null
+pmi_pdus: 1.5
+kind: "curso"
+pmi_pdf: "gestion-del-cambio-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Gestion del cambio 2017 (PMI).pdf"

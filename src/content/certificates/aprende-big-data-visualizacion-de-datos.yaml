@@ -1,0 +1,52 @@
+title: "Aprende big data: Visualización de datos"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "datos-y-analitica"
+domain: "ingenieria-datos"
+tech: ["analitica", "big-data"]
+type: "tecnico"
+official: false
+skills: ["Inteligencia empresarial", "Big data", "Visualización de datos", "Data Visualization"]
+issued: "2019-08-19"
+hours: 2.42
+credential_id: "da88752585df0f6b70fe4d57ed04be49eacdb62b29b3db8355873f4c63484645"
+verify_url: "https://www.linkedin.com/learning/certificates/da88752585df0f6b70fe4d57ed04be49eacdb62b29b3db8355873f4c63484645"
+pdf: "aprende-big-data-visualizacion-de-datos"
+thumb: "aprende-big-data-visualizacion-de-datos"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ingenieria-datos"
+  type: "tecnico"
+  tech: []
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:793657"
+course_url: "https://www.linkedin.com/learning/aprende-big-data-visualizacion-de-datos"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Ana Maria Bisbe York"]
+summary: "Domina las claves de la visualización de datos. Aprende a crear visualizaciones que permitan un análisis eficaz en la era del big data."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Aprende big data Visualizacion de datos.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Aprende Big Data Visualizacion De Datos.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

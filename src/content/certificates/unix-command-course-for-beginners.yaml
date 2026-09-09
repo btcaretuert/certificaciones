@@ -1,0 +1,46 @@
+title: "Unix Command Course for Beginners"
+issuer: "Udemy"
+platform: "Udemy"
+area: "cloud-e-infraestructura"
+domain: "sin-clasificar"
+tech: ["linux"]
+type: "tecnico"
+official: false
+skills: []
+issued: "2020-03-16"
+hours: 2.5
+credential_id: "UC-6064ad42-29d7-463f-9f52-c2a5a1eafad8"
+verify_url: "https://www.udemy.com/certificate/UC-6064ad42-29d7-463f-9f52-c2a5a1eafad8/"
+pdf: "unix-command-course-for-beginners"
+thumb: "unix-command-course-for-beginners"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot: null
+classification_confidence: "low"
+classification_signals: ""
+classification_rules_version: ""
+needs_review: true
+extracted_fields: []
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/start-practical-unix-or-linux-command-line-for-everyone/"
+level: null
+language: null
+retired: false
+instructors: ["Pradeep D"]
+summary: "unix, linux, unix command, linux command, sed, awk, grep, find, sort, regular expression, compress, zip, gzip"
+source_files: ["certs-src/_origen/Certs Udemy/UC-6064ad42-29d7-463f-9f52-c2a5a1eafad8.pdf"]
+expires: null
+active: null
+objectives: ["Practical hands-on unix or linux commands which are required on the ground", "Commands to work with Files and Directories", "Searching patterns across the contents", "Hands-on on columnar data", "sort, grep, sed, awk, zip, gzip, tar", "Ways to compression and un-compress files", "Linux Operating system installation", "and more !"]
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

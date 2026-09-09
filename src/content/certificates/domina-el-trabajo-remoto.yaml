@@ -1,0 +1,55 @@
+title: "Domina el trabajo remoto"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Time Management", "Personal Development", "Life Skills"]
+issued: "2021-03-13"
+hours: 11.22
+credential_id: "c1d0da3949534b2d588737638ddef4f8c476fdaaaf948834e515d2f7595adca9"
+verify_url: "https://www.linkedin.com/learning/certificates/c1d0da3949534b2d588737638ddef4f8c476fdaaaf948834e515d2f7595adca9"
+pdf: "domina-el-trabajo-remoto"
+thumb: "domina-el-trabajo-remoto"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:llsServePath:1550646"
+course_url: "https://www.linkedin.com/learning/paths/domina-el-trabajo-remoto"
+level: "General"
+language: null
+retired: false
+instructors: []
+summary: "Domina el trabajo remoto con ayuda de especialistas en la materia:"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Domina el trabajo remoto.pdf", "certs-src/_origen/Certs Linkedin Itinerarios/CertificadoDeFinalizacion_Domina el trabajo remoto.pdf"]
+expires: null
+active: null
+objectives:
+  - "Organiza tu trabajo en remoto."
+  - "Trabaja desde cualquier lugar."
+  - "Realiza tus tareas con serenidad personal."
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "itinerario"
+pmi_pdf: null
+pmi_source_file: null

@@ -1,0 +1,52 @@
+title: "Aprende cloud computing para IT"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "cloud-e-infraestructura"
+domain: "cloud-plataforma"
+tech: []
+type: "tecnico"
+official: false
+skills: ["Computación en la nube", "Cloud", "Cloud Computing"]
+issued: "2019-10-17"
+hours: 1.29
+credential_id: "72a9f85ddcda098f3505433b82dff788c7940adceff21c289f7f49c750a5dede"
+verify_url: "https://www.linkedin.com/learning/certificates/72a9f85ddcda098f3505433b82dff788c7940adceff21c289f7f49c750a5dede"
+pdf: "aprende-cloud-computing-para-it"
+thumb: "aprende-cloud-computing-para-it"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "cloud-e-infraestructura"
+  domain: "cloud-plataforma"
+  type: "tecnico"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:769802"
+course_url: "https://www.linkedin.com/learning/aprende-cloud-computing-para-it"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Luis Eduardo Lunar Guevara"]
+summary: "Descubre cómo abordar la transición a la computación en la nube. Conoce los modelos de integración y adaptación, los tipos de nubes y su utilización en entornos específicos."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Aprende cloud computing para IT.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Aprende Cloud Computing Para It.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

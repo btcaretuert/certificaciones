@@ -1,0 +1,60 @@
+title: "Curso Completo de Claude AI: Cowork, Design, Projects, Excel"
+issuer: "Udemy"
+platform: "Udemy"
+area: "desarrollo-y-herramientas"
+domain: "ofimatica-colaboracion"
+tech: ["llm-genai", "office-365", "excel", "ia-generativa", "seguridad"]
+type: "transversal"
+official: false
+skills: []
+issued: "2026-08-21"
+hours: 14.0
+credential_id: "UC-041f7bf3-1256-4924-9f54-549f980b67ea"
+verify_url: "https://www.udemy.com/certificate/UC-041f7bf3-1256-4924-9f54-549f980b67ea/"
+pdf: "curso-completo-de-claude-ai-cowork-design-projects-excel"
+thumb: "curso-completo-de-claude-ai-cowork-design-projects-excel"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "desarrollo-y-herramientas"
+  domain: "ofimatica-colaboracion"
+  type: "transversal"
+  tech: ["llm-genai", "office-365"]
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=2"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields: []
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/curso-completo-de-claude-ai-cowork-design-projects/"
+level: null
+language: null
+retired: false
+instructors: ["Santiago Hernández"]
+summary: "Domina Claude AI y delega trabajo real a la IA con Claude Cowork, Claude Design, Claude en Excel, Skills, Plugins y más!"
+source_files: ["certs-src/_origen/Certs Udemy/UC-041f7bf3-1256-4924-9f54-549f980b67ea.pdf"]
+expires: null
+active: null
+objectives:
+  - "Convertir Claude AI en tu asistente de trabajo diario para resolver en minutos tareas que antes te llevaban horas, sin ser usuario técnico."
+  - "Dominar el ecosistema completo de Claude AI desde cero, de Claude Chat a Claude Cowork, para trabajar y automatizar a nivel profesional."
+  - "Delegar tareas reales a Claude Cowork como agente autónomo: ordenar archivos, preparar informes y trabajar en tu ordenador por ti."
+  - "Automatizar tareas repetitivas y dejarlas programadas en Claude Cowork para que se ejecuten solas mientras avanzas con otras cosas."
+  - "Diseñar presentaciones, infografías, webs y kits de redes sociales con acabado profesional usando Claude Design."
+  - "Trabajar más rápido en Excel, Word, PowerPoint y Outlook dejando que Claude analice datos, redacte y prepare documentos por ti."
+  - "Investigar cualquier tema y recibir informes completos y fiables en minutos."
+  - "Usar la IA con criterio y seguridad: gestionar permisos, proteger tus datos y evitar riesgos de Ciberseguridad como el Prompt Injection."
+  - "Crear Skills y Plugins propios, reutilizables y compartibles con tu equipo u organización para ampliar Claude Cowork"
+  - "Conectar Claude con tus apps y servicios mediante MCP para que trabaje con tus datos reales."
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

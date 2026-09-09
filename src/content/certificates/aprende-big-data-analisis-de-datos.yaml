@@ -1,0 +1,52 @@
+title: "Aprende big data: Análisis de datos"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "datos-y-analitica"
+domain: "ingenieria-datos"
+tech: ["analitica", "big-data"]
+type: "tecnico"
+official: false
+skills: ["Big data", "Análisis de Big Data", "Análisis de datos", "Big Data Analytics"]
+issued: "2019-08-18"
+hours: 1.84
+credential_id: "ccc3dc3e4d472df8d5d4c206e7c4ceea301ecbe50102ee93db840f5b864d1f2b"
+verify_url: "https://www.linkedin.com/learning/certificates/ccc3dc3e4d472df8d5d4c206e7c4ceea301ecbe50102ee93db840f5b864d1f2b"
+pdf: "aprende-big-data-analisis-de-datos"
+thumb: "aprende-big-data-analisis-de-datos"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ingenieria-datos"
+  type: "tecnico"
+  tech: []
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:793656"
+course_url: "https://www.linkedin.com/learning/aprende-big-data-analisis-de-datos"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Ana Maria Bisbe York"]
+summary: "Domina el análisis de datos en big data. Aprende a sacar el mayor partido al futuro de los datos para asegurarte el éxito empresarial."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Aprende big data Analisis de datos.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Aprende Big Data Analisis De Datos.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

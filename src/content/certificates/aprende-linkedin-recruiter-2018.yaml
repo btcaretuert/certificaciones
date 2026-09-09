@@ -1,0 +1,46 @@
+title: "Aprende LinkedIn Recruiter (2018)"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "sin-clasificar"
+tech: []
+type: "transversal"
+official: false
+skills: ["LinkedIn Recruiter"]
+issued: "2019-10-14"
+hours: 0.9
+credential_id: "33bc08e51b69887476805845c68e5d31ec6467d03cec9d795e063765aaae9752"
+verify_url: "https://www.linkedin.com/learning/certificates/33bc08e51b69887476805845c68e5d31ec6467d03cec9d795e063765aaae9752"
+pdf: "aprende-linkedin-recruiter-2018"
+thumb: "aprende-linkedin-recruiter-2018"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: "Publicada como competencia de liderazgo, no como circunstancia personal (decision del 2026-09-08)."
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot: null
+classification_confidence: "low"
+classification_signals: ""
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields: []
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:750059"
+course_url: "https://www.linkedin.com/learning/aprende-linkedin-recruiter-2018"
+level: "Beginner"
+language: "es"
+retired: true
+instructors: ["Donatella Barone"]
+summary: "Organiza tu flujo de trabajo en LinkedIn Recruiter. Prioriza candidatos, distribuye tu trabajo en proyectos y colabora con tu equipo, y publica y gestiona anuncios de empleo."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Aprende LinkedIn Recruiter 2018.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

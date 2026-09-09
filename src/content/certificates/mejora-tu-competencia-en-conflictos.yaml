@@ -1,0 +1,52 @@
+title: "Mejora tu competencia en conflictos"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Comunicación", "Conflictología", "Gestión de conflictos", "Desarrollo personal", "Habilidades para la vida", "Conflict Management"]
+issued: "2019-09-17"
+hours: 1.69
+credential_id: "1150e4605c080d18aed0faf959bdc23348f2c8677a1f00024a2c61b87cc21165"
+verify_url: "https://www.linkedin.com/learning/certificates/1150e4605c080d18aed0faf959bdc23348f2c8677a1f00024a2c61b87cc21165"
+pdf: "mejora-tu-competencia-en-conflictos"
+thumb: "mejora-tu-competencia-en-conflictos"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: "Publicada como competencia de liderazgo, no como circunstancia personal (decision del 2026-09-08)."
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:5025581"
+course_url: "https://www.linkedin.com/learning/mejora-tu-competencia-en-conflictos"
+level: "Advanced"
+language: "es"
+retired: false
+instructors: ["Elena Compte Tordesillas"]
+summary: "Aprende a gestionar los conflictos de tu día a día. Consigue lidiar de forma efectiva con personas tóxicas, con grandes egos, con la competitividad o con la desmotivación, entre otros."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Mejora tu competencia en conflictos.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Mejora Tu Competencia En Conflictos.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

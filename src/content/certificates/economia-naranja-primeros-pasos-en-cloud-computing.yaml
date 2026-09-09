@@ -1,0 +1,55 @@
+title: "Economía naranja: Primeros pasos en cloud computing"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "cloud-e-infraestructura"
+domain: "cloud-plataforma"
+tech: []
+type: "tecnico"
+official: false
+skills: ["Business Ethics", "Computer Ethics", "Cloud Computing"]
+issued: "2022-03-16"
+hours: 4.56
+credential_id: "667d240bb3c27107d8bad7e74c90aa79f14d70f43adb9b4bd895d46b57dcb332"
+verify_url: "https://www.linkedin.com/learning/certificates/667d240bb3c27107d8bad7e74c90aa79f14d70f43adb9b4bd895d46b57dcb332"
+pdf: "economia-naranja-primeros-pasos-en-cloud-computing"
+thumb: "economia-naranja-primeros-pasos-en-cloud-computing"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "cloud-e-infraestructura"
+  domain: "cloud-plataforma"
+  type: "tecnico"
+  tech: []
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:llsServePath:5743979"
+course_url: "https://www.linkedin.com/learning/paths/economia-naranja-primeros-pasos-en-cloud-computing"
+level: "Beginner"
+language: null
+retired: true
+instructors: []
+summary: "Da tus primeros pasos en cloud computing con la ayuda de estos instructores expertos:				"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Economia naranja Primeros pasos en cloud computing.pdf", "certs-src/_origen/Certs Linkedin Itinerarios/CertificadoDeFinalizacion_Economia naranja Primeros pasos en cloud computing.pdf"]
+expires: null
+active: null
+objectives:
+  - "Comprende qué es el cloud computing. "
+  - "Aprende qué retos a que retos se enfrentan las empresas."
+  - "Descubre la ética tras el cloud computing."
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "itinerario"
+pmi_pdf: null
+pmi_source_file: null

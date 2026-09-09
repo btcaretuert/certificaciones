@@ -1,0 +1,52 @@
+title: "Cómo superar el bloqueo creativo"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "negocio-e-innovacion"
+domain: "creatividad-innovacion"
+tech: []
+type: "gestion"
+official: false
+skills: ["Creatividad", "Bloqueos creativos", "Creative Blocks"]
+issued: "2019-10-13"
+hours: 0.67
+credential_id: "118699eb3d614c2fe27408dfac383fde60966de44c23af367198f3afce26fd84"
+verify_url: "https://www.linkedin.com/learning/certificates/118699eb3d614c2fe27408dfac383fde60966de44c23af367198f3afce26fd84"
+pdf: "como-superar-el-bloqueo-creativo"
+thumb: "como-superar-el-bloqueo-creativo"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "negocio-e-innovacion"
+  domain: "creatividad-innovacion"
+  type: "gestion"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:2809209"
+course_url: "https://www.linkedin.com/learning/como-superar-el-bloqueo-creativo"
+level: "General"
+language: "es"
+retired: false
+instructors: ["Izanami Martinez"]
+summary: "Aprende las mejores estrategias para librarte de tus bloqueos creativos y alcanza un nuevo nivel en tu potencial de creación."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como superar el bloqueo creativo.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Superar El Bloqueo Creativo.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

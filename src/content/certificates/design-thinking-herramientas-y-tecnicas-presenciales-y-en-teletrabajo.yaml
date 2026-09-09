@@ -1,0 +1,52 @@
+title: "Design Thinking Herramientas y tecnicas presenciales y en teletrabajo"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "negocio-e-innovacion"
+domain: "creatividad-innovacion"
+tech: ["agile"]
+type: "gestion"
+official: false
+skills: ["Comunicación interpersonal", "Design Thinking"]
+issued: "2021-10-05"
+hours: 0.89
+credential_id: "d05ccbeacad1b5734c30055f39c49451ef6705d6b054259f10f9341381390b69"
+verify_url: "https://www.linkedin.com/learning/certificates/d05ccbeacad1b5734c30055f39c49451ef6705d6b054259f10f9341381390b69"
+pdf: "design-thinking-herramientas-y-tecnicas-presenciales-y-en-teletrabajo"
+thumb: "design-thinking-herramientas-y-tecnicas-presenciales-y-en-teletrabajo"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "negocio-e-innovacion"
+  domain: "creatividad-innovacion"
+  type: "gestion"
+  tech: []
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:2838142"
+course_url: "https://www.linkedin.com/learning/design-thinking-herramientas-y-tecnicas-presenciales-y-en-teletrabajo"
+level: "Advanced"
+language: "es"
+retired: false
+instructors: ["Alicia Chavero Claver"]
+summary: "Descubre las mejores técnicas y herramientas para un proceso de Design Thinking exitoso. Explorarás cómo llevarlo a cabo, tanto presencialmente como en remoto, en un solo curso."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Design Thinking Herramientas y tecnicas presenciales y en teletrabajo.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Design Thinking Herramientas y tecnicas presenciales y en teletrabajo.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

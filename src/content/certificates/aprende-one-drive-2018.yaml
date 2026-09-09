@@ -1,0 +1,52 @@
+title: "Aprende One Drive (2018)"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "desarrollo-y-herramientas"
+domain: "ofimatica-colaboracion"
+tech: ["office-365"]
+type: "transversal"
+official: false
+skills: ["OneDrive", "Microsoft OneDrive"]
+issued: "2021-01-07"
+hours: 0.82
+credential_id: "bc0a1a6d59f77a66913621d0637e6b61e9a9c097efd99eeb32d8facb0f966614"
+verify_url: "https://www.linkedin.com/learning/certificates/bc0a1a6d59f77a66913621d0637e6b61e9a9c097efd99eeb32d8facb0f966614"
+pdf: "aprende-one-drive-2018"
+thumb: "aprende-one-drive-2018"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "desarrollo-y-herramientas"
+  domain: "ofimatica-colaboracion"
+  type: "transversal"
+  tech: ["office-365"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:708549"
+course_url: "https://www.linkedin.com/learning/aprende-one-drive-2018"
+level: "Beginner"
+language: "es"
+retired: true
+instructors: ["Jose Manuel Pomares"]
+summary: "Aprovecha las ventajas que te ofrece el servicio de Microsoft OneDrive como almacenamiento de archivos, pero también como aplicación que permite compartir contenido."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Aprende One Drive 2018.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Aprende One Drive 2018.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

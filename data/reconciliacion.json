@@ -1,0 +1,2018 @@
+[
+ {
+  "ficha": "administrador-de-la-nube.yaml",
+  "titulo": "Administrador de la Nube",
+  "visibility": "public",
+  "match": "Administrador de la nube",
+  "match_id": "otr-administrador-de-la-nube",
+  "score": 1.0
+ },
+ {
+  "ficha": "agile-en-accion-construye-tu-equipo-agil.yaml",
+  "titulo": "Agile en acción: Construye tu equipo ágil",
+  "visibility": "public",
+  "match": "Agile en acción: Construye tu equipo ágil (2019)",
+  "match_id": "li-agile-en-accion-construye-tu-equipo-agil-2019",
+  "score": 1.0
+ },
+ {
+  "ficha": "agilidad-estrategica.yaml",
+  "titulo": "Agilidad estratégica",
+  "visibility": "public",
+  "match": "Agilidad estratégica",
+  "match_id": "li-agilidad-estrategica",
+  "score": 1.0
+ },
+ {
+  "ficha": "amplia-tus-competencias-como-lider-para-la-transformacion-digital.yaml",
+  "titulo": "Amplía tus competencias como líder para la transformación digital",
+  "visibility": "public",
+  "match": "Amplía tus competencias como líder para la transformación digital",
+  "match_id": "li-amplia-tus-competencias-como-lider-para-la-transformacion-digital",
+  "score": 1.0
+ },
+ {
+  "ficha": "amplia-tus-competencias-de-trabajo-en-equipo-colaborativo-y-digital.yaml",
+  "titulo": "Amplía tus competencias de trabajo en equipo colaborativo y digital",
+  "visibility": "public",
+  "match": "Amplía tus competencias de trabajo en equipo colaborativo y digital",
+  "match_id": "li-amplia-tus-competencias-de-trabajo-en-equipo-colaborativo-y-digital",
+  "score": 1.0
+ },
+ {
+  "ficha": "amplia-tus-competencias-tecnologicas-como-lider-para-la.yaml",
+  "titulo": "Amplía tus competencias tecnológicas como líder para la transformación digital",
+  "visibility": "public",
+  "match": "Amplía tus competencias tecnológicas como líder para la transformación digital",
+  "match_id": "li-amplia-tus-competencias-tecnologicas-como-lider-para-la-transformacion-digital",
+  "score": 1.0
+ },
+ {
+  "ficha": "analisis-de-informacion-detectar-patrones-y-tendencias.yaml",
+  "titulo": "Análisis de información: Detectar patrones y tendencias",
+  "visibility": "public",
+  "match": "Análisis de información: Detectar patrones y tendencias",
+  "match_id": "li-analisis-de-informacion-detectar-patrones-y-tendencias",
+  "score": 1.0
+ },
+ {
+  "ficha": "apache-airflow-the-hands-on-guide.yaml",
+  "titulo": "Apache Airflow: The Hands-On Guide",
+  "visibility": "public",
+  "match": "Apache Airflow: The Hands-On Guide",
+  "match_id": "ud-apache-airflow-the-hands-on-guide",
+  "score": 1.0
+ },
+ {
+  "ficha": "apache-kafka-and-spring-boot-consumer-producer.yaml",
+  "titulo": "Apache Kafka and Spring Boot (Consumer, Producer)",
+  "visibility": "public",
+  "match": "Apache Kafka and Spring Boot (Consumer, Producer)",
+  "match_id": "ud-apache-kafka-and-spring-boot-consumer-producer",
+  "score": 1.0
+ },
+ {
+  "ficha": "aprende-a-usar-la-metodologia-lean.yaml",
+  "titulo": "Aprende a usar la metodología Lean",
+  "visibility": "public",
+  "match": "Aprende a usar la metodología Lean",
+  "match_id": "li-aprende-a-usar-la-metodologia-lean",
+  "score": 1.0
+ },
+ {
+  "ficha": "aprende-analisis-de-datos.yaml",
+  "titulo": "Aprende análisis de datos",
+  "visibility": "public",
+  "match": "Aprende análisis de datos",
+  "match_id": "li-aprende-analisis-de-datos",
+  "score": 1.0
+ },
+ {
+  "ficha": "aprende-big-data-analisis-de-datos.yaml",
+  "titulo": "Aprende big data: Análisis de datos",
+  "visibility": "public",
+  "match": "Aprende big data: Análisis de datos",
+  "match_id": "li-aprende-big-data-analisis-de-datos",
+  "score": 1.0
+ },
+ {
+  "ficha": "aprende-big-data-conceptos-basicos-para-it.yaml",
+  "titulo": "Aprende big data: Conceptos básicos para IT",
+  "visibility": "public",
+  "match": "Aprende big data: Conceptos básicos para IT",
+  "match_id": "li-aprende-big-data-conceptos-basicos-para-it",
+  "score": 1.0
+ },
+ {
+  "ficha": "aprende-big-data-visualizacion-de-datos.yaml",
+  "titulo": "Aprende big data: Visualización de datos",
+  "visibility": "public",
+  "match": "Aprende big data: Visualización de datos",
+  "match_id": "li-aprende-big-data-visualizacion-de-datos",
+  "score": 1.0
+ },
+ {
+  "ficha": "aprende-cloud-computing-para-it.yaml",
+  "titulo": "Aprende cloud computing para IT",
+  "visibility": "public",
+  "match": "Aprende cloud computing para IT",
+  "match_id": "li-aprende-cloud-computing-para-it",
+  "score": 1.0
+ },
+ {
+  "ficha": "aprende-firebase.yaml",
+  "titulo": "Aprende Firebase",
+  "visibility": "public",
+  "match": "Aprende Firebase",
+  "match_id": "li-aprende-firebase",
+  "score": 1.0
+ },
+ {
+  "ficha": "aprende-json.yaml",
+  "titulo": "Aprende JSON",
+  "visibility": "public",
+  "match": "Aprende JSON",
+  "match_id": "li-aprende-json",
+  "score": 1.0
+ },
+ {
+  "ficha": "aprende-linkedin-recruiter-2018.yaml",
+  "titulo": "Aprende LinkedIn Recruiter (2018)",
+  "visibility": "public",
+  "match": "Aprende LinkedIn Recruiter (2018)",
+  "match_id": "li-aprende-linkedin-recruiter-2018",
+  "score": 1.0
+ },
+ {
+  "ficha": "aprende-microsoft-forms-2017.yaml",
+  "titulo": "Aprende Microsoft Forms (2017)",
+  "visibility": "public",
+  "match": "Aprende Microsoft Forms (2017)",
+  "match_id": "li-aprende-microsoft-forms-2017",
+  "score": 1.0
+ },
+ {
+  "ficha": "aprende-mongodb-bases-de-datos-nosql.yaml",
+  "titulo": "Aprende MongoDB: Bases de datos NoSQL",
+  "visibility": "public",
+  "match": "Aprende MongoDB: Bases de datos NoSQL",
+  "match_id": "li-aprende-mongodb-bases-de-datos-nosql",
+  "score": 1.0
+ },
+ {
+  "ficha": "aprende-one-drive-2018.yaml",
+  "titulo": "Aprende One Drive (2018)",
+  "visibility": "public",
+  "match": "Aprende One Drive (2018)",
+  "match_id": "li-aprende-one-drive-2018",
+  "score": 1.0
+ },
+ {
+  "ficha": "aprende-scrum.yaml",
+  "titulo": "Aprende SCRUM",
+  "visibility": "public",
+  "match": "Aprende SCRUM",
+  "match_id": "li-aprende-scrum",
+  "score": 1.0
+ },
+ {
+  "ficha": "associate-cloud-engineer.yaml",
+  "titulo": "Associate Cloud Engineer",
+  "visibility": "public",
+  "match": "Associate Cloud Engineer Certification",
+  "match_id": "ext-associate-cloud-engineer-certification",
+  "score": 1.0
+ },
+ {
+  "ficha": "basics-of-deep-learning.yaml",
+  "titulo": "Basics of Deep Learning",
+  "visibility": "public",
+  "match": "Basics of Deep Learning",
+  "match_id": "ud-basics-of-deep-learning",
+  "score": 1.0
+ },
+ {
+  "ficha": "bienestar-coordinacion-y-flexibilidad-en-casa-y-en-el-trabajo.yaml",
+  "titulo": "Bienestar, coordinación y flexibilidad en casa y en el trabajo",
+  "visibility": "public",
+  "match": "Bienestar, coordinación y flexibilidad en casa y en el trabajo",
+  "match_id": "li-bienestar-coordinacion-y-flexibilidad-en-casa-y-en-el-trabajo",
+  "score": 1.0
+ },
+ {
+  "ficha": "big-data-equipos-y-soluciones-para-la-empresa.yaml",
+  "titulo": "Big data: Equipos y soluciones para la empresa",
+  "visibility": "public",
+  "match": "Big data: Equipos y soluciones para la empresa",
+  "match_id": "li-big-data-equipos-y-soluciones-para-la-empresa",
+  "score": 1.0
+ },
+ {
+  "ficha": "big-data-escucha-activa.yaml",
+  "titulo": "Big data: Escucha activa",
+  "visibility": "public",
+  "match": "Big data: Escucha activa",
+  "match_id": "li-big-data-escucha-activa",
+  "score": 1.0
+ },
+ {
+  "ficha": "big-data-estructurar-el-proyecto-desde-it.yaml",
+  "titulo": "Big data: Estructurar el proyecto desde IT",
+  "visibility": "public",
+  "match": "Big data: Estructurar el proyecto desde IT",
+  "match_id": "li-big-data-estructurar-el-proyecto-desde-it",
+  "score": 1.0
+ },
+ {
+  "ficha": "big-data-y-spark-ingenieria-de-datos-con-python-y-pyspark.yaml",
+  "titulo": "Big Data y Spark: ingeniería de datos con Python y PySpark",
+  "visibility": "public",
+  "match": "Big Data y Spark: ingeniería de datos con Python y pyspark",
+  "match_id": "ud-big-data-y-spark-ingenieria-de-datos-con-python-y-pyspark",
+  "score": 1.0
+ },
+ {
+  "ficha": "bill-george-sobre-autoconocimiento-autenticidad-y-liderazgo.yaml",
+  "titulo": "Bill George sobre autoconocimiento, autenticidad, y liderazgo",
+  "visibility": "public",
+  "match": "Bill George sobre autoconocimiento, autenticidad, y liderazgo",
+  "match_id": "li-bill-george-sobre-autoconocimiento-autenticidad-y-liderazgo",
+  "score": 1.0
+ },
+ {
+  "ficha": "cloud-computing-para-it-avanzado.yaml",
+  "titulo": "Cloud computing para IT avanzado",
+  "visibility": "public",
+  "match": "Cloud computing para IT avanzado",
+  "match_id": "li-cloud-computing-para-it-avanzado",
+  "score": 1.0
+ },
+ {
+  "ficha": "cloud-digital-leader.yaml",
+  "titulo": "Cloud Digital Leader",
+  "visibility": "public",
+  "match": "Cloud Digital Leader Certification",
+  "match_id": "ext-cloud-digital-leader-certification",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-aprender-del-fracaso.yaml",
+  "titulo": "Cómo aprender del fracaso",
+  "visibility": "public",
+  "match": "Cómo aprender del fracaso",
+  "match_id": "li-como-aprender-del-fracaso",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-aumentar-la-resiliencia.yaml",
+  "titulo": "Cómo aumentar la resiliencia",
+  "visibility": "public",
+  "match": "Cómo aumentar la resiliencia (2016)",
+  "match_id": "li-como-aumentar-la-resiliencia-2016",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-comunicar-de-forma-efectiva-en-la-empresa.yaml",
+  "titulo": "Cómo comunicar de forma efectiva en la empresa",
+  "visibility": "public",
+  "match": "Cómo comunicar de forma efectiva en la empresa",
+  "match_id": "li-como-comunicar-de-forma-efectiva-en-la-empresa",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-comunicarse-con-tacto-y-diplomacia.yaml",
+  "titulo": "Cómo comunicarse con tacto y diplomacia",
+  "visibility": "public",
+  "match": "Cómo comunicarse con tacto y diplomacia",
+  "match_id": "li-como-comunicarse-con-tacto-y-diplomacia",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-contactar-con-la-gente-y-que-te-responda.yaml",
+  "titulo": "Cómo contactar con la gente (y que te responda)",
+  "visibility": "public",
+  "match": "Cómo contactar con la gente (y que te responda)",
+  "match_id": "li-como-contactar-con-la-gente-y-que-te-responda",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-crear-una-cultura-de-la-responsabilidad.yaml",
+  "titulo": "Cómo crear una cultura de la responsabilidad",
+  "visibility": "public",
+  "match": "Cómo crear una cultura de la responsabilidad",
+  "match_id": "li-como-crear-una-cultura-de-la-responsabilidad",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-dar-feedback-a-tus-empleados.yaml",
+  "titulo": "Cómo dar feedback a tus empleados",
+  "visibility": "public",
+  "match": "Cómo dar feedback a tu personal",
+  "match_id": "li-como-dar-feedback-a-tu-personal",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-dar-y-recibir-feedback-o-retroalimentacion.yaml",
+  "titulo": "Cómo dar y recibir feedback o retroalimentación",
+  "visibility": "public",
+  "match": "Cómo dar y recibir feedback o retroalimentación",
+  "match_id": "li-como-dar-y-recibir-feedback-o-retroalimentacion",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-decir-que-no.yaml",
+  "titulo": "Cómo decir que no",
+  "visibility": "public",
+  "match": "Cómo decir que no",
+  "match_id": "li-como-decir-que-no",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-delegar-tareas-en-la-empresa.yaml",
+  "titulo": "Cómo delegar tareas en la empresa",
+  "visibility": "public",
+  "match": "Cómo delegar tareas en la empresa (2013)",
+  "match_id": "li-como-delegar-tareas-en-la-empresa-2013",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-desarrollar-la-capacidad-de-ingenio.yaml",
+  "titulo": "Cómo desarrollar la capacidad de ingenio",
+  "visibility": "public",
+  "match": "Cómo desarrollar la capacidad de ingenio",
+  "match_id": "li-como-desarrollar-la-capacidad-de-ingenio",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-desarrollar-la-inteligencia-emocional.yaml",
+  "titulo": "Cómo desarrollar la inteligencia emocional",
+  "visibility": "public",
+  "match": "Cómo desarrollar la inteligencia emocional (2017)",
+  "match_id": "li-como-desarrollar-la-inteligencia-emocional-2017",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-desarrollar-la-presencia-ejecutiva.yaml",
+  "titulo": "Cómo desarrollar la presencia ejecutiva",
+  "visibility": "public",
+  "match": "Cómo desarrollar la presencia ejecutiva",
+  "match_id": "li-como-desarrollar-la-presencia-ejecutiva",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-desarrollar-tu-elevator-pitch.yaml",
+  "titulo": "Cómo desarrollar tu elevator pitch",
+  "visibility": "public",
+  "match": "Cómo desarrollar tu elevator pitch",
+  "match_id": "li-como-desarrollar-tu-elevator-pitch",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-desarrollar-tu-propia-capacidad-de-adaptacion.yaml",
+  "titulo": "Cómo desarrollar tu propia capacidad de adaptación",
+  "visibility": "public",
+  "match": "Cómo desarrollar tu propia capacidad de adaptación",
+  "match_id": "li-como-desarrollar-tu-propia-capacidad-de-adaptacion",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-dirigir-a-nuevos-directivos.yaml",
+  "titulo": "Cómo dirigir a nuevos directivos",
+  "visibility": "public",
+  "match": "Cómo dirigir a nuevos dirigentes",
+  "match_id": "li-como-dirigir-a-nuevos-dirigentes",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-dirigir-en-un-entorno-global-o-internacional.yaml",
+  "titulo": "Cómo dirigir en un entorno global o internacional",
+  "visibility": "public",
+  "match": "Cómo dirigir en un entorno global o internacional (2019)",
+  "match_id": "li-como-dirigir-en-un-entorno-global-o-internacional-2019",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-ejercer-tu-influencia.yaml",
+  "titulo": "Cómo ejercer tu influencia",
+  "visibility": "public",
+  "match": "Cómo ejercer tu influencia (2016)",
+  "match_id": "li-como-ejercer-tu-influencia-2016",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-enfrentarse-a-los-cambios.yaml",
+  "titulo": "Cómo enfrentarse a los cambios",
+  "visibility": "public",
+  "match": "Cómo enfrentarse a los cambios",
+  "match_id": "li-como-enfrentarse-a-los-cambios",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-establecer-y-cumplir-tus-objetivos-profesionales.yaml",
+  "titulo": "Cómo establecer y cumplir tus objetivos profesionales",
+  "visibility": "public",
+  "match": "Cómo establecer y cumplir tus objetivos profesionales",
+  "match_id": "li-como-establecer-y-cumplir-tus-objetivos-profesionales",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-evitar-el-burnout.yaml",
+  "titulo": "Cómo evitar el burnout",
+  "visibility": "public",
+  "match": "Cómo evitar el burnout",
+  "match_id": "li-como-evitar-el-burnout",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-generar-confianza.yaml",
+  "titulo": "Cómo generar confianza",
+  "visibility": "public",
+  "match": "Cómo generar confianza (2016)",
+  "match_id": "li-como-generar-confianza-2016",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-gestionar-a-tu-jefe.yaml",
+  "titulo": "Cómo gestionar a tu jefe",
+  "visibility": "public",
+  "match": "Cómo gestionar a tu superior",
+  "match_id": "li-como-gestionar-a-tu-superior",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-gestionar-equipos-de-trabajo.yaml",
+  "titulo": "Cómo gestionar equipos de trabajo",
+  "visibility": "public",
+  "match": "Cómo gestionar equipos de trabajo (2015)",
+  "match_id": "li-como-gestionar-equipos-de-trabajo-2015",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-gestionar-mejor-tu-tiempo.yaml",
+  "titulo": "Cómo gestionar mejor tu tiempo",
+  "visibility": "public",
+  "match": "Cómo gestionar mejor tu tiempo",
+  "match_id": "li-como-gestionar-mejor-tu-tiempo",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-identificar-y-retener-personal-con-alto-potencial.yaml",
+  "titulo": "Cómo identificar y retener personal con alto potencial",
+  "visibility": "public",
+  "match": "Cómo identificar y retener personal con alto potencial (2018)",
+  "match_id": "li-como-identificar-y-retener-personal-con-alto-potencial-2018",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-integrar-a-nuevos-empleados-a-la-empresa.yaml",
+  "titulo": "Cómo integrar a nuevos empleados a la empresa",
+  "visibility": "public",
+  "match": "Cómo integrar a personas nuevas en la empresa (2015)",
+  "match_id": "li-como-integrar-a-personas-nuevas-en-la-empresa-2015",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-liderar-a-los-millennials.yaml",
+  "titulo": "Cómo liderar a los millennials",
+  "visibility": "public",
+  "match": "Cómo liderar a la generación Y (2017)",
+  "match_id": "li-como-liderar-a-la-generacion-y-2017",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-liderar-con-eficacia.yaml",
+  "titulo": "Cómo liderar con eficacia",
+  "visibility": "public",
+  "match": "Cómo liderar con eficacia (2019)",
+  "match_id": "li-como-liderar-con-eficacia-2019",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-liderar-el-cambio-en-tu-empresa.yaml",
+  "titulo": "Cómo liderar el cambio en tu empresa",
+  "visibility": "public",
+  "match": "Cómo liderar el cambio en tu empresa",
+  "match_id": "li-como-liderar-el-cambio-en-tu-empresa",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-liderar-sin-autoridad-formal.yaml",
+  "titulo": "Cómo liderar sin autoridad formal",
+  "visibility": "public",
+  "match": "Cómo liderar sin autoridad formal",
+  "match_id": "li-como-liderar-sin-autoridad-formal",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-manejar-el-estres.yaml",
+  "titulo": "Cómo manejar el estrés",
+  "visibility": "public",
+  "match": "Cómo manejar el estrés (2015)",
+  "match_id": "li-como-manejar-el-estres-2015",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-medir-el-rendimiento-de-tu-equipo.yaml",
+  "titulo": "Cómo medir el rendimiento de tu equipo",
+  "visibility": "public",
+  "match": "Cómo medir el rendimiento de tu equipo",
+  "match_id": "li-como-medir-el-rendimiento-de-tu-equipo",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-mejorar-tu-capacidad-de-toma-de-decisiones.yaml",
+  "titulo": "Cómo mejorar tu capacidad de toma de decisiones",
+  "visibility": "public",
+  "match": "Cómo mejorar tu capacidad de toma de decisiones",
+  "match_id": "li-como-mejorar-tu-capacidad-de-toma-de-decisiones",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-mejorar-tu-confianza.yaml",
+  "titulo": "Cómo mejorar tu confianza",
+  "visibility": "public",
+  "match": "Cómo mejorar tu confianza",
+  "match_id": "li-como-mejorar-tu-confianza",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-montar-una-oficina-movil.yaml",
+  "titulo": "Cómo montar una oficina móvil",
+  "visibility": "public",
+  "match": "Cómo montar una oficina móvil",
+  "match_id": "li-como-montar-una-oficina-movil",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-presentar-en-publico-con-eficacia.yaml",
+  "titulo": "Cómo presentar en público con eficacia",
+  "visibility": "public",
+  "match": "Cómo presentar en público con eficacia",
+  "match_id": "li-como-presentar-en-publico-con-eficacia",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-presentar-y-enganchar-a-tu-publico.yaml",
+  "titulo": "Cómo presentar y enganchar a tu público",
+  "visibility": "public",
+  "match": "Cómo presentar y enganchar a tu público",
+  "match_id": "li-como-presentar-y-enganchar-a-tu-publico",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-ser-mas-asertivo.yaml",
+  "titulo": "Cómo ser más asertivo",
+  "visibility": "public",
+  "match": "Aprende las claves de la asertividad",
+  "match_id": "li-aprende-las-claves-de-la-asertividad",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-superar-el-bloqueo-creativo.yaml",
+  "titulo": "Cómo superar el bloqueo creativo",
+  "visibility": "public",
+  "match": "Cómo superar el bloqueo creativo",
+  "match_id": "li-como-superar-el-bloqueo-creativo",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-superar-el-miedo-a-hablar-en-publico.yaml",
+  "titulo": "Cómo superar el miedo a hablar en público",
+  "visibility": "public",
+  "match": "Cómo superar el miedo a hablar en público",
+  "match_id": "li-como-superar-el-miedo-a-hablar-en-publico",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-superar-la-procrastinacion.yaml",
+  "titulo": "Cómo superar la procrastinación",
+  "visibility": "public",
+  "match": "Cómo superar la procrastinación (2016)",
+  "match_id": "li-como-superar-la-procrastinacion-2016",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-superar-los-sesgos-cognitivos.yaml",
+  "titulo": "Cómo superar los sesgos cognitivos",
+  "visibility": "public",
+  "match": "Cómo superar los sesgos cognitivos",
+  "match_id": "li-como-superar-los-sesgos-cognitivos",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-tener-conversaciones-dificiles.yaml",
+  "titulo": "Cómo tener conversaciones difíciles",
+  "visibility": "public",
+  "match": "Cómo tener conversaciones difíciles",
+  "match_id": "li-como-tener-conversaciones-dificiles",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-tomar-decisiones.yaml",
+  "titulo": "Cómo tomar decisiones",
+  "visibility": "public",
+  "match": "Cómo tomar decisiones (2014)",
+  "match_id": "li-como-tomar-decisiones-2014",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-trabajar-con-gente-dificil.yaml",
+  "titulo": "Cómo trabajar con gente difícil",
+  "visibility": "public",
+  "match": "Cómo trabajar con gente difícil",
+  "match_id": "li-como-trabajar-con-gente-dificil",
+  "score": 1.0
+ },
+ {
+  "ficha": "como-y-por-que-desarrollar-una-mentalidad-de-aprendizaje-continuo.yaml",
+  "titulo": "Cómo y por qué desarrollar una mentalidad de aprendizaje continuo",
+  "visibility": "public",
+  "match": "Cómo y por qué desarrollar una mentalidad de aprendizaje continuo",
+  "match_id": "li-como-y-por-que-desarrollar-una-mentalidad-de-aprendizaje-continuo",
+  "score": 1.0
+ },
+ {
+  "ficha": "comprender-y-aprovechar-la-tecnologia.yaml",
+  "titulo": "Comprender y aprovechar la tecnología",
+  "visibility": "public",
+  "match": "Comprender y aprovechar la tecnología",
+  "match_id": "li-comprender-y-aprovechar-la-tecnologia",
+  "score": 1.0
+ },
+ {
+  "ficha": "comunicacion-con-confianza.yaml",
+  "titulo": "Comunicación con confianza",
+  "visibility": "public",
+  "match": "Comunicación con confianza",
+  "match_id": "li-comunicacion-con-confianza",
+  "score": 1.0
+ },
+ {
+  "ficha": "comunicacion-en-momentos-de-cambio.yaml",
+  "titulo": "Comunicación en momentos de cambio",
+  "visibility": "public",
+  "match": "Comunicación en momentos de cambio",
+  "match_id": "li-comunicacion-en-momentos-de-cambio",
+  "score": 1.0
+ },
+ {
+  "ficha": "comunicacion-intercultural.yaml",
+  "titulo": "Comunicación intercultural",
+  "visibility": "public",
+  "match": "Comunicación intercultural",
+  "match_id": "li-comunicacion-intercultural",
+  "score": 1.0
+ },
+ {
+  "ficha": "comunicacion-interpersonal.yaml",
+  "titulo": "Comunicación interpersonal",
+  "visibility": "public",
+  "match": "Comunicación interpersonal",
+  "match_id": "li-comunicacion-interpersonal",
+  "score": 1.0
+ },
+ {
+  "ficha": "contratacion-de-personal-basada-en-el-rendimiento.yaml",
+  "titulo": "Contratación de personal basada en el rendimiento",
+  "visibility": "public",
+  "match": "Contratación de personal basada en el rendimiento (2018)",
+  "match_id": "li-contratacion-de-personal-basada-en-el-rendimiento-2018",
+  "score": 1.0
+ },
+ {
+  "ficha": "conviertete-en-profesional-de-big-data-para-los-negocios.yaml",
+  "titulo": "Conviértete en profesional de Big Data para los negocios",
+  "visibility": "public",
+  "match": "Conviértete en profesional de Big Data para los negocios",
+  "match_id": "li-conviertete-en-profesional-de-big-data-para-los-negocios",
+  "score": 1.0
+ },
+ {
+  "ficha": "conviertete-en-un-especialista-en-big-data-para-it.yaml",
+  "titulo": "Conviértete en un especialista en Big Data para IT",
+  "visibility": "public",
+  "match": "Conviértete en especialista en Big Data para IT",
+  "match_id": "li-conviertete-en-especialista-en-big-data-para-it",
+  "score": 1.0
+ },
+ {
+  "ficha": "crea-una-atmosfera-de-trabajo-productiva.yaml",
+  "titulo": "Crea una atmósfera de trabajo productiva",
+  "visibility": "public",
+  "match": "Crea una atmósfera de trabajo productiva",
+  "match_id": "li-crea-una-atmosfera-de-trabajo-productiva",
+  "score": 1.0
+ },
+ {
+  "ficha": "creatividad-en-la-empresa.yaml",
+  "titulo": "Creatividad en la empresa",
+  "visibility": "public",
+  "match": "Creatividad en la empresa",
+  "match_id": "li-creatividad-en-la-empresa",
+  "score": 1.0
+ },
+ {
+  "ficha": "cuarta-revolucion-industrial-etica-del-cloud-computing.yaml",
+  "titulo": "Cuarta revolución industrial: Ética del cloud computing",
+  "visibility": "public",
+  "match": "Cuarta revolución industrial: Ética del cloud computing",
+  "match_id": "li-cuarta-revolucion-industrial-etica-del-cloud-computing",
+  "score": 1.0
+ },
+ {
+  "ficha": "cuarta-revolucion-industrial-retos-del-cloud-computing.yaml",
+  "titulo": "Cuarta revolución industrial: Retos del cloud computing",
+  "visibility": "public",
+  "match": "Cuarta revolución industrial: Retos del cloud computing",
+  "match_id": "li-cuarta-revolucion-industrial-retos-del-cloud-computing",
+  "score": 1.0
+ },
+ {
+  "ficha": "curso-completo-de-claude-ai-cowork-design-projects-excel.yaml",
+  "titulo": "Curso Completo de Claude AI: Cowork, Design, Projects, Excel",
+  "visibility": "public",
+  "match": "Curso Completo de Claude AI: Cowork, Design, Projects, Excel",
+  "match_id": "ud-curso-completo-de-claude-ai-cowork-design-projects-excel",
+  "score": 1.0
+ },
+ {
+  "ficha": "curso-completo-de-claude-code-crea-aplicaciones-con-ia.yaml",
+  "titulo": "Curso Completo de Claude Code: Crea Aplicaciones con IA",
+  "visibility": "public",
+  "match": "Curso Completo de Claude Code: Crea Aplicaciones con IA",
+  "match_id": "ud-curso-completo-de-claude-code-crea-aplicaciones-con-ia",
+  "score": 1.0
+ },
+ {
+  "ficha": "curso-completo-google-antigravity-crea-aplicaciones-con-ia.yaml",
+  "titulo": "Curso Completo Google Antigravity. Crea Aplicaciones con IA",
+  "visibility": "public",
+  "match": "Curso Completo Google Antigravity. Crea Aplicaciones con IA",
+  "match_id": "ud-curso-completo-google-antigravity-crea-aplicaciones-con-ia",
+  "score": 1.0
+ },
+ {
+  "ficha": "data-engineering-with-google-dataflow-and-apache-beam-on-gcp.yaml",
+  "titulo": "Data Engineering with Google Dataflow and Apache Beam on GCP",
+  "visibility": "public",
+  "match": "Data Engineering with Google Dataflow and Apache Beam on GCP",
+  "match_id": "ud-data-engineering-with-google-dataflow-and-apache-beam-on-gcp",
+  "score": 1.0
+ },
+ {
+  "ficha": "del-victimismo-a-la-accion-asume-el-control.yaml",
+  "titulo": "Del victimismo a la acción: Asume el control",
+  "visibility": "public",
+  "match": "Del victimismo a la acción: Asume el control",
+  "match_id": "li-del-victimismo-a-la-accion-asume-el-control",
+  "score": 1.0
+ },
+ {
+  "ficha": "delve-esencial.yaml",
+  "titulo": "Delve esencial",
+  "visibility": "public",
+  "match": "Delve esencial",
+  "match_id": "li-delve-esencial",
+  "score": 1.0
+ },
+ {
+  "ficha": "desarrolla-la-adaptabilidad-de-tu-equipo.yaml",
+  "titulo": "Desarrolla la adaptabilidad de tu equipo",
+  "visibility": "public",
+  "match": "Desarrolla la adaptabilidad de tu equipo",
+  "match_id": "li-desarrolla-la-adaptabilidad-de-tu-equipo",
+  "score": 1.0
+ },
+ {
+  "ficha": "desarrolla-tu-capacidad-para-gestionar-equipos.yaml",
+  "titulo": "Desarrolla tu capacidad para gestionar equipos",
+  "visibility": "public",
+  "match": "Desarrolla tu capacidad para gestionar equipos",
+  "match_id": "li-desarrolla-tu-capacidad-para-gestionar-equipos",
+  "score": 1.0
+ },
+ {
+  "ficha": "desarrolla-tu-propia-filosofia-de-liderazgo.yaml",
+  "titulo": "Desarrolla tu propia filosofía de liderazgo",
+  "visibility": "public",
+  "match": "Desarrolla tu propia filosofía de liderazgo",
+  "match_id": "li-desarrolla-tu-propia-filosofia-de-liderazgo",
+  "score": 1.0
+ },
+ {
+  "ficha": "desarrolla-tus-habilidades-como-lider-emergente.yaml",
+  "titulo": "Desarrolla tus habilidades como líder emergente",
+  "visibility": "public",
+  "match": "Desarrolla tus habilidades como líder emergente",
+  "match_id": "li-desarrolla-tus-habilidades-como-lider-emergente",
+  "score": 1.0
+ },
+ {
+  "ficha": "desarrollo-agil-de-software.yaml",
+  "titulo": "Desarrollo ágil de software",
+  "visibility": "public",
+  "match": "Desarrollo ágil de software",
+  "match_id": "li-desarrollo-agil-de-software",
+  "score": 1.0
+ },
+ {
+  "ficha": "design-thinking-facilitacion-de-procesos-de-trabajo.yaml",
+  "titulo": "Design Thinking: Facilitación de procesos de trabajo",
+  "visibility": "public",
+  "match": "Design Thinking: Facilitación de procesos de trabajo",
+  "match_id": "li-design-thinking-facilitacion-de-procesos-de-trabajo",
+  "score": 1.0
+ },
+ {
+  "ficha": "design-thinking-herramientas-y-tecnicas-presenciales-y-en-teletrabajo.yaml",
+  "titulo": "Design Thinking Herramientas y tecnicas presenciales y en teletrabajo",
+  "visibility": "public",
+  "match": "Design Thinking: Herramientas y técnicas (presenciales y en teletrabajo)",
+  "match_id": "li-design-thinking-herramientas-y-tecnicas-presenciales-y-en-teletrabajo",
+  "score": 1.0
+ },
+ {
+  "ficha": "devops-esencial.yaml",
+  "titulo": "DevOps esencial",
+  "visibility": "public",
+  "match": "DevOps esencial",
+  "match_id": "li-devops-esencial",
+  "score": 1.0
+ },
+ {
+  "ficha": "devops-fundamentals.yaml",
+  "titulo": "DevOps Fundamentals",
+  "visibility": "public",
+  "match": "DASA DevOps Fundamentals",
+  "match_id": "ext-dasa-devops-fundamentals",
+  "score": 1.0
+ },
+ {
+  "ficha": "digital-transformation-interfaces-conversacionales.yaml",
+  "titulo": "Digital Transformation: Interfaces conversacionales",
+  "visibility": "public",
+  "match": "Digital Transformation: Interfaces conversacionales",
+  "match_id": "li-digital-transformation-interfaces-conversacionales",
+  "score": 1.0
+ },
+ {
+  "ficha": "diversidad-e-inclusion-en-empresas-globales.yaml",
+  "titulo": "Diversidad e inclusión en empresas globales",
+  "visibility": "public",
+  "match": "Diversidad e inclusión en empresas globales",
+  "match_id": "li-diversidad-e-inclusion-en-empresas-globales",
+  "score": 1.0
+ },
+ {
+  "ficha": "django-desarrollo-web.yaml",
+  "titulo": "Django: Desarrollo web",
+  "visibility": "public",
+  "match": "Django: Desarrollo web",
+  "match_id": "li-django-desarrollo-web",
+  "score": 1.0
+ },
+ {
+  "ficha": "docker-esencial.yaml",
+  "titulo": "Docker esencial",
+  "visibility": "public",
+  "match": "Docker esencial (2017)",
+  "match_id": "li-docker-esencial-2017",
+  "score": 1.0
+ },
+ {
+  "ficha": "domina-el-trabajo-remoto.yaml",
+  "titulo": "Domina el trabajo remoto",
+  "visibility": "public",
+  "match": "Domina el trabajo remoto",
+  "match_id": "li-domina-el-trabajo-remoto",
+  "score": 1.0
+ },
+ {
+  "ficha": "domina-las-aplicaciones-en-la-web-de-office-365.yaml",
+  "titulo": "Domina las aplicaciones en la web de Office 365",
+  "visibility": "public",
+  "match": "Domina las aplicaciones complementarias de Office 365 en la web",
+  "match_id": "li-domina-las-aplicaciones-complementarias-de-office-365-en-la-web",
+  "score": 1.0
+ },
+ {
+  "ficha": "domina-las-habilidades-de-vida-a-nivel-de-liderazgo.yaml",
+  "titulo": "Domina las habilidades de vida a nivel de liderazgo",
+  "visibility": "public",
+  "match": "Domina las habilidades de vida a nivel de liderazgo",
+  "match_id": "li-domina-las-habilidades-de-vida-a-nivel-de-liderazgo",
+  "score": 1.0
+ },
+ {
+  "ficha": "domina-las-habilidades-de-vida-personales.yaml",
+  "titulo": "Domina las habilidades de vida personales",
+  "visibility": "public",
+  "match": "Domina las habilidades de vida personales",
+  "match_id": "li-domina-las-habilidades-de-vida-personales",
+  "score": 1.0
+ },
+ {
+  "ficha": "domina-las-habilidades-de-vida-sociales.yaml",
+  "titulo": "Domina las habilidades de vida sociales",
+  "visibility": "public",
+  "match": "Domina las habilidades de vida sociales",
+  "match_id": "li-domina-las-habilidades-de-vida-sociales",
+  "score": 1.0
+ },
+ {
+  "ficha": "economia-naranja-introduccion-a-la-transformacion-digital.yaml",
+  "titulo": "Economía naranja: Introducción a la transformación digital",
+  "visibility": "public",
+  "match": "Economía naranja: Introducción a la transformación digital",
+  "match_id": "li-economia-naranja-introduccion-a-la-transformacion-digital",
+  "score": 1.0
+ },
+ {
+  "ficha": "economia-naranja-primeros-pasos-en-cloud-computing.yaml",
+  "titulo": "Economía naranja: Primeros pasos en cloud computing",
+  "visibility": "public",
+  "match": "Economía naranja: Primeros pasos en cloud computing",
+  "match_id": "li-economia-naranja-primeros-pasos-en-cloud-computing",
+  "score": 1.0
+ },
+ {
+  "ficha": "enterprise-big-data-professional.yaml",
+  "titulo": "Enterprise Big Data Professional",
+  "visibility": "public",
+  "match": "Enterprise Big Data Professional",
+  "match_id": "ext-enterprise-big-data-professional",
+  "score": 1.0
+ },
+ {
+  "ficha": "estrategia-en-vez-de-competir-innove.yaml",
+  "titulo": "Estrategia: en vez de competir, innove",
+  "visibility": "public",
+  "match": "ESTRATEGIA: EN VEZ DE COMPETIR, INNOVE",
+  "match_id": "otr-estrategia-en-vez-de-competir-innove",
+  "score": 1.0
+ },
+ {
+  "ficha": "estrategias-para-tomar-decisiones.yaml",
+  "titulo": "Estrategias para tomar decisiones",
+  "visibility": "public",
+  "match": "Estrategias para tomar decisiones",
+  "match_id": "li-estrategias-para-tomar-decisiones",
+  "score": 1.0
+ },
+ {
+  "ficha": "ethical-hacking-crash-course-2020.yaml",
+  "titulo": "Ethical Hacking Crash Course 2020",
+  "visibility": "public",
+  "match": "Ethical Hacking Crash Course",
+  "match_id": "ud-ethical-hacking-crash-course",
+  "score": 1.0
+ },
+ {
+  "ficha": "evaluacion-de-decisiones-estrategicas.yaml",
+  "titulo": "Evaluación de decisiones estratégicas",
+  "visibility": "public",
+  "match": "Evaluación de Decisiones Estratégicas",
+  "match_id": "otr-evaluacion-de-decisiones-estrategicas",
+  "score": 1.0
+ },
+ {
+  "ficha": "excel-2016-graficos-y-presentacion-de-datos.yaml",
+  "titulo": "Excel 2016: Gráficos y presentación de datos",
+  "visibility": "public",
+  "match": "Excel 2016: Gráficos y presentación de datos",
+  "match_id": "li-excel-2016-graficos-y-presentacion-de-datos",
+  "score": 1.0
+ },
+ {
+  "ficha": "fomenta-la-colaboracion-en-tu-equipo.yaml",
+  "titulo": "Fomenta la colaboración en tu equipo",
+  "visibility": "public",
+  "match": "Fomenta la colaboración en tu equipo",
+  "match_id": "li-fomenta-la-colaboracion-en-tu-equipo",
+  "score": 1.0
+ },
+ {
+  "ficha": "fred-kofman-y-la-gestion-de-conflictos.yaml",
+  "titulo": "Fred Kofman y la gestión de conflictos",
+  "visibility": "public",
+  "match": "Fred Kofman y la gestión de conflictos",
+  "match_id": "li-fred-kofman-y-la-gestion-de-conflictos",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-big-data-modelos-de-negocio.yaml",
+  "titulo": "Fundamentos de big data: Modelos de negocio",
+  "visibility": "public",
+  "match": "Fundamentos de big data: Modelos de negocio",
+  "match_id": "li-fundamentos-de-big-data-modelos-de-negocio",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-big-data-tecnicas-y-conceptos.yaml",
+  "titulo": "Fundamentos de big data: Técnicas y conceptos",
+  "visibility": "public",
+  "match": "Fundamentos de big data: Técnicas y conceptos",
+  "match_id": "li-fundamentos-de-big-data-tecnicas-y-conceptos",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-big-data.yaml",
+  "titulo": "Fundamentos de big data",
+  "visibility": "public",
+  "match": "Fundamentos de big data",
+  "match_id": "li-fundamentos-de-big-data",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-cloud-computing.yaml",
+  "titulo": "Fundamentos de cloud computing",
+  "visibility": "public",
+  "match": "Fundamentos de cloud computing",
+  "match_id": "li-fundamentos-de-cloud-computing",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-design-thinking.yaml",
+  "titulo": "Fundamentos de Design Thinking",
+  "visibility": "public",
+  "match": "Fundamentos de Design Thinking",
+  "match_id": "li-fundamentos-de-design-thinking",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-fintech-o-finanza-tecnologica.yaml",
+  "titulo": "Fundamentos de Fintech o finanza tecnológica",
+  "visibility": "public",
+  "match": "Fundamentos de Fintech o finanza tecnológica",
+  "match_id": "li-fundamentos-de-fintech-o-finanza-tecnologica",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-inteligencia-artificial-machine-learning.yaml",
+  "titulo": "Fundamentos de Inteligencia artificial: Machine Learning",
+  "visibility": "public",
+  "match": "Fundamentos de Inteligencia artificial: Machine Learning",
+  "match_id": "li-fundamentos-de-inteligencia-artificial-machine-learning",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-internet-de-las-cosas.yaml",
+  "titulo": "Fundamentos de internet de las cosas",
+  "visibility": "public",
+  "match": "Fundamentos de internet de las cosas",
+  "match_id": "li-fundamentos-de-internet-de-las-cosas",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-la-ciberseguridad.yaml",
+  "titulo": "Fundamentos de la ciberseguridad",
+  "visibility": "public",
+  "match": "Fundamentos de la ciberseguridad",
+  "match_id": "li-fundamentos-de-la-ciberseguridad",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-la-economia-naranja.yaml",
+  "titulo": "Fundamentos de la economía naranja",
+  "visibility": "public",
+  "match": "Fundamentos de la economía naranja",
+  "match_id": "li-fundamentos-de-la-economia-naranja",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-la-gestion-de-programas.yaml",
+  "titulo": "Fundamentos de la gestión de programas",
+  "visibility": "public",
+  "match": "Fundamentos de la gestión de programas",
+  "match_id": "li-fundamentos-de-la-gestion-de-programas",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-la-gestion-de-proyectos-agil.yaml",
+  "titulo": "Fundamentos de la gestión de proyectos ágil",
+  "visibility": "public",
+  "match": "Fundamentos de la gestión de proyectos ágil (2017)",
+  "match_id": "li-fundamentos-de-la-gestion-de-proyectos-agil-2017",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-la-gestion-del-tiempo.yaml",
+  "titulo": "Fundamentos de la gestión del tiempo",
+  "visibility": "public",
+  "match": "Fundamentos de la gestión del tiempo",
+  "match_id": "li-fundamentos-de-la-gestion-del-tiempo",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-la-gestion-empresarial.yaml",
+  "titulo": "Fundamentos de la gestión empresarial",
+  "visibility": "public",
+  "match": "Fundamentos de la gestión empresarial",
+  "match_id": "li-fundamentos-de-la-gestion-empresarial",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-la-narrativa-o-storytelling.yaml",
+  "titulo": "Fundamentos de la narrativa o storytelling",
+  "visibility": "public",
+  "match": "Fundamentos de la narrativa o storytelling",
+  "match_id": "li-fundamentos-de-la-narrativa-o-storytelling",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-la-negociacion.yaml",
+  "titulo": "Fundamentos de la negociación",
+  "visibility": "public",
+  "match": "Fundamentos de la negociación",
+  "match_id": "li-fundamentos-de-la-negociacion",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-la-optimizacion-de-procesos.yaml",
+  "titulo": "Fundamentos de la optimización de procesos",
+  "visibility": "public",
+  "match": "Fundamentos de la optimización de procesos (2017)",
+  "match_id": "li-fundamentos-de-la-optimizacion-de-procesos-2017",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-la-planificacion-estrategica.yaml",
+  "titulo": "Fundamentos de la planificación estratégica",
+  "visibility": "public",
+  "match": "Fundamentos de la planificación estratégica",
+  "match_id": "li-fundamentos-de-la-planificacion-estrategica",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-la-productividad.yaml",
+  "titulo": "Fundamentos de la productividad",
+  "visibility": "public",
+  "match": "Fundamentos de la productividad",
+  "match_id": "li-fundamentos-de-la-productividad",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-la-resolucion-de-conflictos.yaml",
+  "titulo": "Fundamentos de la resolución de conflictos",
+  "visibility": "public",
+  "match": "Fundamentos de la resolución de conflictos (2018)",
+  "match_id": "li-fundamentos-de-la-resolucion-de-conflictos-2018",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-la-tecnologia-blockchain.yaml",
+  "titulo": "Fundamentos de la tecnología blockchain",
+  "visibility": "public",
+  "match": "Fundamentos de la tecnología blockchain",
+  "match_id": "li-fundamentos-de-la-tecnologia-blockchain",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-six-sigma.yaml",
+  "titulo": "Fundamentos de Six Sigma",
+  "visibility": "public",
+  "match": "Fundamentos de Six Sigma (2018)",
+  "match_id": "li-fundamentos-de-six-sigma-2018",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-transformacion-digital-procesos-de-aprendizaje-y.yaml",
+  "titulo": "Fundamentos de Transformación digital: Procesos de aprendizaje y desarrollo",
+  "visibility": "public",
+  "match": "Fundamentos de Transformación digital: Procesos de aprendizaje y desarrollo",
+  "match_id": "li-fundamentos-de-transformacion-digital-procesos-de-aprendizaje-y-desarrollo",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-de-transformacion-digital-tecnologias-clave.yaml",
+  "titulo": "Fundamentos de transformación digital: Tecnologías clave",
+  "visibility": "public",
+  "match": "Fundamentos de transformación digital: Tecnologías clave",
+  "match_id": "li-fundamentos-de-transformacion-digital-tecnologias-clave",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-del-liderazgo.yaml",
+  "titulo": "Fundamentos del liderazgo",
+  "visibility": "public",
+  "match": "Fundamentos del liderazgo (2014)",
+  "match_id": "li-fundamentos-del-liderazgo-2014",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-del-networking-profesional.yaml",
+  "titulo": "Fundamentos del networking profesional",
+  "visibility": "public",
+  "match": "Fundamentos del networking profesional (2017)",
+  "match_id": "li-fundamentos-del-networking-profesional-2017",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-del-personal-branding.yaml",
+  "titulo": "Fundamentos del personal branding",
+  "visibility": "public",
+  "match": "Fundamentos del personal branding",
+  "match_id": "li-fundamentos-del-personal-branding",
+  "score": 1.0
+ },
+ {
+  "ficha": "fundamentos-y-consejos-para-nuevos-jefes.yaml",
+  "titulo": "Fundamentos y consejos para nuevos jefes",
+  "visibility": "public",
+  "match": "Fundamentos y consejos para gerentes principiantes (2015)",
+  "match_id": "li-fundamentos-y-consejos-para-gerentes-principiantes-2015",
+  "score": 1.0
+ },
+ {
+  "ficha": "gcp-complete-google-data-engineer-and-cloud-architect-guide.yaml",
+  "titulo": "GCP: Complete Google Data Engineer and Cloud Architect Guide",
+  "visibility": "public",
+  "match": "GCP: Complete Google Data Engineer and Cloud Architect Guide",
+  "match_id": "ud-gcp-complete-google-data-engineer-and-cloud-architect-guide",
+  "score": 1.0
+ },
+ {
+  "ficha": "gcp-for-beginner-become-a-google-cloud-digital-leader.yaml",
+  "titulo": "GCP for Beginner - Become a Google Cloud Digital Leader",
+  "visibility": "public",
+  "match": "GCP for Beginners - Become a Google Cloud Digital Leader",
+  "match_id": "ud-gcp-for-beginners-become-a-google-cloud-digital-leader",
+  "score": 1.0
+ },
+ {
+  "ficha": "gdpr-reglamento-europeo-de-proteccion-de-datos.yaml",
+  "titulo": "GDPR: Reglamento europeo de protección de datos",
+  "visibility": "public",
+  "match": "GDPR: Reglamento europeo de protección de datos",
+  "match_id": "li-gdpr-reglamento-europeo-de-proteccion-de-datos",
+  "score": 1.0
+ },
+ {
+  "ficha": "generative-ai-leader.yaml",
+  "titulo": "Generative AI Leader",
+  "visibility": "public",
+  "match": "Generative AI Leader Certification",
+  "match_id": "ext-generative-ai-leader-certification",
+  "score": 1.0
+ },
+ {
+  "ficha": "gestion-de-equipos-remotos.yaml",
+  "titulo": "Gestión de equipos remotos",
+  "visibility": "public",
+  "match": "Teletrabajo y gestión de equipos remotos (2017)",
+  "match_id": "li-teletrabajo-y-gestion-de-equipos-remotos-2017",
+  "score": 0.75
+ },
+ {
+  "ficha": "gestion-del-cambio.yaml",
+  "titulo": "Gestión del cambio",
+  "visibility": "public",
+  "match": "Gestión del cambio (2017)",
+  "match_id": "li-gestion-del-cambio-2017",
+  "score": 1.0
+ },
+ {
+  "ficha": "gestiona-los-cambios.yaml",
+  "titulo": "Gestiona los cambios",
+  "visibility": "public",
+  "match": "Gestiona los cambios",
+  "match_id": "li-gestiona-los-cambios",
+  "score": 1.0
+ },
+ {
+  "ficha": "gestionar-en-todas-las-direcciones-del-organigrama-empresarial.yaml",
+  "titulo": "Gestionar en todas las direcciones del organigrama empresarial",
+  "visibility": "public",
+  "match": "Gestionar en todas las direcciones del organigrama empresarial",
+  "match_id": "li-gestionar-en-todas-las-direcciones-del-organigrama-empresarial",
+  "score": 1.0
+ },
+ {
+  "ficha": "getting-things-done-organizate-con-eficacia.yaml",
+  "titulo": "Getting Things Done. Organízate con eficacia",
+  "visibility": "public",
+  "match": "Getting Things Done. Organízate con eficacia",
+  "match_id": "li-getting-things-done-organizate-con-eficacia",
+  "score": 1.0
+ },
+ {
+  "ficha": "gitlab-ci-pipelines-ci-cd-and-devops-for-beginners.yaml",
+  "titulo": "GitLab CI: Pipelines, CI/CD and DevOps for Beginners",
+  "visibility": "public",
+  "match": "GitLab CI/CD: Pipelines, CI/CD and DevOps for Beginners",
+  "match_id": "ud-gitlab-ci-cd-pipelines-ci-cd-and-devops-for-beginners",
+  "score": 1.0
+ },
+ {
+  "ficha": "gitlab-esencial.yaml",
+  "titulo": "GitLab esencial",
+  "visibility": "public",
+  "match": "GitLab esencial",
+  "match_id": "li-gitlab-esencial",
+  "score": 1.0
+ },
+ {
+  "ficha": "google-cloud-cost-optimization-technique-gcp.yaml",
+  "titulo": "Google Cloud Cost Optimization Technique - GCP",
+  "visibility": "public",
+  "match": "Google Cloud Cost Optimization Technique - GCP",
+  "match_id": "ud-google-cloud-cost-optimization-technique-gcp",
+  "score": 1.0
+ },
+ {
+  "ficha": "google-cloud-platform-practico.yaml",
+  "titulo": "Google Cloud Platform - Práctico",
+  "visibility": "public",
+  "match": "Google Cloud Platform - Practico",
+  "match_id": "ud-google-cloud-platform-practico",
+  "score": 1.0
+ },
+ {
+  "ficha": "google-cloud-professional-data-engineer-get-certified-2022.yaml",
+  "titulo": "Google Cloud Professional Data Engineer: Get Certified 2022",
+  "visibility": "public",
+  "match": "Google Cloud Professional Data Engineer: Get Certified 2022",
+  "match_id": "ud-google-cloud-professional-data-engineer-get-certified-2022",
+  "score": 1.0
+ },
+ {
+  "ficha": "google-kubernetes-engine-de-cero-a-experto.yaml",
+  "titulo": "Google Kubernetes Engine - de cero a experto",
+  "visibility": "public",
+  "match": "Google Kubernetes Engine - de cero a experto",
+  "match_id": "ud-google-kubernetes-engine-de-cero-a-experto",
+  "score": 1.0
+ },
+ {
+  "ficha": "habilidades-de-trabajo-fundamentales.yaml",
+  "titulo": "Habilidades de trabajo fundamentales",
+  "visibility": "public",
+  "match": "Habilidades de trabajo fundamentales",
+  "match_id": "li-habilidades-de-trabajo-fundamentales",
+  "score": 1.0
+ },
+ {
+  "ficha": "habilidades-para-teletrabajo-trucos.yaml",
+  "titulo": "Habilidades para teletrabajo: Trucos",
+  "visibility": "public",
+  "match": "Habilidades para teletrabajo: Trucos",
+  "match_id": "li-habilidades-para-teletrabajo-trucos",
+  "score": 1.0
+ },
+ {
+  "ficha": "historias-y-narrativa-para-lideres.yaml",
+  "titulo": "Historias y narrativa para líderes",
+  "visibility": "public",
+  "match": "Storytelling para el liderazgo",
+  "match_id": "li-storytelling-para-el-liderazgo",
+  "score": 1.0
+ },
+ {
+  "ficha": "ingles-de-negocios-dominar-las-reuniones-en-linea.yaml",
+  "titulo": "Inglés de negocios: Dominar las reuniones en línea",
+  "visibility": "public",
+  "match": "Inglés de negocios: Dominar las reuniones en línea",
+  "match_id": "li-ingles-de-negocios-dominar-las-reuniones-en-linea",
+  "score": 1.0
+ },
+ {
+  "ficha": "introduccion-a-la-visualizacion-de-datos.yaml",
+  "titulo": "Introducción a la visualización de datos",
+  "visibility": "public",
+  "match": "Introducción a la visualización de datos (2015)",
+  "match_id": "li-introduccion-a-la-visualizacion-de-datos-2015",
+  "score": 1.0
+ },
+ {
+  "ficha": "introduccion-al-diseno-de-ecosistemas.yaml",
+  "titulo": "Introducción al diseño de ecosistemas",
+  "visibility": "public",
+  "match": "Introducción al diseño de ecosistemas",
+  "match_id": "li-introduccion-al-diseno-de-ecosistemas",
+  "score": 1.0
+ },
+ {
+  "ficha": "kubernetes-para-administradores-it-esencial.yaml",
+  "titulo": "Kubernetes para administradores IT esencial",
+  "visibility": "public",
+  "match": "Kubernetes para administradores IT esencial",
+  "match_id": "li-kubernetes-para-administradores-it-esencial",
+  "score": 1.0
+ },
+ {
+  "ficha": "kubernetes-para-desarrolladores-esencial.yaml",
+  "titulo": "Kubernetes para desarrolladores esencial",
+  "visibility": "public",
+  "match": "Kubernetes para desarrollo de aplicaciones esencial",
+  "match_id": "li-kubernetes-para-desarrollo-de-aplicaciones-esencial",
+  "score": 1.0
+ },
+ {
+  "ficha": "la-ciencia-del-liderazgo.yaml",
+  "titulo": "La ciencia del liderazgo",
+  "visibility": "public",
+  "match": "La ciencia del liderazgo",
+  "match_id": "li-la-ciencia-del-liderazgo",
+  "score": 1.0
+ },
+ {
+  "ficha": "la-escucha-activa.yaml",
+  "titulo": "La escucha activa",
+  "visibility": "public",
+  "match": "La escucha activa",
+  "match_id": "li-la-escucha-activa",
+  "score": 1.0
+ },
+ {
+  "ficha": "la-importancia-de-las-habilidades-de-vida-o-soft-skills.yaml",
+  "titulo": "La importancia de las habilidades de vida o soft skills",
+  "visibility": "public",
+  "match": "La importancia de las habilidades de vida o soft skills",
+  "match_id": "li-la-importancia-de-las-habilidades-de-vida-o-soft-skills",
+  "score": 1.0
+ },
+ {
+  "ficha": "la-zona-de-confort-y-como-salir-de-ella.yaml",
+  "titulo": "La zona de confort y cómo salir de ella",
+  "visibility": "public",
+  "match": "La zona de confort y cómo salir de ella",
+  "match_id": "li-la-zona-de-confort-y-como-salir-de-ella",
+  "score": 1.0
+ },
+ {
+  "ficha": "lean-it.yaml",
+  "titulo": "Lean IT",
+  "visibility": "public",
+  "match": "Lean IT Association Foundation",
+  "match_id": "ext-lean-it-association-foundation",
+  "score": 1.0
+ },
+ {
+  "ficha": "lenguaje-no-verbal-para-lideres.yaml",
+  "titulo": "Lenguaje no verbal para líderes",
+  "visibility": "public",
+  "match": "Lenguaje no verbal para líderes",
+  "match_id": "li-lenguaje-no-verbal-para-lideres",
+  "score": 1.0
+ },
+ {
+  "ficha": "liderazgo-con-inteligencia-emocional.yaml",
+  "titulo": "Liderazgo con inteligencia emocional",
+  "visibility": "public",
+  "match": "Liderazgo con inteligencia emocional (2015)",
+  "match_id": "li-liderazgo-con-inteligencia-emocional-2015",
+  "score": 1.0
+ },
+ {
+  "ficha": "liderazgo-ejecutivo.yaml",
+  "titulo": "Liderazgo ejecutivo",
+  "visibility": "public",
+  "match": "Liderazgo ejecutivo",
+  "match_id": "li-liderazgo-ejecutivo",
+  "score": 1.0
+ },
+ {
+  "ficha": "liderazgo-en-tiempos-de-transformacion-digital.yaml",
+  "titulo": "Liderazgo en tiempos de transformación digital",
+  "visibility": "public",
+  "match": "Liderazgo en tiempos de transformación digital",
+  "match_id": "li-liderazgo-en-tiempos-de-transformacion-digital",
+  "score": 1.0
+ },
+ {
+  "ficha": "liderazgo-real-liderar-desde-la-experiencia.yaml",
+  "titulo": "Liderazgo real: liderar desde la experiencia",
+  "visibility": "public",
+  "match": "LIDERAZGO REAL: LIDERAR DESDE LA EXPERIENCIA",
+  "match_id": "otr-liderazgo-real-liderar-desde-la-experiencia",
+  "score": 1.0
+ },
+ {
+  "ficha": "liderazgo-y-trabajo-en-equipo.yaml",
+  "titulo": "Liderazgo y trabajo en equipo",
+  "visibility": "public",
+  "match": "Liderazgo y trabajo en equipo",
+  "match_id": "li-liderazgo-y-trabajo-en-equipo",
+  "score": 1.0
+ },
+ {
+  "ficha": "liderazgo.yaml",
+  "titulo": "Liderazgo",
+  "visibility": "public",
+  "match": "Liderazgo",
+  "match_id": "otr-liderazgo",
+  "score": 1.0
+ },
+ {
+  "ficha": "los-cinco-pasos-del-proceso-creativo.yaml",
+  "titulo": "Los cinco pasos del proceso creativo",
+  "visibility": "public",
+  "match": "Los cinco pasos del proceso creativo (2018)",
+  "match_id": "li-los-cinco-pasos-del-proceso-creativo-2018",
+  "score": 1.0
+ },
+ {
+  "ficha": "machine-learning-masterclass-a-z-beginner-to-advance.yaml",
+  "titulo": "Machine Learning Masterclass A-Z: Beginner to Advance",
+  "visibility": "public",
+  "match": "Machine Learning Masterclass A-Z: Beginner to Advance",
+  "match_id": "ud-machine-learning-masterclass-a-z-beginner-to-advance",
+  "score": 1.0
+ },
+ {
+  "ficha": "master-en-antigravity-crea-apps-con-ia-y-vibe-coding.yaml",
+  "titulo": "Master en Antigravity: Crea apps con IA y Vibe Coding",
+  "visibility": "public",
+  "match": "Master en Antigravity: Crea apps con IA y Vibe Coding",
+  "match_id": "ud-master-en-antigravity-crea-apps-con-ia-y-vibe-coding",
+  "score": 1.0
+ },
+ {
+  "ficha": "mejora-la-comunicacion-en-el-ambito-empresarial.yaml",
+  "titulo": "Mejora la comunicación en el ámbito empresarial",
+  "visibility": "public",
+  "match": "Mejora la comunicación en el ámbito empresarial",
+  "match_id": "li-mejora-la-comunicacion-en-el-ambito-empresarial",
+  "score": 1.0
+ },
+ {
+  "ficha": "mejora-tu-capacidad-para-comunicar-con-las-personas.yaml",
+  "titulo": "Mejora tu capacidad para comunicar con las personas",
+  "visibility": "public",
+  "match": "Mejora tu capacidad para comunicar con las personas",
+  "match_id": "li-mejora-tu-capacidad-para-comunicar-con-las-personas",
+  "score": 1.0
+ },
+ {
+  "ficha": "mejora-tu-competencia-en-conflictos.yaml",
+  "titulo": "Mejora tu competencia en conflictos",
+  "visibility": "public",
+  "match": "Mejora tu competencia en conflictos",
+  "match_id": "li-mejora-tu-competencia-en-conflictos",
+  "score": 1.0
+ },
+ {
+  "ficha": "mejora-tu-concentracion.yaml",
+  "titulo": "Mejora tu concentración",
+  "visibility": "public",
+  "match": "Mejora tu concentración",
+  "match_id": "li-mejora-tu-concentracion",
+  "score": 1.0
+ },
+ {
+  "ficha": "mejora-tu-gestion-de-tiempo-y-productividad.yaml",
+  "titulo": "Mejora tu gestión de tiempo y productividad",
+  "visibility": "public",
+  "match": "Mejora tu gestión de tiempo y productividad",
+  "match_id": "li-mejora-tu-gestion-de-tiempo-y-productividad",
+  "score": 1.0
+ },
+ {
+  "ficha": "mejora-tus-dotes-de-liderazgo-y-gestion-de-equipos-de-trabajo.yaml",
+  "titulo": "Mejora tus dotes de liderazgo y gestión de equipos de trabajo",
+  "visibility": "public",
+  "match": "Mejora tus dotes de liderazgo y gestión de equipos de trabajo",
+  "match_id": "li-mejora-tus-dotes-de-liderazgo-y-gestion-de-equipos-de-trabajo",
+  "score": 1.0
+ },
+ {
+  "ficha": "mejora-tus-habilidades-para-resolver-problemas.yaml",
+  "titulo": "Mejora tus habilidades para resolver problemas",
+  "visibility": "public",
+  "match": "Mejora tus habilidades para resolver problemas",
+  "match_id": "li-mejora-tus-habilidades-para-resolver-problemas",
+  "score": 1.0
+ },
+ {
+  "ficha": "microsoft-power-automate-esencial-antes-microsoft-flow.yaml",
+  "titulo": "Microsoft Power Automate esencial (antes Microsoft Flow)",
+  "visibility": "public",
+  "match": "Power Automate esencial (2020)",
+  "match_id": "li-power-automate-esencial-2020",
+  "score": 1.0
+ },
+ {
+  "ficha": "microsoft-teams-esencial.yaml",
+  "titulo": "Microsoft Teams esencial",
+  "visibility": "public",
+  "match": "Microsoft Teams esencial (2019)",
+  "match_id": "li-microsoft-teams-esencial-2019",
+  "score": 1.0
+ },
+ {
+  "ficha": "microsoft-to-do-esencial.yaml",
+  "titulo": "Microsoft To Do esencial",
+  "visibility": "public",
+  "match": "Microsoft To Do esencial",
+  "match_id": "li-microsoft-to-do-esencial",
+  "score": 1.0
+ },
+ {
+  "ficha": "monta-un-cluster-hadoop-big-data-desde-cero.yaml",
+  "titulo": "Monta un Cluster Hadoop Big Data desde cero",
+  "visibility": "public",
+  "match": "Hadoop Big Data desde cero",
+  "match_id": "ud-hadoop-big-data-desde-cero",
+  "score": 1.0
+ },
+ {
+  "ficha": "motivacion-e-implicacion-en-la-empresa.yaml",
+  "titulo": "Motivación e implicación en la empresa",
+  "visibility": "public",
+  "match": "Motivación e implicación en la empresa",
+  "match_id": "li-motivacion-e-implicacion-en-la-empresa",
+  "score": 1.0
+ },
+ {
+  "ficha": "navegar-el-cambio-en-tiempos-dificiles.yaml",
+  "titulo": "Navegar el cambio en tiempos difíciles",
+  "visibility": "public",
+  "match": "Navegar el cambio en tiempos difíciles",
+  "match_id": "li-navegar-el-cambio-en-tiempos-dificiles",
+  "score": 1.0
+ },
+ {
+  "ficha": "novedades-de-microsoft-office-365-aplicaciones-online.yaml",
+  "titulo": "Novedades de Microsoft Office 365: Aplicaciones online",
+  "visibility": "public",
+  "match": "Novedades de Office/Microsoft 365: Aplicaciones online",
+  "match_id": "li-novedades-de-office-microsoft-365-aplicaciones-online",
+  "score": 1.0
+ },
+ {
+  "ficha": "office365-microsoft-365-iniciacion-rapida.yaml",
+  "titulo": "Office365/Microsoft 365: Iniciación rápida",
+  "visibility": "public",
+  "match": "Office365/Microsoft 365: Iniciación rápida",
+  "match_id": "li-office365-microsoft-365-iniciacion-rapida",
+  "score": 1.0
+ },
+ {
+  "ficha": "okr-goal-setting-101-achieve-more-goals-than-ever-faster.yaml",
+  "titulo": "OKR Goal Setting 101 - Achieve more goals than ever! Faster!",
+  "visibility": "public",
+  "match": "OKR Goal Setting 101 - Achieve more goals in 2026 than ever!",
+  "match_id": "ud-okr-goal-setting-101-achieve-more-goals-in-2026-than-ever",
+  "score": 1.0
+ },
+ {
+  "ficha": "onenote-online-esencial.yaml",
+  "titulo": "OneNote Online esencial",
+  "visibility": "public",
+  "match": "OneNote Online esencial",
+  "match_id": "li-onenote-online-esencial",
+  "score": 1.0
+ },
+ {
+  "ficha": "outlook-en-la-web-esencial-office-365-microsoft-365.yaml",
+  "titulo": "Outlook en la web esencial (Office 365/Microsoft 365)",
+  "visibility": "public",
+  "match": "Outlook en la web esencial (Office 365/Microsoft 365)",
+  "match_id": "li-outlook-en-la-web-esencial-office-365-microsoft-365",
+  "score": 1.0
+ },
+ {
+  "ficha": "pensamiento-critico.yaml",
+  "titulo": "Pensamiento crítico",
+  "visibility": "public",
+  "match": "Pensamiento crítico (2017)",
+  "match_id": "li-pensamiento-critico-2017",
+  "score": 1.0
+ },
+ {
+  "ficha": "persuadir-a-los-demas.yaml",
+  "titulo": "Persuadir a los demás",
+  "visibility": "public",
+  "match": "Persuadir a los demás",
+  "match_id": "li-persuadir-a-los-demas",
+  "score": 1.0
+ },
+ {
+  "ficha": "planner-esencial.yaml",
+  "titulo": "Planner esencial",
+  "visibility": "public",
+  "match": "Planner esencial (2019)",
+  "match_id": "li-planner-esencial-2019",
+  "score": 1.0
+ },
+ {
+  "ficha": "postman-domina-las-pruebas-de-api-e-integracion.yaml",
+  "titulo": "Postman: Dominá las pruebas de API e integración!",
+  "visibility": "public",
+  "match": "Postman: Dominá las pruebas de API e integración!",
+  "match_id": "ud-postman-domina-las-pruebas-de-api-e-integracion",
+  "score": 1.0
+ },
+ {
+  "ficha": "presentaciones-orales-online-efectivas.yaml",
+  "titulo": "Presentaciones orales online efectivas",
+  "visibility": "public",
+  "match": "Presentaciones orales online efectivas",
+  "match_id": "li-presentaciones-orales-online-efectivas",
+  "score": 1.0
+ },
+ {
+  "ficha": "primeros-pasos-para-nuevos-jefes.yaml",
+  "titulo": "Primeros pasos para nuevos jefes",
+  "visibility": "public",
+  "match": "Primeros pasos en el liderazgo de equipos",
+  "match_id": "li-primeros-pasos-en-el-liderazgo-de-equipos",
+  "score": 1.0
+ },
+ {
+  "ficha": "profundiza-en-tus-habilidades-de-comunicacion-en-la-empresa.yaml",
+  "titulo": "Profundiza en tus habilidades de comunicación en la empresa",
+  "visibility": "public",
+  "match": "Profundiza en tus habilidades de comunicación en la empresa",
+  "match_id": "li-profundiza-en-tus-habilidades-de-comunicacion-en-la-empresa",
+  "score": 1.0
+ },
+ {
+  "ficha": "profundiza-tus-competencias-en-metodologias-agiles-y-design-thinking.yaml",
+  "titulo": "Profundiza tus competencias en metodologías ágiles y Design Thinking",
+  "visibility": "public",
+  "match": "Profundiza tus competencias en metodologías ágiles y Design Thinking",
+  "match_id": "li-profundiza-tus-competencias-en-metodologias-agiles-y-design-thinking",
+  "score": 1.0
+ },
+ {
+  "ficha": "proteccion-de-datos.yaml",
+  "titulo": "Protección de datos",
+  "visibility": "public",
+  "match": "Protección de datos personales",
+  "match_id": "otr-proteccion-de-datos-personales",
+  "score": 1.0
+ },
+ {
+  "ficha": "python-avanzado.yaml",
+  "titulo": "Python avanzado",
+  "visibility": "public",
+  "match": "Python avanzado (2015)",
+  "match_id": "li-python-avanzado-2015",
+  "score": 1.0
+ },
+ {
+  "ficha": "python-esencial.yaml",
+  "titulo": "Python esencial",
+  "visibility": "public",
+  "match": "Python esencial (2014)",
+  "match_id": "li-python-esencial-2014",
+  "score": 1.0
+ },
+ {
+  "ficha": "python-mejora-tu-desarrollo.yaml",
+  "titulo": "Python: Mejora tu desarrollo",
+  "visibility": "public",
+  "match": "Python: Mejora tu desarrollo",
+  "match_id": "li-python-mejora-tu-desarrollo",
+  "score": 1.0
+ },
+ {
+  "ficha": "python-para-data-science-y-big-data-esencial.yaml",
+  "titulo": "Python para data science y big data esencial",
+  "visibility": "public",
+  "match": "Python para data science y big data esencial (2018)",
+  "match_id": "li-python-para-data-science-y-big-data-esencial-2018",
+  "score": 1.0
+ },
+ {
+  "ficha": "r-para-big-data-esencial.yaml",
+  "titulo": "R para big data esencial",
+  "visibility": "public",
+  "match": "R para big data esencial (2018)",
+  "match_id": "li-r-para-big-data-esencial-2018",
+  "score": 1.0
+ },
+ {
+  "ficha": "recursos-humanos-como-entrevistar-a-candidatos-de-trabajo.yaml",
+  "titulo": "Recursos humanos: Cómo entrevistar a candidatos de trabajo",
+  "visibility": "public",
+  "match": "Recursos humanos: Cómo entrevistar aspirantes",
+  "match_id": "li-recursos-humanos-como-entrevistar-aspirantes",
+  "score": 1.0
+ },
+ {
+  "ficha": "recursos-humanos-contratacion-it.yaml",
+  "titulo": "Recursos humanos: Contratación IT",
+  "visibility": "public",
+  "match": "Recursos humanos: Contratación IT",
+  "match_id": "li-recursos-humanos-contratacion-it",
+  "score": 1.0
+ },
+ {
+  "ficha": "resolucion-de-problemas-empresariales.yaml",
+  "titulo": "Resolución de problemas empresariales",
+  "visibility": "public",
+  "match": "Resolución de problemas empresariales",
+  "match_id": "li-resolucion-de-problemas-empresariales",
+  "score": 1.0
+ },
+ {
+  "ficha": "reuniones-eficaces.yaml",
+  "titulo": "Reuniones eficaces",
+  "visibility": "public",
+  "match": "Reuniones eficaces",
+  "match_id": "li-reuniones-eficaces",
+  "score": 1.0
+ },
+ {
+  "ficha": "rhce-linux-system-engineer-complete-course.yaml",
+  "titulo": "RHCE Linux System Engineer Complete Course",
+  "visibility": "public",
+  "match": "RHCE Linux System Engineer Complete Course",
+  "match_id": "ud-rhce-linux-system-engineer-complete-course",
+  "score": 1.0
+ },
+ {
+  "ficha": "scrum-master.yaml",
+  "titulo": "Scrum Master",
+  "visibility": "public",
+  "match": "Certified ScrumMaster (CSM)",
+  "match_id": "ext-certified-scrummaster",
+  "score": 1.0
+ },
+ {
+  "ficha": "seguridad-informatica-analisis-de-riesgos.yaml",
+  "titulo": "Seguridad informática (Análisis de Riesgos)",
+  "visibility": "public",
+  "match": "Técnico en seguridad informática (análisis de riesgos)",
+  "match_id": "otr-tecnico-en-seguridad-informatica-analisis-de-riesgos",
+  "score": 1.0
+ },
+ {
+  "ficha": "seguridad-informatica-servidores.yaml",
+  "titulo": "Seguridad informática (Servidores)",
+  "visibility": "public",
+  "match": "Técnico en seguridad informática / servidores",
+  "match_id": "otr-tecnico-en-seguridad-informatica-servidores",
+  "score": 1.0
+ },
+ {
+  "ficha": "sharepoint-online-esencial.yaml",
+  "titulo": "Sharepoint Online esencial",
+  "visibility": "public",
+  "match": "Sharepoint Online esencial (2019)",
+  "match_id": "li-sharepoint-online-esencial-2019",
+  "score": 1.0
+ },
+ {
+  "ficha": "splunk-2020-beginner-to-architect.yaml",
+  "titulo": "Splunk 2020 - Beginner to Architect",
+  "visibility": "public",
+  "match": "Splunk  - Beginner to Architect 2026",
+  "match_id": "ud-splunk-beginner-to-architect-2026",
+  "score": 1.0
+ },
+ {
+  "ficha": "superminds-artificial-intelligence-in-2019-2025-markets.yaml",
+  "titulo": "Superminds: Artificial Intelligence in 2019-2025 Markets",
+  "visibility": "public",
+  "match": "SuperMinds: The Future of Artificial Intelligence (AI)",
+  "match_id": "ud-superminds-the-future-of-artificial-intelligence-ai",
+  "score": 1.0
+ },
+ {
+  "ficha": "sway-esencial.yaml",
+  "titulo": "Sway esencial",
+  "visibility": "public",
+  "match": "Sway esencial",
+  "match_id": "li-sway-esencial",
+  "score": 1.0
+ },
+ {
+  "ficha": "taller-starting-data-governance-dama-cmdp.yaml",
+  "titulo": "Taller Starting Data Governance (DAMA - CMDP)",
+  "visibility": "public",
+  "match": "Taller Starting Data Governance",
+  "match_id": "otr-taller-starting-data-governance",
+  "score": 1.0
+ },
+ {
+  "ficha": "teletrabajo.yaml",
+  "titulo": "Teletrabajo",
+  "visibility": "public",
+  "match": "Teletrabajo",
+  "match_id": "li-teletrabajo",
+  "score": 1.0
+ },
+ {
+  "ficha": "terraform-beginner-to-advanced-using-google-cloud-platform.yaml",
+  "titulo": "Terraform Beginner to Advanced - Using Google Cloud Platform",
+  "visibility": "public",
+  "match": "Terraform Beginner to Advanced - Using Google Cloud Platform",
+  "match_id": "ud-terraform-beginner-to-advanced-using-google-cloud-platform",
+  "score": 1.0
+ },
+ {
+  "ficha": "the-complete-dbt-data-build-tool-bootcamp-zero-to-hero.yaml",
+  "titulo": "The Complete dbt (Data Build Tool) Bootcamp: Zero to Hero",
+  "visibility": "public",
+  "match": "The Complete dbt Bootcamp: Zero to Hero + Certification Prep",
+  "match_id": "ud-the-complete-dbt-bootcamp-zero-to-hero-certification-prep",
+  "score": 1.0
+ },
+ {
+  "ficha": "the-ultimate-hands-on-hadoop-tame-your-big-data.yaml",
+  "titulo": "The Ultimate Hands-On Hadoop - Tame your Big Data!",
+  "visibility": "public",
+  "match": "The Ultimate Hands-On Hadoop: Tame your Big Data!",
+  "match_id": "ud-the-ultimate-hands-on-hadoop-tame-your-big-data",
+  "score": 1.0
+ },
+ {
+  "ficha": "toma-de-notas-para-profesionales.yaml",
+  "titulo": "Toma de notas para profesionales",
+  "visibility": "public",
+  "match": "Toma de notas para profesionales",
+  "match_id": "li-toma-de-notas-para-profesionales",
+  "score": 1.0
+ },
+ {
+  "ficha": "trabajo-en-equipo.yaml",
+  "titulo": "Trabajo en equipo",
+  "visibility": "public",
+  "match": "Trabajo en equipo",
+  "match_id": "li-trabajo-en-equipo",
+  "score": 1.0
+ },
+ {
+  "ficha": "transformacion-digital-como-implementarla.yaml",
+  "titulo": "Transformación digital: Cómo implementarla",
+  "visibility": "public",
+  "match": "Transformación digital: Cómo implementarla",
+  "match_id": "li-transformacion-digital-como-implementarla",
+  "score": 1.0
+ },
+ {
+  "ficha": "transformacion-digital-el-rol-de-recursos-humanos.yaml",
+  "titulo": "Transformación digital: El rol de recursos humanos",
+  "visibility": "public",
+  "match": "Transformación digital: El rol de recursos humanos",
+  "match_id": "li-transformacion-digital-el-rol-de-recursos-humanos",
+  "score": 1.0
+ },
+ {
+  "ficha": "transformacion-digital-el-rol-del-cto.yaml",
+  "titulo": "Transformación digital: El rol del CTO",
+  "visibility": "public",
+  "match": "Transformación digital: El rol del CTO",
+  "match_id": "li-transformacion-digital-el-rol-del-cto",
+  "score": 1.0
+ },
+ {
+  "ficha": "transformacion-digital-equipos-online-y-trabajo-colaborativo.yaml",
+  "titulo": "Transformación digital: Equipos online y trabajo colaborativo",
+  "visibility": "public",
+  "match": "Transformación digital: Equipos online y trabajo colaborativo",
+  "match_id": "li-transformacion-digital-equipos-online-y-trabajo-colaborativo",
+  "score": 1.0
+ },
+ {
+  "ficha": "transformacion-digital-liderazgo.yaml",
+  "titulo": "Transformación digital: Liderazgo",
+  "visibility": "public",
+  "match": "Transformación digital: Liderazgo",
+  "match_id": "li-transformacion-digital-liderazgo",
+  "score": 1.0
+ },
+ {
+  "ficha": "transicion-de-jefe-a-lider.yaml",
+  "titulo": "Transición de jefe a líder",
+  "visibility": "public",
+  "match": "Transición de responsable a líder (2017)",
+  "match_id": "li-transicion-de-responsable-a-lider-2017",
+  "score": 1.0
+ },
+ {
+  "ficha": "trucos-creativos-para-lideres.yaml",
+  "titulo": "Trucos creativos para líderes",
+  "visibility": "public",
+  "match": "Trucos creativos para líderes",
+  "match_id": "li-trucos-creativos-para-lideres",
+  "score": 1.0
+ },
+ {
+  "ficha": "trucos-para-cambiar-o-crear-nuevos-habitos.yaml",
+  "titulo": "Trucos para cambiar o crear nuevos hábitos",
+  "visibility": "public",
+  "match": "Trucos para cambiar o crear nuevos hábitos",
+  "match_id": "li-trucos-para-cambiar-o-crear-nuevos-habitos",
+  "score": 1.0
+ },
+ {
+  "ficha": "unix-command-course-for-beginners.yaml",
+  "titulo": "Unix Command Course for Beginners",
+  "visibility": "public",
+  "match": "Unix Command Course for Beginners",
+  "match_id": "ud-unix-command-course-for-beginners",
+  "score": 1.0
+ },
+ {
+  "ficha": "yammer-esencial.yaml",
+  "titulo": "Yammer esencial",
+  "visibility": "public",
+  "match": "Yammer esencial",
+  "match_id": "li-yammer-esencial",
+  "score": 1.0
+ }
+]

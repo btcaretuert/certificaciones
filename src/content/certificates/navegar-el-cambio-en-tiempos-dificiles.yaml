@@ -1,0 +1,52 @@
+title: "Navegar el cambio en tiempos difíciles"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Transformación Digital", "Change Readiness"]
+issued: "2021-04-08"
+hours: 0.88
+credential_id: "9fcda1e7cb653449fd56c58873528a2afe685130abb8c5c53d2a6d9a51096a35"
+verify_url: "https://www.linkedin.com/learning/certificates/9fcda1e7cb653449fd56c58873528a2afe685130abb8c5c53d2a6d9a51096a35"
+pdf: "navegar-el-cambio-en-tiempos-dificiles"
+thumb: "navegar-el-cambio-en-tiempos-dificiles"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "medium"
+classification_signals: "tm=1;sm=0;cd=1;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:2837216"
+course_url: "https://www.linkedin.com/learning/navegar-el-cambio-en-tiempos-dificiles"
+level: "General"
+language: "es"
+retired: false
+instructors: ["Izanami Martinez"]
+summary: "Los tiempos difíciles son, histórica y estadísticamente, naturales. Descubre cómo sacarle partido a las capacidades que llevas de serie y convertir la incertidumbre en un motor de transformación. "
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Navegar el cambio en tiempos dificiles.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Navegar el cambio en tiempos dificiles.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

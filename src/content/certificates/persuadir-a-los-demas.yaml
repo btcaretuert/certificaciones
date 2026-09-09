@@ -1,0 +1,52 @@
+title: "Persuadir a los demás"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Comunicación", "Orador convincente", "Persuación", "Persuasion", "Interpersonal Communication"]
+issued: "2019-09-02"
+hours: 0.67
+credential_id: "f18ffc2288ae0276866f3e1e0d7ed32a68255f73f9b7b849389067008f1f7134"
+verify_url: "https://www.linkedin.com/learning/certificates/f18ffc2288ae0276866f3e1e0d7ed32a68255f73f9b7b849389067008f1f7134"
+pdf: "persuadir-a-los-demas"
+thumb: "persuadir-a-los-demas"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:680859"
+course_url: "https://www.linkedin.com/learning/persuadir-a-los-demas"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Romina Daghighi"]
+summary: "Aprende a emplear la persuasión para presentar tus ideas y consigue que sean escuchadas. Descubre la importancia de cuidar tu imagen personal y cómo te perciben los demás."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Persuadir a los demas.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Persuadir A Los Demas.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "8a3f199ac6af3cf0453654601dddfa5012f4982751272523eb37e5dec6b9d54c"
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: "persuadir-a-los-demas-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Persuadir a los demas (PMI).pdf"

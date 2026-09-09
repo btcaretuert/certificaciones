@@ -1,0 +1,51 @@
+title: "Fundamentos y consejos para nuevos jefes"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "liderazgo-y-gestion"
+domain: "liderazgo-equipos"
+tech: []
+type: "gestion"
+official: false
+skills: ["Gestión de personas", "Liderazgo de equipos", "Employee Management"]
+issued: "2019-08-20"
+hours: 1.14
+credential_id: "844457dfb5d95cedef9e53ac354e51b902cf7e1fd10045366f4a985bfb0ade6c"
+verify_url: "https://www.linkedin.com/learning/certificates/844457dfb5d95cedef9e53ac354e51b902cf7e1fd10045366f4a985bfb0ade6c"
+pdf: "fundamentos-y-consejos-para-nuevos-jefes"
+thumb: "fundamentos-y-consejos-para-nuevos-jefes"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "liderazgo-y-gestion"
+  domain: "liderazgo-equipos"
+  type: "gestion"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:452713"
+course_url: "https://www.linkedin.com/learning/fundamentos-y-consejos-para-gerentes-principiantes-2015"
+level: "Beginner"
+language: "es"
+retired: true
+instructors: ["Todd Dewett"]
+summary: "Establece tu identidad como líder, conecta con tu equipo y aprende a construir relaciones de confianza, gestionar reuniones eficientes y a desarrollar tu autoridad."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Fundamentos y consejos para gerentes principiantes 2015.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "b60d8bab75dd0888f9fa261454959010e4cb87f7587708a97c886be049b34c4b"
+pmi_verify_url: "https://www.linkedin.com/learning/certificates/b60d8bab75dd0888f9fa261454959010e4cb87f7587708a97c886be049b34c4b"
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: "fundamentos-y-consejos-para-nuevos-jefes-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Fundamentos y consejos para gerentes principiantes 2015 (PMI).pdf"

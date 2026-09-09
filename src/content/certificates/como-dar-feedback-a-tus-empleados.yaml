@@ -1,0 +1,52 @@
+title: "Cómo dar feedback a tus empleados"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Crítica constructiva", "Gestión", "Liderazgo", "feedback", "Constructive Feedback"]
+issued: "2019-09-01"
+hours: 1.11
+credential_id: "77b953bac1818f9dee36200c0acfdc31af41a8e1b80540c5ed0bca1d07038032"
+verify_url: "https://www.linkedin.com/learning/certificates/77b953bac1818f9dee36200c0acfdc31af41a8e1b80540c5ed0bca1d07038032"
+pdf: "como-dar-feedback-a-tus-empleados"
+thumb: "como-dar-feedback-a-tus-empleados"
+weight: 2
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:518295"
+course_url: "https://www.linkedin.com/learning/como-dar-feedback-a-tu-personal"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Todd Dewett"]
+summary: "Descubre la importancia de establecer una gran comunicación ya que es el vínculo que mantiene a un equipo unido y te permitirá aumentar el talento de tu equipo."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como dar feedback a tu personal.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "35e1a0775948768ecc898a1c626ec8899a72f6572d10f946e42a9ac679570458"
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: "como-dar-feedback-a-tus-empleados-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Como dar feedback a tu personal (PMI).pdf"

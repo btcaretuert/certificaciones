@@ -1,0 +1,339 @@
+---
+import Base from '../layouts/Base.astro';
+import { publishedCertificates, selectFeatured } from '../lib/data';
+import { countBy, hoursFloor, techCoverage, timeline, evidence } from '../lib/stats';
+import { urlCert, urlCompetencias, urlPdf, urlThumb } from '../lib/urls';
+import { AREA_LABEL, TYPE_LABEL } from '../lib/labels';
+
+const certs = await publishedCertificates();
+const featured = selectFeatured(certs);
+const areas = countBy(certs, (c) => c.area).map(([a, n]) => ({
+  area: a,
+  n,
+  // las horas del area excluyen itinerarios por el mismo motivo que el total
+  h: Math.round(certs.filter((c) => c.area === a && c.kind !== 'itinerario')
+    .reduce((s, c) => s + (c.hours ?? 0), 0)),
+})).sort((x, y) => y.h - x.h || y.n - x.n);
+const maxH = Math.max(1, ...areas.map((a) => a.h));
+const tech = techCoverage(certs).filter((t) => t.n >= 2);
+const { hours, covered, total: nCursos, itineraries } = hoursFloor(certs);
+const hoy = new Date().toISOString().slice(0, 10);
+// 68 cursos otorgan ademas certificado del PMI: otro documento, con su propio
+// numero y sus PDU. Va como distintivo del curso y no como ficha aparte, para
+// no duplicar cada titulo en el listado.
+const conPmi = certs.filter((c) => c.pmi_credential_id);
+const pdu = Math.round(conPmi.reduce((s, c) => s + (c.pmi_pdus ?? 0), 0) * 10) / 10;
+const { years, undated } = timeline(certs);
+// Los filtros corren en el cliente sobre el DOM ya renderizado: con 252 filas no
+// hay nada que optimizar y evita enviar el corpus dos veces, una en HTML y otra
+// en JSON. Cada fila lleva su propio heno de busqueda ya normalizado.
+const anios = [...new Set(certs.map((c) => c.issued?.slice(0, 4)).filter(Boolean))]
+  .sort().reverse() as string[];
+const heno = (c: (typeof certs)[number]) =>
+  [c.title, c.issuer, c.platform, ...c.tech, ...c.skills.slice(0, 8)]
+    .join(' ').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
+const ev = evidence(certs);
+const maxYear = Math.max(1, ...years.map(([, n]) => n));
+---
+<Base title="Alejandro Retuert — Certificaciones">
+  <header class="hero">
+    <div class="wrap">
+      <p class="kicker">Formación continua verificable</p>
+      <h1>Alejandro Retuert</h1>
+      <p class="sub">Ingeniería y arquitectura de datos</p>
+      <ul class="stats">
+        <li><b>{certs.length}</b><span>certificados</span></li>
+        <li><b>{ev.official}</b><span>de organismo externo</span></li>
+        <li><b>{ev.withPdf}</b><span>con documento adjunto</span></li>
+        <li><b>{ev.withVerifyUrl}</b><span>verificables en el emisor</span></li>
+        <li><b>{hours}</b><span>horas de contenido <i>({covered} de {nCursos} con dato)</i></span></li>
+        {conPmi.length > 0 && (
+          <li><b>{conPmi.length}</b><span>con certificado PMI <i>({pdu} PDU)</i></span></li>
+        )}
+      </ul>
+      {itineraries > 0 && (
+        <p class="disclaimer">
+          Las horas excluyen {itineraries} itinerarios de LinkedIn Learning, que agrupan cursos
+          ya contados en esta misma lista. Sumarlos daria una cifra mayor contando dos veces el
+          mismo contenido.
+        </p>
+      )}
+    </div>
+  </header>
+
+  <main class="wrap">
+    <nav class="nav" aria-label="Secciones">
+      <a href={urlCompetencias()}>Ver por competencias →</a>
+    </nav>
+    {featured.length > 0 && (
+      <section>
+        <h2>Destacados</h2>
+        <div class="grid feat">
+          {featured.map((c) => (
+            <article class="card hi">
+              {c.thumb && (
+                <a class="shot" href={urlCert(c.id)}>
+                  <img src={urlThumb(c.thumb)} alt={`Certificado de ${c.title}`}
+                       width="640" height="480" loading="lazy" decoding="async" />
+                </a>
+              )}
+              <span class={`chip ${c.type}`}>{TYPE_LABEL[c.type]}</span>
+              <h3><a href={urlCert(c.id)}>{c.title}</a></h3>
+              <p class="meta">
+                {c.issuer}{c.issued && ` · ${c.issued.slice(0, 4)}`}
+                {c.expires && (c.expires < hoy
+                  ? <span class="exp">vencida {c.expires.slice(0, 4)}</span>
+                  : <span class="vig">vigente hasta {c.expires.slice(0, 4)}</span>)}
+              </p>
+              {c.tech.length > 0 && <p class="techs">{c.tech.map((t) => <code>{t}</code>)}</p>}
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section>
+      <h2>Por área <small>ordenado por horas de contenido, no por número de cursos</small></h2>
+      <div class="bars">
+        {areas.map((a) => (
+          <div class="bar">
+            <span class="lbl">{AREA_LABEL[a.area] ?? a.area}</span>
+            <span class="track"><span class="fill" style={`width:${(a.h / maxH) * 100}%`}></span></span>
+            <span class="num">{a.h} h</span>
+            <span class="num sub">{a.n}</span>
+          </div>
+        ))}
+      </div>
+      <p class="note">La columna de la derecha es el número de credenciales. Lo técnico son cursos
+        largos y lo transversal cursos de una hora: ordenar por volumen invierte la lectura.</p>
+    </section>
+
+    <section>
+      <h2>Tecnologías <small>con dos o más certificados</small></h2>
+      <p class="techs big">{tech.map((t) => <code>{t.tech} <b>{t.n}</b></code>)}</p>
+    </section>
+
+    <section>
+      <h2>Actividad por año</h2>
+      <div class="years">
+        {years.map(([y, n]) => (
+          <div class="yr"><span class="yb" style={`height:${(n / maxYear) * 100}%`}></span><span class="yl">{String(y).slice(2)}</span><span class="yn">{n}</span></div>
+        ))}
+      </div>
+      {undated > 0 && <p class="note">{undated} certificados sin fecha registrada, no incluidos en el gráfico.</p>}
+    </section>
+
+    <section>
+      <h2>Todos los certificados <small>{certs.length}</small></h2>
+      <form class="filtros" id="filtros" role="search" aria-label="Filtrar certificados">
+        <label class="f grow">
+          <span>Buscar</span>
+          <input type="search" id="q" placeholder="título, emisor o tecnología"
+                 autocomplete="off" />
+        </label>
+        <label class="f">
+          <span>Área</span>
+          <select id="f-area">
+            <option value="">todas</option>
+            {areas.map((a) => <option value={a.area}>{AREA_LABEL[a.area] ?? a.area}</option>)}
+          </select>
+        </label>
+        <label class="f">
+          <span>Tipo</span>
+          <select id="f-tipo">
+            <option value="">todos</option>
+            {Object.entries(TYPE_LABEL).map(([k, v]) => <option value={k}>{v}</option>)}
+          </select>
+        </label>
+        <label class="f">
+          <span>Año</span>
+          <select id="f-anio">
+            <option value="">todos</option>
+            {anios.map((y) => <option value={y}>{y}</option>)}
+          </select>
+        </label>
+        <fieldset class="toggles">
+          <legend class="vh">Filtros de evidencia</legend>
+          <label><input type="checkbox" id="f-verif" /> verificable en el emisor</label>
+          <label><input type="checkbox" id="f-pmi" /> con certificado PMI</label>
+          <label><input type="checkbox" id="f-ofi" /> de organismo externo</label>
+        </fieldset>
+        <p class="cuenta">
+          <output id="cuenta" for="q f-area f-tipo f-anio">{certs.length}</output>{' '}
+          de {certs.length} · <button type="reset" id="limpiar">limpiar</button>
+        </p>
+      </form>
+      {conPmi.length > 0 && (
+        <p class="note tight">{conPmi.length} de estos cursos otorgan además un certificado del
+          Project Management Institute, con su propio número y sus PDU. Es otro documento del mismo
+          curso, así que se enlaza aparte en vez de repetir el título en la lista.</p>
+      )}
+      <table>
+        <thead><tr><th>Certificado</th><th>Área</th><th>Tipo</th><th>Año</th><th title="Copia del certificado, alojada en este sitio">Documento</th><th title="Comprobable en el sitio del emisor, sin depender de mí">Verificable</th></tr></thead>
+        <tbody>
+          {certs.map((c) => (
+            <tr data-area={c.area} data-tipo={c.type} data-anio={c.issued?.slice(0, 4) ?? ''}
+                data-verif={c.verify_url ? '1' : ''} data-pmi={c.pmi_pdf ? '1' : ''}
+                data-ofi={c.official ? '1' : ''} data-q={heno(c)}>
+              <td><a class="tt" href={urlCert(c.id)}>{c.title}</a></td>
+              <td class="dim">{AREA_LABEL[c.area] ?? c.area}</td>
+              <td><span class={`chip sm ${c.type}`}>{TYPE_LABEL[c.type]}</span></td>
+              <td class="dim">
+                {c.issued?.slice(0, 4) ?? '—'}
+                {c.expires && c.expires < hoy && <span class="exp" title={`Vencio el ${c.expires}`}>vencida</span>}
+              </td>
+              <td class="docs">
+                {c.pdf
+                  ? <a class="doc" href={urlPdf(c.pdf)} target="_blank" rel="noopener noreferrer">PDF ↗</a>
+                  : <span class="dim">—</span>}
+                {c.pmi_pdf && (
+                  <a class="doc pmi" href={urlPdf(c.pmi_pdf)} target="_blank"
+                     rel="noopener noreferrer"
+                     title={`Certificado del Project Management Institute${c.pmi_pdus ? ` · ${c.pmi_pdus} PDU` : ''}`}>PMI ↗</a>
+                )}
+              </td>
+              <td class="docs">
+                {c.verify_url
+                  ? <a class="ok" href={c.verify_url} rel="noopener noreferrer" target="_blank">emisor ↗</a>
+                  : <span class="dim">—</span>}
+                {c.pmi_verify_url && (
+                  <a class="ok pmi" href={c.pmi_verify_url} rel="noopener noreferrer" target="_blank"
+                     title="Verificar el certificado del PMI en LinkedIn">PMI ↗</a>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    // Filtrado en el cliente sobre las filas ya renderizadas. Sin framework y
+    // sin volver a enviar el corpus: cada fila trae sus propios data-* y el
+    // heno de busqueda ya normalizado desde el build.
+    const form = document.getElementById('filtros');
+    if (form) {
+      // El formulario no envia nada: filtra en el cliente. Sin esto, un Enter
+      // en la caja de busqueda dispara el envio implicito —un unico campo de
+      // texto basta—, la pagina recarga y se pierden los filtros puestos.
+      form.addEventListener('submit', (e) => e.preventDefault());
+      const filas = /** @type {HTMLTableRowElement[]} */ ([...document.querySelectorAll('tbody tr')]);
+      const cuenta = document.getElementById('cuenta');
+      const q = /** @type {HTMLInputElement} */ (document.getElementById('q'));
+      const sel = (id) => /** @type {HTMLSelectElement} */ (document.getElementById(id));
+      const chk = (id) => /** @type {HTMLInputElement} */ (document.getElementById(id));
+
+      // misma normalizacion que en el build: sin acentos y en minusculas, para
+      // que "comunicacion" encuentre "Comunicación"
+      const norm = (s) => s.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
+
+      function aplicar() {
+        const t = norm(q.value.trim());
+        const area = sel('f-area').value;
+        const tipo = sel('f-tipo').value;
+        const anio = sel('f-anio').value;
+        const verif = chk('f-verif').checked;
+        const pmi = chk('f-pmi').checked;
+        const ofi = chk('f-ofi').checked;
+        let n = 0;
+        for (const fila of filas) {
+          const d = fila.dataset;
+          const ok =
+            (!t || (d.q || '').includes(t)) &&
+            (!area || d.area === area) &&
+            (!tipo || d.tipo === tipo) &&
+            (!anio || d.anio === anio) &&
+            (!verif || d.verif === '1') &&
+            (!pmi || d.pmi === '1') &&
+            (!ofi || d.ofi === '1');
+          fila.hidden = !ok;
+          if (ok) n++;
+        }
+        if (cuenta) cuenta.textContent = String(n);
+        form.dataset.vacio = n === 0 ? '1' : '';
+      }
+
+      form.addEventListener('input', aplicar);
+      // reset dispara antes de que los campos se limpien
+      form.addEventListener('reset', () => setTimeout(aplicar, 0));
+      aplicar();
+    }
+  </script>
+
+  <style>
+    .hero { background: var(--accent-soft); border-bottom: 1px solid var(--line); padding: 48px 0 34px; }
+    .kicker { margin: 0 0 6px; color: var(--accent); font-size: 12px; letter-spacing: .09em; text-transform: uppercase; font-weight: 600; }
+    h1 { font-size: clamp(30px, 5vw, 44px); }
+    .sub { margin: 4px 0 0; color: var(--muted); font-size: 17px; }
+    .stats { list-style: none; display: flex; flex-wrap: wrap; gap: 30px; padding: 0; margin: 26px 0 0; }
+    .stats b { display: block; font-size: 27px; font-variant-numeric: tabular-nums; }
+    .stats span { color: var(--muted); font-size: 13px; }
+    /* Sin opacity: atenuar --muted lo baja de 4.70 a 2.95 sobre --accent-soft. */
+    .stats i { font-style: normal; }
+    main { padding: 34px 0 70px; }
+    section { margin-bottom: 42px; }
+    h2 { font-size: 19px; margin-bottom: 14px; }
+    h2 small { color: var(--muted); font-weight: 400; font-size: 13px; margin-left: 8px; }
+    .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 15px; }
+    .card h3 { font-size: 15px; margin: 8px 0 5px; }
+    .meta { margin: 0; color: var(--muted); font-size: 13px; }
+    .chip { display: inline-block; font-size: 10.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; padding: 3px 7px; border-radius: 5px; border: 1px solid currentColor; }
+    .chip.tecnico { color: var(--tec); } .chip.gestion { color: var(--ges); } .chip.transversal { color: var(--tra); }
+    .chip.sm { font-size: 10px; padding: 2px 5px; }
+    .techs { margin: 9px 0 0; display: flex; flex-wrap: wrap; gap: 5px; }
+    .techs code { background: var(--bg); border: 1px solid var(--line); border-radius: 5px; padding: 2px 7px; font-size: 12px; }
+    .techs.big code b { color: var(--accent); }
+    .bars { display: grid; gap: 7px; }
+    .bar { display: grid; grid-template-columns: 210px 1fr 52px 34px; align-items: center; gap: 12px; font-size: 13.5px; }
+    /* Sin opacity: la atenuacion dejaba el contraste en 2.30 (exige 4.5). */
+    .num.sub { font-size: 12px; }
+    .vig { display: inline-block; margin-left: 6px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); border: 1px solid currentColor; border-radius: 4px; padding: 1px 4px; }
+    .track { background: var(--line); border-radius: 4px; height: 9px; overflow: hidden; }
+    .fill { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
+    .num { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+    .years { display: flex; align-items: flex-end; gap: 5px; height: 130px; padding-top: 10px; }
+    .yr { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; }
+    .yb { width: 100%; background: var(--accent); border-radius: 3px 3px 0 0; min-height: 3px; }
+    .yl { font-size: 11px; color: var(--muted); margin-top: 5px; }
+    .yn { font-size: 10px; color: var(--muted); }
+    .note { color: var(--muted); font-size: 12.5px; margin-top: 10px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+    th { text-align: left; font-weight: 600; color: var(--muted); font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+    td { padding: 9px 10px; border-bottom: 1px solid var(--line); }
+    .dim { color: var(--muted); }
+    .ok { color: var(--accent); font-weight: 600; font-size: 12px; }
+    .doc { color: var(--accent); font-weight: 600; font-size: 12px; }
+    .docs { white-space: nowrap; }
+    .pmi { display: inline-block; margin-left: 7px; padding-left: 7px; border-left: 1px solid var(--line); color: var(--ges); }
+    .note.tight { margin: -4px 0 12px; max-width: 76ch; }
+    .nav { margin: 0 0 22px; font-size: 13.5px; }
+    .nav a { color: var(--accent); font-weight: 600; text-decoration: none; }
+    .nav a:hover { text-decoration: underline; }
+    .shot { display: block; margin: -14px -15px 12px; border-bottom: 1px solid var(--line); background: var(--bg); }
+    .shot img { display: block; width: 100%; height: 116px; object-fit: cover; object-position: top center; border-radius: var(--radius) var(--radius) 0 0; }
+    .card h3 a { text-decoration: none; }
+    .card h3 a:hover { text-decoration: underline; }
+    .tt { text-decoration: none; }
+    .tt:hover { text-decoration: underline; color: var(--accent); }
+    .filtros { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px 14px; margin: 0 0 14px; padding: 13px 14px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); }
+    .f { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
+    .f.grow { flex: 1 1 210px; }
+    .f input, .f select { font: inherit; font-size: 13.5px; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 7px; padding: 6px 9px; width: 100%; }
+    .f input:focus-visible, .f select:focus-visible, .toggles input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+    .toggles { display: flex; flex-wrap: wrap; gap: 4px 14px; border: 0; margin: 0; padding: 0; font-size: 12.5px; }
+    .toggles label { display: flex; align-items: center; gap: 7px; color: var(--muted); min-height: 24px; }
+    /* 24x24 es el minimo de WCAG 2.2 (2.5.8) para un objetivo tactil. El
+       checkbox por defecto mide 13px y en un telefono se falla al tocarlo. */
+    .toggles input[type='checkbox'] { width: 24px; height: 24px; margin: 0; accent-color: var(--accent); }
+    .cuenta { margin: 0 0 0 auto; font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+    .cuenta output { font-weight: 700; color: var(--fg); }
+    .cuenta button { font: inherit; color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
+    .filtros[data-vacio='1'] + table tbody::after { content: 'Ningún certificado coincide con estos filtros.'; display: block; padding: 18px 10px; color: var(--muted); }
+    .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .exp { display: inline-block; margin-left: 6px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--alerta); border: 1px solid currentColor; border-radius: 4px; padding: 1px 4px; }
+    .disclaimer { margin: 16px 0 0; max-width: 62ch; color: var(--muted); font-size: 12.5px; line-height: 1.5; }
+    @media (max-width: 640px) { .bar { grid-template-columns: 118px 1fr 44px 28px; font-size: 12.5px; } table { font-size: 12.5px; } }
+  </style>
+</Base>

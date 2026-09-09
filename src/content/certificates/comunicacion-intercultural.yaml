@@ -1,0 +1,52 @@
+title: "Comunicación intercultural"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Comunicación", "Habilidades de comunicación intercultural", "Global", "Cultural Awareness", "Interpersonal Communication"]
+issued: "2019-09-24"
+hours: 0.3
+credential_id: "13ffb1b43041d15ed1d8d468153cc120ba62392f2a45dd0dbc4d388c03fb6de1"
+verify_url: "https://www.linkedin.com/learning/certificates/13ffb1b43041d15ed1d8d468153cc120ba62392f2a45dd0dbc4d388c03fb6de1"
+pdf: "comunicacion-intercultural"
+thumb: "comunicacion-intercultural"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:561639"
+course_url: "https://www.linkedin.com/learning/comunicacion-intercultural"
+level: "General"
+language: "es"
+retired: false
+instructors: ["Tatiana Kolovou"]
+summary: "Empápate de la cultura y costumbres del país de tus compañeros internacionales y aprende técnicas para comunicarte con tus gestores y compañeros de forma intercultural."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Comunicacion intercultural.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Comunicacion Intercultural.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

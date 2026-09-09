@@ -1,0 +1,52 @@
+title: "Fundamentos de la productividad"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Mejora de la productividad", "Desarrollo personal", "Productivity Improvement"]
+issued: "2021-01-18"
+hours: 0.83
+credential_id: "b110ea02b590cfad5abbfed7b8bdcb634f2a8bbb327f1671dd93cd9678360d60"
+verify_url: "https://www.linkedin.com/learning/certificates/b110ea02b590cfad5abbfed7b8bdcb634f2a8bbb327f1671dd93cd9678360d60"
+pdf: "fundamentos-de-la-productividad"
+thumb: "fundamentos-de-la-productividad"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:795024"
+course_url: "https://www.linkedin.com/learning/fundamentos-de-la-productividad-2"
+level: "Intermediate"
+language: "es"
+retired: false
+instructors: ["Pedro Lamban Castillo"]
+summary: "Mejora y aumenta tus conocimientos sobre productividad personal. Consigue optimizar tu manera de trabajar para alcanzar el máximo nivel de eficacia"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Fundamentos de la productividad.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Fundamentos de la productividad.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

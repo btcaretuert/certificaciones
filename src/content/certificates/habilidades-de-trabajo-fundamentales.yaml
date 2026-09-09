@@ -1,0 +1,52 @@
+title: "Habilidades de trabajo fundamentales"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Gestión de carrera profesional", "Career Management"]
+issued: "2019-11-28"
+hours: 0.34
+credential_id: "45db0805cfaee73f8bc2e57b6e8e69b169ea2a8d53c13612e1d795120a653f29"
+verify_url: "https://www.linkedin.com/learning/certificates/45db0805cfaee73f8bc2e57b6e8e69b169ea2a8d53c13612e1d795120a653f29"
+pdf: "habilidades-de-trabajo-fundamentales"
+thumb: "habilidades-de-trabajo-fundamentales"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "low"
+classification_signals: "tm=0;sm=1;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: true
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:756689"
+course_url: "https://www.linkedin.com/learning/habilidades-de-trabajo-fundamentales"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Linkedin Learning"]
+summary: "Repasa con estos consejos prácticos de dos minutos las habilidades clave que todo profesional debería conocer. Prioriza tareas, gestiona el tiempo y maneja el conflicto."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Habilidades de trabajo fundamentales.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Habilidades De Trabajo Fundamentales.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "7060d595cd4fa80d32b7f1c3b52a598a199171908a4b6b2a28092b7fa4d550c4"
+pmi_verify_url: null
+pmi_pdus: 0.25
+kind: "curso"
+pmi_pdf: "habilidades-de-trabajo-fundamentales-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Habilidades de trabajo fundamentales (PMI).pdf"

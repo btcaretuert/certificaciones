@@ -1,0 +1,59 @@
+title: "Monta un Cluster Hadoop Big Data desde cero"
+issuer: "Udemy"
+platform: "Udemy"
+area: "datos-y-analitica"
+domain: "ingenieria-datos"
+tech: ["hadoop", "analitica", "big-data", "linux", "spark"]
+type: "tecnico"
+official: false
+skills: ["Hadoop", "Big data"]
+issued: "2020-01-27"
+hours: 12.5
+credential_id: "UC-04UX8HLX"
+verify_url: "https://www.udemy.com/certificate/UC-04UX8HLX/"
+pdf: "monta-un-cluster-hadoop-big-data-desde-cero"
+thumb: "monta-un-cluster-hadoop-big-data-desde-cero"
+weight: 3
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ingenieria-datos"
+  type: "tecnico"
+  tech: ["hadoop"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "credential_id"
+  - "verify_url"
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/monta-un-cluster-hadoop-big-data-desde-cero/"
+level: null
+language: null
+retired: false
+instructors: ["Apasoft Training"]
+summary: "Aprende a trabajar con Hadoop Big Data con MapReduce, YARN, HIVE, SQOOP, SPARK, HBASE, HUE, Zookeeper, etc...."
+source_files: ["certs-src/_origen/Certs Udemy/UC-04UX8HLX.pdf"]
+expires: null
+active: null
+objectives:
+  - "Instalar un entorno de Hadoop Big Data"
+  - "Administrar y configurar los componentes de Hadoop"
+  - "Instalar un cluster Hadoop con ambari"
+  - "Aprender a manejar el sistema de ficheros HDFS"
+  - "Entender los conceptos más importantes de MapReduce y YARN"
+  - "Aprender a instalar y configurar productos asociados como HIVE, HUE, HBASE, SPARK, ETC...."
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

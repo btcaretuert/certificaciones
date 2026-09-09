@@ -1,0 +1,55 @@
+title: "Mejora la comunicación en el ámbito empresarial"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "comunicacion"
+tech: []
+type: "transversal"
+official: false
+skills: ["Communication"]
+issued: "2019-10-21"
+hours: 4.76
+credential_id: "413e8d7977f240c8a5f202e5cd1f89dc4cb81c765d75a56fc26e10283b85cc4a"
+verify_url: "https://www.linkedin.com/learning/certificates/413e8d7977f240c8a5f202e5cd1f89dc4cb81c765d75a56fc26e10283b85cc4a"
+pdf: "mejora-la-comunicacion-en-el-ambito-empresarial"
+thumb: "mejora-la-comunicacion-en-el-ambito-empresarial"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "comunicacion"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:llsServePath:5011305"
+course_url: "https://www.linkedin.com/learning/paths/mejora-la-comunicacion-en-el-ambito-empresarial"
+level: "General"
+language: null
+retired: false
+instructors: []
+summary: "Mejora la comunicación en el ámbito empresarial con ayuda de estos formadores expertos:"
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Mejora la comunicacion en el ambito empresarial.pdf", "certs-src/_origen/Certs Linkedin Itinerarios/CertificadoDeFinalizacion_Mejora la comunicacion en el ambito empresarial.pdf"]
+expires: null
+active: null
+objectives:
+  - "Mejora tus dotes comunicativas en el trabajo."
+  - "Transmite tus mensajes de la mejor manera posible."
+  - "Incorpora nuevas técnicas de comunicación a tu repertorio."
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "itinerario"
+pmi_pdf: null
+pmi_source_file: null

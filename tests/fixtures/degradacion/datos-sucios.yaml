@@ -1,0 +1,10 @@
+title: Ficha con datos sucios
+issuer: Prueba
+platform: Udemy
+area: area-que-no-existe
+domain: cosa-rara
+type: tipo-invalido
+verify_url: "javascript:alert(1)"
+issued: ""
+hours: ""
+visibility: public

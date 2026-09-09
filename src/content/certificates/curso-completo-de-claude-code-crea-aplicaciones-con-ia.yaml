@@ -1,0 +1,60 @@
+title: "Curso Completo de Claude Code: Crea Aplicaciones con IA"
+issuer: "Udemy"
+platform: "Udemy"
+area: "desarrollo-y-herramientas"
+domain: "ml-ia"
+tech: ["llm-genai", "git", "ia-generativa", "linux", "machine-learning", "seguridad"]
+type: "tecnico"
+official: false
+skills: []
+issued: "2026-08-02"
+hours: 15.0
+credential_id: "UC-25cd0e8d-a1ca-4cef-962c-1f637e7b190f"
+verify_url: "https://www.udemy.com/certificate/UC-25cd0e8d-a1ca-4cef-962c-1f637e7b190f/"
+pdf: "curso-completo-de-claude-code-crea-aplicaciones-con-ia"
+thumb: "curso-completo-de-claude-code-crea-aplicaciones-con-ia"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: ["area"]
+auto_snapshot:
+  area: "datos-y-analitica"
+  domain: "ml-ia"
+  type: "tecnico"
+  tech: ["llm-genai"]
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=1"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields: []
+verified_public: true
+program: "Udemy"
+course_urn: null
+course_url: "https://www.udemy.com/course/curso-completo-de-claude-code-crea-aplicaciones-con-ia/"
+level: null
+language: null
+retired: false
+instructors: ["Santiago Hernández"]
+summary: "Domina Claude Code a nivel profesional y crea aplicaciones reales y seguras con Agentes de IA, MCP, Hooks, Skills y más!"
+source_files: ["certs-src/_origen/Certs Udemy/ClaudeCode-UC-25cd0e8d-a1ca-4cef-962c-1f637e7b190f.pdf", "input/otros_certs/mas/Curso Completo de Claude Code: Crea Aplicaciones con IA- UC-25cd0e8d-a1ca-4cef-962c-1f637e7b190f.pdf"]
+expires: null
+active: null
+objectives:
+  - "Dominar Claude Code desde cero hasta nivel profesional para crear aplicaciones reales de forma rápida, estructurada y segura."
+  - "Configurar y usar Claude Code en terminal, VS Code, Cursor y Ollama según diferentes flujos de trabajo."
+  - "Construir sistemas con subagentes especializados y equipos multi-agente para testing, documentación, bases de datos, Ciberseguridad y más."
+  - "Desarrollar proyectos empresariales reales: landing pages, navegadores controlados por IA, pasarelas de pago digitales, simuladores 3D y más."
+  - "Escribir prompts profesionales para explorar, planificar, dividir tareas complejas y depurar problemas con mayor precisión."
+  - "Diseñar sistemas de memoria, reglas modulares, Auto Memory y Auto Dream para mantener contexto entre sesiones."
+  - "Aplicar seguridad, permisos personalizados, sandboxing y hooks de seguridad en proyectos reales con IA."
+  - "Integrar MCP para conectar Claude Code con GitHub, bases de datos, herramientas externas y servidores personalizados."
+  - "Desarrollar Skills y Plugins personalizados para reutilizar capacidades y ampliar el entorno de trabajo."
+  - "Aplicar Ciberseguridad profesional con IA detectando patrones peligrosos del código generado, ejecutando revisiones automáticas y personalizadas"
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null

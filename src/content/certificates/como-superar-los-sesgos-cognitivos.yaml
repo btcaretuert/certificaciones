@@ -1,0 +1,52 @@
+title: "Cómo superar los sesgos cognitivos"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Diversidad e inclusión", "Desarrollo personal", "Habilidades para la vida", "sesgos cognitivos", "Unconscious Bias Awareness Training"]
+issued: "2019-12-16"
+hours: 0.39
+credential_id: "6fd5a70e88c18bce5caf2a3e91d8d352984c342e8a6bc7d28e955300a8d571fa"
+verify_url: "https://www.linkedin.com/learning/certificates/6fd5a70e88c18bce5caf2a3e91d8d352984c342e8a6bc7d28e955300a8d571fa"
+pdf: "como-superar-los-sesgos-cognitivos"
+thumb: "como-superar-los-sesgos-cognitivos"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:5025675"
+course_url: "https://www.linkedin.com/learning/como-superar-los-sesgos-cognitivos"
+level: "Beginner"
+language: "es"
+retired: false
+instructors: ["Stacey Gordon"]
+summary: "Reconoce los efectos negativos que los sesgos causan en la organización, así como los beneficios de descubrir cuáles influyen en tu proceso para tomar decisiones. "
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Como superar los sesgos cognitivos.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Como Superar Los Sesgos Cognitivos.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: "439364a8415c29e4f8dc1f6fc16d1887c6c5bd9859792838bed91d8a4e7ef953"
+pmi_verify_url: null
+pmi_pdus: 0.25
+kind: "curso"
+pmi_pdf: "como-superar-los-sesgos-cognitivos-pmi"
+pmi_source_file: "certs-src/_reimpresos/CertificateOfCompletion_Como superar los sesgos cognitivos (PMI).pdf"

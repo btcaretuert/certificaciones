@@ -1,0 +1,52 @@
+title: "Pensamiento crítico"
+issuer: "LinkedIn Learning"
+platform: "LinkedIn"
+area: "comunicacion-y-efectividad"
+domain: "efectividad-personal"
+tech: []
+type: "transversal"
+official: false
+skills: ["Toma de decisiones", "Pensamiento crítico", "Critical Thinking"]
+issued: "2019-10-03"
+hours: 1.11
+credential_id: "c921007a813acc4ea3829ed1c65248b2feb99825340d6930803d68f1f75ae6f9"
+verify_url: "https://www.linkedin.com/learning/certificates/c921007a813acc4ea3829ed1c65248b2feb99825340d6930803d68f1f75ae6f9"
+pdf: "pensamiento-critico"
+thumb: "pensamiento-critico"
+weight: 1
+featured: false
+visibility: "public"
+curation_note: ""
+curation_flag: false
+manual_fields: []
+auto_snapshot:
+  area: "comunicacion-y-efectividad"
+  domain: "efectividad-personal"
+  type: "transversal"
+  tech: []
+classification_confidence: "high"
+classification_signals: "tm=1;sm=0;cd=0;tv=0"
+classification_rules_version: "r-1a2b9758"
+needs_review: false
+extracted_fields:
+  - "issued"
+  - "hours"
+verified_public: true
+program: "LinkedIn Learning"
+course_urn: "urn:li:lyndaCourse:597560"
+course_url: "https://www.linkedin.com/learning/pensamiento-critico-2017"
+level: "Beginner"
+language: "es"
+retired: true
+instructors: ["Mike Figliuolo"]
+summary: "Aprende a manejar y controlar tu pensamiento crítico, ya que se trata de tu capacidad de razonar deliberadamente y de manera independiente para tomar decisiones fundadas."
+source_files: ["certs-src/_reimpresos/CertificateOfCompletion_Pensamiento critico 2017.pdf", "certs-src/_origen/Certs Linkedin/CertificadoDeFinalizacion_Pensamiento Critico.pdf"]
+expires: null
+active: null
+objectives: []
+pmi_credential_id: null
+pmi_verify_url: null
+pmi_pdus: null
+kind: "curso"
+pmi_pdf: null
+pmi_source_file: null
