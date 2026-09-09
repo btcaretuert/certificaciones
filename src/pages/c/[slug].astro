@@ -2,7 +2,8 @@
 import Base from '@layouts/Base.astro';
 import { publishedCertificates } from '@lib/data';
 import { urlHome, urlCert, urlPdf, urlThumb } from '@lib/urls';
-import { AREA_LABEL, TYPE_LABEL, KIND_LABEL } from '@lib/labels';
+import { areaLabel, typeLabel, kindLabel, LEVEL_LABEL, LANG_LABEL } from '@lib/labels';
+import { fmtHoras } from '@lib/format';
 import { dimWebp } from '@lib/webp';
 
 export async function getStaticPaths() {
@@ -29,8 +30,7 @@ const fechaLarga = (iso: string) => {
 };
 
 /** Bajo una hora se lee mejor en minutos: hay cursos de 0,19 h. */
-const fmtHoras = (h: number) =>
-  h < 1 ? `${Math.round(h * 60)} min` : `${String(Math.round(h * 10) / 10).replace('.', ',')} h`;
+
 
 const recortar = (s: string, n: number) => {
   if (s.length <= n) return s;
@@ -38,14 +38,7 @@ const recortar = (s: string, n: number) => {
   return (i > 0 ? s.slice(0, i) : s.slice(0, n - 1)).replace(/[,;:.\s]+$/, '') + '…';
 };
 
-const LEVEL_LABEL: Record<string, string> = {
-  Beginner: 'Principiante',
-  Intermediate: 'Intermedio',
-  Advanced: 'Avanzado',
-  General: 'General',
-  'Beginner + Intermediate': 'Principiante e intermedio',
-};
-const LANG_LABEL: Record<string, string> = { es: 'Español', en: 'Inglés' };
+
 
 /* En los 23 itinerarios, `summary` y `objectives` son el MISMO bloque de
    publicidad de LinkedIn: el summary es un pie que repite el titulo y termina
@@ -76,7 +69,7 @@ const evidenciaTxt = vencida
     : 'Con el documento emitido como evidencia';
 const description = recortar(
   [
-    `«${c.title}» — ${KIND_LABEL[c.kind].toLowerCase()} de ${c.issuer}` +
+    `«${c.title}» — ${kindLabel(c.kind).toLowerCase()} de ${c.issuer}` +
       (c.issued ? `, ${fechaLarga(c.issued)}` : ''),
     horasTxt && `${horasTxt} de contenido`,
     evidenciaTxt,
@@ -95,7 +88,7 @@ const ld = {
   hasCredential: {
     '@type': 'EducationalOccupationalCredential',
     name: c.title,
-    credentialCategory: KIND_LABEL[c.kind],
+    credentialCategory: kindLabel(c.kind),
     recognizedBy: { '@type': 'Organization', name: c.issuer },
     ...(c.issued ? { dateCreated: c.issued } : {}),
     ...(c.credential_id ? { identifier: c.credential_id } : {}),
@@ -122,7 +115,7 @@ const ldJson = JSON.stringify(ld)
       <div class="wrap">
         <a class="crumb" href={urlHome()}>← Todos los certificados</a>
         <p class="kicker">
-          {KIND_LABEL[c.kind]}
+          {kindLabel(c.kind)}
           {c.official && <span> · Organismo externo</span>}
         </p>
         <h1>{c.title}</h1>
@@ -132,8 +125,8 @@ const ldJson = JSON.stringify(ld)
           {c.issued && <span> · {fechaLarga(c.issued)}</span>}
         </p>
         <ul class="chips">
-          <li><span class={`chip ${c.type}`}>{TYPE_LABEL[c.type]}</span></li>
-          <li><span class="chip neutro">{AREA_LABEL[c.area] ?? c.area}</span></li>
+          <li><span class={`chip ${c.type}`}>{typeLabel(c.type)}</span></li>
+          <li><span class="chip neutro">{areaLabel(c.area)}</span></li>
           {horasTxt && <li><span class="chip neutro">{horasTxt}</span></li>}
           {nivelTxt && <li><span class="chip neutro">Nivel: {nivelTxt}</span></li>}
           {idiomaTxt && <li><span class="chip neutro">{idiomaTxt}</span></li>}
@@ -317,7 +310,7 @@ const ldJson = JSON.stringify(ld)
         <dl>
           <dt>Emisor</dt><dd>{c.issuer}</dd>
           <dt>Plataforma</dt><dd>{c.platform}</dd>
-          <dt>Tipo</dt><dd>{KIND_LABEL[c.kind]}</dd>
+          <dt>Tipo</dt><dd>{kindLabel(c.kind)}</dd>
           <dt>Fecha de emisión</dt><dd>{c.issued ? fechaLarga(c.issued) : 'Sin registrar'}</dd>
           {horasTxt && <><dt>Duración</dt><dd>{horasTxt}</dd></>}
           {nivelTxt && <><dt>Nivel</dt><dd>{nivelTxt}</dd></>}
@@ -332,7 +325,7 @@ const ldJson = JSON.stringify(ld)
           ) : c.kind === 'certificacion' ? (
             <><dt>Vigencia</dt><dd>Sin fecha de vencimiento</dd></>
           ) : null}
-          <dt>Área</dt><dd>{AREA_LABEL[c.area] ?? c.area}</dd>
+          <dt>Área</dt><dd>{areaLabel(c.area)}</dd>
         </dl>
         <p class="volver"><a href={urlHome()}>← Volver al listado completo</a></p>
       </aside>

@@ -3,7 +3,7 @@ import Base from '@layouts/Base.astro';
 import { publishedCertificates, selectFeatured } from '@lib/data';
 import { countBy, hoursFloor, techCoverage, timeline, evidence } from '@lib/stats';
 import { urlCert, urlCompetencias, urlPdf, urlThumb } from '@lib/urls';
-import { AREA_LABEL, TYPE_LABEL } from '@lib/labels';
+import { areaLabel, typeLabel, TYPE_LABEL } from '@lib/labels';
 
 const certs = await publishedCertificates();
 const featured = selectFeatured(certs);
@@ -77,7 +77,7 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
                        width="640" height="480" loading="lazy" decoding="async" />
                 </a>
               )}
-              <span class={`chip ${c.type}`}>{TYPE_LABEL[c.type]}</span>
+              <span class={`chip ${c.type}`}>{typeLabel(c.type)}</span>
               <h3><a href={urlCert(c.id)}>{c.title}</a></h3>
               <p class="meta">
                 {c.issuer}{c.issued && ` · ${c.issued.slice(0, 4)}`}
@@ -97,7 +97,7 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
       <div class="bars">
         {areas.map((a) => (
           <div class="bar">
-            <span class="lbl">{AREA_LABEL[a.area] ?? a.area}</span>
+            <span class="lbl">{areaLabel(a.area)}</span>
             <span class="track"><span class="fill" style={`width:${(a.h / maxH) * 100}%`}></span></span>
             <span class="num">{a.h} h</span>
             <span class="num sub">{a.n}</span>
@@ -135,7 +135,7 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
           <span>Área</span>
           <select id="f-area">
             <option value="">todas</option>
-            {areas.map((a) => <option value={a.area}>{AREA_LABEL[a.area] ?? a.area}</option>)}
+            {areas.map((a) => <option value={a.area}>{areaLabel(a.area)}</option>)}
           </select>
         </label>
         <label class="f">
@@ -176,8 +176,8 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
                 data-verif={c.verify_url ? '1' : ''} data-pmi={c.pmi_pdf ? '1' : ''}
                 data-ofi={c.official ? '1' : ''} data-q={heno(c)}>
               <td><a class="tt" href={urlCert(c.id)}>{c.title}</a></td>
-              <td class="dim">{AREA_LABEL[c.area] ?? c.area}</td>
-              <td><span class={`chip sm ${c.type}`}>{TYPE_LABEL[c.type]}</span></td>
+              <td class="dim">{areaLabel(c.area)}</td>
+              <td><span class={`chip sm ${c.type}`}>{typeLabel(c.type)}</span></td>
               <td class="dim">
                 {c.issued?.slice(0, 4) ?? '—'}
                 {c.expires && c.expires < hoy && <span class="exp" title={`Vencio el ${c.expires}`}>vencida</span>}

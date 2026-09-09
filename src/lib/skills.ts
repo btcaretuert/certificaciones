@@ -35,9 +35,10 @@ type Vocab = { competencias: Competencia[]; tecnologias: Record<string, string[]
  */
 const vocab = parse(skillsYaml) as Vocab;
 
-/** Minusculas y sin acentos: 'Comunicación' y 'comunicacion' son la misma etiqueta. */
-export const norm = (s: string) =>
-  (s ?? '').trim().toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
+/** Minusculas y sin acentos: 'Comunicación' y 'comunicacion' son la misma
+ *  etiqueta. Vive en format.ts porque el filtrado del navegador usa la misma. */
+export { normalizar as norm } from './format';
+import { normalizar as norm } from './format';
 
 const indice = vocab.competencias.map((c) => ({
   c,

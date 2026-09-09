@@ -3,6 +3,8 @@ import Base from '@layouts/Base.astro';
 import { publishedCertificates, type PublishedCert } from '@lib/data';
 import { agruparPorCompetencia, type GrupoCompetencia } from '@lib/skills';
 import { hoursFloor } from '@lib/stats';
+import { fmtHoras } from '@lib/format';
+import { areaLabel } from '@lib/labels';
 import { urlCert, urlCompetencias, urlHome } from '@lib/urls';
 
 const certs = await publishedCertificates();
@@ -17,15 +19,6 @@ const usos = new Map<string, number>();
 for (const c of certs) for (const s of c.skills) usos.set(s, (usos.get(s) ?? 0) + 1);
 const etiquetasUnicas = [...usos.values()].filter((n) => n === 1).length;
 
-const AREA_LABEL: Record<string, string> = {
-  'datos-y-analitica': 'Datos y Analítica',
-  'cloud-e-infraestructura': 'Cloud e Infraestructura',
-  'desarrollo-y-herramientas': 'Desarrollo y Herramientas',
-  'liderazgo-y-gestion': 'Liderazgo y Gestión',
-  'comunicacion-y-efectividad': 'Comunicación y Efectividad',
-  'negocio-e-innovacion': 'Negocio e Innovación',
-  'sin-clasificar': 'Sin clasificar',
-};
 
 /**
  * Horas de un area: sobre los certificados DISTINTOS que la respaldan.
@@ -66,7 +59,7 @@ const areas = [...porArea.entries()]
 const maxH = Math.max(1, ...grupos.map((g) => g.horas));
 const maxArea = Math.max(1, ...areas.map((a) => a.horas));
 
-const horasTxt = (h: number) => (Number.isInteger(h) ? String(h) : h.toFixed(1).replace('.', ','));
+
 
 /** Primero lo que pesa; los itinerarios al final, porque no suman horas. */
 function ordenaCerts(lista: PublishedCert[]) {
@@ -118,7 +111,7 @@ function ordenaCerts(lista: PublishedCert[]) {
       <div class="bars">
         {areas.map((a) => (
           <a class="bar" href={`#${a.area}`}>
-            <span class="lbl">{AREA_LABEL[a.area] ?? a.area}</span>
+            <span class="lbl">{areaLabel(a.area)}</span>
             <span class="track"><span class="fill" style={`width:${(a.horas / maxArea) * 100}%`}></span></span>
             <span class="num">{a.horas} h</span>
             <span class="num sub">{a.nCerts}</span>
@@ -133,7 +126,7 @@ function ordenaCerts(lista: PublishedCert[]) {
     {areas.map((a) => (
       <section class="area" id={a.area} aria-labelledby={`h-${a.area}`}>
         <h2 id={`h-${a.area}`}>
-          {AREA_LABEL[a.area] ?? a.area}
+          {areaLabel(a.area)}
           <small>{a.horas} h · {a.nCerts} certificados · {a.comps.length} competencias</small>
         </h2>
         <div class="comps">
@@ -154,7 +147,7 @@ function ordenaCerts(lista: PublishedCert[]) {
                       {c.issuer}{c.issued && ` · ${c.issued.slice(0, 4)}`}
                       {c.kind === 'itinerario'
                         ? <span class="tag" title="Agrupa cursos que ya están en esta misma lista; sus horas no se suman">itinerario</span>
-                        : c.hours !== null && <span class="hrs">{horasTxt(c.hours)} h</span>}
+                        : c.hours !== null && <span class="hrs">{fmtHoras(c.hours)}</span>}
                       {c.expires && (c.expires < hoy
                         ? <span class="tag exp" title={`Venció el ${c.expires}`}>vencida</span>
                         : <span class="tag vig" title={`Vigente hasta el ${c.expires}`}>vigente {c.expires.slice(0, 4)}</span>)}
