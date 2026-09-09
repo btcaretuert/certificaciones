@@ -9,11 +9,12 @@
  *
  * Resumable: progress lives in download_log.jsonl, keyed by card index.
  */
-import { chromium } from '/srv/personales/trabajos/github_pages_certificaciones/node_modules/playwright-core/index.mjs';
+import { fileURLToPath } from 'node:url';
+import { chromium } from 'playwright-core';
 import fs from 'node:fs';
 import path from 'node:path';
 
-const DL='/srv/personales/trabajos/github_pages_certificaciones/certs-src/_reimpresos';
+const DL = fileURLToPath(new URL('../../../certs-src/_reimpresos', import.meta.url));
 const LOG='download_log.jsonl';
 const FROM=parseInt(process.argv[2]||'0',10);
 const TO=parseInt(process.argv[3]||'220',10);

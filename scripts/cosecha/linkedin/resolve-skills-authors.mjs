@@ -1,5 +1,5 @@
 /** Resolves learningApiSkill and learningApiAuthor URNs to human names. */
-import { chromium } from '/srv/personales/trabajos/github_pages_certificaciones/node_modules/playwright-core/index.mjs';
+import { chromium } from 'playwright-core';
 import fs from 'node:fs';
 const rows=[];
 for(const f of ['harvest_courses.jsonl','harvest_paths.jsonl'])

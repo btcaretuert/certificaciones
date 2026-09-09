@@ -1,4 +1,4 @@
-import { chromium } from '/srv/personales/trabajos/github_pages_certificaciones/node_modules/playwright-core/index.mjs';
+import { chromium } from 'playwright-core';
 import fs from 'node:fs';
 const b=await chromium.connectOverCDP('http://127.0.0.1:9333');
 const page=b.contexts().flatMap(c=>c.pages()).find(p=>p.url().includes('my-library'));

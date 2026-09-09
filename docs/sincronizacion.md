@@ -60,7 +60,7 @@ Si el material ya llegó por un medio que perdió los permisos, no hay que volve
 a copiarlo; alcanza con reponerlos:
 
 ```bash
-chmod +x .tools/* scripts/build/*.sh
+chmod +x .tools/* scripts/datos/*.sh
 rm -rf node_modules && npm ci
 ```
 
@@ -77,8 +77,12 @@ sobre cualquiera de ellos hace fallar `audit-repo`.
 Prerequisitos del sistema, en Ubuntu:
 
 ```bash
-sudo apt install git python3-yaml python3-pil poppler-utils
+sudo apt install git poppler-utils     # pdftotext, que no es un paquete de Python
+pip install -r requirements.txt        # PyYAML y Pillow
 ```
+
+Eso último solo hace falta para `scripts/datos/` y `scripts/migracion/`; el
+sitio se construye sin una línea de Python.
 
 Google Chrome aparte: las pruebas de navegador usan `channel: 'chrome'`, el del
 sistema. Playwright no descarga ningún navegador propio, así que sin Chrome

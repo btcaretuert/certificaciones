@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Orquestador de la migracion. Un solo uso, reproducible y auditable.
 
-    python3 scripts/migrate/run.py --pdfs certs-src/_origen [--dry-run]
+    python3 scripts/migracion/run.py --pdfs certs-src/_origen [--dry-run]
 
 Produce:
   src/content/certificates/*.yaml   fichas publicables

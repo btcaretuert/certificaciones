@@ -1,4 +1,4 @@
-import { chromium } from '/srv/personales/trabajos/github_pages_certificaciones/node_modules/playwright-core/index.mjs';
+import { chromium } from 'playwright-core';
 import fs from 'node:fs';
 const OUT='harvest_paths.jsonl';
 const cards=JSON.parse(fs.readFileSync('cards_dom.json','utf8'));

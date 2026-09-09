@@ -2,7 +2,7 @@
  * Harvests LinkedIn Learning course metadata + certificate tokens over CDP.
  * Read-only: it calls GET endpoints the app itself calls. Nothing is published.
  */
-import { chromium } from '/srv/personales/trabajos/github_pages_certificaciones/node_modules/playwright-core/index.mjs';
+import { chromium } from 'playwright-core';
 import fs from 'node:fs';
 const OUT='harvest_courses.jsonl';
 const cards=JSON.parse(fs.readFileSync('cards_dom.json','utf8'));

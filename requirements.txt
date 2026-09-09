@@ -1,0 +1,7 @@
+# Dependencias de los scripts Python de scripts/datos/ y scripts/migracion/.
+# Ninguno participa del build del sitio, que es solo Node.
+#
+# Ademas hace falta el binario `pdftotext`, que no es un paquete de Python:
+# en Debian y Ubuntu viene en poppler-utils.
+PyYAML>=6.0
+Pillow>=10.0

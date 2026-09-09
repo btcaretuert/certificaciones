@@ -12,12 +12,12 @@ Publicar es una acción distinta y explícita que ningún script realiza.
 ## Orden
 
 ```bash
-node scripts/linkedin/expand-history.mjs        # carga las 220 tarjetas
-node scripts/linkedin/read-history-dom.mjs      # -> cards_dom.json
-node scripts/linkedin/harvest-courses.mjs       # -> harvest_courses.jsonl
-node scripts/linkedin/harvest-paths.mjs         # -> harvest_paths.jsonl
-node scripts/linkedin/resolve-skills-authors.mjs
-node scripts/linkedin/download-certificates.mjs 0 220
+node scripts/cosecha/linkedin/expand-history.mjs        # carga las 220 tarjetas
+node scripts/cosecha/linkedin/read-history-dom.mjs      # -> cards_dom.json
+node scripts/cosecha/linkedin/harvest-courses.mjs       # -> harvest_courses.jsonl
+node scripts/cosecha/linkedin/harvest-paths.mjs         # -> harvest_paths.jsonl
+node scripts/cosecha/linkedin/resolve-skills-authors.mjs
+node scripts/cosecha/linkedin/download-certificates.mjs 0 220
 npm run map                                     # consolida todo
 ```
 

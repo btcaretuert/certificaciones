@@ -1,7 +1,7 @@
 /** Expands the learning history to its full length.
  *  The "Show more" control only renders once the list bottom is on screen, and
  *  it is not exposed with the button role, so it is clicked in page context. */
-import { chromium } from '/srv/personales/trabajos/github_pages_certificaciones/node_modules/playwright-core/index.mjs';
+import { chromium } from 'playwright-core';
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 const b=await chromium.connectOverCDP('http://127.0.0.1:9333');
 const page=b.contexts().flatMap(c=>c.pages()).find(p=>p.url().includes('my-library'));
