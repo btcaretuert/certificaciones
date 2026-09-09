@@ -184,7 +184,10 @@ export const strictCertificate = base;
  * publicado — exactamente lo contrario de lo que se pidio. Por eso todo
  * fallback apunta a la direccion segura: `private`.
  */
-const lenient = base
+// Se exporta para que tests/unit/degradacion.test.ts pueda ejercitarlo con los
+// fixtures: una regla que decide que se publica y que se retiene no puede
+// depender de una verificacion manual hecha una vez.
+export const lenient = base
   .extend({
     visibility: z.enum(VISIBILITY).catch('private'),
     official: z.boolean().catch(false),

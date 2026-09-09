@@ -3,37 +3,9 @@ import Base from '../../layouts/Base.astro';
 import { publishedCertificates } from '../../lib/data';
 import { urlHome, urlCert, urlPdf, urlThumb } from '../../lib/urls';
 import { AREA_LABEL, TYPE_LABEL, KIND_LABEL } from '../../lib/labels';
+import { dimWebp } from '../../lib/webp';
 
 export async function getStaticPaths() {
-  /**
-   * Alto REAL de la miniatura, leido de la cabecera WebP en build.
-   * 217 de 253 son 640x495, pero hay 7 verticales (A4 y Letter) y varias de
-   * 640x476. Un alto fijo reserva mal el espacio y la pagina salta al cargar.
-   * Se lee aqui y no en el render porque getStaticPaths corre una sola vez.
-   */
-  const { readFileSync } = await import('node:fs');
-
-  function dimWebp(slug: string): { w: number; h: number } | null {
-    try {
-      const b = readFileSync(`certs-src/_thumbs/${slug}.webp`);
-      const fmt = b.toString('latin1', 12, 16);
-      if (fmt === 'VP8 ') {
-        const i = b.indexOf(Buffer.from([0x9d, 0x01, 0x2a]), 20);
-        if (i < 0) return null;
-        // 14 bits utiles: los 2 altos son la escala, no la dimension
-        return { w: b.readUInt16LE(i + 3) & 0x3fff, h: b.readUInt16LE(i + 5) & 0x3fff };
-      }
-      if (fmt === 'VP8L') {
-        const v = b.readUInt32LE(21);
-        return { w: (v & 0x3fff) + 1, h: ((v >>> 14) & 0x3fff) + 1 };
-      }
-      if (fmt === 'VP8X') return { w: b.readUIntLE(24, 3) + 1, h: b.readUIntLE(27, 3) + 1 };
-    } catch {
-      // miniatura ausente en disco: la pagina se emite sin vista previa
-    }
-    return null;
-  }
-
   const certs = await publishedCertificates();
   return certs.map((c) => ({
     params: { slug: c.id },

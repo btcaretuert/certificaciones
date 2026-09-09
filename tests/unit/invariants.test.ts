@@ -12,6 +12,7 @@ import { parse } from 'yaml';
 import { hoursFloor } from '../../src/lib/stats';
 import { agruparPorCompetencia, competenciasDe, mapLabel } from '../../src/lib/skills';
 import { selectPublished, type Cert, type PublishedCert } from '../../src/lib/data';
+import config from '../../astro.config.mjs';
 
 function archivos(dir: string, ext: string[], acc: string[] = []): string[] {
   for (const n of readdirSync(dir)) {
@@ -67,12 +68,59 @@ describe('invariante de curaduria', () => {
     expect(culpables).toEqual([]);
   });
 
-  it('ninguna pagina construye rutas de activos a mano', () => {
+  it('ningun archivo de src construye rutas de activos a mano', () => {
     // Si `base` cambia (renombrar el repo, dominio propio), una ruta escrita a
     // mano queda rota en silencio. Para eso estan los helpers de urls.ts.
-    const culpables = archivos(join('src', 'pages'), ['.astro'])
+    //
+    // Mira `fuentes`, es decir TODO src, y no solo src/pages: al extraer el
+    // marcado a src/components/ una ruta escrita a mano ahi habria quedado
+    // fuera del alcance de esta regla, y la prueba habria seguido en verde sin
+    // comprobar nada. El unico /certificaciones que queda en src vive en un
+    // comentario de urls.ts y no lleva comilla, asi que no da positivo.
+    const culpables = fuentes
       .filter((f) => /['"`]\/certificaciones\//.test(readFileSync(f, 'utf8')));
     expect(culpables).toEqual([]);
+  });
+});
+
+/**
+ * Coherencia del `base` fuera de src/.
+ *
+ * `astro.config.mjs` deriva `base` de GH_REPO, y los helpers de urls.ts lo leen
+ * de BASE_URL, asi que el sitio se adapta solo si el repo se renombra. Estos
+ * tres archivos NO participan de ese mecanismo: llevan la ruta escrita entera y
+ * nada los obligaba a seguir al resto. Un renombre los dejaria apuntando al
+ * repositorio viejo —el sitemap a una URL inexistente, el panel guardando los
+ * PDF en una carpeta que el sitio no sirve— sin que ninguna prueba se quejara.
+ *
+ * El valor esperado se importa de la configuracion en vez de escribirse aqui:
+ * una copia mas del literal seria exactamente el problema que la prueba busca.
+ */
+describe('el base escrito a mano sigue al de la configuracion', () => {
+  const base = config.base as string;
+  const site = (config.site as string).replace(/\/$/, '');
+
+  it('el sitemap de robots.txt apunta a este sitio', () => {
+    const robots = readFileSync(join('public', 'robots.txt'), 'utf8');
+    const linea = robots.match(/^Sitemap:\s*(\S+)$/m);
+    expect(linea, 'robots.txt deberia declarar un Sitemap').not.toBeNull();
+    expect(linea![1]).toBe(`${site}${base}/sitemap-index.xml`);
+  });
+
+  it('el panel guarda los PDF donde el sitio los sirve', () => {
+    // public_folder es la ruta con la que el panel escribe `pdf:` en el YAML.
+    // Si deja de coincidir con base, las fichas nuevas nacen con enlaces rotos.
+    const cms = readFileSync(join('public', 'admin', 'config.yml'), 'utf8');
+    const pf = cms.match(/^public_folder:\s*(\S+)$/m);
+    expect(pf, 'config.yml deberia declarar public_folder').not.toBeNull();
+    expect(pf![1]).toBe(`${base}/certs`);
+  });
+
+  it('el backend del panel nombra este mismo repositorio', () => {
+    const cms = readFileSync(join('public', 'admin', 'config.yml'), 'utf8');
+    const repo = cms.match(/^\s*repo:\s*(\S+)$/m);
+    expect(repo, 'config.yml deberia declarar repo').not.toBeNull();
+    expect(repo![1].split('/')[1]).toBe(base.replace(/^\//, ''));
   });
 });
 
