@@ -1,0 +1,19 @@
+# Sin `Disallow` de ninguna ruta.
+#
+# El panel no llega al artefacto publicado (scripts/strip-admin.mjs lo retira
+# y audit-dist.mjs falla si reaparece), asi que no hay nada que excluir:
+# un Disallow: /admin/ solo serviria para anunciar que ahi hubo un panel.
+#
+# Por el mismo motivo no se listan las fichas retenidas. Un Disallow es un
+# directorio publico de lo que se quiere esconder; esas fichas ni se versionan
+# y sus URLs devuelven el 404 generico.
+#
+# Nota de hosting: bajo project pages este archivo queda en
+# btcaretuert.github.io/certificaciones/robots.txt, y los rastreadores solo
+# leen el de la raiz del host. Hoy no tiene efecto; lo tendria con dominio
+# propio.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://btcaretuert.github.io/certificaciones/sitemap-index.xml
