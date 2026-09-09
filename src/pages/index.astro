@@ -98,7 +98,7 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
         <h2><Icono nombre="estrella" px={17} />Destacados</h2>
         <div class="grid feat">
           {featured.map((c) => (
-            <article class="card hi" data-tipo={c.type}>
+            <article class="card hi">
               {c.thumb && (
                 <a class="shot" href={urlCert(c.id)}>
                   <img src={urlThumb(c.thumb)} alt={`Certificado de ${c.title}`}
@@ -310,13 +310,7 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
     section { margin-bottom: 42px; }
     .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); }
     .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 15px; overflow: hidden; }
-    /* Riel de taxonomía: replica lo que .ev.emisor / .ev.propio / .ev.pmi ya
-       hacen en la ficha, donde el borde izquierdo codifica el origen. Deja ver
-       la mezcla técnico/gestión/transversal sin leer un solo chip. */
-    .card.hi { border-left-width: 3px; transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease); }
-    .card.hi[data-tipo='tecnico'] { border-left-color: var(--tec); }
-    .card.hi[data-tipo='gestion'] { border-left-color: var(--ges); }
-    .card.hi[data-tipo='transversal'] { border-left-color: var(--tra); }
+    .card.hi { transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease); }
     .card.hi:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); }
     .card h3 { font-size: 15px; margin: 8px 0 5px; }
     .meta { margin: 0; color: var(--muted); font-size: 13px; }
@@ -326,7 +320,7 @@ const maxYear = Math.max(1, ...years.map(([, n]) => n));
     .vig { display: inline-block; margin-left: 6px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); border: 1px solid currentColor; border-radius: 4px; padding: 1px 4px; }
     .years { display: flex; align-items: flex-end; gap: 5px; height: 130px; padding-top: 10px; }
     .yr { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; }
-    .yb { width: 100%; background: var(--data); border-radius: var(--radius-sm) var(--radius-sm) 0 0; min-height: 3px; }
+    .yb { width: 100%; background: var(--accent); border-radius: var(--radius-sm) var(--radius-sm) 0 0; min-height: 3px; }
     .yl { font-size: 11px; color: var(--muted); margin-top: 5px; }
     .yn { font-size: 10px; color: var(--muted); }
     .note { color: var(--muted); font-size: 12.5px; margin-top: 10px; }
