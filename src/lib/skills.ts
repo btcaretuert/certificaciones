@@ -10,9 +10,9 @@
  * no en los YAML: no se pierde el dato original y reagrupar no obliga a
  * reescribir 252 fichas.
  */
-import { readFileSync } from 'node:fs';
 import { parse } from 'yaml';
 import type { PublishedCert } from './data';
+import skillsYaml from '../data/skills.yaml?raw';
 
 export type Competencia = {
   slug: string;
@@ -25,7 +25,15 @@ export type Competencia = {
 
 type Vocab = { competencias: Competencia[]; tecnologias: Record<string, string[]> };
 
-const vocab = parse(readFileSync('src/data/skills.yaml', 'utf8')) as Vocab;
+/**
+ * El vocabulario se importa como texto, no se lee del disco.
+ *
+ * `readFileSync('src/data/skills.yaml')` resolvia contra el directorio DESDE EL
+ * QUE se lanza el proceso, no contra el proyecto: funcionaba solo porque todo
+ * se corre desde la raiz. Con `?raw` lo resuelve el bundler contra este
+ * archivo, queda incrustado en build y deja de haber I/O en tiempo de ejecucion.
+ */
+const vocab = parse(skillsYaml) as Vocab;
 
 /** Minusculas y sin acentos: 'Comunicación' y 'comunicacion' son la misma etiqueta. */
 export const norm = (s: string) =>

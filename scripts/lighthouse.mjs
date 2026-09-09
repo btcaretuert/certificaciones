@@ -15,10 +15,11 @@ import * as chromeLauncher from 'chrome-launcher';
 import { spawn } from 'node:child_process';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { BASE_PATH } from './lib/rutas.mjs';
 
 const RAIZ = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const PUERTO = Number(process.env.PORT ?? 4322);
-const BASE = process.env.SITE_BASE ?? `http://localhost:${PUERTO}/certificaciones`;
+const BASE = process.env.SITE_BASE ?? `http://localhost:${PUERTO}${BASE_PATH}`;
 
 /**
  * El servidor lo levanta esta misma corrida, salvo que se apunte a otro con

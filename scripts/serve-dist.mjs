@@ -26,11 +26,14 @@ import { brotliCompress, gzip } from 'node:zlib';
 import { readFile, stat } from 'node:fs/promises';
 import { join, resolve, extname, dirname, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { BASE_PATH } from './lib/rutas.mjs';
 
 const RAIZ = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 // resolve y no join: DIST_DIR puede ser absoluto y join lo colgaria de RAIZ.
 const DIST = resolve(RAIZ, process.env.DIST_DIR ?? 'dist');
-const BASE = process.env.SITE_BASE_PATH ?? '/certificaciones';
+// SITE_BASE_PATH sigue existiendo para apuntar a mano; el valor por omision ya
+// no es un literal, sale del mismo lugar del que el build saca su `base`.
+const BASE = process.env.SITE_BASE_PATH ?? BASE_PATH;
 const PUERTO = Number(process.env.PORT ?? 4322);
 
 const comprimir = { br: promisify(brotliCompress), gzip: promisify(gzip) };

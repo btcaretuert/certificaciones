@@ -14,8 +14,22 @@ import { readFileSync } from 'node:fs';
 
 export type Dim = { w: number; h: number };
 
-/** Directorio de las miniaturas fuente. No esta en public/: los activos se
- *  emiten ficha por ficha en un paso posterior al build. */
+/**
+ * Directorio de las miniaturas fuente. No esta en public/: los activos se
+ * emiten ficha por ficha en un paso posterior al build.
+ *
+ * Es relativo al directorio de trabajo A PROPOSITO, y no resuelto desde este
+ * archivo con import.meta.url: se intento y NO funciona. En el build, Astro
+ * empaqueta este modulo y import.meta.url deja de apuntar a src/, asi que las
+ * 252 lecturas fallaban a la vez. Como el catch de abajo devuelve null, las
+ * paginas se emitian igual —254, auditores en verde, cero errores— con la
+ * relacion de aspecto por omision en las 36 fichas que no miden 495. Lo
+ * detecto la comparacion del HTML emitido, no el build.
+ *
+ * Astro lanza el build con el directorio de trabajo en la raiz del proyecto,
+ * asi que esta ruta es correcta ahi. La prueba de tests/e2e/sitio.spec.ts que
+ * exige varios altos distintos en el HTML es lo que avisa si deja de serlo.
+ */
 export const THUMBS_DIR = 'certs-src/_thumbs';
 
 export function dimWebp(slug: string): Dim | null {

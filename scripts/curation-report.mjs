@@ -8,11 +8,10 @@
  * `curation_note` de las fichas retenidas, que git ignora.
  */
 import { readdir, readFile } from 'node:fs/promises';
-import { join, resolve, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { join } from 'node:path';
 import { parse } from 'yaml';
+import { FICHAS, RETENIDAS } from './lib/rutas.mjs';
 
-const RAIZ = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const CI = process.env.CI === 'true';
 
 async function cargar(dir) {
@@ -28,8 +27,8 @@ async function cargar(dir) {
   })));
 }
 
-const publicas = await cargar(join(RAIZ, 'src/content/certificates'));
-const privadas = await cargar(join(RAIZ, 'private/certificates'));
+const publicas = await cargar(FICHAS);
+const privadas = await cargar(RETENIDAS);
 
 const enRevision = publicas.filter((f) => f.d.visibility === 'review');
 const marcadas = publicas.filter((f) => f.d.curation_flag);

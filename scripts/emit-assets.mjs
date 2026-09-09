@@ -14,11 +14,10 @@ import { readFile, readdir, mkdir, copyFile, stat, open } from 'node:fs/promises
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
+import { FICHAS, THUMBS, CERTS_SRC } from './lib/rutas.mjs';
 
 const RAIZ = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const FICHAS = join(RAIZ, 'src/content/certificates');
-const THUMBS = join(RAIZ, 'certs-src/_thumbs');
-const FUENTES = join(RAIZ, 'certs-src');
+const FUENTES = CERTS_SRC;
 const CI = process.env.CI === 'true';
 
 /**

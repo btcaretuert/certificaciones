@@ -4,12 +4,15 @@ import sitemap from '@astrojs/sitemap';
 
 // Verificado por SSH contra github.com el 2026-09-07: la cuenta es btcaretuert.
 // URL publica resultante: https://btcaretuert.github.io/certificaciones/
-const GH_USER = process.env.GH_USER ?? 'btcaretuert';
-const REPO = process.env.GH_REPO ?? 'certificaciones';
+//
+// El valor sale de scripts/lib/rutas.mjs y no de aqui, para que el servidor de
+// pruebas, Lighthouse y la configuracion de Playwright lean exactamente el
+// mismo base que el build. Antes cada uno lo llevaba escrito entero.
+import { BASE_PATH, SITE_URL } from './scripts/lib/rutas.mjs';
 
 export default defineConfig({
-  site: process.env.SITE_URL ?? `https://${GH_USER}.github.io`,
-  base: `/${REPO}`,
+  site: SITE_URL,
+  base: BASE_PATH,
   trailingSlash: 'ignore',
   output: 'static',
   build: { format: 'directory' },

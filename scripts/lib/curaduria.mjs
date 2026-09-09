@@ -11,12 +11,12 @@ import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
 
-export const RAIZ = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
-export const PUBLICAS = join(RAIZ, 'src/content/certificates');
-// Sobreescribible solo para poder probar el caso "no hay lista de retenidos",
-// que es como corre en cualquier clon. No abre un agujero: sin lista, los
-// auditores declaran alcance reducido en vez de informar "sin fugas".
-export const PRIVADAS = process.env.PRIVADAS_DIR ?? join(RAIZ, 'private/certificates');
+// Las rutas viven en rutas.mjs; aqui solo se les da el nombre con el que las
+// conocen los dos auditores, para no tocar sus llamadas.
+// Import + export y no `export ... from`: la forma corta re-exporta sin crear
+// un binding local, y este modulo usa PUBLICAS y PRIVADAS mas abajo.
+import { RAIZ, FICHAS as PUBLICAS, RETENIDAS as PRIVADAS } from './rutas.mjs';
+export { RAIZ, PUBLICAS, PRIVADAS };
 export const CI = process.env.CI === 'true';
 
 export const escapar = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

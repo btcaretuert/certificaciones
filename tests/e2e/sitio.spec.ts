@@ -154,3 +154,32 @@ test.describe('navegacion', () => {
     expect(['f-area', 'f-tipo', 'f-anio', 'f-verif', 'f-pmi', 'f-ofi', 'limpiar']).toContain(id);
   });
 });
+
+test.describe('dimensiones de las miniaturas', () => {
+  /**
+   * Las miniaturas no son todas del mismo alto: 217 miden 640x495, pero hay 7
+   * verticales y varias de 640x476. El alto se lee de la cabecera WebP en
+   * build, y esa lectura falla en silencio: `dimWebp` devuelve null ante
+   * cualquier problema y la pagina cae al alto por omision.
+   *
+   * Paso de verdad: al resolver el directorio con import.meta.url en vez de
+   * relativo, Astro empaqueto el modulo, las 252 lecturas fallaron a la vez y
+   * 36 fichas pasaron a declarar 495. El build siguio dando 254 paginas y los
+   * dos auditores en verde. Ninguna prueba unitaria lo veia, porque en vitest
+   * el directorio de trabajo si es la raiz.
+   *
+   * Esta mira el HTML emitido, que es donde el fallo se manifiesta.
+   */
+  test.skip(SIN_ACTIVOS, 'necesita certs-src/, que no se versiona');
+
+  test('el alto sale de cada archivo, no de un valor por omision', async ({ page }) => {
+    const altos = new Set<string>();
+    for (const slug of ['apache-airflow-the-hands-on-guide', 'scrum-master', 'basics-of-deep-learning']) {
+      await page.goto(`c/${slug}/`);
+      const alto = await page.locator('img[width="640"]').first().getAttribute('height');
+      if (alto) altos.add(alto);
+    }
+    // Si la lectura se rompiera, las tres declararian el mismo alto por omision.
+    expect(altos.size, `altos leidos: ${[...altos].join(', ')}`).toBeGreaterThan(1);
+  });
+});

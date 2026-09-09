@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import { BASE_PATH } from './scripts/lib/rutas.mjs';
 
 /**
  * Las pruebas de navegador corren contra `astro preview`, no contra el
@@ -14,7 +15,9 @@ import { defineConfig, devices } from '@playwright/test';
  * runners de GitHub ya lo traen.
  */
 
-const BASE = '/certificaciones';
+// Sale de rutas.mjs, igual que el `base` del build: si el repositorio se
+// renombra, las pruebas siguen apuntando al sitio que se acaba de construir.
+const BASE = BASE_PATH;
 // Puerto propio, distinto del 4321 de `astro dev`. Con el mismo puerto,
 // `reuseExistingServer` reutiliza un dev server que ya este corriendo y las
 // pruebas miden HMR, dev-toolbar y mas de 1 MB de JavaScript de desarrollo en
