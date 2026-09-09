@@ -71,21 +71,47 @@ const heno = (c: (typeof certs)[number]) =>
   [c.title, c.issuer, c.platform, ...c.tech, ...c.skills.slice(0, 8)]
     .join(' ').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
 const ev = evidence(certs);
-const maxYear = Math.max(1, ...years.map(([, n]) => n));
-/** El año de mas actividad se pinta con el verde de estado en vez del azul.
- *  Es el unico dato del grafico que se lee sin comparar alturas. */
-const anioPico = years.reduce((a, b) => (b[1] > a[1] ? b : a), years[0] ?? [0, 0])[0];
+
 /**
- * Alto maximo de una columna del histograma, en px.
+ * El eje temporal va en HORAS, no en numero de certificados.
  *
- * En px y no en porcentaje porque el conteo va PEGADO encima de su barra, no en
- * una fila propia: en una banda de 110px con el numero arriba del todo, el «1»
- * de 2013 quedaba a 110px de una barra de 3px y no se leia como su etiqueta.
- * Con el conteo dentro de la columna hace falta reservarle sitio, y eso es una
- * resta de pixeles —110 de banda menos 16 de cifra— que un porcentaje no sabe
- * hacer. Los dos valores viven aqui y en la regla .col, que es donde se ven.
+ * Por conteo, 2019 son 151 credenciales y el segundo año mas alto son 40: el
+ * pico es 3,8x y todo lo demas se aplasta contra el suelo. 2023 —un
+ * certificado— se dibujaba a 2px, indistinguible de un año sin actividad.
+ *
+ * Pero ese pico es un artefacto de la MEDIDA, no del contenido: los 151 de
+ * 2019 son cursos de 1,4 h de media y los 5 de 2026 son de 11,4 h. Medido en
+ * horas el mismo eje da 186 contra 107, o sea 1,7x, y las once barras se leen
+ * sin ninguna tecnica de outlier: sin eje partido, sin escala logaritmica, sin
+ * acumulado y sin agrupar los años viejos en un cubo.
+ *
+ * Es ademas la medida que el resto de la pagina ya usa y argumenta: la seccion
+ * de areas ordena por horas y explica por que. Este grafico era el unico sitio
+ * donde el argumento no se aplicaba.
+ *
+ * El caso que las horas NO cubren: 2018 registra 0 h con dos credenciales de
+ * organismo externo, porque son examenes y no cursos con duracion. Un grafico
+ * de horas lo dibujaria vacio, que es lo contrario de la verdad, asi que los
+ * años con credencial de organismo externo llevan marca propia.
+ */
+const maxHoras = Math.max(1, ...years.map((y) => y.hours));
+/* Sin realce del año mas alto, a proposito: existia para hacer legible un pico
+   que en horas ya no domina, y el unico color libre era el verde, que aqui ya
+   significa "organismo externo". Un color con dos sentidos en el mismo grafico
+   no es un realce, es una ambiguedad. */
+const totalOficiales = years.reduce((s, y) => s + y.official, 0);
+/** Años con credencial pero sin horas registradas: el pie tiene que decirlo. */
+const sinHoras = years.filter((y) => y.n > 0 && y.hours === 0);
+/**
+ * Alto maximo de una barra, en px.
+ *
+ * En px y no en porcentaje porque la cifra va PEGADA encima de su barra, no en
+ * una fila propia: hace falta restarle su sitio a la banda, y eso es una resta
+ * de pixeles —110 de banda menos 16 de cifra— que un porcentaje no sabe hacer.
+ * Los dos valores viven aqui y en la regla .col, que es donde se ven.
  */
 const ALTO_BARRA = 94;
+
 const pctDoc = Math.round((ev.withPdf / Math.max(1, certs.length)) * 100);
 ---
 <Base title="Alejandro Retuert — Certificaciones">
@@ -183,23 +209,29 @@ const pctDoc = Math.round((ev.withPdf / Math.max(1, certs.length)) * 100);
         </div>
 
         <div class="panel">
-          <p class="panel-h">Cadencia por año <span>los años sin actividad se dibujan igual</span></p>
+          <p class="panel-h">Horas por año <span>horas de contenido, no número de cursos</span></p>
           <div class="years">
-            {years.map(([y, n]) => (
-              <div class="yr" title={`${y}: ${n} certificados`}>
+            {years.map((y) => (
+              <div class="yr" title={`${y.year}: ${y.hours} h · ${y.n} certificados${y.official > 0 ? ` · ${y.official} de organismo externo` : ''}`}>
                 <span class="col">
-                  {n > 0 && <span class:list={['yn', { pico: y === anioPico }]}>{n}</span>}
-                  <span class:list={['yb', { pico: y === anioPico }]}
-                        style={`height:${Math.max(n > 0 ? 3 : 0, (n / maxYear) * ALTO_BARRA)}px`}></span>
+                  {y.official > 0 && <span class="ofi">{y.official}</span>}
+                  {y.hours > 0 && <span class="yn">{y.hours}</span>}
+                  <span class="yb" style={`height:${(y.hours / maxHoras) * ALTO_BARRA}px`}></span>
                 </span>
-                <span class="yl">{String(y).slice(2)}</span>
+                <span class="yl">{String(y.year).slice(2)}</span>
               </div>
             ))}
           </div>
           <p class="pie">
-            {undated > 0 && <>{undated} certificados sin fecha registrada, fuera del gráfico. </>}
-            Un año sin certificados se dibuja como columna vacía: el hueco es parte de lo que el
-            gráfico dice.
+            <span class="leyenda"><b class="ofi">n</b> credenciales de organismo externo emitidas ese año: {totalOficiales} en total.</span>
+            {sinHoras.length > 0 && (
+              <>
+                {sinHoras.map((y) => y.year).join(' y ')} no registra horas porque
+                {' '}{sinHoras.length === 1 && sinHoras[0].n === 1 ? 'su credencial es un examen' : 'sus credenciales son exámenes'},
+                no cursos con duración: la barra queda a cero y la marca es lo que hay que leer.
+              </>
+            )}
+            {undated > 0 && <> {undated} certificados sin fecha registrada, fuera del gráfico.</>}
           </p>
         </div>
       </div>
@@ -277,11 +309,13 @@ const pctDoc = Math.round((ev.withPdf / Math.max(1, certs.length)) * 100);
                 <td class="c-tit"><a class="tt" href={urlCert(c.id)}>{c.title}</a></td>
                 <td class="c-area dim">{areaLabel(c.area)}</td>
                 <td class="c-tipo"><Chip variante={c.type} sm>{typeLabel(c.type)}</Chip></td>
-                <td class="c-anio">
-                  <span class="anio">{c.issued?.slice(0, 4) ?? '—'}</span>
-                  {c.expires && c.expires < hoy && <span class="estado exp" title={`Venció el ${c.expires}`}>vencida</span>}
-                </td>
+                <td class="c-anio"><span class="anio">{c.issued?.slice(0, 4) ?? '—'}</span></td>
                 <td class="c-ev">
+                  {/* El estado de vigencia va aqui y no junto al año: la columna
+                      del año mide 9% y «vencida» se iba a una segunda linea, con
+                      lo que esa fila quedaba mas alta que las otras 251 y rompia
+                      el ritmo de la tabla. Aqui cabe en la misma linea. */}
+                  {c.expires && c.expires < hoy && <span class="estado exp" title={`Venció el ${c.expires}`}>vencida</span>}
                   {c.pdf
                     ? <a class="btn-doc" href={urlPdf(c.pdf)} target="_blank" rel="noopener noreferrer">PDF</a>
                     : <span class="dim">—</span>}
@@ -435,18 +469,23 @@ const pctDoc = Math.round((ev.withPdf / Math.max(1, certs.length)) * 100);
     .pie { margin-top: 14px; font-size: 11.5px; line-height: 1.5; color: var(--dim); font-family: var(--mono); }
     .techs.big { line-height: 1.5; }
 
-    /* Histograma con base alineada y conteo pegado a su columna.
-       La banda de 110px la fija .col y el alto util de la barra sale de
-       ALTO_BARRA en el frontmatter: los 16px de diferencia son el sitio del
-       conteo, que se apoya sobre la barra en vez de flotar en una fila comun. */
+    /* Barras de horas, base alineada y cifra pegada a su columna. La banda de
+       110px la fija .col y el alto util sale de ALTO_BARRA en el frontmatter:
+       los 16px de diferencia son el sitio de la cifra, que se apoya sobre la
+       barra en vez de flotar en una fila comun.
+       Sin alto minimo: una barra de 0 h tiene que verse como 0. El año que
+       tiene credencial pero no horas lo dice su marca, no un muñon inventado. */
     .years { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 5px; padding-top: 8px; border-bottom: 1px solid var(--line); }
-    .yr { display: grid; grid-template-rows: 110px auto; justify-items: center; }
-    .col { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; width: 100%; height: 110px; }
-    .yb { width: 100%; background: var(--accent); border-radius: 2px 2px 0 0; opacity: .85; }
-    .yb.pico { background: var(--ok); opacity: 1; }
+    .yr { display: grid; grid-template-rows: 128px auto; justify-items: center; }
+    .col { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; width: 100%; height: 128px; }
+    .yb { width: 100%; background: var(--accent); border-radius: 2px 2px 0 0; }
     .yn { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-bottom: 3px; }
-    .yn.pico { color: var(--ok); }
+    /* Marca de credencial de organismo externo. Va encima de la cifra de horas
+       porque en 2018 la barra mide 0 y es lo unico que queda por leer. */
+    .ofi { display: flex; align-items: center; justify-content: center; width: 15px; height: 15px; margin-bottom: 4px; border-radius: 50%; background: var(--ok-soft); border: 1px solid var(--ok-borde); color: var(--ok); font-family: var(--mono); font-size: 9.5px; font-weight: 600; }
     .yl { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-top: 6px; }
+    .leyenda { display: inline-flex; align-items: center; gap: 6px; margin-right: 5px; }
+    .leyenda .ofi { margin: 0; }
 
     /* ── FILTROS ──────────────────────────────────────────────────────────── */
     .filtros { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px 16px; margin: 0 0 14px; padding: 14px 16px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); }
@@ -508,6 +547,7 @@ const pctDoc = Math.round((ev.withPdf / Math.max(1, certs.length)) * 100);
     .c-anio { width: 9%; }
     .c-ev { width: 17%; text-align: right; white-space: nowrap; }
     .c-ev .btn-doc + .btn-doc, .c-ev .btn-doc + .dim { margin-left: 5px; }
+    .c-ev .estado { margin-right: 8px; font-size: 10.5px; vertical-align: middle; }
     .btn-doc.ver { color: var(--accent); }
     /* --dim (#7d8590) NO sirve aqui: sobre la franja alterna da 4.44 y sobre el
        realce 4.17, los dos bajo el minimo AA. --muted da 5.38 y 5.06. */
@@ -517,7 +557,6 @@ const pctDoc = Math.round((ev.withPdf / Math.max(1, certs.length)) * 100);
     /* El año en monoespaciada: cuatro cifras de ancho fijo se leen en columna,
        que es justo lo que se hace al recorrer 252 filas ordenadas por fecha. */
     .anio { font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
-    .c-anio .estado { margin-left: 6px; font-size: 10px; }
     /* Hermano general, no adyacente. Entre el formulario y la tabla hay un <p>
        —la nota del PMI, que se emite siempre porque hay 68 cursos con
        acreditacion— asi que `.filtros + table` no encontraba nada y el aviso de

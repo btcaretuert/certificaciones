@@ -42,30 +42,55 @@ export function techCoverage(certs: PublishedCert[]) {
     .sort((a, b) => b.weight - a.weight || b.n - a.n || (a.tech < b.tech ? -1 : 1));
 }
 
+/** Una fila del eje temporal. `hours` excluye itinerarios, igual que el total
+ *  del sitio: un itinerario agrupa cursos que ya estan contados en su año. */
+export type YearRow = {
+  year: number;
+  n: number;
+  hours: number;
+  /** Credenciales de organismo externo emitidas ese año. */
+  official: number;
+};
+
 /**
  * Actividad por año, con los años vacios incluidos.
  *
- * Devolver solo los años con certificados convierte el histograma en una
- * mentira de eje: entre 2014 y 2018 no hubo formacion registrada, y omitir los
- * tres años intermedios los dibujaba pegados, como si 2014 y 2018 fueran
+ * Devolver solo los años con certificados convierte el grafico en una mentira
+ * de eje: entre 2014 y 2018 no hubo formacion registrada, y omitir los tres
+ * años intermedios los dibujaba pegados, como si 2014 y 2018 fueran
  * consecutivos. En un grafico de actividad el hueco ES el dato.
  *
  * El relleno se limita al rango observado —del primer año al ultimo— y no toca
- * ningun conteo: la suma de `years` sigue siendo certs.length menos `undated`.
+ * ningun conteo: la suma de `n` sigue siendo certs.length menos `undated`.
+ *
+ * Devuelve las HORAS ademas del conteo porque el conteo solo no es comparable
+ * entre años: 2019 son 151 cursos de 1,4 h de media y 2026 son 5 de 11,4 h.
+ * Contarlos como unidades equivalentes fabrica un pico que no existe en el
+ * contenido. Quien dibuja decide la medida; aqui se devuelven las dos.
  */
 export function timeline(certs: PublishedCert[]) {
-  const years = new Map<number, number>();
+  const years = new Map<number, YearRow>();
   let undated = 0;
+  const fila = (y: number) => {
+    const r = years.get(y) ?? { year: y, n: 0, hours: 0, official: 0 };
+    years.set(y, r);
+    return r;
+  };
   for (const c of certs) {
     if (!c.issued) { undated++; continue; }
-    const y = Number(c.issued.slice(0, 4));
-    years.set(y, (years.get(y) ?? 0) + 1);
+    const r = fila(Number(c.issued.slice(0, 4)));
+    r.n++;
+    if (c.kind !== 'itinerario') r.hours += c.hours ?? 0;
+    if (c.official) r.official++;
   }
-  if (years.size === 0) return { years: [] as [number, number][], undated };
+  if (years.size === 0) return { years: [] as YearRow[], undated };
   const desde = Math.min(...years.keys());
   const hasta = Math.max(...years.keys());
-  const sorted: [number, number][] = [];
-  for (let y = desde; y <= hasta; y++) sorted.push([y, years.get(y) ?? 0]);
+  const sorted: YearRow[] = [];
+  for (let y = desde; y <= hasta; y++) {
+    const r = fila(y);
+    sorted.push({ ...r, hours: Math.round(r.hours) });
+  }
   return { years: sorted, undated };
 }
 
