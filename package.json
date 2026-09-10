@@ -27,6 +27,7 @@
     "test:e2e": "playwright test",
     "test:unit": "node scripts/ensure-curation.mjs && vitest run --project unit",
     "thumbs": "python3 scripts/datos/thumbs.py",
+    "og": "node scripts/og-card.mjs",
     "test:perf": "node scripts/lighthouse.mjs",
     "panel": "npm run prebuild && node scripts/panel-server.mjs",
     "audit:repo": "node scripts/audit-repo.mjs",

@@ -5,7 +5,7 @@ import Icono from '@components/Icono.astro';
 import { publishedCertificates, selectFeatured } from '@lib/data';
 import { dimWebp } from '@lib/webp';
 import { countBy, hoursFloor, techCoverage, timeline, evidence } from '@lib/stats';
-import { urlCert, urlCompetencias, urlPdf, urlThumb } from '@lib/urls';
+import { urlAsset, urlCert, urlCompetencias, urlPdf, urlThumb } from '@lib/urls';
 import { areaLabel, typeLabel, TYPE_LABEL } from '@lib/labels';
 
 const certs = await publishedCertificates();
@@ -114,7 +114,7 @@ const ALTO_BARRA = 94;
 
 const pctDoc = Math.round((ev.withPdf / Math.max(1, certs.length)) * 100);
 ---
-<Base title="Alejandro Retuert — Certificaciones">
+<Base title="Alejandro Retuert — Certificaciones" image={urlAsset('og.png')}>
   <header class="hero">
     <div class="wrap">
       <p class="kicker">Registro verificable · Ingeniería y arquitectura de datos</p>
