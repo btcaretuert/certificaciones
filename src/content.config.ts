@@ -1,5 +1,9 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+// `astro:content` exporta `z` solo como valor, asi que `z.ZodTypeAny` no
+// resuelve como namespace de tipos. El tipo se toma de `astro/zod`, que es
+// el mismo zod que usa Astro; en zod 4 el canonico es ZodType, no ZodTypeAny.
+import type { ZodType } from 'astro/zod';
 
 /* ─────────────────────────────────────────────────────────────────────────
    VOCABULARIO CANONICO
@@ -35,7 +39,7 @@ const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
    correccion de los datos en un solo flag de la CMS.
    ──────────────────────────────────────────────────────────────────────── */
 
-const blankToNull = <T extends z.ZodTypeAny>(inner: T) =>
+const blankToNull = <T extends ZodType>(inner: T) =>
   z.preprocess((v) => (v === '' || v === undefined ? null : v), inner.nullable());
 
 /** 'certs-src/x.pdf' | '/certs/x.pdf' | 'x.pdf'  ->  'x' */

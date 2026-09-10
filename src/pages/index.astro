@@ -350,17 +350,20 @@ const pctDoc = Math.round((ev.withPdf / Math.max(1, certs.length)) * 100);
       // en la caja de busqueda dispara el envio implicito —un unico campo de
       // texto basta—, la pagina recarga y se pierden los filtros puestos.
       form.addEventListener('submit', (e) => e.preventDefault());
-      const filas = /** @type {HTMLTableRowElement[]} */ ([...document.querySelectorAll('tbody tr')]);
+      // Astro compila este bloque como TypeScript, asi que las aserciones van
+      // con `as` y no con /** @type */: los casts JSDoc solo valen en archivos
+      // .js y aca serian comentarios inertes que dejan todo en HTMLElement.
+      const filas = [...document.querySelectorAll('tbody tr')] as HTMLTableRowElement[];
       const cuenta = document.getElementById('cuenta');
-      const q = /** @type {HTMLInputElement} */ (document.getElementById('q'));
-      const sel = (id) => /** @type {HTMLSelectElement} */ (document.getElementById(id));
-      const chk = (id) => /** @type {HTMLInputElement} */ (document.getElementById(id));
+      const q = document.getElementById('q') as HTMLInputElement;
+      const sel = (id: string) => document.getElementById(id) as HTMLSelectElement;
+      const chk = (id: string) => document.getElementById(id) as HTMLInputElement;
 
       // misma normalizacion que en el build: sin acentos y en minusculas, para
       // que "comunicacion" encuentre "Comunicación"
-      const norm = (s) => s.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
+      const norm = (s: string) => s.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
 
-      function aplicar() {
+      const aplicar = () => {
         const t = norm(q.value.trim());
         const area = sel('f-area').value;
         const tipo = sel('f-tipo').value;
@@ -389,7 +392,7 @@ const pctDoc = Math.round((ev.withPdf / Math.max(1, certs.length)) * 100);
         }
         if (cuenta) cuenta.textContent = String(n);
         form.dataset.vacio = n === 0 ? '1' : '';
-      }
+      };
 
       form.addEventListener('input', aplicar);
       // reset dispara antes de que los campos se limpien
