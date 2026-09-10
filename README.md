@@ -36,6 +36,12 @@ Consecuencia: un clon puede compilar el HTML y correr las pruebas
 (`SIN_ACTIVOS=1`), pero **el artefacto publicable solo se construye donde están
 los activos**. CI valida estructura; no publica.
 
+Publicar, entonces, es manual y desde la máquina que tiene los activos: se
+construye en local y se empuja `dist/` a la rama `gh-pages`. El procedimiento
+completo, con la trampa del `.nojekyll` que deja el sitio sin CSS respondiendo
+`200`, está en
+[`docs/sincronizacion.md` §5](docs/sincronizacion.md#5-publicar-el-sitio).
+
 ## Comandos
 
 | Comando | Qué hace |
@@ -46,6 +52,7 @@ los activos**. CI valida estructura; no publica.
 | `npm run panel` | Panel de edición en `localhost:4323/admin/`. Solo Chrome, Edge o Brave. |
 | `npm run test` | Pruebas unitarias y de repositorio. |
 | `npm run test:e2e` | Playwright: funcional, accesibilidad y CSP, sobre el artefacto. |
+| `npm run og` | Regenera `public/og.png`, la tarjeta social, con las cifras de `dist/`. Después de `build`. |
 | `npm run test:perf` | Lighthouse sobre las 3 plantillas, umbral 95. |
 | `npm run tools:security` | Descarga gitleaks y osv-scanner, fijados por SHA256. |
 | `npm run check:security` | gitleaks, osv-scanner, `npm audit` y el auditor del repositorio. |

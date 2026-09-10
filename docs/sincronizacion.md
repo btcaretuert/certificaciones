@@ -86,7 +86,7 @@ sitio se construye sin una línea de Python.
 
 Google Chrome aparte: las pruebas de navegador usan `channel: 'chrome'`, el del
 sistema. Playwright no descarga ningún navegador propio, así que sin Chrome
-—o sin Edge o Brave— los 27 casos no corren.
+—o sin Edge o Brave— los 29 casos no corren.
 
 Node vive en NVM y **no está en el PATH por defecto**. Toda sesión de Bash que
 use `node`, `npm` o `npx` empieza por:
@@ -123,17 +123,19 @@ no calza, la máquina no está lista y el número dice dónde mirar.
 ```bash
 export NVM_DIR="$HOME/.nvm" && \. "$NVM_DIR/nvm.sh" && nvm use
 
-npm run test:unit       # 365 en verde
+npm run test:unit       # 377 en verde
 npm run build           # 254 páginas, ambos auditores "sin fugas"
-npx playwright test     # 27 en verde
+npx playwright test     # 29 en verde
 npm run check:security  # 5/5 comprobaciones en verde
 npm run test:perf       # 100/100/100/100 en las 3 plantillas
 ```
 
 Dos lecturas que engañan si no se conocen:
 
-- Si `test:unit` da **352 de 365**, faltan los activos privados o falta git:
-  13 pruebas leen el repositorio real con `git ls-files`.
+- Si `test:unit` no llega a **377** y lo que falla vive en
+  `tests/unit/audit-repo.test.ts`, no busques una regresión: esas pruebas leen
+  el repositorio real con `git ls-files`, y fallan en bloque cuando faltan los
+  activos privados o cuando el árbol no es un clon de git.
 - Si un auditor dice **«sin fugas (solo reglas estructurales)»**, no leas eso
   como una auditoría completa. Sin `private/` no ejecuta ninguna sonda, y lo
   declara. La auditoría completa solo corre donde están los activos.
@@ -143,4 +145,98 @@ la anterior. Uno olvidado hace medir un `dist/` viejo:
 
 ```bash
 ss -ltn | grep -E ':432[123]'   # 4321 dev, 4322 dist servido, 4323 panel
+```
+
+## 5. Publicar el sitio
+
+El despliegue es **manual y desde esta máquina**. No hay `deploy.yml` ni un
+`npm run deploy`: `.github/workflows/` solo tiene `ci.yml`, que ejecuta pruebas
+y auditorías pero **nunca construye el artefacto real**. No podría: el build
+necesita `certs-src/` —126 MB de PDFs y miniaturas, incluidos los de las fichas
+retenidas— y ese directorio no se versiona. Un artefacto construido en CI
+saldría sin evidencias.
+
+Pages sirve la rama `gh-pages` desde la raíz, con `https_enforced`. El flujo es
+construir en local y empujar el `dist/` resultante a esa rama por un worktree
+desechable, fuera del árbol del repositorio:
+
+```bash
+export NVM_DIR="$HOME/.nvm" && \. "$NVM_DIR/nvm.sh" && nvm use
+npm run build
+
+WT=/tmp/gh-pages-worktree
+git worktree add "$WT" gh-pages
+rsync -a --delete --exclude=.git dist/ "$WT/"
+git -C "$WT" add -A
+git -C "$WT" commit -m "deploy: publica el artefacto del $(date +%Y-%m-%d)"
+git -C "$WT" push origin gh-pages
+git worktree remove --force "$WT"
+```
+
+`rsync` con `--delete` deja `gh-pages` idéntico a `dist/`, incluido lo que
+empieza con punto: `.nojekyll` viaja porque el build lo emite, no porque nadie
+se acuerde de reponerlo. Ver abajo por qué importa.
+
+Dos reglas que no son opcionales: el worktree **se borra siempre** al terminar,
+y `dist/` **nunca** se commitea en `main`.
+
+Si el push agrega historial nuevo, antes:
+
+```bash
+npm run tools:security && npm run check:security
+```
+
+El repositorio es público. Una vez publicado un commit, su contenido es
+recuperable aunque un commit posterior lo "corrija".
+
+### `.nojekyll`: la línea que parece de adorno y no lo es
+
+Astro emite sus bundles en `dist/_astro/`, y GitHub Pages pasa todo por Jekyll,
+que **descarta cualquier carpeta cuyo nombre empiece con `_`**. Sin un
+`.nojekyll` en la raíz de `gh-pages`, el sitio responde **HTTP 200 con el HTML
+completo y sin una línea de CSS ni de JS**: sin estilos y sin filtrado.
+
+El síntoma engaña: parece un problema de `base` o de rutas relativas, y no lo
+es. Durante un tiempo el archivo vivió solo en la rama `gh-pages`, puesto a
+mano, y el sitio dependía de que quien desplegara se acordara. Hoy está
+versionado en `public/.nojekyll`, así que el build lo emite y `rsync` lo lleva:
+**no lo borres del repositorio pensando que es basura**, es de los archivos
+vacíos que hacen trabajo.
+
+### La tarjeta social
+
+`public/og.png` es la imagen que muestran LinkedIn, Slack o WhatsApp al pegar
+el enlace. Está versionada, así que un despliegue normal no la toca. Se
+regenera con `npm run og`, **después** de `npm run build`: el script no lleva
+cifras propias, las lee de la banda de indicadores de `dist/index.html` y
+aborta si alguna etiqueta esperada ya no está. Necesita Chrome del sistema,
+igual que las pruebas de navegador.
+
+Conviene rehacerla cuando cambien los números de la portada —certificados,
+horas, verificables, PMI—, porque si no la tarjeta sigue anunciando un total
+viejo y nadie mira una imagen para darse cuenta.
+
+### Comprobar que el despliegue quedó bien
+
+No alcanza con que la portada responda `200`: eso es exactamente lo que hace un
+sitio al que Jekyll le comió los bundles. Hay que pedir también una hoja de
+estilo:
+
+```bash
+SITIO=https://btcaretuert.github.io/certificaciones/
+
+curl -o /dev/null -w '%{http_code}\n' "$SITIO"
+
+# La hoja que la portada declara, resuelta y pedida:
+CSS=$(curl -s "$SITIO" | grep -o '/certificaciones/_astro/[^"]*\.css' | head -1)
+curl -o /dev/null -w '%{http_code}\n' "https://btcaretuert.github.io$CSS"
+```
+
+Los dos tienen que dar `200`. Si el primero da `200` y el segundo `404`, falta
+el `.nojekyll`.
+
+Estado de Pages y última corrida, sin abrir el navegador:
+
+```bash
+gh api repos/btcaretuert/certificaciones/pages --jq '.status, .source'
 ```
